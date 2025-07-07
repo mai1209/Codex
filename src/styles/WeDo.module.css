@@ -75,7 +75,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   border-bottom-right-radius: 4rem;
   border-top-left-radius: 4rem;
 }
@@ -83,6 +83,15 @@
 .crimsonContainer p {
   max-width: 300px;
   padding: 0 15px;
+}
+
+.name{
+  margin-top: 10px;
+}
+
+span{
+  background-color: var(--color-fondo-dark);
+  border-radius: 4rem;
 }
 
 @media (min-width: 850px) {
@@ -100,7 +109,7 @@
 
   .name {
     font-size: 4rem;
-
+    
     line-height: 3.5rem;
 
   }

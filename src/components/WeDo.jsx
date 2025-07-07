@@ -18,8 +18,8 @@ function WeDo() {
       </p>
     </div>
         <div className={style.crimsonContainer}>
-          <p>En Codex diseñamos, desarrollamos y comunicamos ideas con propósito.Nos especializamos en crear estrategias visuales y digitales que posicionan marcas, conectan con audiencias y potencian resultados.</p>
-          <p>Desde Argentina, trabajamos con un equipo multidisciplinario, creativo y profesional, listo para llevar tu proyecto al siguiente nivel.</p>
+          <p>En Codex <span>diseñamos, desarrollamos y comunicamos ideas con propósito.</span>Nos especializamos en crear estrategias visuales y digitales que posicionan marcas, conectan con audiencias y potencian resultados.</p>
+          <p>Desde Argentina, trabajamos con un <span>equipo multidisciplinario, creativo y profesional</span>, listo para llevar tu proyecto al siguiente nivel.</p>
         </div>
       </div>
     </div>
