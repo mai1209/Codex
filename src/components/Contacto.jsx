@@ -28,10 +28,10 @@ function Contacto() {
 
 
         </form>
-        <div>
-            <img src="" alt="" />
-            <img src="" alt="" />
-            <img src="" alt="" />
+        <div className={style.redes}>
+            <img src="" alt="instagram" />
+            <img src="" alt="linkedin" />
+            <img src="" alt="whatsapp" />
         </div>
     
      </div>
