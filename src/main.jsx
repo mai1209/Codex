@@ -7,6 +7,7 @@ import Diagrama from './components/Diagrama'
 import DiagramaM from './components/DiagramaM'   
 import Done from './components/Done'  
 import Team from './components/Team'
+import Contacto from './components/Contacto'
 
 function RootApp() {
   const [isMobile, setIsMobile] = useState(false)
@@ -28,6 +29,7 @@ function RootApp() {
       {isMobile ? <Diagrama /> : <DiagramaM />}
       <Done />
       <Team />
+      <Contacto />
     </StrictMode>
   )
 }
