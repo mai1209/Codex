@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-fondo: #070a0c;
+    --color-crimson: #FF1493;
+    --color-text: #fff;
+    --color-dark-text: #000;
+    --color-fondo-dark: #1C1C1C;
+}
+
+.container {
+    min-height: fit-content;
+
+    background-color: var(--color-fondo-dark);
+    color: var(--color-text);
+    position: relative;
+    top: -350px;
+}
+
+.title {
+    color: var(--color-crimson);
+    font-size: 1.7rem;
+    text-align: end;
+    margin: 20px 45px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+.containerTeam {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+.containerInfo {
+    font-size: 0.7rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.containerInfo h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.line {
+    border-top: 6px solid var(--color-text);
+    border-right: 6px solid var(--color-text);
+    border-top-right-radius: 100px;
+    margin-right: 40px;
+    margin-top: 50px;
+}

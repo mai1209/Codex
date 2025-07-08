@@ -13,7 +13,6 @@
 
 .container {
   min-height: fit-content;
-  min-height: 200vh;
   background-color: var(--color-fondo-dark);
   padding-top: 20px;
 }
@@ -26,7 +25,6 @@
 }
 
 .containerAll {
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -280,6 +278,8 @@
   font-size: 0.7rem;
   margin-left: auto;
   padding-right: 20px;
+  position: relative;
+  top: -150px;
 
 
 }

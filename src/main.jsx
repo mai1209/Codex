@@ -6,6 +6,7 @@ import WeDo from './components/WeDo'
 import Diagrama from './components/Diagrama'     
 import DiagramaM from './components/DiagramaM'   
 import Done from './components/Done'  
+import Team from './components/Team'
 
 function RootApp() {
   const [isMobile, setIsMobile] = useState(false)
@@ -26,6 +27,7 @@ function RootApp() {
       <WeDo />
       {isMobile ? <Diagrama /> : <DiagramaM />}
       <Done />
+      <Team />
     </StrictMode>
   )
 }
