@@ -1,0 +1,129 @@
+/* --- TUS ESTILOS PARA MÓVIL (Estos no cambian) --- */
+:root {
+    --color-fondo: #070a0c;
+    --color-crimson: #FF1493;
+    --color-text: #fff;
+    --color-dark-text: #000;
+    --color-fondo-dark: #1C1C1C;
+}
+
+.container {
+    min-height: fit-content;
+    height: 100vh;
+    background-color: var(--color-fondo-dark);
+}
+
+.title {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    text-transform: uppercase;
+    padding-left: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* La clase sombraa no la tocamos, pero ten en cuenta que su posicionamiento
+   también podría necesitar ajustes si estaba anclada al cohete. */
+.sombraa {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 5;
+    position: relative;
+    top: -742px;
+    left: -40px;
+    overflow: hidden;
+}
+
+.coete {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(6px 0 #FF1493) drop-shadow(-6px 0 #FF1493) drop-shadow(0 6px #FF1493) drop-shadow(0 -6px #FF1493);
+    z-index: 9;
+    position: relative;
+    top: -125px;
+    left: -20px;
+    overflow: hidden;
+}
+
+.containerAll {
+    position: relative;
+    top: -300px;
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.box {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: end;
+    color: var(--color-text);
+    font-size: 0.5rem;
+    gap: 5px;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+.box img {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* --- 👇 ESTILOS CORREGIDOS PARA ESCRITORIO 👇 --- */
+@media (min-width: 850px) {
+    .title {
+        font-size: 3rem;
+       
+    }
+
+    /* 1. Definimos el contenedor principal como flex */
+    .contentWrapper {
+        display: flex;
+        align-items: center; /* Centra el cohete y el texto verticalmente */
+        justify-content: space-between; /* Centra ambos elementos en la pantalla */
+        position: relative;
+        top: -200px;
+
+    }
+
+    /* 2. Ajustamos el cohete */
+    .coete {
+        width: 60%; /* Un poco menos de espacio para que se vea bien */
+        /* Quitamos el posicionamiento que daba problemas */
+        position: static;
+    }
+
+    /* 3. Ajustamos el contenedor de los textos */
+    .containerAll {
+        /* Quitamos el posicionamiento que daba problemas */
+        position: static;
+        width: auto; /* Ancho automático basado en su contenido */
+        /* Alineamos los items de la lista a la izquierda */
+        align-items: flex-start;
+        gap: 15px; /* Un poco más de espacio entre líneas */
+        margin-right: 150px;
+    }
+    
+    /* 4. Ajustamos cada línea de texto */
+    .box {
+        /* Para que el ícono y el texto se alineen a la izquierda */
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: start;
+        font-size: 2rem; /* Tamaño de fuente ajustado */
+        margin-right: 0; /* Ya no necesitamos este margen */
+    }
+
+    .box img {
+        width: 25px; /* Íconos un poco más grandes */
+        height: 25px;
+    }
+}

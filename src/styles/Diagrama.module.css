@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
   --color-fondo: #070a0c;
   --color-crimson: #FF1493;
@@ -10,261 +11,285 @@
 }
 
 
-.container{
-    min-height:fit-content ;
-    min-height: 200vh;
-    background-color:var(--color-fondo-dark) ;
-    padding-top: 100px;
+.container {
+  min-height: fit-content;
+  min-height: 200vh;
+  background-color: var(--color-fondo-dark);
+  padding-top: 20px;
 }
 
-.title{
-    color: var(--color-text);
-    font-size: 1.5rem;
-    padding: 3rem 2rem;
-    text-transform: uppercase;
+.title {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  padding: 3rem 2rem;
+  text-transform: uppercase;
 }
 
-.containerAll{
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 82%;
-    height: 100%;
+.containerAll {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 82%;
+  height: 100%;
 }
 
-.containerItemRectangulo{
-    color: var(--color-text);   
-    border: 1px solid var(--color-crimson);
-    width: fit-content;
-    padding: 5px 40px;
-    border-radius: 111px;
-    font-size: 1rem;
-    text-align: center;
-      font-family: "Poppins", sans-serif;
+.containerItemRectangulo {
+  color: var(--color-text);
+  border: 1px solid var(--color-crimson);
+  width: fit-content;
+  padding: 5px 40px;
+  border-radius: 111px;
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-.containerItemCuadrado{
-    border-left: 1px solid var(--color-crimson);
-    border-bottom: 1px solid var(--color-crimson);
-    width: 170px;
-    height: 120px;
-    margin-left: 50px;
-    border-bottom-left-radius: 4rem;
-    color: var(--color-text);
-    padding-left: 12px;
-    padding-top: 10px;
-    font-size: 0.7rem;
-      font-family: "Inter", sans-serif;
-      font-weight: 400;
-    
+.containerItemCuadrado {
+  border-left: 1px solid var(--color-crimson);
+  border-bottom: 1px solid var(--color-crimson);
+  width: 170px;
+  height: 120px;
+  margin-left: 50px;
+  border-bottom-left-radius: 4rem;
+  color: var(--color-text);
+  padding-left: 12px;
+  padding-top: 10px;
+  font-size: 0.7rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+
 
 
 }
 
-.containerItemCirculo{
-    border: 1px solid var(--color-crimson);
-    background-color: var(--color-fondo-dark);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    color: var(--color-text);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: -50px;
-    left: 140px;
-    z-index: 1;
-      font-family: "Poppins", sans-serif;
+.containerItemCirculo {
+  border: 1px solid var(--color-crimson);
+  background-color: var(--color-fondo-dark);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -50px;
+  left: 140px;
+  z-index: 1;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-.containerItemCuadradoDos{
-    width: 170px;
-    height: 110px;
-    margin-left: 50px;
-    border-top-left-radius: 4rem;
-    border-left: 1px solid var(--color-crimson);
-    border-top: 1px solid var(--color-crimson);
-    position: relative;
-    top: -90px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.containerItemCuadradoDos {
+  width: 170px;
+  height: 110px;
+  margin-left: 50px;
+  border-top-left-radius: 4rem;
+  border-left: 1px solid var(--color-crimson);
+  border-top: 1px solid var(--color-crimson);
+  position: relative;
+  top: -90px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.containerItemCuadradoDos p{
- text-align: center;
- font-size: 0.7rem;
- color: var(--color-text);
- margin-left: 50px;
- margin-top: 20px;
-      font-family: "Inter", sans-serif;
-      font-weight: 400;
-
-}
-
-.containerItemRectanguloDos{
-     color: var(--color-text);
-    border: 1px solid var(--color-crimson);
-    width: fit-content;
-    padding: 15px 40px;
-    border-radius: 111px;
-    font-size: 1rem;
-    text-align: center;
-    position: relative;
-    top: -90px;
-      font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.containerItemCuadradoTres{
-    border-left: 1px solid var(--color-crimson);
-    border-bottom: 1px solid var(--color-crimson);
-    width: 190px;
-    height: 100px;
-    margin-left: 50px;
-    border-bottom-left-radius: 4rem;
-    color: var(--color-text);
-    padding-left: 12px;
-    padding-top: 20px;
-    font-size: 0.7rem;
-    position: relative;
-    top: -90px;
-    text-align: center;
-      font-family: "Inter", sans-serif;
-      font-weight: 400;
-
-
+.containerItemCuadradoDos p {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--color-text);
+  margin-left: 50px;
+  margin-top: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 
 }
 
-.containerItemCirculoTres{
-    border: 1px solid var(--color-crimson);
-    background-color: var(--color-fondo-dark);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    color: var(--color-text);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: -130px;
-    left: 140px;
-    z-index: 1;
-      font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-.containerItemCirculoTres p{
-    text-align: center;
-      font-family: "Inter", sans-serif;
-      font-weight: 400;
-
-}
-
-.containerItemCuadradoCuatro{
-    width: 170px;
-    height: 110px;
-    margin-left: 50px;
-    border-top-left-radius: 4rem;
-    border-left: 1px solid var(--color-crimson);
-    border-top: 1px solid var(--color-crimson);
-    position: relative;
-    top: -180px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-}
-
-.containerItemCuadradoCuatro p{
-     text-align: center;
- font-size: 0.7rem;
- color: var(--color-text);
- margin-left: 50px;
- margin-top: 40px;
-      font-family: "Inter", sans-serif;
-      font-weight: 400;
-
-}
-
-.containerItemRectanguloTres{
-border: 1px solid var(--color-crimson);
-width: fit-content;
-border-radius: 111px;
-position: relative;
-top: -180px;
-color: var(--color-text);
-font-size: 1rem;
+.containerItemRectanguloDos {
+  color: var(--color-text);
+  border: 1px solid var(--color-crimson);
+  width: fit-content;
   padding: 15px 40px;
-    font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-
-
-   
-}
-
-.containerItemCuadradoCinco{
-     border-left: 1px solid var(--color-crimson);
-    border-bottom: 1px solid var(--color-crimson);
-    width: 190px;
-    height: 100px;
-    margin-left: 50px;
-    border-bottom-left-radius: 4rem;
-    color: var(--color-text);
-    padding-left: 12px;
-    padding-top: 20px;
-    font-size: 0.7rem;
-    position: relative;
-    top: -180px;
-    text-align: center;
-      font-family: "Inter", sans-serif;
-      font-weight: 400;
-
-}
-
-.containerItemCirculoCuatro{
-      border: 1px solid var(--color-crimson);
-    background-color: var(--color-fondo-dark);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    color: var(--color-text);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: -225px;
-    left: 140px;
-    z-index: 1;
-      font-family: "Poppins", sans-serif;
+  border-radius: 111px;
+  font-size: 1rem;
+  text-align: center;
+  position: relative;
+  top: -90px;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-.containerTitleBottom{
-    color: var(--color-text);
-    position: relative;
-    top: -190px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.7rem;
-    text-align: center;
-    max-width: 230px;
-    margin-left: 50px;
-      font-family: "Inter", sans-serif;
-font-weight: 400;
-   
+.containerItemCuadradoTres {
+  border-left: 1px solid var(--color-crimson);
+  border-bottom: 1px solid var(--color-crimson);
+  width: 190px;
+  height: 100px;
+  margin-left: 50px;
+  border-bottom-left-radius: 4rem;
+  color: var(--color-text);
+  padding-left: 12px;
+  padding-top: 20px;
+  font-size: 0.7rem;
+  position: relative;
+  top: -90px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+
+
+
 }
 
+.containerItemCirculoTres {
+  border: 1px solid var(--color-crimson);
+  background-color: var(--color-fondo-dark);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -130px;
+  left: 140px;
+  z-index: 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.containerItemCirculoTres p {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+
+}
+
+.containerItemCuadradoCuatro {
+  width: 170px;
+  height: 110px;
+  margin-left: 50px;
+  border-top-left-radius: 4rem;
+  border-left: 1px solid var(--color-crimson);
+  border-top: 1px solid var(--color-crimson);
+  position: relative;
+  top: -180px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.containerItemCuadradoCuatro p {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--color-text);
+  margin-left: 50px;
+  margin-top: 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+
+}
+
+.containerItemRectanguloTres {
+  border: 1px solid var(--color-crimson);
+  width: fit-content;
+  border-radius: 111px;
+  position: relative;
+  top: -180px;
+  color: var(--color-text);
+  font-size: 1rem;
+  padding: 15px 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 
 
+
+}
+
+.containerItemCuadradoCinco {
+  border-left: 1px solid var(--color-crimson);
+  border-bottom: 1px solid var(--color-crimson);
+  width: 190px;
+  height: 100px;
+  margin-left: 50px;
+  border-bottom-left-radius: 4rem;
+  color: var(--color-text);
+  padding-left: 12px;
+  padding-top: 20px;
+  font-size: 0.7rem;
+  position: relative;
+  top: -180px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+
+}
+
+.containerItemCirculoCuatro {
+  border: 1px solid var(--color-crimson);
+  background-color: var(--color-fondo-dark);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -225px;
+  left: 140px;
+  z-index: 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.containerTitleBottom {
+  color: var(--color-text);
+  position: relative;
+  top: -190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  text-align: center;
+  max-width: 230px;
+  margin-left: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+
+}
+
+.textBottom {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  justify-content: flex-end;
+  gap: 3px;
+  align-items: end;
+  text-align: end;
+  color: var(--color-text);
+  font-size: 0.7rem;
+  margin-left: auto;
+  padding-right: 20px;
+
+
+}
+
+.witeBorderBox {
+  height: 0.6rem;
+  border: 1px solid var(--color-text);
+  width: 100%;
+}
+
+span {
+  color: var(--color-crimson);
+}
