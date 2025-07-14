@@ -10,7 +10,7 @@ function Done() {
 
         {/* 👇 NUEVO CONTENEDOR WRAPPER 👇 */}
         <div className={style.contentWrapper}>
-          <img className={style.coete} src="./coeteFuego.png" alt="coete" />
+          <img className={style.coete} src="./coeteFuego.png" alt="coete"  id="coete" />
 
           <div className={style.containerAll}>
             <div className={style.box}>
@@ -25,7 +25,7 @@ function Done() {
               </p>
             </div>
             <div className={style.box}>
-              <img src="./select.png" alt="select" />
+              <img src="./select.png" alt="select"  />
               <p>
                 nATALIA LOFEUDO - MARKETING  MENTORSHIP
               </p>
