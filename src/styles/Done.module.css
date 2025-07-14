@@ -49,9 +49,7 @@
     overflow: hidden;
     cursor: pointer;
 }
-.coete:hover{
-     filter: drop-shadow(6px 0 #FF1493) drop-shadow(-6px 0 #ff1414) drop-shadow(0 6px #ff1414) drop-shadow(0 -6px #ff1414); 
-}
+
 
 .containerAll {
     position: relative;
