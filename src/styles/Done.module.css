@@ -81,7 +81,7 @@
 }
 
 
-/* --- 👇 ESTILOS CORREGIDOS PARA ESCRITORIO 👇 --- */
+
 @media (min-width: 850px) {
     .title {
         font-size: 3rem;
