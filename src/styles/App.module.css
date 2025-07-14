@@ -233,6 +233,7 @@ padding-top: 10px;
     background-image: url('../../public/fondoM.png');
     background-repeat: no-repeat;
     background-size: cover;
+   height: 100vh;
   }
 
   .imgLogo {
