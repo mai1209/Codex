@@ -12,7 +12,10 @@
     background-color: var(--color-fondo-dark);
     position: relative;
     top: -100px;
+
 }
+
+
 
 .title {
     font-size: 1.5rem;
@@ -22,6 +25,8 @@
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: normal;
+    text-align: end ;
+   width: fit-content;
 }
 
 /* La clase sombraa no la tocamos, pero ten en cuenta que su posicionamiento

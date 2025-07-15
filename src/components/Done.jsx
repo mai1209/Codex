@@ -4,9 +4,11 @@ function Done() {
   return (
     <div className={style.container}>
       <div>
-        <h2 className={style.title}>
+       <div className={style.containerTitle}>
+         <h2 className={style.title}>
           What We've <br /> Done.
         </h2>
+       </div>
 
         {/* 👇 NUEVO CONTENEDOR WRAPPER 👇 */}
         <div className={style.contentWrapper}>

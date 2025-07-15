@@ -21,19 +21,21 @@ const services = [
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [activeMenuIndex, setActiveMenuIndex] = useState(null);
 
-useEffect(() => {
-  const instanceId = Math.random().toString(36).substring(2, 9); // Unique ID for this instance
-  console.log(`useEffect mounted (ID: ${instanceId})`);
-  const interval = setInterval(() => {
-    console.log(`Interval triggered (ID: ${instanceId}) at:`, new Date().toLocaleTimeString());
-    setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
-  }, 9000);
-  return () => {
-    console.log(`Cleaning up interval (ID: ${instanceId})`);
-    clearInterval(interval);
-  };
-}, []);
+
+  useEffect(() => {
+    const instanceId = Math.random().toString(36).substring(2, 9); // Unique ID for this instance
+    console.log(`useEffect mounted (ID: ${instanceId})`);
+    const interval = setInterval(() => {
+      console.log(`Interval triggered (ID: ${instanceId}) at:`, new Date().toLocaleTimeString());
+      setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
+    }, 9000);
+    return () => {
+      console.log(`Cleaning up interval (ID: ${instanceId})`);
+      clearInterval(interval);
+    };
+  }, []);
   return (
     <div className={style.container}>
       <nav>
@@ -44,12 +46,18 @@ useEffect(() => {
         <div className={style.containerTexts}>
           {menuItems.map((item, index) => (
             <div key={index} className={style.containerMenu}>
-              <div className={style.rectangle}></div>
-              <a href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}>
+              <div
+                className={`${style.rectangle} ${activeMenuIndex === index ? style.activeRectangle : ''}`}
+              ></div>
+              <a
+                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                onClick={() => setActiveMenuIndex(index)}
+              >
                 {item}
               </a>
             </div>
           ))}
+
         </div>
       </nav>
       <div className={style.containerLogo}>
