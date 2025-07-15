@@ -22,13 +22,18 @@ const services = [
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
-    }, 3000); // Cambia cada 3 segundos
-    return () => clearInterval(interval); // Limpia el intervalo al desmontar
-  }, []);
-
+useEffect(() => {
+  const instanceId = Math.random().toString(36).substring(2, 9); // Unique ID for this instance
+  console.log(`useEffect mounted (ID: ${instanceId})`);
+  const interval = setInterval(() => {
+    console.log(`Interval triggered (ID: ${instanceId}) at:`, new Date().toLocaleTimeString());
+    setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
+  }, 9000);
+  return () => {
+    console.log(`Cleaning up interval (ID: ${instanceId})`);
+    clearInterval(interval);
+  };
+}, []);
   return (
     <div className={style.container}>
       <nav>
@@ -48,29 +53,25 @@ function App() {
         </div>
       </nav>
       <div className={style.containerLogo}>
-        <div className={style.typingGroup}>
-          <p className={style.textLine}>Codicem Ad</p>
-          <p className={style.textLine}>astra</p>
-          <p className={style.textLine}>sequimur</p>
+        <div className={style.containerImg}>
+          <img
+            className={style.imgLogo}
+            src="./logo.png"
+            alt="Codex Corporation Logo"
+          />
         </div>
-        <img
-          className={style.imgLogo}
-          src="./logo.png"
-          alt="Codex Corporation Logo"
-        />
-        <p className={style.textLogoM}>Codex Corp.</p>
-      </div>
-      <div className={style.containerTextBottom}>
-        {services.map((service, index) => (
+        <div className={style.containerTextBottom}>
           <p
-            key={index}
-            className={`${style.textBottom} ${
-              index === activeIndex ? style.active : ''
-            }`}
+            key={activeIndex} // Ensures re-render for animation
+            className={style.textBottom}
+            data-text={services[activeIndex]} // Required for glitch effect
           >
-            {service}
+            {services[activeIndex]}
           </p>
-        ))}
+        </div>
+        <div className={style.typingGroup}>
+          <p className={style.textLine}>Codicem Ad astra sequimur</p>
+        </div>
       </div>
     </div>
   );
