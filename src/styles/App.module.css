@@ -63,7 +63,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: fit-content;
+  height: 100vh;
   margin: 0 1rem;
 }
 
@@ -87,13 +87,13 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 15rem;
+  padding-top: 7rem;
   position: relative;
 }
 
 .imgLogo {
-  width: 70px;
-  height: 70px;
+  width: 200px;
+  height: 200px;
   z-index: 1;
 }
 
@@ -105,27 +105,24 @@ nav {
   top: -30px;
   text-align: center;
   height: 120px;
-  /* Ajustado para fuente grande y animaciones */
-  overflow: hidden;
+
+
+
 }
 
 .textBottom {
   font-size: clamp(30px, 10vw, 100px);
-
-
   font-family: "Rubik Glitch", system-ui;
   color: var(--color-text);
   line-height: 1;
   display: inline-block;
   z-index: 2;
-  letter-spacing: 10px;
-  /* Igual que .hero */
+  letter-spacing: 5px;
   filter: drop-shadow(0 1px 3px);
-  /* Brillo igual que .hero */
   position: relative;
   animation: fade 0.5s ease-in-out;
-  /* Para transición de texto */
 }
+
 
 .textBottom span {
   animation: paths 5s step-end infinite;
@@ -167,8 +164,6 @@ nav {
 }
 
 .typingGroup {
-  position: relative;
-  top: -1.5rem;
   color: var(--color-text);
   text-align: end;
   margin-right: 0.5rem;
@@ -177,6 +172,8 @@ nav {
   font-style: normal;
   font-size: 0.8rem;
   width: 100%;
+  margin-top: 12rem;
+ 
 
 }
 

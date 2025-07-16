@@ -4,10 +4,7 @@ import style from '../styles/WeDo.module.css'
 function WeDo() {
   return (
     <div className={style.container}>
-      <div className={style.containerTitle}>
-        <p className={style.title}>Aplicaciones Moviles</p>
-
-      </div>
+   
       <div className={style.line}></div>
       <div className={style.containerAll}>
      <div className={style.containerP}>   
