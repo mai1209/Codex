@@ -87,7 +87,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 7rem;
+  padding-top: 12rem;
   position: relative;
 }
 
@@ -101,10 +101,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  top: -30px;
   text-align: center;
   height: 120px;
+  margin-top: 20px;
 
 
 
@@ -592,8 +591,7 @@ nav {
   top: -30px;
   text-align: center;
   height: fit-content;
-  /* Ajustado para fuente grande y animaciones */
-  overflow: hidden;
+
 }
 
 
