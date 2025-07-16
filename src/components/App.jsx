@@ -30,7 +30,7 @@ function App() {
     const interval = setInterval(() => {
       console.log(`Interval triggered (ID: ${instanceId}) at:`, new Date().toLocaleTimeString());
       setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
-    }, 5000);
+    }, 1000);
     return () => {
       console.log(`Cleaning up interval (ID: ${instanceId})`);
       clearInterval(interval);
