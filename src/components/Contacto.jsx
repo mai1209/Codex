@@ -2,7 +2,7 @@ import style from "../styles/Contacto.module.css"
 
 function Contacto() {
   return (
-    <div className={style.container}>
+    <div className={style.container}   id='contact' >
 
 
       <div className={style.containerInformation}>

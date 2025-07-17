@@ -2,7 +2,7 @@
 import style from '../styles/Diagrama.module.css'
 function Diagrama() {
   return (
-    <div className={style.container}>
+    <div className={style.container} id='check-our-services'>
       <h2 className={style.title}>Services</h2>
       <div className={style.containerAll}>
         <div className={style.containerItemRectangulo}>

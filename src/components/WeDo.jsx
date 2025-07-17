@@ -3,7 +3,7 @@ import style from '../styles/WeDo.module.css'
 
 function WeDo() {
   return (
-    <div className={style.container}>
+    <div className={style.container} id='what-we-do'>
    
       <div className={style.line}></div>
       <div className={style.containerAll}>
@@ -16,7 +16,7 @@ function WeDo() {
     </div>
         <div className={style.crimsonContainer}>
           <p>En Codex <span>diseñamos, desarrollamos y comunicamos ideas con propósito.</span>Nos especializamos en crear estrategias visuales y digitales que posicionan marcas, conectan con audiencias y potencian resultados.</p>
-          <p>Desde Argentina, trabajamos con un <span>equipo multidisciplinario, creativo y profesional</span>, listo para llevar tu proyecto al siguiente nivel.</p>
+          <p className={style.dos}>Desde Argentina, trabajamos con un <span>equipo multidisciplinario, creativo y profesional</span>, listo para llevar tu proyecto al siguiente nivel.</p>
         </div>
       </div>
     </div>

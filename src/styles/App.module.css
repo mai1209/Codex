@@ -56,7 +56,7 @@ nav {
 
 .container {
   background-color: var(--color-fondo-dark);
-  min-height: 90vh;
+height: 80vh;
 }
 
 .containerLogo {
@@ -87,7 +87,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 12rem;
+  padding-top: 10rem;
   position: relative;
 }
 
@@ -102,19 +102,21 @@ nav {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 120px;
-  margin-top: 20px;
+
+
+
 
 
 
 }
 
 .textBottom {
-  font-size: clamp(30px, 10vw, 100px);
+  font-size: clamp(40px, 10vw, 100px);
   font-family: "Rubik Glitch", system-ui;
   color: var(--color-text);
   line-height: 1;
   display: inline-block;
+  text-align: start;
   z-index: 2;
   letter-spacing: 5px;
   filter: drop-shadow(0 1px 3px);
@@ -165,13 +167,16 @@ nav {
 .typingGroup {
   color: var(--color-text);
   text-align: end;
-  margin-right: 0.5rem;
+  margin-right: 3rem;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 0.8rem;
-  width: 100%;
-  margin-top: 12rem;
+  font-size: 0.8rem;  
+padding-top: 300px;
+position: absolute;
+right: 0;
+
+
  
 
 }
@@ -523,13 +528,16 @@ nav {
   }
 }
 
-@media (min-width: 850px) {
+
+
+@media (min-width: 850px) { 
   .containerTexts {
     display: flex;
   }
 
   .name {
-    font-size: 3rem;
+    font-size: 2.9rem;
+    margin-top: 3px;
   }
 
   .subName {
@@ -545,14 +553,20 @@ nav {
   .rectangle {
     width: 100%;
     margin: 0;
-     background-color: transparent;
-  transition: background-color 0.3s;
+    background-color: transparent;
+    transition: background-color 0.3s;
 
   }
 
   .activeRectangle {
+    opacity: 1;
   background-color: var(--color-crimson);
 }
+.hoverRectangle {
+  opacity: 1;
+  background-color: var(--color-crimson); 
+}
+
 
   .containerMenu {
     display: flex;
@@ -573,13 +587,13 @@ nav {
   }
 
   .imgLogo {
-    width: 200px;
-    height: 200px;
+    width: 182px;
+    height: 165px;
     z-index: 1;
   }
 
   .textBottom {
-    font-size: clamp(30px, 10vw, 200px);
+    font-size: clamp(30px, 10vw, 120px);
     z-index: 0;
 
   }
@@ -588,9 +602,10 @@ nav {
   align-items: center;
   justify-content: center;
   position: relative;
-  top: -30px;
+  top: -20px;
   text-align: center;
   height: fit-content;
+  max-width: 2000px;
 
 }
 
@@ -599,11 +614,9 @@ nav {
 
   .typingGroup {
 
-  top: -1.5rem;
-
-  margin-right: 2rem;
-
-  font-size: 1.2rem;
+ 
+    top:130px ;
+  font-size: 2.2rem;
 
 
 }

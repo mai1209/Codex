@@ -2,7 +2,7 @@ import style from "../styles/Team.module.css"
 
 function Team() {
     return (
-        <div className={style.container}>
+        <div className={style.container} id="our-team">
             <div className={style.line}>
                 <h2 className={style.title}>OUR TEAM</h2>
             <div className={style.containerTeam}>

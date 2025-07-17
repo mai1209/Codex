@@ -2,7 +2,7 @@ import style from "../styles/Done.module.css";
 
 function Done() {
   return (
-    <div className={style.container}>
+    <div className={style.container} id="portfolio">
       <div>
        <div className={style.containerTitle}>
          <h2 className={style.title}>

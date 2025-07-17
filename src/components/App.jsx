@@ -22,10 +22,11 @@ const services = [
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeMenuIndex, setActiveMenuIndex] = useState(null);
+  const [hoveredMenuIndex, setHoveredMenuIndex] = useState(null);
 
 
   useEffect(() => {
-    const instanceId = Math.random().toString(36).substring(2, 9); // Unique ID for this instance
+    const instanceId = Math.random().toString(36).substring(2, 9);
     console.log(`useEffect mounted (ID: ${instanceId})`);
     const interval = setInterval(() => {
       console.log(`Interval triggered (ID: ${instanceId}) at:`, new Date().toLocaleTimeString());
@@ -44,22 +45,42 @@ function App() {
           <p className={style.subName}>Corporation & Business</p>
         </div>
         <div className={style.containerTexts}>
-          {menuItems.map((item, index) => (
-            <div key={index} className={style.containerMenu}>
-              <div
-                className={`${style.rectangle} ${activeMenuIndex === index ? style.activeRectangle : ''}`}
-              ></div>
-              <a
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                onClick={() => setActiveMenuIndex(index)}
-              >
-                {item}
-              </a>
-            </div>
-          ))}
+
+          {menuItems.map((item, index) => {
+            const isActive = index === activeMenuIndex;
+            const isHovered = index === hoveredMenuIndex;
+
+            const showActive = isHovered ? false : isActive; 
+            const showHover = isHovered;
+
+            return (
+              <div key={index} className={style.containerMenu}>
+                <div
+                  className={`
+                  ${style.rectangle}
+                  ${showActive ? style.activeRectangle : ''}
+                  ${showHover ? style.hoverRectangle : ''}
+        `}
+                ></div>
+
+                <a
+                  href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  onClick={() => setActiveMenuIndex(index)}
+                  onMouseEnter={() => setHoveredMenuIndex(index)}
+                  onMouseLeave={() => setHoveredMenuIndex(null)}
+                >
+                  {item}
+                </a>
+              </div>
+            );
+          })}
+
 
         </div>
       </nav>
+        <div className={style.typingGroup}>
+          <p className={style.textLine}>Codicem Ad astra sequimur</p>
+        </div>
       <div className={style.containerLogo}>
         <div className={style.containerImg}>
           <img
@@ -77,9 +98,7 @@ function App() {
             {services[activeIndex]}
           </p>
         </div>
-        <div className={style.typingGroup}>
-          <p className={style.textLine}>Codicem Ad astra sequimur</p>
-        </div>
+      
       </div>
     </div>
   );

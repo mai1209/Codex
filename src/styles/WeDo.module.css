@@ -8,26 +8,21 @@
   --color-fondo-dark: #1C1C1C;
 
 }
-
 .container {
   min-height: fit-content;
   background-color: var(--color-fondo-dark);
+  height: 80vh;
 }
-
-
-
 .line {
   height: 1px;
   width: 90%;
   background-color: var(--color-crimson);
   margin-left: auto;
 }
-
 .containerAll {
   margin-top: 50px;
   display: flex;
 }
-
 .name {
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -37,13 +32,11 @@
   font-style: normal;
   line-height: 1.5rem;
 }
-
 .containerP {
   min-width: 100px;
   display: flex;
   justify-content: center;
 }
-
 .crimsonContainer {
   border: 2px solid var(--color-crimson);
   display: flex;
@@ -53,7 +46,7 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  padding: 20px 0;
+  padding: 30px 0 70px 0;
   height: fit-content;
   background-color: var(--color-crimson);
   color: var(--color-text);
@@ -62,19 +55,16 @@
   font-style: normal;
   font-size: 0.9rem;
   border-bottom-right-radius: 4rem;
-  border-top-left-radius: 4rem;
-} 
-
+  border-top-left-radius: 10rem;
+}
 .crimsonContainer p {
   max-width: 300px;
-  padding: 0 15px;
+  padding: 0 50px;
 }
-
-.name{
+.name {
   margin-top: 10px;
 }
-
-span{
+span {
   background-color: var(--color-fondo-dark);
   border-radius: 4rem;
 }
@@ -83,41 +73,34 @@ span{
   .title {
     display: none;
   }
+
   .line {
     height: 2px;
   }
 
   .containerP {
-    min-width: 200px;
+    min-width: 300px;
   }
-
   .name {
     font-size: 4.3rem;
-    
+    position: relative;
+    left: 60px;
     line-height: 3.5rem;
-
   }
-
   .crimsonContainer {
     justify-content: center;
     align-items: flex-end;
     text-align: end;
-    width: 60%;
-    height: 400px;
-
-    font-size: 1.6rem;
-
+    width: 80%;
+    font-size: 2.2rem;
   }
-
-  .crimsonContainer p {
+.crimsonContainer p {
     max-width: 90%;
-    padding: 0 15px;
   }
-
-  .containerAll {
+.containerAll {
     margin-top: 80px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 100px;
   }
 }
