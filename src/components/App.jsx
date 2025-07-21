@@ -23,7 +23,18 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeMenuIndex, setActiveMenuIndex] = useState(null);
   const [hoveredMenuIndex, setHoveredMenuIndex] = useState(null);
+  const [showLogo, setShowLogo] = useState(false);
+  const [showArrow, setShowArrow] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowLogo(window.scrollY > 100);
+      setShowArrow(window.scrollY > window.innerHeight); 
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const instanceId = Math.random().toString(36).substring(2, 9);
@@ -37,32 +48,47 @@ function App() {
       clearInterval(interval);
     };
   }, []);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', 
+    });
+  };
+
   return (
     <div className={style.container}>
+      <div className={`${style.containerArrowSubir} ${showArrow ? style.showArrow : ''}`}>
+        <img className={style.arrowSubirImg} src="./arrowup.png" alt="arrow-subir"  onClick={scrollToTop} />
+      </div>
       <nav>
         <div className={style.welcome}>
-          <p className={style.name}>Codex</p>
-          <p className={style.subName}>Corporation & Business</p>
+          {showLogo ? (
+            <img src="./logo.png" alt="Codex Logo" className={style.logo} />
+          ) : (
+                <div>
+   <p className={style.name}>Codex</p>
+        <p className={style.subName}>Corporation & Business</p>
+                </div>
+         
+          )}
+     
         </div>
         <div className={style.containerTexts}>
-
           {menuItems.map((item, index) => {
             const isActive = index === activeMenuIndex;
             const isHovered = index === hoveredMenuIndex;
-
-            const showActive = isHovered ? false : isActive; 
+            const showActive = isHovered ? false : isActive;
             const showHover = isHovered;
 
             return (
               <div key={index} className={style.containerMenu}>
                 <div
                   className={`
-                  ${style.rectangle}
-                  ${showActive ? style.activeRectangle : ''}
-                  ${showHover ? style.hoverRectangle : ''}
-        `}
+                    ${style.rectangle}
+                    ${showActive ? style.activeRectangle : ''}
+                    ${showHover ? style.hoverRectangle : ''}
+                  `}
                 ></div>
-
                 <a
                   href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
                   onClick={() => setActiveMenuIndex(index)}
@@ -74,13 +100,11 @@ function App() {
               </div>
             );
           })}
-
-
         </div>
       </nav>
-        <div className={style.typingGroup}>
-          <p className={style.textLine}>Codicem Ad astra sequimur</p>
-        </div>
+      <div className={style.typingGroup}>
+        <p className={style.textLine}>Codicem Ad astra sequimur</p>
+      </div>
       <div className={style.containerLogo}>
         <div className={style.containerImg}>
           <img
@@ -91,14 +115,13 @@ function App() {
         </div>
         <div className={style.containerTextBottom}>
           <p
-            key={activeIndex} // Ensures re-render for animation
+            key={activeIndex}
             className={style.textBottom}
-            data-text={services[activeIndex]} // Required for glitch effect
+            data-text={services[activeIndex]}
           >
             {services[activeIndex]}
           </p>
         </div>
-      
       </div>
     </div>
   );

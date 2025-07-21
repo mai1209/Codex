@@ -2,11 +2,11 @@ import style from "../styles/Contacto.module.css"
 
 function Contacto() {
   return (
-    <div className={style.container}   id='contact' >
+    <div className={style.container}>
 
 
       <div className={style.containerInformation}>
-        <div className={style.lineaBottom}></div>
+      
         <h2>CONTACTO</h2>
         <form action="">
           <div className={style.inputContainer}>
@@ -27,14 +27,18 @@ function Contacto() {
           </div>
 
 
-          <button className={style.btn}>Contactarme</button>
+       <div className={style.containerBtn}>
+           <button className={style.btn}>Contactarme</button>
+       </div>
 
 
         </form>
        
 
       </div>
-      <div className={style.containerInfo}> </div>
+      <div className={style.containerInfo}> 
+        <img className={style.logoFooter} src="./logoFooter.png" alt="" />
+      </div>
        <div className={style.redes}>
           <img src="./LinkedIn.png" alt="instagram" />
           <img src="Instagram.png" alt="linkedin" />
