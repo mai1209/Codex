@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Importamos la fuente (esto déjalo si ya lo tenés en un archivo global) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&display=swap');
 
 :root {
-    --color-fondo: #070a0c;
+    --color-fondo-dark: #121212;
     --color-crimson: #FF1493;
     --color-text: #fff;
-    --color-dark-text: #000;
-    --color-fondo-dark: #1C1C1C;
+    --color-fondo-instagram: #f0ead6;
 }
 
 .title {
   color: var(--color-text);
   font-size: 5rem;
-  padding: 3rem 2rem;
+  padding: 3rem 0 0 2rem;
   text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke: 1px var(--color-text);
@@ -19,222 +19,123 @@
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: normal;
-}
-
-.container {
-    min-height: fit-content;
-    height: 200vh;
-    overflow: hidden;
     background-color: var(--color-fondo-dark);
-    color: var(--color-text);
-
-}
-.containerWrapper{
-    borderr: 3px solid green; 
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-
-
  
+    z-index: 99999;
 }
 
-.containerAll{
-    borderr: 7px solid gray;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.servicesSection {
+  position: relative; /* nuevo */
+  overflow: hidden; /* por si el video se sale */
+  background-color: var(--color-fondo-dark);
+  color: var(--color-text);
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 2rem 0;
+  font-family: 'Poppins', sans-serif;
+  z-index: 1; /* para asegurar layering */
+}
+
+
+.servicesGrid {
+    display: grid;
+   
+    grid-template-columns: repeat(3, 1fr);
+   
+    gap: 100px 20px;    
     width: 100%;
-
+    max-width: 1200px;
 }
-.caja{
-    borderr: 2px solid red;
-    min-width: 420px;
-    height: 250px;
-    margin: 0 5px;
+
+
+.serviceItem {
+    position: relative; 
+    text-align: center;
+}
+
+
+.serviceTitle {
+    font-size: 2.2rem;
+    font-weight: 500;
+    border: 2px solid var(--color-crimson);
+    border-radius: 20px;
+    padding: 20px 10px;
+    cursor: pointer;
+    /* MODIFICACIÓN: Añadimos transiciones para el color y el radio del borde */
+    transition: background-color 0.4s ease, color 0.4s ease, border-radius 0.4s ease;
     position: relative;
+    z-index: 2;
+    background-color: var(--color-fondo-dark); 
+    box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.535);
+}
+.serviceDescription {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    width: 90%;
+    position: absolute; 
+    bottom: 100%; /* Por defecto, pegada encima del serviceTitle (para las primeras descripciones) */
+    left: 50%;
+    transform: translate(-50%, 0); /* Sin desplazamiento inicial */
+    color: var(--color-fondo-dark);
+    padding: 30px 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: var(--color-fondo-instagram);
+    height: 100px; /* Altura inicial */
     
-}
-.containerItemRectangulo p{
-    font-size: 2.5rem;
-      font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  border-radius: 20px;
-  padding: 20px 5px;
-  border: 2px solid var(--color-crimson);   
-  text-align: center;
-}
-
-.containerTitleBottom p{
-    font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1.3rem;
-}
-
-.containerItemCuadrado{
-    borderr: 2px solid purple;
-     margin-top: 7px;   
-     height: 100px;
-     position: absolute;
-     top: -114px;
-}
-
-.containerItemCuadradoDosNoVisible{
-    display: none;
+    /* Estado inicial */
+    opacity: 0; /* Oculta por defecto */
+    transition: opacity 0.3s ease; /* Transición suave para opacidad */
     
-
+    z-index: 1;
 }
 
-.containerItemCuadrado p{
-      font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1.3rem;
-
+.serviceItem:hover .serviceDescription {
+    opacity: 1; /* Se hace visible */
+    animation: stretchHeightAndReturnUp 0.6s ease-in-out; /* Animación por defecto: crece hacia arriba */
 }
 
-.containerItemCuadradoTres {
-  rborder:  3px solid purple;
-  height: 100px;
-  margin-top: 7px;
-  position: absolute;
-  top: -160px;
-
-}
-
-.containerItemCuadradoDos{
-    borderr: 1px solid purple;
-    height: 100px;
-   margin-top: 7px;
-    background-colorr: red;
-}
-.containerItemCuadradoTwo{
-    borderr: 1px solid purple;
-    height: 100px;
-    margin-top: 7px;
-    background-colorr: rgb(0, 26, 255);
-}
-
-.caja5{
-    background-colorr: aqua;
-}
-.containerItemCuadradoDos p{
-     font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1.3rem;
-}
-
-.containerItemCuadradoTwo p{
-     font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1.3rem;
-}
-
-.containerItemCuadradoTres{
-          borderr: 2px solid purple;
-     margin-bottom: 7px;  
-     position: absolute;
-     top: -113px;
-     
-}
-
-.containerItemCuadradoTres p{
-     font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1.3rem;
+@keyframes stretchHeightAndReturnUp {
+    0% {
+        height: 100px; /* Altura inicial */
+    }
+    50% {
+        height: 140px; 
+    }
+    100% {
+        height: 100px;
+    }
 }
 
 
-.caja3{
-    borderr: 2px solid red;
-    min-width: 420px;
-    height: 250px;
-    margin: 0 5px;
-    position: relative;
-     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-colorr: yellow;
-
+.serviceItem:nth-child(n+4) .serviceDescription {
+    bottom: auto; 
+    top: 100%; 
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px;
 }
 
-.caja7{
-    borderr: 1px solid red;
-     borderr: 2px solid red;
-    min-width: 420px;
-    height: 250px;
-    margin: 0 5px;
-    position: relative;
-     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.serviceItem:nth-child(n+4):hover .serviceDescription {
+    animation: stretchHeightAndReturnDown 0.6s ease-in-out; 
 }
 
-
-.caja1{
-  
+@keyframes stretchHeightAndReturnDown {
+    0% {
+        height: 100px; 
+    }
+    50% {
+        height: 140px; 
+    }
+    100% {
+        height: 100px; 
+    }
 }
 
-.containerItemCirculo{
-    display: none;
-}
-
-.containerItemCirculoVisible p{
-    font-size: 2.5rem;
-      font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  border-radius: 20px;
-  padding: 20px 5px;
-  border: 2px solid var(--color-crimson);   
-  text-align: center;
-  margin-top: 100px;
-}
-
-
-.containerItemCirculoDosVisible{
- font-size: 2.5rem;
-      font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  border-radius: 20px;
-  padding: 20px 5px;
-  border: 2px solid var(--color-crimson);   
-  text-align: center;
-  margin-top: 100px;
-}
-
-.containerItemCirculoCuatroVisible{
-
-     font-size: 2.5rem;
-      font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  border-radius: 20px;
-  padding: 20px 5px;
-  border: 2px solid var(--color-crimson);   
-  text-align: center;
-  margin-top: 100px;
-
-}
-
-.containerItemCirculoDos{
-    display: none;
-}
-
-.caja9{
-display: none;
-}
-
-.boxbottom{
-
+.serviceItem:hover .serviceTitle {
+    background-color: var(--color-crimson);
 }

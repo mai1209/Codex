@@ -15,6 +15,7 @@
     color: var(--color-text);
     position: relative;
     top: -350px;
+    z-index: 99999;
 }
 
 .title {
@@ -52,8 +53,8 @@
 }
 
 .line {
-    border-top: 6px solid var(--color-text);
-    border-right: 6px solid var(--color-text);
+    border-top: 10px solid var(--color-text);
+    border-right: 10px solid var(--color-text);
     border-top-right-radius: 100px;
     margin-right: 40px;
     margin-top: 50px;
@@ -62,7 +63,8 @@
 
 @media (min-width: 850px) {
     .title{
-        font-size: 3.5rem;
+        font-size: 4rem;
+            margin: 100px 100px 0 0;
     }
 
     .containerInfo {
@@ -71,5 +73,20 @@
 
 
 
+}
+
+.line {
+    border-top: 25px solid var(--color-text);
+    border-right: 25px solid var(--color-text);
+    border-top-right-radius: 150px;
+    margin-right: 200px;
+    margin-top: 50px;
+}
+.line {
+    border-top: 30px solid var(--color-text);
+    border-right: 30px solid var(--color-text);
+    border-top-right-radius: 100px;
+    margin-right: 40px;
+    margin-top: 50px;
 }
 }

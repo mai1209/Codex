@@ -6,17 +6,12 @@
     --color-dark-text: #000;
     --color-fondo-dark: #1C1C1C;
 }
-
 .container {
     min-height: fit-content;
     background-color: var(--color-fondo-dark);
     position: relative;
     top: -100px;
-
 }
-
-
-
 .title {
     font-size: 1.5rem;
     color: var(--color-text);
@@ -27,10 +22,9 @@
     font-style: normal;
     text-align: end ;
    width: fit-content;
-}
+   line-height: 30px;
 
-/* La clase sombraa no la tocamos, pero ten en cuenta que su posicionamiento
-   también podría necesitar ajustes si estaba anclada al cohete. */
+}
 .sombraa {
     width: 100%;
     height: auto;
@@ -49,13 +43,12 @@
     filter: drop-shadow(6px 0 #FF1493) drop-shadow(-6px 0 #FF1493) drop-shadow(0 6px #FF1493) drop-shadow(0 -6px #FF1493);
     z-index: 9;
     position: relative;
-    top: -125px;
-    left: -20px;
+    top: 5px;
+    left: -100px;
     overflow: hidden;
     cursor: pointer;
+
 }
-
-
 .containerAll {
     position: relative;
     top: -300px;
@@ -65,7 +58,6 @@
     flex-direction: column;
     align-items: flex-end;
 }
-
 .box {
     display: flex;
     justify-content: flex-end;
@@ -79,62 +71,107 @@
     margin-right: 10px;
     z-index: 999999;
     text-shadow: 2px 2px 4px #333333;
-
+      font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
-
 .box img {
     width: 15px;
     height: 15px;
 }
 
+ .textBottom{
+        padding-top: 10px;
+        padding-bottom: 1rem;
+        font-size: 0.5rem;
+        text-align: end;
+        color: var(--color-text);
+        margin-right: 5px;
+        margin-left: auto;
+        max-width: 230px;
+    }
+    span{
+    color: var(--color-crimson);
+    background-color: var(--color-fondo-dark);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;   
+    }
 
+    .witeBorderBox{
+        height: 5px;
 
+        border-top: 1px solid var(--color-text);
+        border-bottom:1px solid var(--color-text) ;
+        border-left:1px solid var(--color-text) ;
+        width: 100%;
+        margin-left: auto;
+    }
 @media (min-width: 850px) {
     .title {
-        font-size: 3rem;
-       
-    }
+        font-size: 5rem;
+        padding-left: 80px;
+        padding-bottom: 50px;
+        padding-top: 30px;
+           line-height: 65px ;
 
-    /* 1. Definimos el contenedor principal como flex */
+     }
     .contentWrapper {
         display: flex;
-        align-items: center; /* Centra el cohete y el texto verticalmente */
-        justify-content: space-between; /* Centra ambos elementos en la pantalla */
+        align-items: center; 
+        justify-content: space-between; 
         position: relative;
         top: -200px;
-
     }
-
-    /* 2. Ajustamos el cohete */
     .coete {
-        width: 60%; /* Un poco menos de espacio para que se vea bien */
-        /* Quitamos el posicionamiento que daba problemas */
-        position: static;
+        width: 60%; 
+        position: relative;
+        top: 200px;
+        left: -20px;
+        z-index: 1;
     }
 
-    /* 3. Ajustamos el contenedor de los textos */
     .containerAll {
-        /* Quitamos el posicionamiento que daba problemas */
         position: static;
-        width: auto; /* Ancho automático basado en su contenido */
-        /* Alineamos los items de la lista a la izquierda */
+        width: 1000px;
         align-items: flex-start;
-        gap: 15px; /* Un poco más de espacio entre líneas */
-        margin-right: 150px;
+        gap: 15px; 
+        margin-right: 30px;
+    
     }
     
-    /* 4. Ajustamos cada línea de texto */
     .box {
-        /* Para que el ícono y el texto se alineen a la izquierda */
         flex-direction: row;
         justify-content: flex-start;
         text-align: start;
-        font-size: 2rem; /* Tamaño de fuente ajustado */
-        margin-right: 0; /* Ya no necesitamos este margen */
+        font-size: 1rem; 
+        margin-right: 0; 
     }
 
     .box img {
-        width: 25px; /* Íconos un poco más grandes */
+        width: 25px; 
         height: 25px;
     }
+
+    .textBottom{
+        padding-top: 200px;
+        padding-bottom: 2rem;
+        font-size: 1.5rem;
+        text-align: end;
+        color: var(--color-text);
+        margin-right: 5px;
+        max-width: 100vw;
+        margin-left: auto;
+    }
+
+    .witeBorderBox{
+        height: 10px;
+
+        border-top: 1px solid var(--color-text);
+        border-bottom:1px solid var(--color-text) ;
+        border-left:1px solid var(--color-text) ;
+        width: 87%;
+        margin-left: auto;
+    }
+  
 }
