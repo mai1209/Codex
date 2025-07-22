@@ -38,6 +38,7 @@ function Contacto() {
             <button className={style.btn}>Contactarme</button>
           </div>
         </form>
+        
       </div>
       <div className={style.containerInfo}>
         <img

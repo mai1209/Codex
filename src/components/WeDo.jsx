@@ -42,15 +42,13 @@ function WeDo() {
               <p className={style.p}>boosts by improving functionality and search engine rankings, ensuring your site performs better and reaches more users effectively.</p>
               <img className={style.medidor} src="" alt="medidor" />
             </div>
-
-            <div className={style.cardInfo3}>
+          <div className={style.cardInfo3}>
               <p className={style.cardNumber}>DO IT</p>
               <p className={style.p}>Make your website mobile-friendly now for better SEO!</p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   )
 }
