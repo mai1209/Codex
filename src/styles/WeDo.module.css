@@ -44,7 +44,7 @@
   border-top-left-radius: 100px;
   border-bottom-right-radius: 0;
   min-height: fit-content;
-  height: 180vh;
+
 
 
 
@@ -107,13 +107,13 @@ span {
   border-bottom-left-radius: 50px;
   border-top-left-radius: 50px;
   border-bottom-right-radius: 0px;
-  margin-top: 100px;
   margin-left: 30px;
   padding-bottom: 10px;
   box-shadow: 4px 4px 40px #0000009f;
   display: flex;
   flex-direction: column;
   margin-top: 150px ;
+
 }
 
 .cardTitle {

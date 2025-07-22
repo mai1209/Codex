@@ -3,7 +3,7 @@ import style from '../styles/WeDo.module.css'
 function WeDo() {
   return (
     <div className={style.container} id='qué-hacemos'>
-  {/* Video de fondo */}
+      {/* Video de fondo */}
       <video
         autoPlay
         loop
@@ -32,22 +32,22 @@ function WeDo() {
         </div>
         <div className={style.card}>
           <p className={style.cardTitle}>A mobile-friendly website is crucial:</p>
-       <div className={style.containerTextAll}>
-           <div className={style.cardInfo1}>
-            <p className={style.cardNumber}>70%</p>
-            <p className={style.p}>De las visitas llegan a traves del  navegador mobil</p>
+          <div className={style.containerTextAll}>
+            <div className={style.cardInfo1}>
+              <p className={style.cardNumber}>70%</p>
+              <p className={style.p}>De las visitas llegan a traves del  navegador mobil</p>
+            </div>
+            <div className={style.cardInfo2}>
+              <p className={style.cardNumber}>SEO</p>
+              <p className={style.p}>boosts by improving functionality and search engine rankings, ensuring your site performs better and reaches more users effectively.</p>
+              <img className={style.medidor} src="" alt="medidor" />
+            </div>
+
+            <div className={style.cardInfo3}>
+              <p className={style.cardNumber}>DO IT</p>
+              <p className={style.p}>Make your website mobile-friendly now for better SEO!</p>
+            </div>
           </div>
-          <div className={style.cardInfo2}>
-            <p  className={style.cardNumber}>SEO</p>
-            <p className={style.p}>boosts by improving functionality and search engine rankings, ensuring your site performs better and reaches more users effectively.</p>
-            <img className={style.medidor} src="" alt="medidor" />
-          </div>
-    
-          <div className={style.cardInfo3}>
-            <p  className={style.cardNumber}>DO IT</p>
-            <p className={style.p}>Make your website mobile-friendly now for better SEO!</p>
-          </div>
-       </div>
         </div>
       </div>
 
