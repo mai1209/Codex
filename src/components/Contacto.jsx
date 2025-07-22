@@ -1,12 +1,21 @@
-import style from "../styles/Contacto.module.css"
+import style from "../styles/Contacto.module.css";
 
 function Contacto() {
   return (
-    <div className={style.container}>
-
+    <div className={style.container} id="contacto">
+      {/* Video de fondo */}  
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className={style.videoBackground}
+      >
+        <source src="/Codex/video.mp4" type="video/mp4" />
+        <p>El video no se carga. Revisa la consola para errores.</p>
+      </video>
 
       <div className={style.containerInformation}>
-      
         <h2>CONTACTO</h2>
         <form action="">
           <div className={style.inputContainer}>
@@ -25,32 +34,30 @@ function Contacto() {
             <span className={style.placeholderFijo}>rubro:</span>
             <input type="text" />
           </div>
-
-
-       <div className={style.containerBtn}>
-           <button className={style.btn}>Contactarme</button>
-       </div>
-
-
+          <div className={style.containerBtn}>
+            <button className={style.btn}>Contactarme</button>
+          </div>
         </form>
-       
-
       </div>
-      <div className={style.containerInfo}> 
-        <img className={style.logoFooter} src="./logoFooter.png" alt="" />
+      <div className={style.containerInfo}>
+        <img
+          className={style.logoFooter}
+          src="./logoFooter.png"
+          alt="Logo de la empresa Codex"
+        />
       </div>
-       <div className={style.redes}>
-          <img src="./LinkedIn.png" alt="instagram" />
-          <img src="Instagram.png" alt="linkedin" />
-          <img src="WhatsApp.png" alt="whatsapp" />
-        </div>
+      <div className={style.redes}>
+        <img src="./LinkedIn.png" alt="LinkedIn" />
+        <img src="./Instagram.png" alt="Instagram" />
+        <img src="./WhatsApp.png" alt="WhatsApp" />
+      </div>
       <footer>
-        <p>Politica de privacidad</p>
-        <p>aviso legal</p>
-        <p>politica de cookies</p>
+        <p>Política de privacidad</p>
+        <p>Aviso legal</p>
+        <p>Política de cookies</p>
       </footer>
     </div>
-  )
+  );
 }
 
-export default Contacto
+export default Contacto;  

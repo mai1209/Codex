@@ -8,7 +8,7 @@
 }
 .container {
     min-height: fit-content;
-    background-color: var(--color-fondo-dark);
+z-index: -1;
     position: relative;
     top: -100px;
 }
@@ -23,6 +23,7 @@
     text-align: end ;
    width: fit-content;
    line-height: 30px;
+   z-index: -1;
 
 }
 .sombraa {
@@ -41,7 +42,7 @@
     height: auto;
     display: block;
     filter: drop-shadow(6px 0 #FF1493) drop-shadow(-6px 0 #FF1493) drop-shadow(0 6px #FF1493) drop-shadow(0 -6px #FF1493);
-    z-index: 9;
+    z-index: -1;
     position: relative;
     top: 5px;
     left: -100px;
@@ -57,6 +58,7 @@
     gap: 5px;
     flex-direction: column;
     align-items: flex-end;
+    z-index: -1;
 }
 .box {
     display: flex;
@@ -89,10 +91,10 @@
         margin-right: 5px;
         margin-left: auto;
         max-width: 230px;
+        z-index: -1;
     }
     span{
     color: var(--color-crimson);
-    background-color: var(--color-fondo-dark);
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;   
@@ -107,6 +109,19 @@
         width: 100%;
         margin-left: auto;
     }
+
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Coloca el video detrás de todo el contenido */
+  border: none;
+}
+
 @media (min-width: 850px) {
     .title {
         font-size: 5rem;
@@ -128,7 +143,7 @@
         position: relative;
         top: 200px;
         left: -20px;
-        z-index: 1;
+        z-index: -1;
     }
 
     .containerAll {
@@ -162,6 +177,9 @@
         margin-right: 5px;
         max-width: 100vw;
         margin-left: auto;
+                z-index: -1;
+                position: relative;
+
     }
 
     .witeBorderBox{

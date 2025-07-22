@@ -2,7 +2,18 @@ import style from "../styles/Team.module.css"
 
 function Team() {
     return (
-        <div className={style.container} id="our-team">
+        <div className={style.container} id="nuestro-equipo">
+              {/* Video de fondo */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className={style.videoBackground}
+      >
+        <source src="/Codex/video.mp4" type="video/mp4" />
+        <p>El video no se carga. Revisa la consola para errores.</p>
+      </video>
             <div className={style.line}>
                 <h2 className={style.title}>OUR TEAM</h2>
             <div className={style.containerTeam}>

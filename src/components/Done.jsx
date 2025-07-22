@@ -2,7 +2,19 @@ import style from "../styles/Done.module.css";
 
 function Done() {
   return (
-    <div className={style.container} id="portfolio">
+    <div className={style.container} id="portafolio">
+                   
+   {/* Video de fondo */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className={style.videoBackground}
+      >
+        <source src="/Codex/video.mp4" type="video/mp4" />
+        <p>El video no se carga. Revisa la consola para errores.</p>
+      </video>
       <div className={style.textBottom}>
         <span> Hay ideas que solo necesitan el equipo correcto para despegar.</span>
         ¿Y si justo nos cruzamos en el momento ideal?

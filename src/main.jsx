@@ -17,7 +17,7 @@ function RootApp() {
       setIsMobile(window.innerWidth <= 1000 )
     }
 
-    handleResize() // Inicial
+    handleResize() 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
@@ -27,9 +27,9 @@ function RootApp() {
       <App />
       <WeDo />
       {isMobile ? <Diagrama /> : <DiagramaM />}
-      <Done />
-      <Team />
-      <Contacto />
+    <Done />
+    <Team/>
+    <Contacto/>
     </StrictMode>
   )
 }

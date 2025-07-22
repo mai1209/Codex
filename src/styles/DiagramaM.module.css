@@ -8,53 +8,59 @@
     --color-fondo-instagram: #f0ead6;
 }
 
+.container {
+    position: relative;
+   
+    min-height: 90vh;
+  z-index: -1;
+    overflow: hidden;
+   
+}
+
 .title {
-  color: var(--color-text);
-  font-size: 5rem;
-  padding: 3rem 0 0 2rem;
-  text-transform: uppercase;
+    color: var(--color-text);
+    font-size: 5rem;
+    padding: 3rem 0 0 2rem;
+    text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke: 1px var(--color-text);
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: normal;
-    background-color: var(--color-fondo-dark);
- 
-    z-index: 99999;
+    z-index: -1;
+    /* Asegura que esté sobre el video */
+    position: relative;
 }
 
 .servicesSection {
-  position: relative; /* nuevo */
-  overflow: hidden; /* por si el video se sale */
-  background-color: var(--color-fondo-dark);
-  color: var(--color-text);
-  min-height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 0 2rem 0;
-  font-family: 'Poppins', sans-serif;
-  z-index: 1; /* para asegurar layering */
+    position: relative;
+    /* nuevo */
+    overflow: hidden;
+    /* por si el video se sale */
+    color: var(--color-text);
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 2rem 0;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1;
+    /* para asegurar layering */
 }
-
 
 .servicesGrid {
     display: grid;
-   
     grid-template-columns: repeat(3, 1fr);
-   
-    gap: 100px 20px;    
+    gap: 100px 20px;
     width: 100%;
     max-width: 1200px;
 }
 
-
 .serviceItem {
-    position: relative; 
+    position: relative;
     text-align: center;
 }
-
 
 .serviceTitle {
     font-size: 2.2rem;
@@ -63,79 +69,100 @@
     border-radius: 20px;
     padding: 20px 10px;
     cursor: pointer;
-    /* MODIFICACIÓN: Añadimos transiciones para el color y el radio del borde */
     transition: background-color 0.4s ease, color 0.4s ease, border-radius 0.4s ease;
     position: relative;
     z-index: 2;
-    background-color: var(--color-fondo-dark); 
+    background-color: #1c1c1c6c;
+    backdrop-filter: blur(4px);
     box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.535);
 }
+
 .serviceDescription {
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.5;
     width: 90%;
-    position: absolute; 
-    bottom: 100%; /* Por defecto, pegada encima del serviceTitle (para las primeras descripciones) */
+    position: absolute;
+    bottom: 100%;
+    /* Por defecto, pegada encima del serviceTitle (para las primeras descripciones) */
     left: 50%;
-    transform: translate(-50%, 0); /* Sin desplazamiento inicial */
+    transform: translate(-50%, 0);
+    /* Sin desplazamiento inicial */
     color: var(--color-fondo-dark);
     padding: 30px 5px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: var(--color-fondo-instagram);
-    height: 100px; /* Altura inicial */
-    
-    /* Estado inicial */
-    opacity: 0; /* Oculta por defecto */
-    transition: opacity 0.3s ease; /* Transición suave para opacidad */
-    
+    height: 100px;
+    /* Altura inicial */
+    opacity: 0;
+    /* Oculta por defecto */
+    transition: opacity 0.3s ease;
+    /* Transición suave para opacidad */
     z-index: 1;
 }
 
 .serviceItem:hover .serviceDescription {
-    opacity: 1; /* Se hace visible */
-    animation: stretchHeightAndReturnUp 0.6s ease-in-out; /* Animación por defecto: crece hacia arriba */
+    opacity: 1;
+    /* Se hace visible */
+    animation: stretchHeightAndReturnUp 0.6s ease-in-out;
+    /* Animación por defecto: crece hacia arriba */
 }
 
 @keyframes stretchHeightAndReturnUp {
     0% {
-        height: 100px; /* Altura inicial */
+        height: 100px;
+        /* Altura inicial */
     }
+
     50% {
-        height: 140px; 
+        height: 140px;
     }
+
     100% {
         height: 100px;
     }
 }
 
-
 .serviceItem:nth-child(n+4) .serviceDescription {
-    bottom: auto; 
-    top: 100%; 
-    border-top-left-radius: 0; 
+    bottom: auto;
+    top: 100%;
+    border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-bottom-left-radius: 20px; 
+    border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
 .serviceItem:nth-child(n+4):hover .serviceDescription {
-    animation: stretchHeightAndReturnDown 0.6s ease-in-out; 
+    animation: stretchHeightAndReturnDown 0.6s ease-in-out;
 }
 
 @keyframes stretchHeightAndReturnDown {
     0% {
-        height: 100px; 
+        height: 100px;
     }
+
     50% {
-        height: 140px; 
+        height: 140px;
     }
+
     100% {
-        height: 100px; 
+        height: 100px;
     }
 }
 
 .serviceItem:hover .serviceTitle {
     background-color: var(--color-crimson);
+}
+
+
+.videoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    border: none;
 }
