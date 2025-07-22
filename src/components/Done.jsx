@@ -3,8 +3,6 @@ import style from "../styles/Done.module.css";
 function Done() {
   return (
     <div className={style.container} id="portafolio">
-                   
-   {/* Video de fondo */}
       <video
         autoPlay
         loop
@@ -26,12 +24,9 @@ function Done() {
             What We've <br /> Done.
           </h2>
         </div>
-
-        {/* 👇 NUEVO CONTENEDOR WRAPPER 👇 */}
         <div className={style.contentWrapper}>
           <img className={style.coete} src="./coeteFuego.png" alt="coete" id="coete" />
-
-          <div className={style.containerAll}>
+           <div className={style.containerAll}>
             <div className={style.box}>
               <img src="./select.png" alt="select" />
               <p>Growth expense manager app</p>

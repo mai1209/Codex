@@ -58,7 +58,6 @@ function App() {
 
   return (
     <div className={style.container}>
-      {/* Video de fondo para toda la página */}
       <video
         autoPlay
         loop
