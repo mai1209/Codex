@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import style from '../styles/App.module.css';
 
 const menuItems = [
-  'What we do',
-  'Check our services',
-  'Portfolio',
-  'Our Team',
-  'Contact',
+  'Qué hacemos',
+  'Consulta nuestros servicios',
+  'Portafolio',
+  'Nuestro equipo',
+  'Contacto',
 ];
 
 const services = [
@@ -38,16 +38,17 @@ function App() {
 
   useEffect(() => {
     const instanceId = Math.random().toString(36).substring(2, 9);
-    console.log(`useEffect mounted (ID: ${instanceId})`);
+    console.log(`useEffect montado (ID: ${instanceId})`);
     const interval = setInterval(() => {
-      console.log(`Interval triggered (ID: ${instanceId}) at:`, new Date().toLocaleTimeString());
+      console.log(`Intervalo activado (ID: ${instanceId}) a las:`, new Date().toLocaleTimeString());
       setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
     }, 1000);
     return () => {
-      console.log(`Cleaning up interval (ID: ${instanceId})`);
+      console.log(`Limpiando intervalo (ID: ${instanceId})`);
       clearInterval(interval);
     };
   }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -57,21 +58,31 @@ function App() {
 
   return (
     <div className={style.container}>
+      {/* Video de fondo para toda la página */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className={style.videoBackground}
+      >
+        <source src="/Codex/video.mp4" type="video/mp4" />
+        <p>El video no se carga. Revisa la consola para errores.</p>
+      </video>
+
       <div className={`${style.containerArrowSubir} ${showArrow ? style.showArrow : ''}`}>
-        <img className={style.arrowSubirImg} src="./arrowup.png" alt="arrow-subir"  onClick={scrollToTop} />
+        <img className={style.arrowSubirImg} src="./arrowup.png" alt="flecha-subir" onClick={scrollToTop} />
       </div>
       <nav>
         <div className={style.welcome}>
           {showLogo ? (
-            <img src="./logo.png" alt="Codex Logo" className={style.logo} />
+            <img src="./logo.png" alt="Logo Codex" className={style.logo} />
           ) : (
-                <div>
-   <p className={style.name}>Codex</p>
-        <p className={style.subName}>Corporation & Business</p>
-                </div>
-         
+            <div>
+              <p className={style.name}>Codex</p>
+              <p className={style.subName}>Corporación & Negocios</p>
+            </div>
           )}
-     
         </div>
         <div className={style.containerTexts}>
           {menuItems.map((item, index) => {
@@ -102,15 +113,13 @@ function App() {
           })}
         </div>
       </nav>
-      <div className={style.typingGroup}>
-        <p className={style.textLine}>Codicem Ad astra sequimur</p>
-      </div>
+    
       <div className={style.containerLogo}>
         <div className={style.containerImg}>
           <img
             className={style.imgLogo}
             src="./logo.png"
-            alt="Codex Corporation Logo"
+            alt="Logo Corporación Codex"
           />
         </div>
         <div className={style.containerTextBottom}>

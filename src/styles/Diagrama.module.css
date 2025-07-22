@@ -1,4 +1,4 @@
-/* Importamos la fuente (esto déjalo si ya lo tenés en un archivo global) */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&display=swap');
 
 :root {
@@ -7,18 +7,20 @@
     --color-text: #fff;
     --color-fondo-instagram: #f0ead6;
 }
-
-.container{
-  background-color: var(--color-fondo-dark);
-  min-height: fit-content;
-  height: 175vh;
-
+.servicesSection{
+  height: 1200px;
 
 }
+.container {
+    min-height: fit-content;
+    height: 175vh;
+    position: relative; 
+    z-index: -1;
+}
 
-.title{
-  color: var(--color-text);
-   text-transform: uppercase;
+.title {
+    color: var(--color-text);
+    text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke: 1px var(--color-text);
     text-transform: uppercase;
@@ -27,50 +29,55 @@
     font-style: normal;
     padding: 40px 0 20px 30px;
     font-size: 2rem;
+    z-index: -1; 
+    text-align: center;
+}
+
+.servicesGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.serviceDescription {
+    background-color: var(--color-fondo-instagram);
+    color: var(--color-fondo-dark);
+    line-height: 1rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px 5px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 30px;
+}
+
+.serviceTitle {
+    background-color: var(--color-crimson);
+    color: var(--color-text);
+    font-size: 1.5rem;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid var(--color-crimson);
+    position: relative;
+    z-index: 2;
+    box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.535);
+    margin: 0 15px;
 }
 
 
-.servicesGrid{
-
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  height: 800px;
-  
+.videoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Cubre toda la altura de .container (175vh) */
+    object-fit: cover;
+    z-index: -1; /* Coloca el video detrás de todo el contenido */
+    border: none;
 }
-
-.serviceDescription{
-  background-color: var(--color-fondo-instagram);
-  color: var(--color-fondo-dark);
-  line-height: 1rem;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  padding: 20px 5px;
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 30px;
-    
-}
-
-.serviceTitle{
-  background-color: var(--color-crimson);
-  color: var(--color-text);
-  font-size: 1.5rem;
-  padding: 10px 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  border: 2px solid var(--color-crimson);
-  box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.535);
-  margin: 0 15px;
-
-}
-
-
-
-
-
-

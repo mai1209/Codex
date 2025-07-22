@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mai1209.github.io/Codex",
+  "homepage":"https://www.letsbuilditcodex.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
