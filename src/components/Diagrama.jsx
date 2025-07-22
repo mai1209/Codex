@@ -40,7 +40,7 @@ function Diagrama() {
                 className={style.videoBackground}
                 onError={(e) => console.error('Error cargando el video:', e)}
             >
-                <source src="/Codex/video.mp4" type="video/mp4" />
+                <source src="video.mp4" type="video/mp4" />
                 <p>El video no se carga. Revisa la consola para errores.</p>
             </video>
             <h2 className={style.title}>Services</h2>

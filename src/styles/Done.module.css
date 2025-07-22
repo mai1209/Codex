@@ -2,13 +2,13 @@
 :root {
     --color-fondo: #070a0c;
     --color-crimson: #FF1493;
-    --color-text: #fff;
+    --color-text: #fff; 
     --color-dark-text: #000;
     --color-fondo-dark: #1C1C1C;
 }
 .container {
     min-height: fit-content;
-z-index: -1;
+    z-index: -1;
     position: relative;
     top: -100px;
 }

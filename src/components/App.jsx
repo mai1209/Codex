@@ -66,7 +66,7 @@ function App() {
         playsInline
         className={style.videoBackground}
       >
-        <source src="/Codex/video.mp4" type="video/mp4" />
+        <source src="video.mp4" type="video/mp4" />
         <p>El video no se carga. Revisa la consola para errores.</p>
       </video>
 
