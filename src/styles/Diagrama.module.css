@@ -13,7 +13,6 @@
 }
 .container {
     min-height: fit-content;
-    height: 175vh;
     position: relative; 
     z-index: -1;
 }
