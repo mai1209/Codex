@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: 'Menda';
-  src: url('/Codex/public/Menda\ Font/Menda Medium.otf') format('truetype');
+  src: url('/Menda\ Font/Menda Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
@@ -34,7 +34,7 @@ nav {
 .name {
   font-size: 1.5rem;
   color: var(--color-crimson);
-  font-family: 'Menda', sans-serif;
+  font-family: 'Menda';
   text-transform: uppercase;
   line-height: 1;
   text-align: start;
