@@ -7,9 +7,11 @@
 }
 .container {
     min-height: fit-content;
-    z-index: -1;
+    background-color: var(--color-fondo-dark);
     position: relative;
-    top: -100px;
+    top: -1px;
+    z-index: -1;
+    padding-top: 50px;
 }
 .title {
     font-size: 1.5rem;

@@ -1,8 +1,7 @@
-import React, { useState } from 'react'; // Importa useState para la gestión de estado
+import { useState } from 'react'; 
 import style from '../styles/Contacto.module.css';
 
 function Contacto() {
-  // Define el estado para cada campo del formulario
   const [formData, setFormData] = useState({
     nombreApellido: '',
     email: '',
@@ -10,7 +9,7 @@ function Contacto() {
     rubro: '',
   });
 
-  // Maneja los cambios en los inputs y actualiza el estado
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -19,14 +18,10 @@ function Contacto() {
     }));
   };
 
-  // Maneja el envío del formulario
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Evita el comportamiento por defecto del formulario (recargar la página)
-    console.log('Datos del formulario enviados:', formData);
-    // Aquí es donde típicamente enviarías los datos a un servidor o API
-    // Por ejemplo: axios.post('/api/contact', formData);
 
-    // Opcional: Limpiar el formulario después de enviarlo
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    console.log('Datos del formulario enviados:', formData);
     setFormData({
       nombreApellido: '',
       email: '',
@@ -38,17 +33,8 @@ function Contacto() {
 
   return (
     <div className={style.container} id="contacto">
-      {/* Video de fondo */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className={style.videoBackground}
-      >
-        <source src="video.mp4" type="video/mp4" />
-        <p>El video no se carga. Revisa la consola para errores.</p>
-      </video>
+  
+    
 
       <div className={style.containerInformation}>
         <h2>CONTACTO</h2>
