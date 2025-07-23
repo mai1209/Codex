@@ -38,6 +38,8 @@
   border-top-left-radius: 100px;
   border-bottom-right-radius: 0;
   min-height: fit-content;
+  height: 180vh;
+  margin-left: 40px;
 }
 .containerTitleDescription {
   display: flex;
@@ -87,7 +89,10 @@ span {
   box-shadow: 4px 4px 40px #0000009f;
   display: flex;
   flex-direction: column;
-  margin-top: 160px ;
+  margin-top: 220px ;
+
+  margin-left: 50px;
+ 
 }
 .cardTitle {
   font-family: "Poppins", sans-serif;

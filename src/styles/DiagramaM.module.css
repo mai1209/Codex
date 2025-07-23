@@ -1,151 +1,136 @@
-/* Importamos la fuente (esto déjalo si ya lo tenés en un archivo global) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&display=swap');
 
 :root {
-    --color-fondo-dark: #121212;
-    --color-crimson: #FF1493;
-    --color-text: #fff;
-    --color-fondo-instagram: #f0ead6;
+  --color-fondo-dark: #121212;
+  --color-crimson: #FF1493;
+  --color-text: #fff;
+  --color-fondo-instagram: #f0ead6;
 }
 
 .container {
-    position: relative;
-     min-height: 90vh;
-    overflow: hidden;
+  position: relative;
+  min-height: 90vh;
+  overflow: hidden;
+  z-index: 0;
 }
+
 .title {
-    color: var(--color-text);
-    font-size: 5rem;
-    padding: 3rem 0 0 2rem;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--color-text);
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    z-index: -1;
-    /* Asegura que esté sobre el video */
-    position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-text);
+  font-size: 5rem;
+  padding: 3rem 0 0 2rem;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
 }
+
 .servicesSection {
-    position: relative;
-    overflow: hidden;
-    color: var(--color-text);
-    min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 0 2rem 0;
-    font-family: 'Poppins', sans-serif;
-    z-index: 1;
+  position: relative;
+  overflow: hidden;
+  color: var(--color-text);
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 2rem 0;
+  font-family: 'Poppins', sans-serif;
+  z-index: 1;
 }
+
 .servicesGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 100px 20px;
-    width: 100%;
-    max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px 20px;
+  width: 100%;
+  max-width: 1200px;
 }
+
 .serviceItem {
-    position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
+  z-index: 1;
 }
+
 .serviceTitle {
-    font-size: 2.2rem;
-    font-weight: 500;
-    border: 2px solid var(--color-crimson);
-    border-radius: 20px;
-    padding: 20px 10px;
-    cursor: pointer;
-    transition: background-color 0.4s ease, color 0.4s ease, border-radius 0.4s ease;
-    position: relative;
-    z-index: 2;
-    background-color: #1c1c1c6c;
-    backdrop-filter: blur(4px);
-    box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.535);
+  font-size: 2.2rem;
+  font-weight: 500;
+  border: 2px solid var(--color-crimson);
+  border-radius: 20px;
+  padding: 20px 10px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, color 0.4s ease, border-radius 0.4s ease;
+  background-color: #1c1c1c6c;
+  backdrop-filter: blur(4px);
+  box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.535);
+  position: relative;
+  z-index: 2;
 }
+
 .serviceDescription {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.5;
-    width: 90%;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    color: var(--color-fondo-dark);
-    padding: 30px 5px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background-color: var(--color-fondo-instagram);
-    height: 100px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  width: 90%;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: var(--color-fondo-dark);
+  padding: 30px 5px 100px 5px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: var(--color-fondo-instagram);
+  height: 100px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* evita bloquear hover de otros */
 }
 
 .serviceItem:hover .serviceDescription {
-    opacity: 1;
-    /* Se hace visible */
-    animation: stretchHeightAndReturnUp 0.6s ease-in-out;
-    /* Animación por defecto: crece hacia arriba */
+  opacity: 1;
+  z-index: 10;
+  animation: stretchHeightAndReturnUp 0.6s ease-in-out;
+  pointer-events: auto;
 }
 
 @keyframes stretchHeightAndReturnUp {
-    0% {
-        height: 100px;
-        /* Altura inicial */
-    }
-
-    50% {
-        height: 140px;
-    }
-
-    100% {
-        height: 100px;
-    }
+  0% { height: 100px; }
+  50% { height: 140px; }
+  100% { height: 100px; }
 }
 
 .serviceItem:nth-child(n+4) .serviceDescription {
-    bottom: auto;
-    top: 100%;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+  bottom: auto;
+  top: 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .serviceItem:nth-child(n+4):hover .serviceDescription {
-    animation: stretchHeightAndReturnDown 0.6s ease-in-out;
+  animation: stretchHeightAndReturnDown 0.6s ease-in-out;
 }
 
 @keyframes stretchHeightAndReturnDown {
-    0% {
-        height: 100px;
-    }
-
-    50% {
-        height: 140px;
-    }
-
-    100% {
-        height: 100px;
-    }
+  0% { height: 100px; }
+  50% { height: 140px; }
+  100% { height: 100px; }
 }
 
 .serviceItem:hover .serviceTitle {
-    background-color: var(--color-crimson);
+  background-color: var(--color-crimson);
 }
 
-
 .videoBackground {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none; /* fundamental para permitir interacción encima */
 }
