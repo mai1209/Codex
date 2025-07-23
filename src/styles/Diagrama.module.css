@@ -15,6 +15,8 @@
     min-height: fit-content;
     position: relative; 
     z-index: -1;
+
+  
 }
 
 .title {
@@ -35,7 +37,9 @@
 .servicesGrid {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 30px;  
+     
+    z-index: -9999;
 }
 
 .serviceDescription {
@@ -77,6 +81,6 @@
     width: 100%;
     height: 100%; /* Cubre toda la altura de .container (175vh) */
     object-fit: cover;
-    z-index: -1; /* Coloca el video detrás de todo el contenido */
+    z-index: -8;
     border: none;
 }
