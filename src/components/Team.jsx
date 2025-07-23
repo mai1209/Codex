@@ -3,37 +3,48 @@ import style from "../styles/Team.module.css"
 function Team() {
     return (
         <div className={style.container} id="nuestro-equipo">
-              {/* Video de fondo */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className={style.videoBackground}
-      >
-        <source src="video.mp4" type="video/mp4" />
-        <p>El video no se carga. Revisa la consola para errores.</p>
-      </video>
+         
             <div className={style.line}>
                 <h2 className={style.title}>OUR TEAM</h2>
-            <div className={style.containerTeam}>
-                <img src="" alt="img-mai" />
-                <div className={style.containerInfo}>
-                    <h3 >Maira Coria</h3>
-                    <p>Co-Founder</p>
-                    <p>Social media</p>
-                    <p>Full stack developer</p>
+                <div className={style.containerTeam}>
+                    <div className={style.containerImgTeam}>
+                        <img className={style.imgFondo} src="/fondoImgTeam.png" alt="fondo" />
+                        <div className={style.wrapperImgTeamMai}>
+                      
+                        </div>
+                    </div>
+                    <div className={style.containerInfo}>
+                        <h3 >Maira Coria</h3>
+                        <p>CTO</p>
+                        <p>Co-Founder</p>
+                    </div>
                 </div>
-            </div>
-            <div className={style.containerTeam}>
-                <img src="" alt="img-david" />
-                <div className={style.containerInfo}>
-                    <h3>David Menendez</h3>
-                    <p>Co-Founder</p>
-                    <p>Marketing strategies</p>
-                    <p>UX | UI Design</p>
+                <div className={style.containerTeam}>
+                    <div className={style.containerImgTeam}>
+                        <img className={style.imgFondo} src="/fondoImgTeam.png" alt="fondo" />
+                         <div className={style.wrapperImgTeam}>
+                      
+                        </div>
+                    </div>
+                    <div className={style.containerInfo}>
+                        <h3>David Menendez</h3>
+                        <p>CEO</p>
+                        <p>Co-Founder</p>
+                    </div>
                 </div>
-            </div>
+                <div className={style.containerTeam}>
+                    <div className={style.containerImgTeam}>
+                        <img className={style.imgFondo} src="/fondoImgTeam.png" alt="fondo" />
+                        <div className={style.wrapperImgTeamJuan}>
+                      
+                        </div>
+                    </div>
+                    <div className={style.containerInfo}>
+                        <h3>Juan Manuek Fehleisen</h3>
+                        <p>CMO</p>
+                        <p>Chief Sales Officer</p>
+                    </div>
+                </div>
             </div>
         </div>
     )

@@ -5,13 +5,15 @@
   --color-crimson: #FF1493;
   --color-text: #fff;
   --color-fondo-instagram: #f0ead6;
+     --color-fondo-dark: #1C1C1C;
 }
 
 .container {
-  position: relative;
+
   min-height: 90vh;
   overflow: hidden;
   z-index: 0;
+  background-color: var(--color-fondo-dark);
 }
 
 .title {
@@ -124,7 +126,7 @@
   background-color: var(--color-crimson);
 }
 
-.videoBackground {
+.videoBackgroundd {
   position: absolute;
   top: 0;
   left: 0;

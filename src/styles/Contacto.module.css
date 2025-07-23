@@ -11,8 +11,9 @@
 .container {
   min-height: fit-content;
   color: var(--color-text);
-  margin-top: -350px; 
-  position: relative; 
+  margin-top: -205px; 
+  background-color: var(--color-fondo-dark);
+
 }
 .title {
   font-size: 2rem;
@@ -34,7 +35,8 @@
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
-  z-index: 1; /* Ensure it’s above the video */
+  z-index: 1; 
+  margin-left: 5px;
 }
 .containerInformation h2 {
   font-size: 1.8rem;
@@ -120,7 +122,7 @@ footer {
   font-family: "Archivo", sans-serif;
   cursor: pointer;
 }
-.videoBackground {
+.videoBackgroundd {
   position: absolute;
   top: 0;
   left: 0;
@@ -173,7 +175,7 @@ form {
     position: absolute;
     top: -200px;
    right: -35px;
-    z-index: -1;
+    z-index: 0;
     display: flex;
   }
 

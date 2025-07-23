@@ -23,8 +23,7 @@
 .container {
   min-height: fit-content;
   height: 100vh;
-  position: relative;
-  z-index: -1;
+background-color: var(--color-fondo-dark);
 }
 .line {
   height: 1px;
@@ -36,9 +35,10 @@
 .containerAll {
   background-color: var(--color-crimson);
   border-top-left-radius: 100px;
+  border-bottom-left-radius: 30px;
   border-bottom-right-radius: 0;
   min-height: fit-content;
-  height: 180vh;
+ padding-bottom: 40px;
   margin-left: 40px;
 }
 .containerTitleDescription {
@@ -69,12 +69,15 @@
   margin-left: 40px;
 }
 .crimsonContainer {
-  text-align: center;
+  text-align: end;
   color: var(--color-text);
   margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
+  font-size: 1rem;
 
 }
 span {
@@ -84,14 +87,14 @@ span {
 }
 .card {
   background-color: var(--color-fondo-instagram);
-  border-bottom-right-radius: 0px;
   padding-bottom: 10px;
   box-shadow: 4px 4px 40px #0000009f;
   display: flex;
   flex-direction: column;
-  margin-top: 220px ;
-
-  margin-left: 50px;
+  margin-top: 160px ;
+  border-bottom-left-radius: 30px ;
+  border-top-left-radius: 30px;
+  margin-left: 40px;
  
 }
 .cardTitle {

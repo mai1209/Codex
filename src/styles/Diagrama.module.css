@@ -7,16 +7,10 @@
     --color-text: #fff;
     --color-fondo-instagram: #f0ead6;
 }
-.servicesSection{
-  height: 1200px;
 
-}
 .container {
     min-height: fit-content;
-    position: relative; 
-    z-index: -1;
-
-  
+    background-color: var(--color-fondo-dark);
 }
 
 .title {
@@ -68,13 +62,13 @@
     border-radius: 20px;
     border: 2px solid var(--color-crimson);
     position: relative;
-    z-index: 2;
+    z-index: auto;
     box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.535);
     margin: 0 15px;
 }
 
 
-.videoBackground {
+.videoBackgroundd {
     position: absolute;
     top: 0;
     left: 0;

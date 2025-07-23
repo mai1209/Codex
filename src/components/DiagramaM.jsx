@@ -31,17 +31,7 @@ const services = [
 function Diagrama() {
     return (
         <div className={style.container} id='consulta-nuestros-servicios'>
-            {/* Video de fondo para toda la página */}
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className={style.videoBackground}
-            >
-                <source src="video.mp4" type="video/mp4" />
-                <p>El video no se carga. Revisa la consola para errores.</p>
-            </video>
+         
             <h2 className={style.title}>Services</h2>
             <section className={style.servicesSection}>
                 <div className={style.servicesGrid}>
