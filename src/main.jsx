@@ -6,6 +6,7 @@ import WeDo from './components/WeDo'
 import Diagrama from './components/Diagrama'     
 import DiagramaM from './components/DiagramaM'   
 import Done from './components/Done'  
+import Nav from './components/Nav'
 import Team from './components/Team'
 import Contacto from './components/Contacto'
 
@@ -24,11 +25,12 @@ function RootApp() {
 
   return (
     <StrictMode>
+      <Nav></Nav>
       <App />
       <WeDo />
       {isMobile ? <Diagrama /> : <DiagramaM />}
-    <Done />
-    <Team/>
+      <Done />
+      <Team></Team>
     <Contacto/>
     </StrictMode>
   )

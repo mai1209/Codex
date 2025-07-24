@@ -23,17 +23,16 @@
 }
 nav {
   position: fixed;
-  top: 0;
-  left: 0;
+  height: 100px;
   width: 100%;
-  z-index: 200000000;
   background-color: #1c1c1c6c;
   backdrop-filter: blur(4px);
   box-shadow: 1px 1px 10px #61616195;
   display: flex;
   justify-content: center;
   justify-content: space-between;
-  height: 100px;
+  padding-right: 20px;
+  z-index: 99999999999;
 
 }
 .name {
@@ -84,7 +83,7 @@ nav {
 .imgLogo {
   width: 100px;
   height: 100px;
-  z-index: 1;
+
 }
 .containerTextBottom {
   display: flex;
@@ -400,11 +399,11 @@ nav {
   .imgLogo {
     width: 182px;
     height: 165px;
-    z-index: 1;
+ 
   }
   .textBottom {
     font-size: 5rem;
-    z-index: 0;
+ 
   }
   .containerTextBottom {
     display: flex;

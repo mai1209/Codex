@@ -14,9 +14,10 @@
     background-color: var(--color-fondo-dark);
     color: var(--color-text);
     position: relative;
-    top: -200px;
-    z-index: 0;
-  
+    top: -50px;
+    z-index: -1 ;
+ 
+
   
 }
 
@@ -58,16 +59,7 @@
     margin-right: 40px;
     margin-top: 50px;
 }
-.videoBackgroundd {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; 
-  border: none;
-}
+
 .imgFondo{
     width: 120px;
     height: 120px;
@@ -124,9 +116,7 @@
         margin: 100px 100px 0 0;
     }
 
-    .containerInfo {
-        font-size: 1.2rem;
-    }
+  
 
     .line {
         border-top: 25px solid var(--color-text);
@@ -139,7 +129,7 @@
         border-top: 30px solid var(--color-text);
         border-right: 30px solid var(--color-text);
         border-top-right-radius: 100px;
-        margin-right: 40px;
+        margin-right: 200px;
         margin-top: 50px;
     }
 
@@ -147,7 +137,7 @@
     display: flex;
     justify-content: space-around;
     height: fit-content;
-    height: 250px;
+    height: 300px;
 }
 
     .imgFondo{
@@ -162,7 +152,32 @@
     font-weight: 300;
     font-style: normal;
     flex-grow: 1;
-    margin-left: 300px;
+    margin-right: 300px;
+    text-align: end;
     
+}
+.wrapperImgTeam{
+  
+    width: 130px;
+    height: 222px;
+    top: -250px;
+    left: 216px;
+ 
+ 
+}
+.wrapperImgTeamMai{
+    width: 130px;
+    height: 222px;
+    top: -250px;
+    left: 216px;
+  
+ 
+}
+.wrapperImgTeamJuan{
+ width: 130px;
+    height: 222px;
+    top: -250px;
+    left: 216px;
+
 }
 }
