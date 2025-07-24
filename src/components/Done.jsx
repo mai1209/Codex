@@ -3,12 +3,7 @@ import style from "../styles/Done.module.css";
 function Done() {
   return (
     <div className={style.container} id="portafolio">
-  
-      <div className={style.textBottom}>
-        <span> Hay ideas que solo necesitan el equipo correcto para despegar.</span>
-        ¿Y si justo nos cruzamos en el momento ideal?
-        <div className={style.witeBorderBox}></div>
-      </div>
+
       <div>
         <div className={style.containerTitle}>
           <h2 className={style.title}>

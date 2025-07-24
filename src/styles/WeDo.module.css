@@ -23,8 +23,9 @@
 .container {
   min-height: fit-content;
   height: 100vh;
-background-color: var(--color-fondo-dark);
+  background-color: var(--color-fondo-dark);
 }
+
 .line {
   height: 1px;
   width: 80%;
@@ -45,7 +46,7 @@ background-color: var(--color-fondo-dark);
   display: flex;
   flex-direction: column;
   padding-top: 30px;
-  height: 290px;
+
 }
 .containerP {
   width: 100%;
@@ -136,18 +137,9 @@ span {
 .medidor {
   display: none;
 }
-.videoBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  border: none;
-}
 
-@media (min-width: 850px) {
+
+@media (min-width: 1430px) {
   .containerAll {
     border-top-left-radius: 235px;
     border-bottom-left-radius: 100px;
@@ -167,7 +159,6 @@ span {
   }
 
   .containerTitleDescription {
-    height: 450px;
     justify-content: space-between;
     flex-direction: row;
   }
@@ -202,8 +193,8 @@ span {
   .containerTextAll {
     display: flex;
     justify-content: space-around;
-    max-height: 600px;
-    height: 500px;
+   
+
   }
   .cardNumber {
     font-family: 'Menda';
