@@ -172,6 +172,13 @@ textarea::placeholder {
   text-transform: uppercase;
 }
 
+input:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0px 1000px #1C1C1C inset !important; 
+  -webkit-text-fill-color:#FF1493 !important; 
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 
 @media (min-width: 850px) {
   .containerInformation h2 {

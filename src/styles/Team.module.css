@@ -11,11 +11,12 @@
 .container {
     min-height: fit-content;
    padding-bottom: 50px;
+ 
     background-color: var(--color-fondo-dark);
     color: var(--color-text);
     position: relative;
-    top: -50px;
-    z-index: -1 ;
+    top: -100px;
+    z-index: 1 ;
  
 
   
@@ -57,7 +58,7 @@
     border-right: 10px solid var(--color-text);
     border-top-right-radius: 100px;
     margin-right: 40px;
-    margin-top: 50px;
+   
 }
 
 .imgFondo{
