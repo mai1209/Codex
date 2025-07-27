@@ -61,7 +61,7 @@ function Contacto() {
         <h2>CONTACTO</h2>
         <form
           onSubmit={handleSubmit}
-          action="https://formsubmit.co/codexastra.hub@gmail.com"
+          action="https://formsubmit.co/7cc625d51224baae948a2cb061816416"
           method="POST"
         >
           <div className={style.inputContainer}>
