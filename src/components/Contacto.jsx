@@ -1,92 +1,126 @@
-import { useState } from 'react'; 
+import { useState } from 'react';
 import style from '../styles/Contacto.module.css';
+import Swal from 'sweetalert2';
 
 function Contacto() {
-  const [formData, setFormData] = useState({
-    nombreApellido: '',
-    email: '',
-    asunto: '',
-    rubro: '',
-  });
+  const [isLoading, setIsLoading] = useState(false);
 
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setIsLoading(true);
+    const form = e.target;
+    const formData = new FormData(form);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { Accept: 'application/json' },
+      });
 
-
-  const handleSubmit = (e) => {
-    e.preventDefault(); 
-    console.log('Datos del formulario enviados:', formData);
-    setFormData({
-      nombreApellido: '',
-      email: '',
-      asunto: '',
-      rubro: '',
-    });
-    alert('¡Formulario enviado con éxito!');
-  };
+      if (response.ok) {
+        form.reset();
+        Swal.fire({
+          title: '¡Mensaje enviado!',
+          text: 'Gracias por contactarte, te responderé pronto.',
+          icon: 'success',
+          background: '#1C1C1C',
+          color: '#fff',
+          confirmButtonColor: '#FF1493',
+           confirmButtonText: 'Genial',
+          iconColor: '#FF1493',
+           customClass: {
+    popup: 'swal-custom',
+    confirmButton: 'swal-confirm-btn'
+  }
+        });
+      } else {
+        Swal.fire({
+          title: 'Error',
+          text: 'No se pudo enviar el mensaje. Intenta nuevamente.',
+          icon: 'error',
+          confirmButtonColor: '#FF1493',
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      Swal.fire({
+        title: 'Error de conexión',
+        text: 'Hubo un problema de red. Revisa tu conexión e intenta otra vez.',
+        icon: 'error',
+        confirmButtonColor: '#FF1493',
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   return (
     <div className={style.container} id="contacto">
-  
-    
-
       <div className={style.containerInformation}>
         <h2>CONTACTO</h2>
-        {/* Agregamos el manejador onSubmit al formulario */}
-        <form onSubmit={handleSubmit}>
+        <form
+          onSubmit={handleSubmit}
+          action="https://formsubmit.co/codexastra.hub@gmail.com"
+          method="POST"
+        >
           <div className={style.inputContainer}>
-            {/* Es mejor usar <label> con htmlFor para accesibilidad */}
-            <label htmlFor="nombreApellido" className={style.placeholderFijo}>nombre y apellido:</label>
+            <label htmlFor="nombreApellido" className={style.placeholderFijo}>
+              nombre y apellido:
+            </label>
             <input
               type="text"
-              id="nombreApellido" // ID único para el input
-              name="nombreApellido" // Nombre para el input (crucial para el estado y el envío)
-              value={formData.nombreApellido} // El valor del input está controlado por el estado
-              onChange={handleChange} // Llama a handleChange cada vez que el valor cambia
-              required // Hace que el campo sea obligatorio
-            />
-          </div>
-          <div className={style.inputContainer}>
-            <label htmlFor="email" className={style.placeholderFijo}>email:</label>
-            <input
-              type="email" // Tipo "email" para validación básica y teclado móvil adecuado
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
+              id="nombreApellido"
+              name="nombreApellido"
+              placeholder="Tu nombre completo"
               required
             />
           </div>
           <div className={style.inputContainer}>
-            <label htmlFor="asunto" className={style.placeholderFijo}>asunto:</label>
+            <label htmlFor="email" className={style.placeholderFijo}>
+              email:
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="tu@ejemplo.com"
+              required
+            />
+          </div>
+          <div className={style.inputContainer}>
+            <label htmlFor="asunto" className={style.placeholderFijo}>
+              asunto:
+            </label>
             <input
               type="text"
               id="asunto"
               name="asunto"
-              value={formData.asunto}
-              onChange={handleChange}
+              placeholder="Motivo de contacto"
               required
             />
           </div>
           <div className={style.inputContainer}>
-            <label htmlFor="rubro" className={style.placeholderFijo}>rubro:</label>
+            <label htmlFor="rubro" className={style.placeholderFijo}>
+              rubro:
+            </label>
             <input
               type="text"
               id="rubro"
               name="rubro"
-              value={formData.rubro}
-              onChange={handleChange}
+              placeholder="Tu sector o rubro"
               required
             />
           </div>
+
+          {/* Campos ocultos para formsubmit */}
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://tusitio.com/gracias" />
+
           <div className={style.containerBtn}>
-            <button className={style.btn} type="submit">Contactarme</button>
+            <button className={style.btn} type="submit" disabled={isLoading}>
+              {isLoading ? 'Enviando...' : 'Contactarme'}
+            </button>
           </div>
         </form>
       </div>
@@ -99,9 +133,9 @@ function Contacto() {
         />
       </div>
       <div className={style.redes}>
-        <img src="./LinkedIn.png" alt="LinkedIn" />
-        <img src="./Instagram.png" alt="Instagram" />
-        <img src="./WhatsApp.png" alt="WhatsApp" />
+        <a href="#" target='_blank' rel="noopener noreferrer"> <img src="./LinkedIn.png" alt="LinkedIn" /></a>
+       <a  href="https://instagram.com/codexcorporation" target='_blank' rel="noopener noreferrer"> <img src="./Instagram.png" alt="Instagram" /></a>
+       <a href="https://wa.me/5493425543308" target="_blank" rel="noopener noreferrer"> <img src="./WhatsApp.png" alt="WhatsApp" /></a>
       </div>
       <footer>
         <p>Política de privacidad</p>

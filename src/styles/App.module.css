@@ -9,6 +9,12 @@
   --color-fondo-dark: #1c1c1c;
 }
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: 'Menda';
   src: url('/Menda\ Font/Menda Medium.ttf') format('truetype');
@@ -16,10 +22,13 @@
   font-style: normal;
 }
 .container {
-  position: relative;
+
   height: fit-content;
-  isolation: isolate;
+  overflow: hidden;
   background-color: var(--color-fondo-dark);
+  width: 100vw;
+
+
 }
 nav {
   position: fixed;
@@ -57,8 +66,11 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  margin: 0 1rem;
+  padding: 0 1rem;
   height: 70vh;
+  width: 100vw;
+
+
 }
 .containerTexts {
   display: none;
@@ -90,10 +102,11 @@ nav {
   align-items: center;
   justify-content: center;
   text-align: center;
-  display: none;
+
+  overflow: hidden;
 }
 .textBottom {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: "Rubik Glitch", system-ui;
   color: var(--color-text);
   line-height: 1;
@@ -101,29 +114,32 @@ nav {
   text-align: start;
   z-index: 2;
   letter-spacing: 5px;
-  filter: drop-shadow(0 1px 3px);
-  position: relative;
-  animation: fade 0.5s ease-in-out;
+  padding-bottom: 20px;
+  text-align: center;
+  overflow: hidden;
+
+ 
+  
 }
-.textBottom span {
+.textBottomm span {
   animation: paths 5s step-end infinite;
 }
-.textBottom::before,
-.textBottom::after {
+.textBottomm::before,
+.textBottomm::after {
   content: attr(data-text);
   position: absolute;
   width: 110%;
   z-index: -1;
   font-family: "Rubik Glitch", system-ui;
 }
-.textBottom::before {
+.textBottomm::before {
   top: 10px;
   left: 15px;
   color: var(--color-crimson);
   animation: paths 5s step-end infinite, opacity 5s step-end infinite,
     font 8s step-end infinite, movement 10s step-end infinite;
 }
-.textBottom::after {
+.textBottomm::after {
   top: 5px;
   left: -10px;
   color: #0ff;
@@ -336,16 +352,7 @@ nav {
   position: relative;
  }
 
-.videoBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  border: none;
-}
+
 @media (min-width: 850px) {
   .containerTexts {
     display: flex;
@@ -401,10 +408,22 @@ nav {
     height: 165px;
  
   }
+
+
   .textBottom {
-    font-size: 5rem;
- 
-  }
+  font-size: 5rem;
+  font-family: "Rubik Glitch", system-ui;
+  color: var(--color-text);
+  line-height: 1;
+  display: inline-block;
+  text-align: start;
+  z-index: 2;
+  letter-spacing: 5px;
+  filter: drop-shadow(0 1px 3px);
+  position: relative;
+  animation: fade 0.5s ease-in-out;
+  
+}
   .containerTextBottom {
     display: flex;
     align-items: center;
@@ -443,4 +462,6 @@ nav {
     height: 70px;
     margin-right: 70px;
   }
+
+
 }

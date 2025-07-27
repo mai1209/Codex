@@ -15,8 +15,8 @@ const services = [
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [showLogo, setShowLogo] = useState(false);
-  const [showArrow, setShowArrow] = useState(false);
+  //const [showLogo, setShowLogo] = useState(false);
+  //const [showArrow, setShowArrow] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,16 +41,9 @@ function App() {
     };
   }, []);
 
-
-
-  return (
+return (
     <div className={style.container}>
-   
-
-    
-   
-    
-      <div className={style.containerLogo}>
+     <div className={style.containerLogo}>
         <div className={style.containerImg}>
           <img
             className={style.imgLogo}

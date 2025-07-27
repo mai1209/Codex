@@ -79,7 +79,7 @@
     top: -120px;
     left: 53px;
     border-top-left-radius: 7px;
-    background-image: url("../../public/imgDavidOficial.jpg") ;
+    background-image: url("../../imgDavidOficial.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
  
@@ -91,7 +91,7 @@
     top: -120px;
     left: 53px;
     border-top-left-radius: 7px;
-    background-image: url("../../public/imgMaiOficial.jpeg") ;
+    background-image: url("../../imgMaiOficial.jpeg") ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -104,7 +104,7 @@
     top: -120px;
     left: 53px;
     border-top-left-radius: 7px;
-    background-image: url("../../public/imgOficialJuan.jpeg") ;
+    background-image: url("../../imgOficialJuan.jpeg") ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -115,8 +115,6 @@
         font-size: 4rem;
         margin: 100px 100px 0 0;
     }
-
-  
 
     .line {
         border-top: 25px solid var(--color-text);
@@ -154,30 +152,23 @@
     flex-grow: 1;
     margin-right: 300px;
     text-align: end;
-    
 }
 .wrapperImgTeam{
-  
     width: 130px;
     height: 222px;
     top: -250px;
     left: 216px;
- 
- 
 }
 .wrapperImgTeamMai{
     width: 130px;
     height: 222px;
     top: -250px;
     left: 216px;
-  
- 
 }
 .wrapperImgTeamJuan{
- width: 130px;
+     width: 130px;
     height: 222px;
     top: -250px;
     left: 216px;
-
 }
 }
