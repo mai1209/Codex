@@ -8,21 +8,31 @@
   --color-dark-text: #000;
   --color-fondo-dark: #1C1C1C;
 }
+
+@font-face {
+  font-family: 'Menda';
+  src: url('/Menda\ Font/Menda Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 .container {
   min-height: fit-content;
   color: var(--color-text);
-  margin-top: -100px; 
+  margin-top: -100px;
   background-color: var(--color-fondo-dark);
-z-index: 0;
+  z-index: 0;
   position: relative;
 
 }
+
 .title {
   font-size: 2rem;
   font-weight: 700;
   padding: 50px 0;
- 
+
 }
+
 .containerInfo {
   height: 255px;
   margin-left: auto;
@@ -32,14 +42,16 @@ z-index: 0;
   position: relative;
   top: 5rem;
 }
+
 .containerInformation {
   position: absolute;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-style: normal;
-  z-index: 1; 
+  z-index: 1;
   margin-left: 5px;
 }
+
 .containerInformation h2 {
   font-size: 1.8rem;
   color: transparent;
@@ -51,12 +63,14 @@ z-index: 0;
   font-family: "Poppins", sans-serif;
   font-weight: 900;
   font-style: normal;
-   z-index: -1;
+  z-index: -1;
 }
+
 form {
   width: 100vw;
   z-index: -1;
 }
+
 form input {
   background: none;
   border: none;
@@ -66,15 +80,18 @@ form input {
   padding: 5px 0px;
   border-bottom: 1px solid var(--color-crimson);
 }
+
 .inputContainer {
   display: flex;
   flex-direction: column;
 }
+
 .containerBtn {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .btn {
   width: fit-content;
   margin-top: 10px;
@@ -87,6 +104,7 @@ form input {
   font-weight: 600;
   font-style: normal;
 }
+
 .placeholderFijo {
   color: var(--color-text);
   font-weight: bold;
@@ -97,11 +115,13 @@ form input {
   font-weight: 600;
   background-color: transparent;
   font-style: normal;
- 
+
 }
+
 input:focus {
   outline: none;
 }
+
 .redes {
   display: flex;
   gap: 10px;
@@ -110,11 +130,13 @@ input:focus {
   justify-content: end;
   z-index: 99999;
 }
+
 .redes img {
   width: 25px;
   height: 25px;
   cursor: pointer;
 }
+
 footer {
   display: flex;
   gap: 10px;
@@ -124,19 +146,33 @@ footer {
   font-family: "Archivo", sans-serif;
   cursor: pointer;
 }
-.videoBackgroundd {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; 
-  border: none;
-}
-.logoFooter{
+
+.logoFooter {
   display: none;
 }
+
+input::placeholder,
+textarea::placeholder {
+  color: #ff14917c;
+  opacity: 1;
+  font-family: "Archivo", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.swal-custom {
+  font-family: 'Menda'; 
+  font-size: 18px;
+  color: #fff;
+}
+
+.swal-confirm-btn {
+  font-family: 'Menda';
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
 @media (min-width: 850px) {
   .containerInformation h2 {
     font-size: 5rem;
@@ -144,30 +180,34 @@ footer {
     top: -100px;
   }
 
-.placeholderFijo {
+  .placeholderFijo {
     font-size: 2rem;
-}
+  }
 
-form input {
-   font-size: 1.5rem;
+  form input {
+    font-size: 1.5rem;
     width: 100%;
-}
-form {
+  }
+
+  form {
     width: 600px;
-}
-.btn {
+  }
+
+  .btn {
     width: fit-content;
     margin-left: auto;
     padding: 5px;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
     font-size: 2rem;
-}
-.redes {
+  }
+
+  .redes {
     margin-right: 400px;
     margin-top: 300px;
-}
-.redes img {
+  }
+
+  .redes img {
     width: 70px;
     height: 70px;
   }
@@ -176,7 +216,7 @@ form {
     width: 32vw;
     position: absolute;
     top: -150px;
-   right: -35px;
+    right: -35px;
     z-index: 0;
     display: flex;
   }
