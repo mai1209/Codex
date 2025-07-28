@@ -23,7 +23,7 @@
 }
 .container {
 
-  height: fit-content;
+  height: 98vh;
   overflow: hidden;
   background-color: var(--color-fondo-dark);
   width: 100vw;
