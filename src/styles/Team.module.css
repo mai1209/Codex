@@ -111,6 +111,9 @@
     background-position: center;
  
 }
+
+
+
 @media (min-width: 850px) {
     .title{
         font-size: 4rem;
