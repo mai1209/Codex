@@ -108,7 +108,7 @@ function WeDo() {
           }}
         >
           <div className={style.card}>
-            <p className={style.cardTitle}>A mobile-friendly website is crucial:</p>
+            <p className={style.cardTitle}>Un sitio web optimizado para dispositivos móviles es crucial:</p>
             <div className={style.containerTextAll}>
               <div className={style.cardInfo1}>
                 <p className={style.cardNumber}>
@@ -120,13 +120,13 @@ function WeDo() {
               <div className={style.cardInfo2}>
                 <p className={style.cardNumber}>SEO</p>
                 <p className={style.p}>
-                  Boosts by improving functionality and search engine rankings, ensuring your site performs better and reaches more users effectively.
+                  Aumenta la eficacia mejorando la funcionalidad y las clasificaciones en los motores de búsqueda, lo que garantiza que su sitio tenga un mejor rendimiento y llegue a más usuarios de manera efectiva.
                 </p>
                 <img className={style.medidor} src="" alt="medidor" />
               </div>
               <div className={style.cardInfo3}>
                 <p className={style.cardNumber}>DO IT</p>
-                <p className={style.p}>Make your website mobile-friendly now for better SEO!</p>
+                <p className={style.p}>¡Haga que su sitio web sea compatible con dispositivos móviles ahora para un mejor SEO!</p>
               </div>
             </div>
           </div>

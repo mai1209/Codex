@@ -4,7 +4,7 @@ import style from "../styles/Team.module.css";
 // Variantes
 const titleVariant = {
   hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }
+  visible: { opacity: 1, x: 0, transition: { duration: 1.5} }
 };
 
 const textVariant = {
@@ -12,7 +12,7 @@ const textVariant = {
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.8 + i * 0.2 }
+    transition: { delay: 1 + i * 0.5}
   })
 };
 
@@ -48,7 +48,7 @@ function Team() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          OUR TEAM
+          nuestro equipo
         </motion.h2>
 
         {members.map((member, i) => (
