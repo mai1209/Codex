@@ -8,7 +8,7 @@
   --color-fondo-dark: #1C1C1C;
 }
 .container {
-  background-color: var(--color-fondo-dark);
+  background-color: transparent;
   height: 100vh;
 }
 .title {
