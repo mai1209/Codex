@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import style from '../styles/App.module.css';
-
-
+import InterstellarBackground from './InterstellarBackground';
 
 const services = [
   'Identidad Visual',
@@ -15,8 +14,6 @@ const services = [
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
-  //const [showLogo, setShowLogo] = useState(false);
-  //const [showArrow, setShowArrow] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,16 +31,17 @@ function App() {
     const interval = setInterval(() => {
       console.log(`Intervalo activado (ID: ${instanceId}) a las:`, new Date().toLocaleTimeString());
       setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
-    }, 1000);
+    }, 2000); // Cambiado a 2 segundos para mejor visualización
     return () => {
       console.log(`Limpiando intervalo (ID: ${instanceId})`);
       clearInterval(interval);
     };
   }, []);
 
-return (
+  return (
     <div className={style.container}>
-     <div className={style.containerLogo}>
+      <InterstellarBackground />
+      <div className={style.containerLogo}>
         <div className={style.containerImg}>
           <img
             className={style.imgLogo}
@@ -52,13 +50,11 @@ return (
           />
         </div>
         <div className={style.containerTextBottom}>
-          <p
-            key={activeIndex}
-            className={style.textBottom}
-            data-text={services[activeIndex]}
-          >
-            {services[activeIndex]}
-          </p>
+          <div className={style.glitchWrapper}>
+            <div className={style.glitchText} data-text={services[activeIndex]}>
+              {services[activeIndex]}
+            </div>
+          </div>
         </div>
       </div>
     </div>

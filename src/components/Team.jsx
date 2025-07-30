@@ -2,9 +2,24 @@ import { motion } from 'framer-motion';
 import style from "../styles/Team.module.css";
 
 // Variantes
-const titleVariant = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1.5} }
+//const titleVariant = {
+//hidden: { opacity: 0, x: 50 },
+//visible: { opacity: 1, x: 0, transition: { duration: 1.5} }
+//};
+
+const titleVariantTwo = {
+  hidden: {
+    clipPath: "inset(100% 0% 0% 0%)",
+    opacity: 0,
+  },
+  visible: {
+    clipPath: "inset(0% 0% 0% 0%)",
+    opacity: 1,
+    transition: {
+      duration: 2,
+      ease: "easeInOut",
+    },
+  },
 };
 
 const textVariant = {
@@ -12,7 +27,7 @@ const textVariant = {
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 1 + i * 0.5}
+    transition: { delay: 1 + i * 0.5 }
   })
 };
 
@@ -41,17 +56,18 @@ function Team() {
   return (
     <div className={style.container} id="nuestro-equipo">
       <div className={style.line}>
-        <motion.h2
+        <motion.div
           className={style.title}
-          variants={titleVariant}
-          initial="hidden"
+          initial='hidden'
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          nuestro equipo
-        </motion.h2>
+          viewport={{ once: true, amount: 0.5 }}
 
-        {members.map((member, i) => (
+        >
+          <motion.h2 variants={titleVariantTwo}>
+            nuestro equipo
+          </motion.h2>
+          </motion.div>
+       {members.map((member, i) => (
           <div key={i} className={style.containerTeam}>
             <div className={style.containerImgTeam}>
               <img className={style.imgFondo} src="/fondoImgTeam.png" alt="fondo" />

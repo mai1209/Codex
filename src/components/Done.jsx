@@ -84,7 +84,7 @@ function Done() {
         </div>
 
       </div>
-      <p className={style.textBottom}>Contact us to see more</p>
+     <a className={style.textBottomLink} href="#contacto"> <p className={style.textBottom}>Contactanos para ver mas</p></a>
     </div>
   );
 }

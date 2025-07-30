@@ -7,33 +7,28 @@
     --color-dark-text: #000;
     --color-fondo-dark: #1C1C1C;
 }
-
 .container {
     min-height: fit-content;
-   padding-bottom: 50px;
- 
-    background-color: var(--color-fondo-dark);
+    padding-bottom: 50px;
+    background-color: transparent;
     color: var(--color-text);
     position: relative;
     top: -100px;
-    z-index: 1 ;
- 
 
-  
 }
 
 .title {
     color: var(--color-crimson);
-    font-size: 1.7rem;
+    font-size: 1rem;
+    margin: 50px 100px 50px 0;
     text-align: end;
-    margin: 30px 60px;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: normal;
-
+    line-height: 2rem;
+    width: 100%;
 }
-
 .containerTeam {
     display: flex;
     justify-content: space-around;
@@ -58,22 +53,19 @@
     border-right: 10px solid var(--color-text);
     border-top-right-radius: 100px;
     margin-right: 40px;
-   
+    padding-right: 30px;
 }
-
 .imgFondo{
     width: 120px;
     height: 120px;
     position: relative;
 }
-
 .containerImgTeam{
     margin-left: 20px;
     width: 100px;
 }
 
 .wrapperImgTeam{
-  
     width: 65px;
     height: 105px;
     position: relative;
@@ -83,10 +75,9 @@
     background-image: url("../../imgDavidOficial.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
- 
 }
 .wrapperImgTeamMai{
-     width: 65px;
+    width: 65px;
     height: 105px;
     position: relative;
     top: -120px;
@@ -96,7 +87,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
- 
 }
 .wrapperImgTeamJuan{
     width: 65px;
@@ -109,17 +99,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
- 
 }
-
-
-
 @media (min-width: 850px) {
     .title{
-        font-size: 4rem;
-        margin: 100px 100px 0 0;
+        font-size: 3rem;
+        margin: 50px 100px 100px 0;
+        line-height: 9rem;
     }
-
     .line {
         border-top: 25px solid var(--color-text);
         border-right: 25px solid var(--color-text);
@@ -134,19 +120,16 @@
         margin-right: 200px;
         margin-top: 50px;
     }
-
     .containerTeam {
-    display: flex;
-    justify-content: space-around;
-    height: fit-content;
-    height: 300px;
+        display: flex;
+        justify-content: space-around;
+        height: fit-content;
+        height: 300px;
 }
-
     .imgFondo{
     width: 250px;
     height: 250px;
     margin-left: 100px;
-   
 }
 .containerInfo {
     font-size: 2rem;

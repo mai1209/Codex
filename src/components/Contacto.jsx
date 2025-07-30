@@ -2,6 +2,7 @@ import { useState } from 'react';
 import style from '../styles/Contacto.module.css';
 import Swal from 'sweetalert2';
 
+
 function Contacto() {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -57,6 +58,7 @@ function Contacto() {
 
   return (
     <div className={style.container} id="contacto">
+      
       <div className={style.containerInformation}>
         <h2>CONTACTANOS</h2>
         <form

@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import style from '../styles/App.module.css';
 
+
 function Nav() {
+
     const [activeMenuIndex, setActiveMenuIndex] = useState(null);
     const [hoveredMenuIndex, setHoveredMenuIndex] = useState(null);
     const [showLogo, setShowLogo] = useState(false);
@@ -13,16 +15,36 @@ function Nav() {
         'Nuestro equipo',
         'Contacto',
     ];
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            // Show logo when scrolled past 100px (adjust as needed)
+            setShowLogo(scrollPosition > 100);
+            // Show arrow when scrolled past 200px (adjust as needed)
+            setShowArrow(scrollPosition > 200);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth',
         });
     };
+
     return (
         <div>
             <div className={`${style.containerArrowSubir} ${showArrow ? style.showArrow : ''}`}>
-                <img className={style.arrowSubirImg} src="./arrowup.png" alt="flecha-subir" onClick={scrollToTop} />
+                <img
+                    className={style.arrowSubirImg}
+                    src="./arrowup.png"
+                    alt="flecha-subir"
+                    onClick={scrollToTop}
+                />
             </div>
             <nav>
                 <div className={style.welcome}>
@@ -46,10 +68,10 @@ function Nav() {
                             <div key={index} className={style.containerMenu}>
                                 <div
                                     className={`
-                    ${style.rectangle}
-                    ${showActive ? style.activeRectangle : ''}
-                    ${showHover ? style.hoverRectangle : ''}
-                  `}
+                                        ${style.rectangle}
+                                        ${showActive ? style.activeRectangle : ''}
+                                        ${showHover ? style.hoverRectangle : ''}
+                                    `}
                                 ></div>
                                 <a
                                     href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
@@ -65,7 +87,7 @@ function Nav() {
                 </div>
             </nav>
         </div>
-    )
+    );
 }
 
-export default Nav
+export default Nav;

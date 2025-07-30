@@ -23,7 +23,7 @@
 .container {
   min-height: fit-content;
   height: 100vh;
-  background-color: var(--color-fondo-dark);
+ background-color: transparent;
   overflow-x: hidden;
 }
 
