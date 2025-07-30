@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
     --color-fondo: #070a0c;
     --color-crimson: #FF1493;
@@ -6,15 +8,19 @@
     --color-fondo-dark: #1C1C1C;
 }
 
+@font-face {
+  font-family: 'Menda';
+  src: url('/Menda\ Font/Menda Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
 .container {
     min-height: fit-content;
     background-color: var(--color-fondo-dark);
     padding-top: 50px;
-
-   
+    height: 100vh;
+    padding-bottom: 100px;
 }
-
-
 .title {
     font-size: 1.5rem;
     color: var(--color-text);
@@ -26,154 +32,141 @@
     text-align: end;
     width: fit-content;
     line-height: 30px;
-
 }
-
-.sombraa {
-    width: 100%;
-    height: auto;
-    display: block;
-    z-index: 5;
-    position: relative;
-    top: -742px;
-    left: -40px;
-    overflow: hidden;
-}
-
-.coete {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: drop-shadow(6px 0 #FF1493) drop-shadow(-6px 0 #FF1493) drop-shadow(0 6px #FF1493) drop-shadow(0 -6px #FF1493);
-    position: relative;
-    top: 5px;
-    left: -100px;
-    overflow: hidden;
-    cursor: pointer;
-
-}
-
-.containerAll {
-    position: relative;
-    top: -300px;
-    display: flex;
-    width: 100%;
-    gap: 5px;
-    flex-direction: column;
-    align-items: flex-end;
-  
-}
-
-.box {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row-reverse;
-    align-items: center;
-    text-align: end;
+.subtitle{
     color: var(--color-text);
-    font-size: 0.6rem;
-    gap: 5px;
-    text-transform: uppercase;
-    margin-right: 10px;
-    z-index: 999999;
-    text-shadow: 2px 2px 4px #333333;
-    font-family: "Poppins", sans-serif;
+    font-family: 'menda';
     font-weight: 500;
-    font-style: normal;
-}
-
-.box img {
-    width: 15px;
-    height: 15px;
-}
-
-.textBottom {
-
-    padding-bottom: 5rem;
-    font-size: 1rem;
     text-align: center;
-    color: var(--color-text);
-    width: 320px;
-    margin: auto;
-   
+    padding: 1rem 0;
 }
-
-span {
+.span{
+    background-color: transparent;
     color: var(--color-crimson);
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-
-
-
+    padding: 0;
+}
+.containerAllProyect{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.nameProyect{
+    color: var(--color-text);
+    font-size: 0.8rem;
+    font-family: 'menda';
+    font-weight: 500;
+    margin-left: 10px;
+}
+.descriptionProyect{
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  color: var(--color-text);
+  font-size: 0.6rem;
+  max-width: 200px;
+  margin-left: 10px;
+  line-height: 1rem;
+}
+.containerProyect{
+      position: relative;
+    background-color: #FFFFFF12;
+      backdrop-filter: blur(4px);
+       box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.535);
+    margin: 0 0.5rem ;
+    width: 100%;
+    height: 220px;
+    border-radius: 13px;
+}
+.containerBoxOne,
+.containerBoxTwo,
+.containerBoxTres {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 20px;
+}
+.containerProyect .img{
+    width: 100%;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
 }
 
-
+.textBottom{
+    color: var(--color-text);
+    text-align: end;
+    margin-right: 20px;
+    padding: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+.link{
+      position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+}
 @media (min-width: 850px) {
     .title {
         font-size: 5rem;
-        padding-left: 80px;
+        padding-left: 32px;
         padding-bottom: 50px;
         padding-top: 100px;
         line-height: 65px;
-     
+}
+.containerProyect{
+ 
+    width: 600px;
+    height: 430px;
+}
+.containerBoxOne{
+    justify-content: end;
+}
 
-    }
+.containerBoxTres{
+    justify-content: end;
+}
 
-    .contentWrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        top: -200px;
-        
-    }
+.app{
+    height: 300px;
+}
 
-    .coete {
-        width: 60%;
-        position: relative;
-        top: 200px;
-        left: -20px;
-    }
+.subtitle{
+    padding: 3rem 0;
+    font-size: 2rem;
+}
+.containerBoxOne,
+.containerBoxTwo,
+.containerBoxTres {
+    gap: 2rem;
+}
 
-    .containerAll {
-        position: static;
-        width: 1000px;
-        align-items: flex-start;
-        gap: 15px;
-        margin-right: 30px;
+.containerAllProyect{
+    gap: 2rem;
+}
+.nameProyect{
+    font-size: 1.5rem;
+   
+}
+.descriptionProyect{
+ max-width: 300px;
+  font-size: 1rem;
 
-    }
+}
+.textBottom{
 
-    .box {
-        flex-direction: row;
-        justify-content: flex-start;
-        text-align: start;
-        font-size: 1rem;
-        margin-right: 0;
-    }
+  font-size: 1.5rem;
+}
+.link{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
 
-    .box img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .witeBorderBox {
-        height: 10px;
-        border-top: 1px solid var(--color-text);
-        border-bottom: 1px solid var(--color-text);
-        border-left: 1px solid var(--color-text);
-        margin-left: auto;
-    }
-
-    .textBottom {
-        padding-bottom: 5rem;
-        font-size: 1.5rem;
-        color: var(--color-text);
-        width: 200vh;
-        margin: 0;
-        margin-left: auto;
-        z-index: 0;
-    }
+}
 
 }

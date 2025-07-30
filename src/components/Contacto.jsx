@@ -58,7 +58,7 @@ function Contacto() {
   return (
     <div className={style.container} id="contacto">
       <div className={style.containerInformation}>
-        <h2>CONTACTO</h2>
+        <h2>CONTACTANOS</h2>
         <form
           onSubmit={handleSubmit}
           action="https://formsubmit.co/7cc625d51224baae948a2cb061816416"
