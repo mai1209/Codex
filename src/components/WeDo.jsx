@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import style from '../styles/WeDo.module.css';
 import ContadorAnimado from './Contador';
-//import InterstellarBackground from './InterstellarBackground';
+import InterstellarBackground from './InterstellarBackground';
 
 function WeDo() {
   const containerPRef = useRef(null);
@@ -51,7 +51,7 @@ function WeDo() {
 
   return (
     <div className={style.container} id="qué-hacemos">
-     
+          <InterstellarBackground />
       <div className={style.line}></div>
       <div className={style.containerAll}>
         <div className={style.containerTitleDescription}>

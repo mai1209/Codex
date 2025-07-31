@@ -1,5 +1,5 @@
 import style from '../styles/DiagramaM.module.css';
-
+import InterstellarBackground from './InterstellarBackground';
 // Array con la información de los servicios para no repetir código
 const services = [
     {
@@ -31,7 +31,7 @@ const services = [
 function Diagrama() {
     return (
         <div className={style.container} id='consulta-nuestros-servicios'>
-         
+           <InterstellarBackground />
             <h2 className={style.title}>Servicios</h2>
             <section className={style.servicesSection}>
                 <div className={style.servicesGrid}>
