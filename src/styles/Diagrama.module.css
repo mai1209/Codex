@@ -8,6 +8,13 @@
     --color-fondo-instagram: #f0ead6;
 }
 
+@font-face {
+  font-family: 'Menda';
+  src: url('/Menda\ Font/Menda Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 .container {
     min-height: fit-content;
     background-color: transparent;
@@ -37,8 +44,9 @@
 }
 
 .serviceDescription {
-    background-color: var(--color-fondo-instagram);
-    color: var(--color-fondo-dark);
+        background-color: #ff14911e;
+    
+   color: var(--color-text);
     line-height: 1rem;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -49,22 +57,26 @@
     align-items: center;
     text-align: center;
     margin: 0 30px;
+    
 }
 
 .serviceTitle {
-    background-color: var(--color-crimson);
-    color: var(--color-text);
-    font-size: 1.5rem;
-    padding: 10px 5px;
+   background-color: var(--color-fondo-instagram);
+    backdrop-filter: blur(2px);
+      color: var(--color-fondo-dark);
+   
+    font-size: 1.2rem;
+    padding: 5px 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    border: 2px solid var(--color-crimson);
+    border-radius: 10px;
+    border: 2px solid var(--color-fondo-instagram);
     position: relative;
     z-index: auto;
-    box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.535);
+    box-shadow: 1px 1px 20px 1px rgba(177, 177, 177, 0.535);
     margin: 0 15px;
+    font-family: 'Menda';
 }
 
 

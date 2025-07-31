@@ -35,7 +35,8 @@
   margin-bottom: 30px;
 }
 .containerAll {
-  background-color: var(--color-crimson);
+   background-color: #ff14911e;
+   backdrop-filter: blur(2px);
   border-top-left-radius: 100px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 0;
@@ -83,7 +84,7 @@
 
 }
 span {
-  background-color: var(--color-fondo);
+  background-color: var(--color-crimson);
   padding: 0 10px;
   border-radius: 20px;
 }
