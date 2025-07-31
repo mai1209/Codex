@@ -70,7 +70,7 @@
 .containerProyect{
       position: relative;
     background-color: #FFFFFF12;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(2px);
        box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.535);
     margin: 0 0.5rem ;
     width: 100%;

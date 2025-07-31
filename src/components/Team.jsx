@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import style from "../styles/Team.module.css";
+import InterstellarBackground from './InterstellarBackground';
+
 
 // Variantes
 //const titleVariant = {
@@ -55,6 +57,7 @@ function Team() {
 
   return (
     <div className={style.container} id="nuestro-equipo">
+        <InterstellarBackground />
       <div className={style.line}>
         <motion.div
           className={style.title}

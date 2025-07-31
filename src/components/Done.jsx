@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import style from "../styles/Done.module.css";
+import InterstellarBackground from './InterstellarBackground';
 
 function Done() {
  
@@ -20,6 +21,7 @@ function Done() {
 
   return (
     <div className={style.container} id="portafolio">
+        <InterstellarBackground />
       <div>
         <div className={style.containerTitle}>
           <motion.div
