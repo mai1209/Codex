@@ -23,28 +23,31 @@ function RootApp() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  useEffect(() => {
-    // Solución para el viewport móvil
-    const setAppHeight = () => {
-      const vh = window.innerHeight * 0.01
-      document.documentElement.style.setProperty('--vh', `${vh}px`)
-      
-      const container = document.querySelector('.interstellarContainer')
-      if (container) {
-        container.style.height = `${window.innerHeight}px`
-        container.style.width = `${window.innerWidth}px`
-      }
-    }
+useEffect(() => {
+  const setAppHeight = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-    setAppHeight()
-    window.addEventListener('resize', setAppHeight)
-    window.addEventListener('orientationchange', setAppHeight)
-
-    return () => {
-      window.removeEventListener('resize', setAppHeight)
-      window.removeEventListener('orientationchange', setAppHeight)
+    const container = document.querySelector('.interstellarContainer');
+    if (container) {
+      const contentHeight = Math.max(
+        window.innerHeight,
+        document.documentElement.scrollHeight
+      );
+      container.style.height = `${contentHeight}px`;
+      container.style.width = `${window.innerWidth}px`;
     }
-  }, [])
+  };
+
+  setAppHeight();
+  window.addEventListener('resize', setAppHeight);
+  window.addEventListener('orientationchange', setAppHeight);
+
+  return () => {
+    window.removeEventListener('resize', setAppHeight);
+    window.removeEventListener('orientationchange', setAppHeight);
+  };
+}, []);
 
 
   return (
