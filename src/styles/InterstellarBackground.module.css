@@ -6,16 +6,21 @@
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   min-height: -webkit-fill-available;
-  background: radial-gradient(ellipse at bottom, #06080b 0%, #090A0F 100%);
+  background: 
+    radial-gradient(ellipse at bottom, #06080b 0%, #090A0F 100%),
+    linear-gradient(to bottom, #090A0F, #090A0F); /* Fondo adicional */
   overflow: hidden;
   z-index: -1;
   perspective: 1000px;
   touch-action: none;
   overscroll-behavior: none;
-  transform: translateZ(0);
-  /* Asegurar que cubra toda la pantalla */
-  bottom: 0;
-  right: 0;
+  transform: translate3d(0, 0, 0); /* Usar translate3d en lugar de translateZ */
+  -webkit-overflow-scrolling: touch;
+  /* Extender más allá de los límites visuales */
+  bottom: -1px;
+  right: -1px;
+  left: -1px;
+  top: -1px;
 }
 /* Media query específica para móviles */
 @media (max-width: 768px) and (orientation: portrait) {
