@@ -10,3 +10,11 @@
 body {
   overscroll-behavior: none;
 }
+
+.app-wrapper {
+  position: relative;
+  /* Esto crea un nuevo contexto de apilamiento. Es la forma moderna 
+     y segura de asegurar que el z-index: -1 del hijo no se vaya por 
+     detrás de elementos fuera del wrapper. */
+  isolation: isolate; 
+}
