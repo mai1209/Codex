@@ -18,7 +18,7 @@ const titleVariantTwo = {
     clipPath: "inset(0% 0% 0% 0%)",
     opacity: 1,
     transition: {
-      duration: 2,
+      duration: 0.7,
       ease: "easeInOut",
     },
   },
@@ -29,7 +29,7 @@ const textVariant = {
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 1 + i * 0.5 }
+    transition: { delay: 0.5 + i * 0.3 }
   })
 };
 
