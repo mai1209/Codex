@@ -1,20 +1,34 @@
+
+
 .interstellarContainer {
-  position: fixed;
+  position: fixed; /* Mantenemos fixed para mejor rendimiento */
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100vh; /* Altura inicial del viewport */
   height: calc(var(--vh, 1vh) * 100);
   min-height: -webkit-fill-available;
   background: radial-gradient(ellipse at bottom, #06080b 0%, #090A0F 100%);
   overflow: hidden;
   z-index: -1;
   perspective: 1000px;
-  /* Elimina estas propiedades que bloquean el scroll */
-  /* touch-action: none; */
-  /* overscroll-behavior: none; */
   transform: translate3d(0, 0, 0);
-  -webkit-overflow-scrolling: touch;
+  
+  /* Asegurar que cubra todo el espacio necesario */
+  bottom: 0;
+  right: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #090A0F; /* Mismo color que el gradiente */
+  z-index: -2; /* Detrás del fondo interestelar */
+  pointer-events: none;
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
