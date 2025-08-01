@@ -90,6 +90,7 @@ const InterstellarBackground = () => {
 
       <div className={`${styles.nebula} ${styles.nebula1}`}></div>
       <div className={`${styles.nebula} ${styles.nebula2}`}></div>
+      
     </div>
   );
 };

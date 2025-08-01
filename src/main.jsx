@@ -52,6 +52,7 @@ useEffect(() => {
 
   return (
     <StrictMode>
+      
       <Nav></Nav>
       <App />
       <WeDo />
