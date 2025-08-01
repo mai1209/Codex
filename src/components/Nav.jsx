@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 import style from '../styles/App.module.css';
-
+import { CiMenuFries } from "react-icons/ci";
+import { IoCloseOutline } from "react-icons/io5";
 
 function Nav() {
-
     const [activeMenuIndex, setActiveMenuIndex] = useState(null);
     const [hoveredMenuIndex, setHoveredMenuIndex] = useState(null);
     const [showLogo, setShowLogo] = useState(false);
     const [showArrow, setShowArrow] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    
     const menuItems = [
         'Qué hacemos',
         'Consulta nuestros servicios',
@@ -19,9 +21,7 @@ function Nav() {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            // Show logo when scrolled past 100px (adjust as needed)
             setShowLogo(scrollPosition > 100);
-            // Show arrow when scrolled past 200px (adjust as needed)
             setShowArrow(scrollPosition > 200);
         };
 
@@ -34,6 +34,19 @@ function Nav() {
             top: 0,
             behavior: 'smooth',
         });
+    };
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
+    const handleMenuItemClick = (index) => {
+        setActiveMenuIndex(index);
+        closeMenu();
     };
 
     return (
@@ -49,7 +62,7 @@ function Nav() {
             <nav>
                 <div className={style.welcome}>
                     {showLogo ? (
-                        <img src="./logo.png" alt="Logo Codex" className={style.logo} />
+                        <img  id='img' onClick={scrollToTop} src="./logo.png" alt="Logo Codex" className={style.logo} />
                     ) : (
                         <div>
                             <p className={style.name}>Codex</p>
@@ -57,6 +70,8 @@ function Nav() {
                         </div>
                     )}
                 </div>
+                
+                {/* Menú para desktop */}
                 <div className={style.containerTexts}>
                     {menuItems.map((item, index) => {
                         const isActive = index === activeMenuIndex;
@@ -84,6 +99,31 @@ function Nav() {
                             </div>
                         );
                     })}
+                </div>
+                
+                {/* Menú hamburguesa para mobile */}
+                <div className={style.menuHamburguesa}>
+                    {isMenuOpen ? (
+                        <IoCloseOutline className={style.menuIconn} onClick={toggleMenu} />
+                    ) : (
+                        <CiMenuFries className={style.menuIcon} onClick={toggleMenu} />
+                    )}
+                </div>
+                
+                {/* Overlay y menú móvil */}
+                <div className={`${style.overlay} ${isMenuOpen ? style.open : ''}`} onClick={closeMenu}></div>
+                
+                <div className={`${style.mobileMenu} ${isMenuOpen ? style.open : ''}`}>
+                    <IoCloseOutline className={style.closeIcon} onClick={closeMenu} />
+                    {menuItems.map((item, index) => (
+                        <a
+                            key={index}
+                            href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                            onClick={() => handleMenuItemClick(index)}
+                        >
+                            {item}
+                        </a>
+                    ))}
                 </div>
             </nav>
         </div>

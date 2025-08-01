@@ -3,12 +3,10 @@ import styles from '../styles/InterstellarBackground.module.css';
 
 const InterstellarBackground = () => {
   const [stars, setStars] = useState([]);
-  const [comets, setComets] = useState([]);
 
   useEffect(() => {
     const generateStars = () => {
       const newStars = [];
-      // 👇 Aumenté el número de estrellas aquí
       const starCount = 500;
 
       for (let i = 0; i < starCount; i++) {
@@ -25,32 +23,13 @@ const InterstellarBackground = () => {
       setStars(newStars);
     };
 
-    const generateComets = () => {
-      const newComets = [];
-      const cometCount = 3;
-
-      for (let i = 0; i < cometCount; i++) {
-        newComets.push({
-          id: i,
-          x: Math.random() * 100,
-          y: Math.random() * 100,
-          angle: Math.random() * 360,
-          delay: Math.random() * 30,
-          duration: Math.random() * 30 + 20
-        });
-      }
-      setComets(newComets);
-    };
-
     generateStars();
-    generateComets();
-
-    const cometInterval = setInterval(generateComets, 30000);
-    return () => clearInterval(cometInterval);
+    // No es necesario regenerar las estrellas en un intervalo
   }, []);
 
   return (
     <div className={styles.interstellarContainer}>
+      {/* Estrellas de fondo */}
       {stars.map((star) => (
         <div
           key={`star-${star.id}`}
@@ -66,6 +45,7 @@ const InterstellarBackground = () => {
         />
       ))}
 
+      {/* Estrellas parpadeantes */}
       {stars.filter((_, i) => i % 10 === 0).map((star) => (
         <div
           key={`twinkle-${star.id}`}
@@ -82,9 +62,12 @@ const InterstellarBackground = () => {
         />
       ))}
 
-   
+      {/* Nebulosas */}
       <div className={`${styles.nebula} ${styles.nebula1}`}></div>
       <div className={`${styles.nebula} ${styles.nebula2}`}></div>
+      {/* 👇 NUEVAS NEBULOSAS AÑADIDAS 👇 */}
+      <div className={`${styles.nebula} ${styles.nebula3}`}></div>
+      <div className={`${styles.nebula} ${styles.nebula4}`}></div>
     </div>
   );
 };
