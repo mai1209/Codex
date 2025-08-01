@@ -52,14 +52,16 @@ useEffect(() => {
 
   return (
     <StrictMode>
-      
-      <Nav></Nav>
-      <App />
-      <WeDo />
-      {isMobile ? <Diagrama /> : <DiagramaM />}
-      <Done />
-      <Team></Team>
-    <Contacto/>
+     {/* 👇 AÑADE ESTE DIV CONTENEDOR 👇 */}
+      <div className="app-wrapper">
+        <Nav />
+        <App /> {/* App ya contiene InterstellarBackground */}
+        <WeDo />
+        {isMobile ? <Diagrama /> : <DiagramaM />}
+        <Done />
+        <Team />
+        <Contacto />
+      </div>
     </StrictMode>
   )
 }

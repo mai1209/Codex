@@ -8,18 +8,18 @@ const InterstellarBackground = () => {
   useEffect(() => {
     const generateStars = () => {
       const newStars = [];
-      const starCount = 300; // Aumenté la cantidad para mejor efecto
+      // 👇 Aumenté el número de estrellas aquí
+      const starCount = 500;
 
       for (let i = 0; i < starCount; i++) {
         newStars.push({
           id: i,
-          size: Math.random() * 2 + 0.5,
+          size: Math.random() * 3 + 0.5,
           x: Math.random() * 100,
           y: Math.random() * 100,
           opacity: Math.random() * 0.8 + 0.2,
-          duration: Math.random() * 30 + 20, // Tiempos más variados
-          delay: Math.random() * 30,
-          startingDepth: Math.random() * 100 + 100 // Profundidad inicial aleatoria
+          duration: Math.random() * 50 + 30,
+          delay: Math.random() * 20
         });
       }
       setStars(newStars);
@@ -27,21 +27,16 @@ const InterstellarBackground = () => {
 
     const generateComets = () => {
       const newComets = [];
-      const cometCount = 2; // Menos cometas para no distraer
+      const cometCount = 3;
 
       for (let i = 0; i < cometCount; i++) {
-        const angle = Math.random() * 360;
-        const startX = Math.random() * 100;
-        const startY = Math.random() * 100;
-        
         newComets.push({
           id: i,
-          startX,
-          startY,
-          angle,
+          x: Math.random() * 100,
+          y: Math.random() * 100,
+          angle: Math.random() * 360,
           delay: Math.random() * 30,
-          duration: Math.random() * 15 + 10,
-          startingDepth: Math.random() * 150 + 50
+          duration: Math.random() * 30 + 20
         });
       }
       setComets(newComets);
@@ -50,7 +45,7 @@ const InterstellarBackground = () => {
     generateStars();
     generateComets();
 
-    const cometInterval = setInterval(generateComets, 20000);
+    const cometInterval = setInterval(generateComets, 30000);
     return () => clearInterval(cometInterval);
   }, []);
 
@@ -61,12 +56,12 @@ const InterstellarBackground = () => {
           key={`star-${star.id}`}
           className={styles.star}
           style={{
-            '--size': `${star.size}px`,
-            '--x': `${star.x}%`,
-            '--y': `${star.y}%`,
-            '--opacity': star.opacity,
-            '--starting-depth': `${star.startingDepth}px`,
-            animation: `${styles.starDepth} ${star.duration}s linear ${star.delay}s infinite`
+            width: `${star.size}px`,
+            height: `${star.size}px`,
+            left: `${star.x}%`,
+            top: `${star.y}%`,
+            opacity: star.opacity,
+            animation: `${styles.fall} ${star.duration}s linear ${star.delay}s infinite`
           }}
         />
       ))}
@@ -76,21 +71,20 @@ const InterstellarBackground = () => {
           key={`twinkle-${star.id}`}
           className={`${styles.star} ${styles.twinkling}`}
           style={{
-            '--size': `${star.size * 1.5}px`,
-            '--x': `${star.x}%`,
-            '--y': `${star.y}%`,
-            '--opacity': star.opacity,
-            '--starting-depth': `${star.startingDepth}px`,
-            animation: `${styles.starDepth} ${star.duration * 0.8}s linear ${star.delay}s infinite, 
+            width: `${star.size * 1.5}px`,
+            height: `${star.size * 1.5}px`,
+            left: `${star.x}%`,
+            top: `${star.y}%`,
+            opacity: star.opacity,
+            animation: `${styles.fall} ${star.duration * 0.8}s linear ${star.delay}s infinite, 
                        ${styles.twinkle} ${Math.random() * 5 + 3}s ease-in-out infinite`
           }}
         />
       ))}
 
-
+   
       <div className={`${styles.nebula} ${styles.nebula1}`}></div>
       <div className={`${styles.nebula} ${styles.nebula2}`}></div>
-      
     </div>
   );
 };
