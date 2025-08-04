@@ -9,10 +9,13 @@
   --color-fondo-dark: #1c1c1c;
 }
 
+
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
 }
 
 @font-face {
@@ -26,6 +29,7 @@
   height: 98vh;
   overflow: hidden;
   width: 100vw;
+    cursor: url('/cursor.png') 4 4, auto !important;
 }
 
 nav {
@@ -69,17 +73,12 @@ nav {
   width: 100vw;
 }
 
-
-
 .containerMenu {
   display: flex;
   align-items: center;
   display: none;
  
 }
-
-
-
 .containerImg {
   width: 100%;
   display: flex;
@@ -287,7 +286,63 @@ nav {
   }
 }
 
-/* Versión desktop - Efectos más intensos */
+.containerButtonWrapper{
+    display: flex;
+    width: 100vw;
+    position: absolute;
+    top: 100px;
+    justify-content: flex-end;
+
+}
+
+.containerButton{
+    background-color: #F0EAD6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 0.2rem;
+    margin: 1rem 0;
+
+    border-top-left-radius: 38px;
+    border-bottom-left-radius: 38px;
+    gap: 0.4rem;
+
+}
+
+.button{
+    background-color: var(--color-fondo-dark);
+    color: var(--color-text);
+    border: 1px solid var(--color-crimson);
+    border-radius: 68px;
+    text-align: center;
+    height: fit-content;
+    padding: 0.7rem 1rem;
+    font-size: 0.6rem;
+    font-family: 'Menda';
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+
+}
+
+.containerText{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--color-fondo-dark);
+  color: var(--color-text);
+  border: 1px solid var(--color-crimson);
+  border-radius: 50%;
+   font-family: 'Menda';
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+
 @media (min-width: 850px) {
   .glitchText {
     font-size: 5rem;
@@ -410,18 +465,14 @@ nav {
 .containerTexts{
   display: flex;
   gap: 30px;
- 
-
-}
+ }
 
 .rectangle {
   height: 6px;
   background: var(--color-crimson);
   width: 100%;
   opacity: 0;
-  
-
-}
+  }
 
   /* Cuando el enlace está hover o activo */
 .hoverRectangle, .activeRectangle {

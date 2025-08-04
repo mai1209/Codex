@@ -9,6 +9,9 @@
 
 body {
   overscroll-behavior: none;
+  cursor: url('/cursor.png') 4 4, auto !important;
+
+
 }
 
 .app-wrapper {
@@ -34,3 +37,4 @@ body {
   border-radius: 50%;    
   padding: 30px; 
 }
+

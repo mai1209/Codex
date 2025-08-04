@@ -23,6 +23,7 @@
   background-color: transparent;
   z-index: 0;
   position: relative;
+    overflow: hidden;
 
 }
 
@@ -140,6 +141,7 @@ input:focus {
   width: 25px;
   height: 25px;
   cursor: pointer;
+  z-index: 99999;
 }
 
 footer {
@@ -230,8 +232,10 @@ input:-webkit-autofill {
     position: absolute;
     top: -150px;
     right: -35px;
-    z-index: 0;
+    z-index: -1;
     display: flex;
+
+  
   }
 
   .container {
