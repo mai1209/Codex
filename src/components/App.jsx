@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       setShowLogo(window.scrollY > 100);
-      setShowArrow(window.scrollY > window.innerHeight); 
+      setShowArrow(window.scrollY > window.innerHeight);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -41,6 +41,14 @@ function App() {
   return (
     <div className={style.container}>
       <InterstellarBackground />
+      <div className={style.containerButtonWrapper}>
+        <div className={style.containerButton}>
+        <a href="https://wa.link/3425543308">  <button className={style.button}>Let’s build it!</button></a>
+          <div className={style.containerText}>
+          <p>?</p>
+          </div>
+        </div>
+      </div>
       <div className={style.containerLogo}>
         <div className={style.containerImg}>
           <img
@@ -57,6 +65,7 @@ function App() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }
