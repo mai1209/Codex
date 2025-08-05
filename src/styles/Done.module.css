@@ -205,6 +205,19 @@
   right: 10px;
   width: 25px;
   height: 25px;
+}
+.button{
+    padding: 1rem 1rem;
+    font-size: 1rem;
+}
+.containerText{
+    line-height: 0.8rem;
+    font-size: 1rem;
+}
+.containerButtonWrapper{
+  
+
+    margin: 1.5rem 0;
 
 }
 
