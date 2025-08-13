@@ -1,69 +1,59 @@
-import { StrictMode, useEffect, useState } from 'react'
-import { createRoot } from 'react-dom/client'
-import '../src/index.css'
-import App from './components/App'
-import WeDo from './components/WeDo'
-import Diagrama from './components/Diagrama'     
-import DiagramaM from './components/DiagramaM'   
-import Done from './components/Done'  
-import Nav from './components/Nav'
-import Team from './components/Team'
-import Contacto from './components/Contacto'
+import { StrictMode, useEffect, useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importa Router
+import '../src/index.css';
+import App from './components/App';
+import WeDo from './components/WeDo';
+import Diagrama from './components/Diagrama';
+import DiagramaM from './components/DiagramaM';
+import Done from './components/Done';
+import Nav from './components/Nav';
+import Team from './components/Team';
+import Contacto from './components/Contacto';
+import Orion from './components/Orion'; 
+import Ask from './components/Ask';
 
 function RootApp() {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1000)
-    }
-
-    handleResize()
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
-useEffect(() => {
-  const setAppHeight = () => {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-    const container = document.querySelector('.interstellarContainer');
-    if (container) {
-      const contentHeight = Math.max(
-        window.innerHeight,
-        document.documentElement.scrollHeight
-      );
-      container.style.height = `${contentHeight}px`;
-      container.style.width = `${window.innerWidth}px`;
-    }
-  };
-
-  setAppHeight();
-  window.addEventListener('resize', setAppHeight);
-  window.addEventListener('orientationchange', setAppHeight);
-
-  return () => {
-    window.removeEventListener('resize', setAppHeight);
-    window.removeEventListener('orientationchange', setAppHeight);
-  };
-}, []);
-
+      setIsMobile(window.innerWidth <= 1000);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <StrictMode>
-     {/* 👇 AÑADE ESTE DIV CONTENEDOR 👇 */}
-      <div className="app-wrapper">
-        <Nav />
-        <App /> {/* App ya contiene InterstellarBackground */}
-        <WeDo />
-        {isMobile ? <Diagrama /> : <DiagramaM />}
-        <Done />
-        <Team />
-        <Contacto />
-      </div>
+      <Router> {/* Envuelve todo en Router */}
+        <div className="app-wrapper">
+         
+          <Routes>
+            {/* Ruta principal (página de inicio) */}
+            <Route 
+              path="/" 
+              element={
+                <>
+                 <Nav /> 
+                  <App />
+                  <WeDo />
+                  {isMobile ? <Diagrama /> : <DiagramaM />}
+                  <Done />
+                  <Team />
+                  <Contacto />
+                </>
+              } 
+            />
+            {/* Ruta para Orion */}
+            <Route path="/orion" element={<Orion />} />
+            <Route path='/ask' element={<Ask />} />
+          </Routes>
+        </div>
+      </Router>
     </StrictMode>
-  )
+  );
 }
 
-createRoot(document.getElementById('root')).render(<RootApp />)
+createRoot(document.getElementById('root')).render(<RootApp />);
