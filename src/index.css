@@ -1,19 +1,28 @@
-/* src/index.css */
-* {
+/* Reset básico */
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  overflow-x: hidden; /* Solo aquí, no en * */
   scroll-behavior: smooth;
-  overflow-x: hidden  ;
 }
 
-html {
-  cursor: url(/cursor.svg), auto;
+/* Scrollbars para Brave/Chrome */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff149174;
+  border-radius: 4px;
+
+}
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
 }
 
 body {
-  overscroll-behavior: none;
-
+  cursor: url(/cursor.svg), auto;
+  overscroll-behavior-y: contain; /* Más seguro que 'none' */
 }
 
 .app-wrapper {
@@ -24,22 +33,4 @@ body {
 ::selection {
   background-color: #ff1493;
   color: #000;
-  border-radius: 50%;
-  padding: 30px;
-}
-
-::-moz-selection {
-  background-color: rgb(255, 20, 147);
-  color: rgb(255, 255, 255);
-  border-radius: 50%;
-  padding: 30px;
-}
-
-canvas#trail-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999; 
-  pointer-events: none;
-
 }
