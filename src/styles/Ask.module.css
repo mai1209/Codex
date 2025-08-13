@@ -99,6 +99,66 @@ margin: 1rem;
     color: var(--color-crimson);
     font-size: 1rem;
 }
+.containerLogo{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    z-index: 0;
+    position: fixed;
+    bottom: 0;
+}
+.logoBlanco{
+   width: 330px;
+   
+}
+
+.containerButtonWrapper{
+    display: flex;
+    width: 100vw;
+    position: absolute;
+    top: 12px;
+    justify-content: flex-end;
+   
+}
+.containerButton{
+    background-color: #F0EAD6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 0.2rem;
+    border-top-left-radius: 38px;
+    border-bottom-left-radius: 38px;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+.button{
+    background-color: var(--color-fondo-dark);
+    color: var(--color-text);
+    border: 1px solid var(--color-crimson);
+    border-radius: 68px;
+    text-align: center;
+    height: fit-content;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.6rem;
+    font-family: 'Menda';
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+}
+.containerText{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--color-fondo-dark);
+  color: var(--color-text);
+  border: 1px solid var(--color-crimson);
+  border-radius: 50%;
+  font-family: 'Menda';
+  font-weight: 500;
+  font-style: normal;
+}
 
 @media (min-width: 850px){
 
@@ -137,4 +197,24 @@ margin: 1rem;
     padding: 2rem;
  
 }
+.logoBlanco{
+    width: 650px;
+    height: 600px;
+   
+}
+.containerText{
+  padding: 0.4rem 0.9rem;
+  font-size: 1.5rem;
+}
+.button{
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+}
+.containerButton{
+  padding: 0.2rem 0.4rem;
+  margin: 1rem 0.5rem;
+
+}
+
+ 
 }

@@ -17,6 +17,7 @@
     background-color: var(--color-fondo-dark);
     height: 100vh;
     min-height: fit-content;
+    overflow: hidden;
 
 
 }
@@ -77,13 +78,14 @@
       font-weight: 500;
   font-style: normal;
   font-size: 1rem;
+  padding-left: 0;
 
 }
 
 .imgOrion{
     width: 95%;
     height: auto;
-    margin: 0.5rem;
+    margin: 0.5rem  ;
 
 }
 
@@ -105,27 +107,80 @@
       font-weight: 500;
   font-style: normal;
   margin: 1rem ;
+  max-width: 800px;
 }
 .containerDescriptionAll{
     padding-bottom: 2rem;
+ 
 
 }
 
-
+.containerButtonWrapper{
+    display: flex;
+    width: 100vw;
+    position: absolute;
+    top: 10px;
+    justify-content: flex-end;
+}
+.containerButton{
+    background-color: #F0EAD6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 0.2rem;
+    margin: 1rem 0;
+    border-top-left-radius: 38px;
+    border-bottom-left-radius: 38px;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+.button{
+    background-color: var(--color-fondo-dark);
+    color: var(--color-text);
+    border: 1px solid var(--color-crimson);
+    border-radius: 68px;
+    text-align: center;
+    height: fit-content;
+    padding: 0.7rem 1rem;
+    font-size: 0.6rem;
+    font-family: 'Menda';
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+}
+.containerText{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--color-fondo-dark);
+  color: var(--color-text);
+  border: 1px solid var(--color-crimson);
+  border-radius: 50%;
+  font-family: 'Menda';
+  font-weight: 500;
+  font-style: normal;
+}
 @media (min-width: 850px){
 .containerDescriptionAll{
    display: flex;
    flex-direction: row;
+   justify-content: center;
+   gap: 2rem;
 }
 .imgOrion{
     width: 45%;
-    margin: 2rem;
+    margin: 2rem 0 2rem 3rem;
+    
+
 
 }
 
 .title{
    
   font-size: 2rem;
+  padding-left: 1rem;
 
 }
 
@@ -140,5 +195,24 @@
     font-size: 1rem;
     text-align: start ;
     line-height: 1.9rem;
+}
+.containerText{
+  padding: 0.4rem 0.9rem;
+  font-size: 1.5rem;
+}
+.button{
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+}
+.containerButton{
+  padding: 0.2rem 0.4rem;
+  margin: 1rem 0.5rem;
+
+}
+
+.containerButtonWrapper{
+
+    top: 40px;
+  
 }
 }
