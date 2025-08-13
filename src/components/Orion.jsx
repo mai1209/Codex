@@ -6,12 +6,20 @@ function Orion() {
   
   return (
     <div className={style.container}>
+           <div className={style.containerButtonWrapper}>
+        <div className={style.containerButton}>
+        <a href="https://wa.me/5493425543308"><button className={style.button}>Let’s build it!</button></a>
+          <div className={style.containerText}>
+         <p  onClick={() => navigate("/ask")}>?</p>
+          </div>
+        </div>
+      </div>
       <div className={style.btnHome}>
         <button onClick={() => navigate('/')}>Volver</button>
       </div>
       
       <h2 className={style.title}>
-        <span className={style.span}>PORTAFOLIO</span> Orion Hairstudio
+        <span className={style.span}>PORTAFOLIO</span> &gt; Orion Hairstudio
       </h2>
       
       <div className={style.containerDescriptionAll}>

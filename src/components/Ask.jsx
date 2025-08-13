@@ -6,6 +6,14 @@ function Ask() {
   
   return (
     <div className={style.container}>
+          <div className={style.containerButtonWrapper}>
+        <div className={style.containerButton}>
+        <a href="https://wa.me/5493425543308"><button className={style.button}>Let’s build it!</button></a>
+          <div className={style.containerText}>
+         <p  onClick={() => navigate("/ask")}>?</p>
+          </div>
+        </div>
+      </div>
       <div className={style.btnHome}>
         <button onClick={() => navigate('/')}>Volver</button>
       </div>
@@ -52,6 +60,9 @@ function Ask() {
             Tenemos plena confianza en nuestro trabajo y los resultados que entregamos. No haremos promesas vacías (nadie puede garantizar fama instantánea), pero estaremos a tu lado en cada paso, ajustando estrategias para asegurar un progreso genuino. Nuestro éxito se define por tu satisfacción, y no nos detendremos hasta que estés encantado con los resultados logrados con Codex.
           </p>
         </div>
+      </div>
+      <div className={style.containerLogo}>
+        <img src="./logoblanco.png" alt="logoblanco " className={style.logoBlanco} />
       </div>
     </div>
   );
