@@ -29,7 +29,7 @@
   height: 98vh;
   overflow: hidden;
   width: 100vw;
-    cursor: url('/cursor.png') 4 4, auto !important;
+    
 }
 
 nav {
@@ -293,6 +293,7 @@ nav {
     border-top-left-radius: 38px;
     border-bottom-left-radius: 38px;
     gap: 0.4rem;
+    cursor: pointer;
 }
 .button{
     background-color: var(--color-fondo-dark);
@@ -539,6 +540,7 @@ nav {
 .containerButton{
   padding: 0.2rem 0.4rem;
   margin: 1rem 0;
+
 }
 
 }

@@ -1,0 +1,140 @@
+:root {
+    --color-fondo-dark: #121212;
+    --color-crimson: #FF1493;
+    --color-text: #fff;
+    --color-fondo-instagram: #f0ead6;
+}
+
+@font-face {
+    font-family: 'Menda';
+    src: url('/Menda\ Font/Menda Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+.container {
+    background-color: var(--color-fondo-dark);
+    height: 100vh;
+    min-height: fit-content;
+    padding-bottom: 1rem;
+}
+
+.btnHome{
+    padding: 1rem;
+ 
+}
+
+/* styles.module.css */
+.btnHome button {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-family: 'Menda';
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+  position: relative;
+  padding: 0.3rem 0.5rem;
+  transition: all 0.4s ease;
+}
+
+/* Efecto hover: Borde inferior animado + desplazamiento */
+.btnHome button:hover {
+  color: var(--color-crimson);
+  transform: translateX(-5px); /* Desplaza ligeramente a la izquierda */
+}
+
+/* Pseudoelemento para el borde animado */
+.btnHome button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--color-crimson);
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+.btnHome button:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.title {
+    color: var(--color-crimson);
+    font-size: 0.9rem;
+    margin: 0.4rem 2rem;
+    font-family: 'Menda';
+    font-weight: 500;
+    font-style: normal;
+}
+
+.containerQuestion{
+    color: var(--color-text);
+    display: flex;
+gap: 1rem;
+margin: 1rem;
+   font-family: 'Menda';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.8rem;
+    align-items: center;
+}
+
+.containerAsk{
+    color: var(--color-text);
+    font-size: 0.6rem;
+    margin: 1rem;
+   font-family: 'Menda';
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+
+}
+
+.simbol{
+    color: var(--color-crimson);
+    font-size: 1rem;
+}
+
+@media (min-width: 850px){
+
+.title {
+ 
+    font-size: 1.9rem;
+    margin: 1rem 2rem;
+
+}
+.containerQuestion{
+  
+
+
+    font-size: 1.5rem;
+  
+}
+.containerAsk{
+   
+    font-size: 1rem;
+    margin: 2rem;
+ 
+    text-align: start;
+
+}
+.containerAll{
+    margin: 0 10rem;
+}
+
+.simbol{
+
+    font-size: 2rem;
+}
+
+
+.btnHome{
+    padding: 2rem;
+ 
+}
+}

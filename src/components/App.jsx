@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import style from '../styles/App.module.css';
 import InterstellarBackground from './InterstellarBackground';
+import { useNavigate } from 'react-router-dom';
 
 const services = [
   'Identidad Visual',
@@ -13,7 +14,9 @@ const services = [
 ];
 
 function App() {
+   const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(0);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +48,7 @@ function App() {
         <div className={style.containerButton}>
         <a href="https://wa.me/5493425543308"><button className={style.button}>Let’s build it!</button></a>
           <div className={style.containerText}>
-          <p>?</p>
+         <p  onClick={() => navigate("/ask")}>?</p>
           </div>
         </div>
       </div>

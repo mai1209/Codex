@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import style from "../styles/Done.module.css";
+import { useNavigate } from 'react-router-dom';
 
 
+  
 function Done() {
-
+ const navigate = useNavigate();
   const titleVariants = {
     hidden: {
       clipPath: "inset(100% 0% 0% 0%)",
@@ -65,7 +67,10 @@ function Done() {
               <img className={style.img} src="/orion.png" alt="orion" />
               <p className={style.nameProyect}>Orion hairstudio</p>
               <p className={style.descriptionProyect}>Brand identity</p>
-              <img className={style.link} src="/Linking.png" alt="link" />
+              <button  onClick={() => navigate("/orion")}>
+                <img className={style.link} src="/Linking.png" alt="link" />
+              </button>
+        
             </div>
           </div>
           <div className={style.containerBoxTres}>

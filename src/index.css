@@ -1,40 +1,44 @@
-*{
+/* src/index.css */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
 
-
+html {
+  cursor: url(/cursor.svg), auto;
 }
 
 body {
   overscroll-behavior: none;
-  cursor: url('/cursor.png') 4 4, auto !important;
-
 
 }
 
 .app-wrapper {
   position: relative;
-
-  isolation: isolate; 
+  isolation: isolate;
 }
-
 
 ::selection {
   background-color: #ff1493;
-  color: #000;    
-  border-radius: 50%;    
-  padding: 30px;    
+  color: #000;
+  border-radius: 50%;
+  padding: 30px;
 }
-
-
-
 
 ::-moz-selection {
-  background-color: #ff1493;
-  color: #ffffff;
-  border-radius: 50%;    
-  padding: 30px; 
+  background-color: rgb(255, 20, 147);
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 30px;
 }
 
+canvas#trail-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; 
+  pointer-events: none;
+
+}
