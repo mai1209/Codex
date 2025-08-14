@@ -1,4 +1,6 @@
 import style from '../styles/DiagramaM.module.css';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 // Array con la información de los servicios para no repetir código
 const services = [
@@ -28,16 +30,56 @@ const services = [
     }
 ];
 
+// Variantes de animación
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: -50, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10
+    }
+  }
+};
+
 function Diagrama() {
+    // Configuración para detectar cuando el elemento está en vista
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.1
+    });
+
     return (
-        <div className={style.container} id='consulta-nuestros-servicios'>
-          
+        <div className={style.container} id='consulta-nuestros-servicios' ref={ref}>
             <h2 className={style.title}>Servicios</h2>
-            <section className={style.servicesSection}>
+            <motion.section 
+                className={style.servicesSection}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                variants={containerVariants}
+            >
                 <div className={style.servicesGrid}>
                     {/* Mapeamos el array de servicios para crear cada item */}
                     {services.map((service, index) => (
-                        <div className={style.serviceItem} key={index}>
+                        <motion.div 
+                            className={style.serviceItem} 
+                            key={index}
+                            variants={itemVariants}
+                            whileHover={{ scale: 1.05 }}
+                        >
                             {/* El texto descriptivo que se mostrará al hacer hover */}
                             <p className={style.serviceDescription}>
                                 {service.description}
@@ -46,10 +88,10 @@ function Diagrama() {
                             <p className={style.serviceTitle}>
                                 {service.title}
                             </p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
-            </section>
+            </motion.section>
         </div>
     );
 }
