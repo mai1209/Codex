@@ -80,8 +80,8 @@ margin: 1rem;
    font-family: 'Menda';
     font-weight: 500;
     font-style: normal;
-    font-size: 0.8rem;
-    align-items: center;
+    font-size: 0.7rem;
+    align-items: start;
 }
 
 .containerAsk{
@@ -91,7 +91,7 @@ margin: 1rem;
    font-family: 'Menda';
     font-weight: 500;
     font-style: normal;
-    text-align: center;
+    text-align: start;
 
 }
 

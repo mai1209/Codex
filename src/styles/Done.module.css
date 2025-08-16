@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --color-fondo: #070a0c;
     --color-crimson: #FF1493;
@@ -9,18 +9,21 @@
 }
 
 @font-face {
-  font-family: 'Menda';
-  src: url('/Menda\ Font/Menda Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
+    src: url('/Menda\ Font/Menda Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'Menda';
 }
+
 .container {
     min-height: fit-content;
     background-color: transparent;
     padding-top: 50px;
     height: 100vh;
     padding-bottom: 100px;
+    
 }
+
 .title {
     font-size: 1.5rem;
     color: var(--color-text);
@@ -33,51 +36,58 @@
     width: fit-content;
     line-height: 30px;
 }
-.subtitle{
+
+.subtitle {
     color: var(--color-text);
     font-family: 'menda';
     font-weight: 500;
     text-align: center;
     padding: 1rem 0;
 }
-.span{
+
+.span {
     background-color: transparent;
     color: var(--color-crimson);
     padding: 0;
 }
-.containerAllProyect{
+
+.containerAllProyect {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
-.nameProyect{
+
+.nameProyect {
     color: var(--color-text);
     font-size: 0.8rem;
     font-family: 'menda';
     font-weight: 500;
     margin-left: 10px;
 }
-.descriptionProyect{
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-  color: var(--color-text);
-  font-size: 0.6rem;
-  max-width: 200px;
-  margin-left: 10px;
-  line-height: 1rem;
+
+.descriptionProyect {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: var(--color-text);
+    font-size: 0.6rem;
+    max-width: 200px;
+    margin-left: 10px;
+    line-height: 1rem;
 }
-.containerProyect{
-      position: relative;
+
+.containerProyect {
+    position: relative;
     background-color: #FFFFFF12;
-      backdrop-filter: blur(2px);
-       box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.535);
-    margin: 0 0.5rem ;
+    backdrop-filter: blur(2px);
+    box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.535);
+    margin: 0 0.5rem;
     width: 100%;
     height: 250px;
     min-height: fit-content;
     border-radius: 13px;
 }
+
 .containerBoxOne,
 .containerBoxTwo,
 .containerBoxTres {
@@ -87,31 +97,33 @@
     gap: 1rem;
     margin: 0 20px;
 }
-.containerProyect .img{
+
+.containerProyect .img {
     width: 100%;
+ 
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
 }
 
 
-.link{
-      position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
+.link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
-.containerButtonWrapper{
+.containerButtonWrapper {
     display: flex;
     width: 100vw;
- 
+
     justify-content: flex-end;
 
 }
 
-.containerButton{
+.containerButton {
     background-color: #F0EAD6;
     display: flex;
     justify-content: center;
@@ -119,14 +131,14 @@
     width: fit-content;
     padding: 0.4rem;
     margin: 1rem 0.5rem;
-  
+
     border-top-left-radius: 13px;
     border-bottom-left-radius: 13px;
     gap: 0.4rem;
 
 }
 
-.button{
+.button {
     background-color: var(--color-fondo-dark);
     color: var(--color-text);
     border: 1px solid var(--color-crimson);
@@ -142,7 +154,7 @@
 
 }
 
-.containerText{
+.containerText {
     line-height: 0.5rem;
     font-size: 0.6rem;
     text-transform: uppercase;
@@ -151,74 +163,276 @@
     font-style: normal;
 }
 
+.containerPopUp {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.popUp {
+    background-color: var(--color-dark-text);
+    color: var(--color-text);
+    font-size: 0.6rem;
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px 2px rgba(255, 255, 255, 0.148);
+    position: relative;
+    z-index: 9999;
+    position: fixed;
+    top: 40%;
+      opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    padding: 0.2rem 0.1rem;
+
+}
+.popUp.activo{
+      opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+}
+.popUp h2 {
+    font-weight: bold;
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'Menda';
+    padding: 0.9rem 0.6rem;
+    text-align: center;
+}
+
+.description {
+    max-width: 250px;
+    margin: 0.5rem auto;
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'Menda';
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.btnButton {
+    text-align: center;
+    width: 100%;
+    background-color: #FF1493;
+    border: none;
+    color: var(--color-text);
+    padding: 0.5rem;
+    z-index: 9999;
+    border-radius: 13px;
+    font-weight: 500;
+    font-style: normal;
+    font-family: 'Menda';
+    cursor: pointer;
+}
+
+.containerImg {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+
+}
+
+.popUpImg {
+    width: 100px;
+
+}
+
+.logoBlanco {
+    width: 100px;
+
+}
+
+.secondFondo{
+    background-color: #0000006e;
+    backdrop-filter: blur(7px);
+    height: 100vh;
+    width: 100vw;
+    z-index: 8888;
+     position: fixed;
+     top: 0;
+   opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    
+}
+
+.secondFondo.activo{
+   opacity: 1;
+    pointer-events: all;
+}
+
+  
+
+
 @media (min-width: 850px) {
+    .containerProyect .img {
+    width: 100%;
+ height: 300px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
     .title {
         font-size: 5rem;
         padding-left: 32px;
         padding-bottom: 50px;
         padding-top: 100px;
         line-height: 65px;
-}
-.containerProyect{
- 
-    width: 600px;
-    height: 430px;
-}
-.containerBoxOne{
-    justify-content: end;
+    }
+
+    .containerProyect {
+
+        width: 600px;
+        height: 430px;
+    }
+
+    .containerBoxOne {
+        justify-content: end;
+    }
+
+    .containerBoxTres {
+        justify-content: end;
+    }
+
+
+
+    .subtitle {
+        padding: 3rem 0;
+        font-size: 2rem;
+    }
+
+    .containerBoxOne,
+    .containerBoxTwo,
+    .containerBoxTres {
+        gap: 2rem;
+    }
+
+    .containerAllProyect {
+        gap: 2rem;
+    }
+
+    .nameProyect {
+        font-size: 1.5rem;
+
+    }
+
+    .descriptionProyect {
+        max-width: 300px;
+        font-size: 1rem;
+
+    }
+
+    .link {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .button {
+        padding: 1rem 1rem;
+        font-size: 1rem;
+    }
+
+    .containerText {
+        line-height: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .containerButtonWrapper {
+
+
+        margin: 1.5rem 0;
+
+    }
+
+
+    .containerPopUp {
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
-.containerBoxTres{
-    justify-content: end;
-}
-
-.app{
-    height: 300px;
-}
-
-.subtitle{
-    padding: 3rem 0;
-    font-size: 2rem;
-}
-.containerBoxOne,
-.containerBoxTwo,
-.containerBoxTres {
-    gap: 2rem;
-}
-
-.containerAllProyect{
-    gap: 2rem;
-}
-.nameProyect{
-    font-size: 1.5rem;
-   
-}
-.descriptionProyect{
- max-width: 300px;
-  font-size: 1rem;
-
-}
-
-.link{
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-}
-.button{
-    padding: 1rem 1rem;
-    font-size: 1rem;
-}
-.containerText{
-    line-height: 0.8rem;
-    font-size: 1rem;
-}
-.containerButtonWrapper{
+.popUp {
   
+    font-size: 1.2rem;
 
-    margin: 1.5rem 0;
+ 
+    top: 40%;
+    opacity: 0;
+    padding: 0.5rem 0.3rem;
 
+}
+
+.popUp.activo{
+    opacity: 1;
+}
+
+.popUp h2 {
+  
+    padding: 1rem 0.9rem;
+    text-align: center;
+}
+
+.description {
+    max-width: 500px;
+    margin: 0.5rem auto;
+
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.btnButton {
+  
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+}
+
+.containerImg {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+
+}
+
+.popUpImg {
+    width: 100px;
+
+}
+
+.logoBlanco {
+    width: 100px;
+
+}
+
+
+.secondFondo{
+ 
+
+     opacity: 0;
+    
+}
+
+.secondFondo.activo{
+    opacity: 1;
 }
 
 }
