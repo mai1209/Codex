@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 const services = [
     {
         title: 'Desarrollo Web',
-        description: '*Creamos sitios web innovadores, optimizados y adaptados a tus necesidades.'
+        description: 'Creamos sitios web innovadores, optimizados y adaptados a tus necesidades.'
     },
     {
         title: 'Comunicación',
