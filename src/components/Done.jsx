@@ -100,7 +100,7 @@ function Done() {
             </div>
           </div>
           
-          <div className={style.containerBoxTres}>
+          <div className={style.containerBoxTres}>    
             <div className={style.containerProyect}>
               <img className={style.img} src="/app.png" alt="app" />
               <p className={style.nameProyect}>Growth mobile app</p>

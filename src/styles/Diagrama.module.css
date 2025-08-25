@@ -44,8 +44,8 @@
 }
 
 .serviceDescription {
-        background-color: #ff1491;
-    
+       
+      box-shadow: 1px 1px 20px 1px rgba(177, 177, 177, 0.534);
    color: var(--color-text);
     line-height: 1rem;
     border-bottom-left-radius: 20px;
