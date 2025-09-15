@@ -20,7 +20,7 @@
   min-height: fit-content;
   color: var(--color-text);
   margin-top: -100px;
-  background-color: transparent;
+  background-color: var(--color-fondo-dark);
   z-index: 0;
   position: relative;
     overflow: hidden;

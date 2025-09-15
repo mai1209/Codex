@@ -20,204 +20,304 @@
   font-weight: 500;
   font-style: normal;
 }
-.container {
-  min-height: fit-content;
-  height: 100vh;
- background-color: transparent;
-  overflow-x: hidden;
-}
-
-.line {
-  height: 1px;
-  width: 80%;
-  background-color: var(--color-crimson);
-  margin-left: auto;
-  margin-bottom: 30px;
-}
-.containerAll {
-   
-   backdrop-filter: blur(2px);
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 0;
-  min-height: fit-content;
- padding-bottom: 40px;
-  margin-left: 40px;
-}
-.containerTitleDescription {
-  display: flex;
-  flex-direction: column;
-  padding-top: 30px;
-
-}
-.containerP {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.name {
-  color: var(--color-text);
-  font-size: 2rem;
-  text-transform: uppercase;
-  line-height: 1.5rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
+@font-face {
+  font-family: 'Menda';
+  src: url('/Codex/Menda\ Font/Menda SemiBold.otf') format('truetype');
+  font-weight: 600;
   font-style: normal;
-  margin-right: 10px;
 }
-.logo {
-  height: 100px;
-  width: 100px;
-  margin-left: 40px;
+.container{
+  background-color: var(--color-fondo-dark);
+  background-image: url('../../cuadricula.png') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center ;
 }
-.crimsonContainer {
-  text-align: end;
+
+.title {
   color: var(--color-text);
-  margin-top: 20px;
-  margin-right: 10px;
-  margin-left: 10px;
-  font-family: "Poppins", sans-serif;
+  padding: 1rem;
+  font-family: 'Menda'; 
   font-weight: 500;
-  font-style: normal;
-  font-size: 1rem;
+  line-height: 1.5rem;
+  font-size: 1.7rem;
+}
+.containerInfo{
+  color: var(--color-text);
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  margin: 5rem 0 0 0 ;
+  padding-right: 20px;
 
 }
-span {
-  background-color: var(--color-crimson);
-  padding: 0 10px;
-  border-radius: 20px;
-}
-.card {
-  background-color: var(--color-fondo-instagram);
-  padding-bottom: 10px;
-  box-shadow: 4px 4px 40px #0000009f;
-  display: flex;
-  flex-direction: column;
-  margin-top: 160px ;
-  border-bottom-left-radius: 30px ;
-  border-top-left-radius: 30px;
-  margin-left: 40px;
+.containerTextInfo{
+  position: absolute;
+  z-index: 1;
+  text-align: end;
  
 }
-.cardTitle {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  text-transform: uppercase;
-  padding: 20px 15px;
-  font-size: 1.2rem;
-  text-align: center;
+.medioCirculo{
+  width: 22vw;
+  position: relative; 
+  top: 0px;
+  z-index: 0;
 }
-.cardInfo1,
-.cardInfo2,
-.cardInfo3 {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 30px;
-}
-.cardInfo1 p,
-.cardInfo2 p,
-.cardInfo3 p {
-  max-width: 270px;
-}
-.cardInfo1 .p,
-.cardInfo2 .p,
-.cardInfo3 .p {
-  font-family: 'Menda';
-  font-weight: 500;
-}
-.cardNumber {
-  font-family: 'Menda';
-  font-weight: 500;
-  font-size: 2rem;
-}
-.medidor {
+
+
+.pensando{
+  width: 50vw;
   display: none;
 }
 
+.containerTextInfo p:nth-child(1){
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.8rem;
+}
 
-@media (min-width: 1430px) {
-  .containerAll {
-    border-top-left-radius: 235px;
-    border-bottom-left-radius: 100px;
-    margin-left: 100px;
-    padding-bottom: 1px;
+.containerTextInfo p:nth-child(2){
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+.text{
+  color: var(--color-text);
+  font-style: 'Menda';
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.6rem;
+  text-transform: uppercase;  
+  padding: 3rem 0 0 0 ;
+
+}
+
+.color{
+  color: var(--color-crimson);
+}
+
+.containerImportantInfo{
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.boxOne{
+ background-color: #ffffff0d;
+ border-top-left-radius: 33px;
+ border-top-right-radius: 33px;
+ margin: 0 1rem;
+
+}
+
+.boxThree{
+border-bottom-left-radius: 33px;
+border-bottom-right-radius: 33px;
+ background-color: #ffffff0d;
+  margin: 0 1rem;
+}
+
+.boxTwo{
+  background-color: var(--color-crimson);
+  border-radius: 33px;
  
-  }
-  .containerP {
-    width: fit-content;
-  }
-  .name {
-    font-size: 5rem;
-    line-height: 3.6rem;
-    margin-top: 10px;
-    text-align: start;
-    margin-left: 150px;
-  }
+}
 
-  .containerTitleDescription {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-  .crimsonContainer {
-    margin-right: 40px;
-    font-size: 2.2rem;
-    max-width: 900px;
-    margin-top: 30px;
-    text-align: end;
-    
-  }
-  .logo {
-    display: none;
-  }
-  .cardTitle {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    text-transform: uppercase;
-    padding: 20px 15px;
+.number {
+  color: var(--color-crimson);
+  padding: 2rem 0 0 2rem; 
+  font-family: 'Menda';
+  font-weight: 500;
+
+
+}
+
+.numberTwo{
+  color: var(--color-text);
+   padding: 2rem 0 0 2rem; 
+   font-family: 'Menda';
+   font-weight: 500;
+}
+
+.counter p{
+  font-size: 3rem;
+  font-family: 'Menda';
+  font-weight: 500;
+    margin: auto;
+  max-width: 45vw;
+}
+
+.hoy{
     font-size: 3rem;
-  }
+  font-family: 'Menda';
+  font-weight: 500;
+    margin: auto;
+  max-width: 45vw;
+}
 
-  .card {
-    display: flex;
-    margin-left: 200px;
-    margin-bottom: 100px;
-    border-bottom-left-radius:55px ;
-    border-top-left-radius: 55px;
+.textInfo{
+  font-size: 0.8rem;
+  margin: auto;
+  max-width: 45vw;
+  padding: 0 0 2rem 0;
+  font-family: 'Menda';
+  font-weight: 500;
+}
+
+.seo{
+  font-family: 'Menda';
+  font-weight: 500;
+  color: var(--color-fondo);
+  font-size: 3rem;
+  margin: auto;
+  max-width: 60vw;
+    
+}
+
+.textInfoTwo{
+  color: var(--color-fondo);
+  font-family: 'Menda';
+  font-weight: 500;
+  margin: auto;
+  max-width: 60vw;
+}
+
+.containerButton{
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+button{
+  background: none ;
+  border: none;
+  font-family: 'Menda';
+  font-weight: 500;
+  background-color: var(--color-text);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.arrow{
+  width: 5vw;
+
+}
+
+
+@media (min-width: 850px) {
+  .title {
+  padding: 4rem;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
+}
+
+.medioCirculo{
+  width: 9vw;
+}
+.containerInfo{
+  align-items: center;
+  margin: 1rem 0;
+  padding-right: 40px;
+}
+
+.containerTextInfo p:nth-child(1){
+  font-size: 1.5rem;
+}
+
+.containerTextInfo p:nth-child(2){
  
-  }
-  .containerTextAll {
-    display: flex;
-    justify-content: space-around;
-   
+  font-size: 1.8rem;
+}
 
-  }
-  .cardNumber {
-    font-family: 'Menda';
-    font-weight: 500;
-    font-size: 5rem;
-  }
-  .cardInfo1 p,
-  .cardInfo2 p,
-  .cardInfo3 p {
-    max-width: 300px;
-  }
-  .cardInfo1 .p,
-  .cardInfo2 .p,
-  .cardInfo3 .p {
-    font-size: 1.2rem;
-  }
-  .cardInfo1,
-  .cardInfo3 {
-    justify-content: flex-end;
-  }
-  .cardInfo2 {
-    justify-content: flex-start;
-  }
-  }
+.text{
+  font-size: 2.8rem;
+  padding: 10rem 0 0 0 ;
+}
+
+.pensando{
+  display: flex;
+  width: 25vw;
+  position: absolute;
+  top: 57vw;
+  filter: grayscale(100%);
+ 
+}
+
+.containerImportantInfo{
+  align-items: flex-end;
+  flex-direction: row;
+  padding: 8rem;
+}
+
+.boxOne{
+
+ border-top-left-radius: 33px;
+ border-bottom-left-radius: 33px;
+ border-top-right-radius: 0;
+ margin: 1rem 0 0 0;
+ padding: 1rem;
+height: 250px;
+    width: 400px;      
+  
+}
+
+.boxThree{
+border-bottom-left-radius: 0;
+border-top-right-radius: 33px;
+margin: 1rem 0 0 0;
+    width: 400px;       /* Usa width en lugar de max-width */
+
+height: 250px;
+padding: 1rem;
+}
+
+.counter p,
+.textInfo,
+.seo,
+.textInfoTwo,
+.hoy{
+  padding: 0 0 0 1.5rem;
+
+}
+
+.textInfo,
+.textInfoTwo{
+  font-size: 1rem;
+}
+.number,
+.numberTwo{
+
+  padding: 0.5rem 0 0.5rem 0.5rem; 
+ 
+
+
+}
+
+.boxTwo{
+  background-color: var(--color-crimson);
+  border-radius: 0;
+  border-top-right-radius: 33px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 33px;
+    width: 700px;       
+
+   padding: 1rem;
+
+ 
+}
+
+.arrow{
+  width: 2vw;
+
+}
+
+
+}

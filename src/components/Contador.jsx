@@ -1,50 +1,50 @@
-import { useEffect, useRef, useState } from 'react';
+  import { useEffect, useRef, useState } from 'react';
 
-const ContadorAnimado = ({ final = 70 }) => {
-  const [count, setCount] = useState(0);
-  const [active, setActive] = useState(false);
-  const ref = useRef(null);
+  const ContadorAnimado = ({ final = 70 }) => {
+    const [count, setCount] = useState(0);
+    const [active, setActive] = useState(false);
+    const ref = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setActive(true);
-        }
-      },
-      { threshold: 0.9 }
-    );
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActive(true);
+          }
+        },
+        { threshold: 0.9 }
+      );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
       if (ref.current) {
-        observer.unobserve(ref.current);
+        observer.observe(ref.current);
       }
-    };
-  }, []);
 
-  useEffect(() => {
-    if (!active || count >= final) return;
+      return () => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      };
+    }, []);
 
-    const interval = setInterval(() => {
-      setCount((prev) => {
-        if (prev < final) return prev + 1;
-        clearInterval(interval);
-        return final;
-      });
-    }, 20);
+    useEffect(() => {
+      if (!active || count >= final) return;
 
-    return () => clearInterval(interval);
-  }, [active, count, final]);
+      const interval = setInterval(() => {
+        setCount((prev) => {
+          if (prev < final) return prev + 1;
+          clearInterval(interval);
+          return final;
+        });
+      }, 20);
 
-  return (
-    <p ref={ref}>
-      {count}%
-    </p>
-  );
-};
+      return () => clearInterval(interval);
+    }, [active, count, final]);
 
-export default ContadorAnimado;
+    return (
+      <p ref={ref}>
+        {count}%
+      </p>
+    );
+  };
+
+  export default ContadorAnimado;

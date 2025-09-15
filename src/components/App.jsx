@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import style from '../styles/App.module.css';
-import InterstellarBackground from './InterstellarBackground';
 import { useNavigate } from 'react-router-dom';
 
 const services = [
@@ -14,9 +13,10 @@ const services = [
 ];
 
 function App() {
-   const navigate = useNavigate();
-  const [activeIndex, setActiveIndex] = useState(0);
-
+  const navigate = useNavigate();
+  //const [activeIndex, setActiveIndex] = useState(0);
+  const [showLogo, setShowLogo] = useState(false); // <--- LÍNEA FALTANTE
+  const [showArrow, setShowArrow] = useState(false); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,47 +28,40 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const instanceId = Math.random().toString(36).substring(2, 9);
-    console.log(`useEffect montado (ID: ${instanceId})`);
-    const interval = setInterval(() => {
-      console.log(`Intervalo activado (ID: ${instanceId}) a las:`, new Date().toLocaleTimeString());
-      setActiveIndex((prevIndex) => (prevIndex + 1) % services.length);
-    }, 2000); // Cambiado a 2 segundos para mejor visualización
-    return () => {
-      console.log(`Limpiando intervalo (ID: ${instanceId})`);
-      clearInterval(interval);
-    };
-  }, []);
+
 
   return (
     <div className={style.container}>
-      <InterstellarBackground />
-      <div className={style.containerButtonWrapper}>
-        <div className={style.containerButton}>
-        <a href="https://wa.me/5493425543308"><button className={style.button}>Let’s build it!</button></a>
-          <div className={style.containerText}>
-         <p  onClick={() => navigate("/ask")}>?</p>
+      <div className={style.contenedorGeneral}>
+   
+          <img className={style.imgBanner} src="./banner.png" alt="banner" />
+       
+      <div className={style.containerGeneral}>
+          <div className={style.containerInfo}>
+          <div className={style.containerTextHome}>
+            <p>Tu mejor</p>
+            <p>opcion a la</p>
+            <p>hora de</p>
+            <p>digitalizarte</p>
           </div>
+        <div className={style.secondaryText}>
+          <p>¿Sabias qué? El 70% de las visitas llegan a traves del  navegador mobile</p>
+          <p>Potencia tu marca en la era digital</p>
         </div>
-      </div>
-      <div className={style.containerLogo}>
-        <div className={style.containerImg}>
-          <img
-            className={style.imgLogo}
-            src="./logo.png"
-            alt="Logo Corporación Codex"
-          />
         </div>
-        <div className={style.containerTextBottom}>
-          <div className={style.glitchWrapper}>
-            <div className={style.glitchText} data-text={services[activeIndex]}>
-              {services[activeIndex]}
+        <div className={style.containerResorte}>
+          <img className={style.resorte} src="./resorte.png" alt="resorte" />
+          <div className={style.containerButtonWrapper}>
+            <div className={style.containerButton}>
+              <a href="https://wa.me/5493425543308"><button className={style.button}>Let’s build it!</button></a>
+              <div className={style.containerText}>
+                <div > <img className={style.wp} src="./WhatsApp.png" alt="wp" /> </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
+      </div>
     </div>
   );
 }

@@ -64,6 +64,8 @@ function Ask() {
       <div className={style.containerLogo}>
         <img src="./logoblanco.png" alt="logoblanco " className={style.logoBlanco} />
       </div>
+
+
     </div>
   );
 }

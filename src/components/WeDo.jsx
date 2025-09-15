@@ -1,140 +1,50 @@
-import { useRef, useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import style from '../styles/WeDo.module.css';
-import ContadorAnimado from './Contador';
-
+import style from '../styles/WeDo.module.css'
+import Contador from './Contador'
 
 function WeDo() {
-  const containerPRef = useRef(null);
-  const [hasScrolled, setHasScrolled] = useState(false);
-  const cardRef = useRef(null);
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollThreshold = 20;
-      if (window.scrollY > scrollThreshold) {
-        setHasScrolled(true);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setShowCard(true);
-        }
-      },
-      {
-        threshold: 0.3,
-      }
-    );
-
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
-
-    return () => {
-      if (cardRef.current) observer.unobserve(cardRef.current);
-    };
-  }, []);
-
-  const variants = {
-    hidden: { opacity: 0, x: '100%' },
-    visible: { opacity: 1, x: 0 },
-  };
-
   return (
-    <div className={style.container} id="qué-hacemos">
-      <div className={style.line}></div>
-      <div className={style.containerAll}>
-        <div className={style.containerTitleDescription}>
-          <motion.div
-            className={style.containerP}
-            ref={containerPRef}
-            initial="hidden"
-            animate={hasScrolled ? 'visible' : 'hidden'}
-            variants={variants}
-            transition={{
-              duration: 1.2,
-              ease: 'easeOut',
-            }}
-          >
-            <img className={style.logo} src="./logogota.png" alt="Logo" />
-            <p className={style.name}>
-              What <br />
-              the <br />
-              F*ck <br />
-              we do
-            </p>
-          </motion.div>
-          <motion.div
-            className={style.containerP}
-            ref={containerPRef}
-            initial="hidden"
-            animate={hasScrolled ? 'visible' : 'hidden'}
-            variants={variants}
-            transition={{
-              duration: 1.2,
-              ease: 'easeOut',
-
-            }}
-            >
-            <div className={style.crimsonContainer}>
-              <p className={style.puno}>
-                En Codex <span>diseñamos, desarrollamos y comunicamos ideas con propósito.</span> Nos especializamos en crear estrategias visuales y digitales que posicionan marcas, conectan con audiencias y potencian resultados.
-              </p>
-              <br />
-              <p className={style.pdos}>
-                Desde Argentina, trabajamos con un <span>equipo multidisciplinario, creativo y profesional</span>, listo para llevar tu proyecto al siguiente nivel.
-              </p>
-            </div>
-          </motion.div>
+    <div className={style.container}>
+      <h2  className={style.title}>¿QUE <br></br> HACEMOS?</h2>
+      <div className={style.containerInfo}>
+        <div className={style.containerTextInfo}>
+          <p>En Codex Corp. impulsamos marcas a través del diseño, desarrollo y comunicación estratégica. <br /> Somos expertos en branding, marketing digital y diseño web, creando soluciones <br /> visuales y digitales que aumentan la visibilidad de tu  <br />negocio, conectan con tu público objetivo y generan resultados medibles. <br/> <br />    </p> 
+          <p>Nuestro equipo multidisciplinario combina creatividad, innovación y <br /> experiencia para llevar cada proyecto al siguiente nivel.</p>
         </div>
-        <motion.div
-          ref={containerPRef}
-          initial="hidden"
-          animate={hasScrolled ? 'visible' : 'hidden'}
-          variants={variants}
-          transition={{
-            duration: 2,
-            delay: 0.5,
-            ease: 'easeOut',
+        <img className={style.medioCirculo} src="./mediocirculo.png" alt="mediocirculo" />
+      </div>
+      <img className={style.pensando} src="./pensando.png" alt="pensando" />
+      <p className={style.text}> A mobile-friendly   <span className={style.color}> website</span>  <br />  is crucial:</p>
 
-          }}
-        >
-          <div className={style.card}>
-            <p className={style.cardTitle}>Un sitio web optimizado para dispositivos móviles es crucial:</p>
-            <div className={style.containerTextAll}>
-              <div className={style.cardInfo1}>
-                <p className={style.cardNumber}>
-                  <ContadorAnimado />
-                </p>
 
-                <p className={style.p}>De las visitas llegan a través del navegador móvil</p>
-              </div>
-              <div className={style.cardInfo2}>
-                <p className={style.cardNumber}>SEO</p>
-                <p className={style.p}>
-                  Aumenta la eficacia mejorando la funcionalidad y las clasificaciones en los motores de búsqueda, lo que garantiza que su sitio tenga un mejor rendimiento y llegue a más usuarios de manera efectiva.
-                </p>
-                <img className={style.medidor} src="" alt="medidor" />
-              </div>
-              <div className={style.cardInfo3}>
-                <p className={style.cardNumber}>DO IT</p>
-                <p className={style.p}>¡Haga que su sitio web sea compatible con dispositivos móviles ahora para un mejor SEO!</p>
-              </div>
+      <div className={style.containerImportantInfo}>
+
+        <div className={style.boxOne}>
+            <p className={style.number}>01.</p>
+
+            <div className={style.counter}>
+                 <Contador />
             </div>
-          </div>
-        </motion.div>
+            <p className={style.textInfo}>De las visitas llegan a traves del  navegador mobil</p>
+        </div>
+
+        <div className={style.boxTwo}>
+          <p className={style.numberTwo}>02.</p>
+          <p className={style.seo}>SEO</p>
+          <p className={style.textInfoTwo}>Mejoramos el rendimiento de tu sitio web optimizando su funcionalidad y posicionamiento en buscadores, asegurando que alcance a más usuarios de manera efectiva.</p>
+         <div className={style.containerButton}>
+           <button>Let’s build it! <img className={style.arrow} src="./arrow.png" alt="arrow" /> </button>
+         </div>
+        </div>
+
+        <div className={style.boxThree}>
+          <p className={style.number}>03.</p>
+          <p className={style.hoy}>HOY</p>
+          <p className={style.textInfo}>Haz tu sitio web móvil y potencia tu SEO para llegar a más clientes.</p>
+        
+        </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default WeDo;
+export default WeDo

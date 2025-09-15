@@ -10,7 +10,7 @@
 .container {
     min-height: fit-content;
     padding-bottom: 50px;
-    background-color: transparent;
+    background-color: var(--color-fondo-dark);
     color: var(--color-text);
     position: relative;
     top: -100px;

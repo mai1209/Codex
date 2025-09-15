@@ -17,7 +17,7 @@
 
 .container {
     min-height: fit-content;
-    background-color: transparent;
+    background-color: var(--color-fondo-dark);
 }
 
 .title {
