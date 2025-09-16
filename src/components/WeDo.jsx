@@ -3,7 +3,7 @@ import Contador from './Contador'
 
 function WeDo() {
   return (
-    <div className={style.container}>
+    <div className={style.container} id='qué-hacemos'>
       <h2  className={style.title}>¿QUE <br></br> HACEMOS?</h2>
       <div className={style.containerInfo}>
         <div className={style.containerTextInfo}>
