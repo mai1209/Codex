@@ -7,155 +7,98 @@
     --color-dark-text: #000;
     --color-fondo-dark: #1C1C1C;
 }
-.container {
-    min-height: fit-content;
-    padding-bottom: 50px;
+
+
+.container{
     background-color: var(--color-fondo-dark);
     color: var(--color-text);
-    position: relative;
-    top: -100px;
-
+ 
+   
 }
 
-.title {
-    color: var(--color-crimson);
-    font-size: 1rem;
-    margin: 50px 100px 50px 0;
-    text-align: end;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    line-height: 2rem;
-    width: 100%;
-}
-.containerTeam {
+.containerMembers{
     display: flex;
-    justify-content: space-around;
-    height: fit-content;
-    height: 150px;
-}
-.containerInfo {
-    font-size: 0.7rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-   flex-grow: 1;
-    margin-left: 30px;
-}
-.containerInfo h3 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-}
-.line {
-    border-top: 10px solid var(--color-text);
-    border-right: 10px solid var(--color-text);
-    border-top-right-radius: 100px;
-    margin-right: 40px;
-    padding-right: 30px;
-}
-.imgFondo{
-    width: 120px;
-    height: 120px;
-    position: relative;
-}
-.containerImgTeam{
-    margin-left: 20px;
-    width: 100px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding: 2rem 0;
 }
 
-.wrapperImgTeam{
-    width: 65px;
-    height: 105px;
-    position: relative;
-    top: -120px;
-    left: 53px;
-    border-top-left-radius: 7px;
-    background-image: url("../../imgDavidOficial.webp") ;
-    background-repeat: no-repeat;
-    background-size: cover;
+.imgMembers{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
 }
-.wrapperImgTeamMai{
-    width: 65px;
-    height: 105px;
-    position: relative;
-    top: -120px;
-    left: 53px;
-    border-top-left-radius: 7px;
-    background-image: url("../../imgMaiOficial.webp") ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
+.wrapperClass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    flex: 1;
 }
-.wrapperImgTeamJuan{
-    width: 65px;
-    height: 105px;
-    position: relative;
-    top: -120px;
-    left: 53px;
-    border-top-left-radius: 7px;
-    background-image: url("../../imgOficialJuan.webp") ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
+.wrapperClass p{
+    text-align: center;
+    font-family: 'Menda';
+    font-weight: 500;
+    font-size: 0.6rem;
 }
+
+.containerImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    filter: grayscale(100%);
+
+}
+
+.containerImg img{
+    width: 20vw;
+   
+}
+
 @media (min-width: 850px) {
-    .title{
-        font-size: 3rem;
-        margin: 50px 100px 100px 0;
-        line-height: 9rem;
+
+    .container{
+          height: 80vh;
     }
-    .line {
-        border-top: 25px solid var(--color-text);
-        border-right: 25px solid var(--color-text);
-        border-top-right-radius: 150px;
-        margin-right: 200px;
-        margin-top: 50px;
-    }
-    .line {
-        border-top: 30px solid var(--color-text);
-        border-right: 30px solid var(--color-text);
-        border-top-right-radius: 100px;
-        margin-right: 200px;
-        margin-top: 50px;
-    }
-    .containerTeam {
-        display: flex;
-        justify-content: space-around;
-        height: fit-content;
-        height: 300px;
+  .containerImg img{
+    width: 10vw;
+   
 }
-    .imgFondo{
-    width: 250px;
-    height: 250px;
-    margin-left: 100px;
+
+.containerImg{
+ 
+    gap: 3rem;
+    padding: 2rem 0;
+    
+
 }
-.containerInfo {
-    font-size: 2rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    flex-grow: 1;
-    margin-right: 300px;
-    text-align: end;
+
+.imgMembers{
+    width: 150px;
+    height: 150px;
+   
 }
-.wrapperImgTeam{
-    width: 130px;
-    height: 222px;
-    top: -250px;
-    left: 216px;
+
+.wrapperClass{
+    gap: 2rem;
 }
-.wrapperImgTeamMai{
-    width: 130px;
-    height: 222px;
-    top: -250px;
-    left: 216px;
+
+.wrapperClass p{
+   
+    font-size: 1.3rem;
+   
 }
-.wrapperImgTeamJuan{
-     width: 130px;
-    height: 222px;
-    top: -250px;
-    left: 216px;
+
+.containerMembers{
+ 
+    
+    padding: 4rem 0;
 }
+
 }

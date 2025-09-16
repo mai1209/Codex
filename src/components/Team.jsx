@@ -1,37 +1,8 @@
-import { motion } from 'framer-motion';
+
 import style from "../styles/Team.module.css";
 
 
 
-// Variantes
-//const titleVariant = {
-//hidden: { opacity: 0, x: 50 },
-//visible: { opacity: 1, x: 0, transition: { duration: 1.5} }
-//};
-
-const titleVariantTwo = {
-  hidden: {
-    clipPath: "inset(100% 0% 0% 0%)",
-    opacity: 0,
-  },
-  visible: {
-    clipPath: "inset(0% 0% 0% 0%)",
-    opacity: 1,
-    transition: {
-      duration: 0.7,
-      ease: "easeInOut",
-    },
-  },
-};
-
-const textVariant = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.5 + i * 0.3 }
-  })
-};
 
 function Team() {
   const members = [
@@ -40,54 +11,44 @@ function Team() {
       name: "Maira Coria",
       role1: "CTO",
       role2: "Co-Founder",
+      img: "./imgMaiOficial.webp",
     },
     {
       wrapperClass: style.wrapperImgTeam,
       name: "David Menendez",
       role1: "CEO",
       role2: "Co-Founder",
+      img: "./imgDavidOficial.webp",
     },
     {
       wrapperClass: style.wrapperImgTeamJuan,
       name: "Juan Manuel Fehleisen",
       role1: "CMO",
       role2: "Chief Sales Officer",
+      img: "./imgOficialJuan.webp",
     }
   ];
 
   return (
     <div className={style.container} id="nuestro-equipo">
-      <div className={style.line}>
-        <motion.div
-          className={style.title}
-          initial='hidden'
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-
-        >
-          <motion.h2 variants={titleVariantTwo}>
-            nuestro equipo
-          </motion.h2>
-          </motion.div>
-       {members.map((member, i) => (
-          <div key={i} className={style.containerTeam}>
-            <div className={style.containerImgTeam}>
-              <img className={style.imgFondo} src="/fondoImgTeam.webp" alt="fondo" />
-              <div className={member.wrapperClass} />
+      <div className={style.containerImg}>
+        <img src="./logo1.webp" alt="logo1" />
+        <img src="./logo2.webp" alt="logo2" />
+        <img src="./logo3.webp" alt="logo3" />
+        <img src="./logo4.webp" alt="logo4" />
+        <img src="./logo5.webp" alt="logo5" />
+        <img src="./logo6.webp" alt="logo6" />
+      </div>
+      <div className={style.containerMembers}>
+        {members.map((member) => (
+          <div key={member.name} className={style.wrapperClass}>
+            <div>
+              <img className={style.imgMembers} src={member.img} alt="img" />
             </div>
-
-            <motion.div
-              className={style.containerInfo}
-              custom={i}
-              variants={textVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <h3>{member.name}</h3>
-              <p>{member.role1}</p>
-              <p>{member.role2}</p>
-            </motion.div>
+           
+            <p>{member.role1}</p>
+            <p>{member.role2}</p>
+             <p>{member.name}</p>
           </div>
         ))}
       </div>
