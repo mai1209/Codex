@@ -26,12 +26,47 @@
   font-weight: 600;
   font-style: normal;
 }
-.container{
+.container {
+
+  --grid-size: 100px;          /* Tamaño de cada celda */
+  --line-color: #3838384f;      /* Color de las líneas finas de la grilla */
+  --cross-color: #66666600;       /* Color de las cruces en las intersecciones */
+  --dot-color: #55555500;         /* Color de los puntos en el medio */
+
   background-color: var(--color-fondo-dark);
-  background-image: url('../../cuadricula.png') ;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position:center ;
+
+  /* Las capas se leen de arriba hacia abajo */
+  background-image:
+    /* 1. Puntos en el medio de la celda (la capa de más arriba) */
+    radial-gradient(circle, var(--dot-color) 1px, transparent 1.5px),
+    /* 2. Barra vertical de la cruz (+) */
+    linear-gradient(var(--cross-color), var(--cross-color)),
+    /* 3. Barra horizontal de la cruz (+) */
+    linear-gradient(to right, var(--cross-color), var(--cross-color)),
+    /* 4. Líneas verticales de la grilla */
+    repeating-linear-gradient(to right, var(--line-color) 0, var(--line-color) 2px, transparent 2px, transparent var(--grid-size)),
+    /* 5. Líneas horizontales de la grilla */
+    repeating-linear-gradient(to bottom, var(--line-color) 0, var(--line-color) 2px, transparent 2px, transparent var(--grid-size));
+
+  /* El tamaño de cada capa (corresponde a las 5 capas de arriba) */
+  background-size:
+    var(--grid-size) var(--grid-size),      /* 1. El espacio de repetición para los puntos */
+    2px 10px,                             /* 2. Grosor y alto de la barra vertical de la cruz */
+    10px 2px,                             /* 3. Ancho y grosor de la barra horizontal de la cruz */
+    var(--grid-size) var(--grid-size),      /* 4. El espacio de repetición para la grilla vertical */
+    var(--grid-size) var(--grid-size);      /* 5. El espacio de repetición para la grilla horizontal */
+
+  background-position:
+    calc(var(--grid-size) / 2) calc(var(--grid-size) / 2), /* 1. Centra los puntos en la celda */
+    center center,                          /* 2. Centra las barras verticales de la cruz */
+    center center,                          /* 3. Centra las barras horizontales de la cruz */
+    center center,                          /* 4. Centra la grilla vertical */
+    center center;                          /* 5. Centra la grilla horizontal */
+
+ 
+  background-repeat: repeat;
+
+
 }
 
 .title {
@@ -47,7 +82,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: end;
-  margin: 5rem 0 0 0 ;
+  margin: 9rem 0 0 0 ;
   padding-right: 20px;
 
 }
@@ -272,7 +307,7 @@ height: 250px;
 border-bottom-left-radius: 0;
 border-top-right-radius: 33px;
 margin: 1rem 0 0 0;
-    width: 400px;       /* Usa width en lugar de max-width */
+    width: 400px;       
 
 height: 250px;
 padding: 1rem;

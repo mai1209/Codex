@@ -1,50 +1,68 @@
-  import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-  const ContadorAnimado = ({ final = 70 }) => {
-    const [count, setCount] = useState(0);
-    const [active, setActive] = useState(false);
-    const ref = useRef(null);
+const ContadorAnimado = ({ final = 70 }) => {
+  const [count, setCount] = useState(0);
+  const [active, setActive] = useState(false);
+  const ref = useRef(null);
+  const animationFrameId = useRef(); 
 
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setActive(true);
-          }
-        },
-        { threshold: 0.9 }
-      );
-
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-
-      return () => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
+  // Este useEffect para el IntersectionObserver se queda igual
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActive(true);
         }
-      };
-    }, []);
-
-    useEffect(() => {
-      if (!active || count >= final) return;
-
-      const interval = setInterval(() => {
-        setCount((prev) => {
-          if (prev < final) return prev + 1;
-          clearInterval(interval);
-          return final;
-        });
-      }, 20);
-
-      return () => clearInterval(interval);
-    }, [active, count, final]);
-
-    return (
-      <p ref={ref}>
-        {count}%
-      </p>
+      },
+      { threshold: 0.9 }
     );
-  };
 
-  export default ContadorAnimado;
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
+
+  useEffect(() => {
+    if (!active) return;
+
+    const duration = 1500; 
+    let startTime = null;
+
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = timestamp - startTime;
+      const percentage = Math.min(progress / duration, 1);
+      const newCount = Math.floor(percentage * final);
+      
+      setCount(newCount);
+
+      if (progress < duration) {
+        // Si no hemos terminado, pedimos el siguiente frame
+        animationFrameId.current = requestAnimationFrame(animate);
+      }
+    };
+
+    // Inicia la animación
+    animationFrameId.current = requestAnimationFrame(animate);
+
+    // Función de limpieza para cancelar la animación si el componente se desmonta
+    return () => cancelAnimationFrame(animationFrameId.current);
+  }, [active, final]);
+
+
+  return (
+    <p ref={ref}>
+      {count}%
+    </p>
+  );
+};
+
+export default ContadorAnimado;

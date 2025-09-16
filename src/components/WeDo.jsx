@@ -1,5 +1,5 @@
 import style from '../styles/WeDo.module.css'
-import Contador from './Contador'
+//import Contador from './Contador'
 
 function WeDo() {
   return (
@@ -10,9 +10,9 @@ function WeDo() {
           <p>En Codex Corp. impulsamos marcas a través del diseño, desarrollo y comunicación estratégica. <br /> Somos expertos en branding, marketing digital y diseño web, creando soluciones <br /> visuales y digitales que aumentan la visibilidad de tu  <br />negocio, conectan con tu público objetivo y generan resultados medibles. <br/> <br />    </p> 
           <p>Nuestro equipo multidisciplinario combina creatividad, innovación y <br /> experiencia para llevar cada proyecto al siguiente nivel.</p>
         </div>
-        <img className={style.medioCirculo} src="./mediocirculo.png" alt="mediocirculo" />
+        <img  loading="lazy" className={style.medioCirculo} src="./mediocirculo.webp" alt="mediocirculo" />
       </div>
-      <img className={style.pensando} src="./pensando.png" alt="pensando" />
+      <img  loading="lazy" className={style.pensando} src="./pensando.webp" alt="pensando" />
       <p className={style.text}> A mobile-friendly   <span className={style.color}> website</span>  <br />  is crucial:</p>
 
 
@@ -22,7 +22,7 @@ function WeDo() {
             <p className={style.number}>01.</p>
 
             <div className={style.counter}>
-                 <Contador />
+               
             </div>
             <p className={style.textInfo}>De las visitas llegan a traves del  navegador mobil</p>
         </div>
@@ -32,7 +32,7 @@ function WeDo() {
           <p className={style.seo}>SEO</p>
           <p className={style.textInfoTwo}>Mejoramos el rendimiento de tu sitio web optimizando su funcionalidad y posicionamiento en buscadores, asegurando que alcance a más usuarios de manera efectiva.</p>
          <div className={style.containerButton}>
-           <button>Let’s build it! <img className={style.arrow} src="./arrow.png" alt="arrow" /> </button>
+           <button>Let’s build it! <img loading="lazy" className={style.arrow} src="./arrow.webp" alt="arrow" /> </button>
          </div>
         </div>
 

@@ -132,14 +132,14 @@ function Contacto() {
       <div className={style.containerInfo}>
         <img
           className={style.logoFooter}
-          src="./logoFooter.png"
+          src="./logoFooter.webp"
           alt="Logo de la empresa Codex"
         />
       </div>
       <div className={style.redes}>
-        <a href="#" target='_blank' rel="noopener noreferrer"> <img src="./LinkedIn.png" alt="LinkedIn" /></a>
-       <a  href="https://instagram.com/codexcorporation" target='_blank' rel="noopener noreferrer"> <img src="./Instagram.png" alt="Instagram" /></a>
-       <a href="https://wa.me/5493425543308" target="_blank" rel="noopener noreferrer"> <img src="./WhatsApp.png" alt="WhatsApp" /></a>
+        <a href="#" target='_blank' rel="noopener noreferrer"> <img src="./LinkedIn.webp" alt="LinkedIn" /></a>
+       <a  href="https://instagram.com/codexcorporation" target='_blank' rel="noopener noreferrer"> <img src="./Instagram.webp" alt="Instagram" /></a>
+       <a href="https://wa.me/5493425543308" target="_blank" rel="noopener noreferrer"> <img src="./WhatsApp.webp" alt="WhatsApp" /></a>
       </div>
       <footer>
         <p>Política de privacidad</p>

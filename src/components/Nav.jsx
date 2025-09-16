@@ -46,14 +46,15 @@ function Nav() {
             <div className={`${style.containerArrowSubir} ${showArrow ? style.showArrow : ''}`}>
                 <img
                     className={style.arrowSubirImg}
-                    src="./arrowup.png"
+                    src="./arrowup.webp"
                     alt="flecha-subir"
                     onClick={scrollToTop}
+                    loading="lazy"
                 />
             </div>
             <nav>
                 <div className={style.welcome}>
-                   <img  id='img' onClick={scrollToTop} src="./logo.png" alt="Logo Codex" className={style.logo} />
+                   <img loading="lazy" id='img' onClick={scrollToTop} src="./logo.webp" alt="Logo Codex" className={style.logo} />
                 </div>
 
                 <div className={style.containerTexts}>

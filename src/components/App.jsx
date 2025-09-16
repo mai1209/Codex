@@ -15,7 +15,7 @@ const services = [
 function App() {
   const navigate = useNavigate();
   //const [activeIndex, setActiveIndex] = useState(0);
-  const [showLogo, setShowLogo] = useState(false); // <--- LÍNEA FALTANTE
+  const [showLogo, setShowLogo] = useState(false); 
   const [showArrow, setShowArrow] = useState(false); 
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function App() {
     <div className={style.container}>
       <div className={style.contenedorGeneral}>
    
-          <img className={style.imgBanner} src="./banner.png" alt="banner" />
+          <img loading="lazy" className={style.imgBanner} src="./banner.webp" alt="banner" />
        
       <div className={style.containerGeneral}>
           <div className={style.containerInfo}>
@@ -50,12 +50,12 @@ function App() {
         </div>
         </div>
         <div className={style.containerResorte}>
-          <img className={style.resorte} src="./resorte.png" alt="resorte" />
+          <img className={style.resorte} src="./resorte.webp" alt="resorte" />
           <div className={style.containerButtonWrapper}>
             <div className={style.containerButton}>
               <a href="https://wa.me/5493425543308"><button className={style.button}>Let’s build it!</button></a>
               <div className={style.containerText}>
-                <div > <img className={style.wp} src="./WhatsApp.png" alt="wp" /> </div>
+                <div > <img className={style.wp} src="./WhatsApp.webp" alt="wp" /> </div>
               </div>
             </div>
           </div>

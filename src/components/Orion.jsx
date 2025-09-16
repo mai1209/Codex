@@ -25,7 +25,7 @@ function Orion() {
       <div className={style.containerDescriptionAll}>
         <img 
           className={style.imgOrion} 
-          src="./orionDescription.png" 
+          src="./orionDescription.webp" 
           alt="Identidad visual de Orion Hairstudio" 
         />
         

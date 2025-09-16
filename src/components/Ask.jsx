@@ -62,7 +62,7 @@ function Ask() {
         </div>
       </div>
       <div className={style.containerLogo}>
-        <img src="./logoblanco.png" alt="logoblanco " className={style.logoBlanco} />
+        <img src="./logoblanco.webp" alt="logoblanco " className={style.logoBlanco} />
       </div>
 
 

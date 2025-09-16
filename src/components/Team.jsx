@@ -72,7 +72,7 @@ function Team() {
        {members.map((member, i) => (
           <div key={i} className={style.containerTeam}>
             <div className={style.containerImgTeam}>
-              <img className={style.imgFondo} src="/fondoImgTeam.png" alt="fondo" />
+              <img className={style.imgFondo} src="/fondoImgTeam.webp" alt="fondo" />
               <div className={member.wrapperClass} />
             </div>
 

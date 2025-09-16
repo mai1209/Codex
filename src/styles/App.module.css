@@ -224,7 +224,7 @@ cursor: pointer;
   height: 23px;
 }
 .containerGeneral{
-  background-image: url('../../textfondo.png');
+  background-image: url('../../textfondo.webp');
   background-size: contain;
   background-repeat: no-repeat;
   margin: 2rem 0;
