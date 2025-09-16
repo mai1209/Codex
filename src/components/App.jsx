@@ -2,19 +2,26 @@ import { useState, useEffect } from 'react';
 import style from '../styles/App.module.css';
 import { useNavigate } from 'react-router-dom';
 
-const services = [
-  'Identidad Visual',
-  'Estrategias y diseño',
-  'Aplicaciones Móvil',
-  'Desarrollo Web',
-  'Comunicación',
-  'Creatividad',
-  'Marketing',
-];
+// Componente aislado para el video. No afecta a nada más.
+const AutoPlayBackgroundVideo = ({ videoId }) => {
+ const videoSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&iv_load_policy=3&modestbranding=1`;
+
+  return (
+    <div className={style.videoBackgroundContainer}>
+      <iframe
+        className={style.videoBackground}
+        src={videoSrc}
+        title="YouTube video background player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  );
+};
+
 
 function App() {
   const navigate = useNavigate();
-  //const [activeIndex, setActiveIndex] = useState(0);
   const [showLogo, setShowLogo] = useState(false);
   const [showArrow, setShowArrow] = useState(false);
 
@@ -28,24 +35,15 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-
-
   return (
     <div className={style.container}>
+      {/* El div principal que ya tenías */}
       <div className={style.contenedorGeneral}>
 
-       {/* 1. VIDEO CORREGIDO */}
-        <video
-          className={style.videoBackground}   // -> Clase nueva para el fondo
-          src="/video.mp4"                    // -> Ruta desde la carpeta /public
-          autoPlay                            // -> Atributo en camelCase para React
-          loop
-          muted
-          playsInline                         // -> Atributo en camelCase para React
-        >
-          Tu navegador no soporta videos.
-        </video>
+        {/* Insertamos el video aquí. Se posicionará detrás del resto del contenido */}
+        <AutoPlayBackgroundVideo videoId="B8VV75AdHco" />
 
+        {/* Todo tu contenido permanece igual */}
         <div className={style.containerGeneral}>
           <div className={style.containerInfo}>
             <div className={style.containerTextHome}>
@@ -55,7 +53,7 @@ function App() {
               <p>digitalizarte</p>
             </div>
             <div className={style.secondaryText}>
-              <p>¿Sabias qué? El 70% de las visitas llegan a traves del  navegador mobile</p>
+              <p>¿Sabias qué? El 70% de las visitas llegan a traves del navegador mobile</p>
               <p>Potencia tu marca en la era digital</p>
             </div>
           </div>

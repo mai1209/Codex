@@ -49,12 +49,17 @@ nav {
 }
 .videoBackground {
   border-radius: 5px;
-  width: 90%;
+  width: 95%;
+  height: 300px;
   margin: auto;
   object-fit: cover; 
   z-index: 1;     
 }
-
+.videoBackgroundContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .containerMenu {
   display: flex;
@@ -244,13 +249,15 @@ border: none;
 
 @media (min-width: 850px) {
 
-/* --- CLASE NUEVA PARA EL VIDEO --- */
+
 .videoBackground {
   border-radius: 33px;
-  width: 70%;
-  margin: 1rem;
-  object-fit: cover; 
-  z-index: 1;     
+  width: 90%;
+  height: 400px;
+   
+}
+.videoBackgroundContainer{
+  flex: 1;
 }
   .containerMenu {
   display: flex;
