@@ -82,18 +82,22 @@
   display: flex;
   justify-content: flex-end;
   align-items: end;
-  margin: 9rem 0 0 0 ;
-  padding-right: 20px;
+  margin: 2rem 1rem;
+
+
+ 
 
 }
 .containerTextInfo{
   position: absolute;
   z-index: 1;
   text-align: end;
+  width: 90%;
  
 }
 .medioCirculo{
-  width: 22vw;
+  width: 40vw;
+  height: 100%;
   position: relative; 
   top: 0px;
   z-index: 0;
@@ -101,7 +105,7 @@
 
 
 .pensando{
-  width: 50vw;
+ 
   display: none;
 }
 
@@ -110,6 +114,8 @@
   font-weight: 300;
   font-style: normal;
   font-size: 0.8rem;
+
+ 
 }
 
 .containerTextInfo p:nth-child(2){
@@ -238,6 +244,7 @@ button{
   justify-content: center;
   align-items: center;
   gap: 5px;
+  font-size: 0.5rem;
 }
 
 .arrow{

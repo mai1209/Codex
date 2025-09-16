@@ -1,5 +1,5 @@
 import style from '../styles/WeDo.module.css'
-//import Contador from './Contador'
+import Contador from './Contador'
 
 function WeDo() {
   return (
@@ -22,7 +22,7 @@ function WeDo() {
             <p className={style.number}>01.</p>
 
             <div className={style.counter}>
-               
+               <Contador />
             </div>
             <p className={style.textInfo}>De las visitas llegan a traves del  navegador mobil</p>
         </div>

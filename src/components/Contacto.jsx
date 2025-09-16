@@ -139,7 +139,7 @@ function Contacto() {
       <div className={style.redes}>
         <a href="#" target='_blank' rel="noopener noreferrer"> <img src="./LinkedIn.webp" alt="LinkedIn" /></a>
        <a  href="https://instagram.com/codexcorporation" target='_blank' rel="noopener noreferrer"> <img src="./Instagram.webp" alt="Instagram" /></a>
-       <a href="https://wa.me/5493425543308" target="_blank" rel="noopener noreferrer"> <img src="./WhatsApp.webp" alt="WhatsApp" /></a>
+      
       </div>
       <footer>
         <p>Política de privacidad</p>
