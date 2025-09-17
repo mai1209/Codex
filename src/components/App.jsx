@@ -40,7 +40,6 @@ function App() {
       {/* El div principal que ya tenías */}
       <div className={style.contenedorGeneral}>
 
-        {/* Insertamos el video aquí. Se posicionará detrás del resto del contenido */}
         <AutoPlayBackgroundVideo videoId="B8VV75AdHco" />
 
         {/* Todo tu contenido permanece igual */}

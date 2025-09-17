@@ -32,7 +32,8 @@ function WeDo() {
           <p className={style.seo}>SEO</p>
           <p className={style.textInfoTwo}>Mejoramos el rendimiento de tu sitio web optimizando su funcionalidad y posicionamiento en buscadores, asegurando que alcance a más usuarios de manera efectiva.</p>
          <div className={style.containerButton}>
-           <button>Let’s build it! <img loading="lazy" className={style.arrow} src="./arrow.webp" alt="arrow" /> </button>
+            
+            <a href="https://wa.me/5493425543308"><button>Let’s build it! <img loading="lazy" className={style.arrow} src="./arrow.webp" alt="arrow" /> </button></a>
          </div>
         </div>
 
