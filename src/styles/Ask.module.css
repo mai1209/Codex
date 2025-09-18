@@ -10,6 +10,7 @@
     src: url('/Menda\ Font/Menda Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 .container {
