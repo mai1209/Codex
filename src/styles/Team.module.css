@@ -12,6 +12,8 @@
 .container{
     background-color: var(--color-fondo-dark);
     color: var(--color-text);
+
+    
  
    
 }
@@ -22,6 +24,9 @@
     align-items: center;
     gap: 5px;
     padding: 2rem 0;
+
+
+    
 }
 
 .imgMembers{
@@ -30,6 +35,10 @@
     border-radius: 50%;
 }
 
+.circle{
+    border: 2px solid var(--color-crimson);
+    border-radius: 50%;
+}
 .wrapperClass{
     display: flex;
     flex-direction: column;
@@ -38,28 +47,27 @@
     height: 200px;
     flex: 1;
 }
-
 .wrapperClass p{
     text-align: center;
     font-family: 'Menda';
     font-weight: 500;
     font-size: 0.6rem;
 }
-
 .containerImg{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    padding: 3rem 0;
     filter: grayscale(100%);
-
 }
 
 .containerImg img{
     width: 20vw;
-   
 }
+
+
 
 @media (min-width: 850px) {
 

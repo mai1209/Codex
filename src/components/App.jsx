@@ -22,24 +22,32 @@ const AutoPlayBackgroundVideo = ({ videoId }) => {
 
 function App() {
   const navigate = useNavigate();
-  const [showLogo, setShowLogo] = useState(false);
+
   const [showArrow, setShowArrow] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowLogo(window.scrollY > 100);
-      setShowArrow(window.scrollY > window.innerHeight);
+   
+      setShowArrow(window.scrollY > 200);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
+  // <-- 1. AÑADE LA FUNCIÓN PARA HACER SCROLL -->
+  const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+  };
 
   return (
     <div className={style.container}>
+      
       {/* El div principal que ya tenías */}
       <div className={style.contenedorGeneral}>
-
         <AutoPlayBackgroundVideo videoId="B8VV75AdHco" />
 
         {/* Todo tu contenido permanece igual */}
@@ -69,6 +77,18 @@ function App() {
           </div>
         </div>
       </div>
+
+      {/* <-- 2. AÑADE EL JSX DE LA FLECHA AQUÍ --> */}
+      <div className={`${style.containerArrowSubir} ${showArrow ? style.showArrow : ''}`}>
+        <img
+            className={style.arrowSubirImg}
+            src="./arrowup.webp"
+            alt="flecha-subir"
+            onClick={scrollToTop}
+            loading="lazy"
+        />
+      </div>
+
     </div>
   );
 }

@@ -42,7 +42,7 @@ function Team() {
       <div className={style.containerMembers}>
         {members.map((member) => (
           <div key={member.name} className={style.wrapperClass}>
-            <div>
+            <div className={style.circle}>
               <img className={style.imgMembers} src={member.img} alt="img" />
             </div>
            

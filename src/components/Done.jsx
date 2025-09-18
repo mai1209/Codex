@@ -1,4 +1,4 @@
-  import { motion } from "framer-motion";
+ 
   import style from "../styles/Done.module.css";
   import { useNavigate } from 'react-router-dom';
   import { useState } from "react";
@@ -34,15 +34,8 @@
       <div className={style.container} id="portafolio">
         <div>
           <div className={style.containerTitle}>
-            <motion.div
-              className={style.title}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-            >
-              <motion.p variants={titleVariants}>What We've</motion.p>
-              <motion.p variants={titleVariants}>Done.</motion.p>
-            </motion.div>
+            <p  className={style.title}> What We've <br /> Done. </p>
+     
           </div>
           
           <p className={style.subtitle}>

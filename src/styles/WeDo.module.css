@@ -144,7 +144,7 @@
   color: var(--color-text);
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .boxOne{
