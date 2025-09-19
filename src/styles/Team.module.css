@@ -7,43 +7,21 @@
     --color-dark-text: #000;
     --color-fondo-dark: #1C1C1C;
 }
+
+@font-face {
+  font-family: 'Menda';
+  src: url('/Menda\ Font/menda_medium-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 .container{
     background-color: var(--color-fondo-dark);
     color: var(--color-text);
     min-height: fit-content;
 }
-.containerMembers{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
-    padding: 2rem 0;
-}
 
-.imgMembers{
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-}
-
-.circle{
-    border: 2px solid var(--color-crimson);
-    border-radius: 50%;
-}
-.wrapperClass{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-    flex: 1;
-}
-.wrapperClass p{
-    text-align: center;
-    font-family: 'Menda';
-    font-weight: 500;
-    font-size: 0.6rem;
-}
 .containerImg{
     display: flex;
     justify-content: center;
@@ -58,6 +36,63 @@
     width: 20vw;
 }
 
+
+.containerMembers{
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center ;
+    padding: 2rem 0;
+
+}
+.wrapperClass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem ;
+    flex: 1;
+}
+.imgMembers{
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+}
+.containerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.p{
+    font-size: 0.7rem;
+    font-family: 'Menda';
+    text-align: center;
+
+}
+
+.role2{
+    font-size: 0.7rem;
+    font-family: "Archivo", sans-serif;  
+    font-weight:100;
+    font-style: normal;
+}
+.firstImage {
+  border-radius: 50%;
+  padding: 1px; 
+  background: conic-gradient(from 180deg, var(--color-crimson) 180deg, transparent 0);
+  border: none;
+}
+
+.middleImage{
+  border-radius: 50%;
+  padding: 1px; 
+  background: conic-gradient(from 0deg, var(--color-crimson) 180deg, transparent 0);
+  border: none;
+}
 @media (min-width: 850px) {
 
 .containerImg img{
@@ -69,23 +104,25 @@
 }
 
 .imgMembers{
-    width: 150px;
-    height: 150px;
+   width: 150px;
+   height: 150px;
+
 }
 
-.wrapperClass{
-    gap: 1.2rem;
-}
-
-.wrapperClass p{
-   font-size: 1.3rem;
+.p{
+    font-size: 1.2rem;
    
+
+}
+
+.role2{
+    font-size: 1rem;
+
 }
 
 .containerMembers{
- max-width: 1000px;
-    margin: auto;
-    padding: 4rem  0 1rem 0;
+   gap: 2rem    ;
+
 }
 
 }

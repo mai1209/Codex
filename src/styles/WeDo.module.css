@@ -10,21 +10,21 @@
 }
 @font-face {
   font-family: 'Menda';
-  src: url('/Codex/Menda\ Font/Menda Bold.otf') format('truetype');
+  src: url('/Codex/Menda\ Font/menda_bold-webfont.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Menda';
-  src: url('/Codex/Menda\ Font/Menda Medium.otf') format('truetype');
+  src: url('/Codex/Menda\ Font/menda_medium-webfont.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Menda';
-  src: url('/Codex/Menda\ Font/Menda SemiBold.otf') format('truetype');
+  src: url('/Codex/Menda\ Font/menda_semibold-webfont.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;

@@ -2,8 +2,6 @@
 import style from "../styles/Team.module.css";
 
 
-
-
 function Team() {
   const members = [
     {
@@ -27,7 +25,7 @@ function Team() {
       role2: "Chief Sales Officer",
       img: "./imgOficialJuan.webp",
     }
-  ];
+    ];
 
   return (
     <div className={style.container} id="nuestro-equipo">
@@ -40,18 +38,32 @@ function Team() {
         <img src="./logo6.webp" alt="logo6" />
       </div>
       <div className={style.containerMembers}>
-        {members.map((member) => (
-          <div key={member.name} className={style.wrapperClass}>
-            <div className={style.circle}>
-              <img className={style.imgMembers} src={member.img} alt="img" />
-            </div>
+    {members.map((member, index) => {
+          
+          let specialClass = '';
+          if (index === 0) {
+            specialClass = style.firstImage;
+          } else if (index === members.length - 1) {
+            specialClass = style.middleImage;
+          }
+
+          return (
            
-            <p>{member.role1}</p>
-            <p>{member.role2}</p>
-             <p>{member.name}</p>
-          </div>
-        ))}
-      </div>
+            <div key={member.name} className={style.wrapperClass}>
+              
+              <div className={`${style.circle} ${specialClass}`}>
+                <img className={style.imgMembers} src={member.img} alt={member.name} />
+              </div>
+         
+              <div className={style.containerText}>
+                <p className={style.p}>{member.role1}</p>
+                <p className={style.role2}>{member.role2}</p>
+                <p className={style.p}>{member.name}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div> 
     </div>
   );
 }

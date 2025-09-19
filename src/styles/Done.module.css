@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    src: url('/Menda\ Font/Menda Medium.ttf') format('truetype');
+    src: url('/Menda\ Font/menda_medium-webfont.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-family: 'Menda';
