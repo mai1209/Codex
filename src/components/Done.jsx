@@ -117,21 +117,7 @@
           </div>
         </div>
         
-        {/* Botón de acción */}
-        <div className={style.containerButtonWrapper}>
-          <div className={style.containerButton}>
-            <a href="https://wa.me/5493425543308">
-              <button className={style.button}>Let's build it!</button>
-            </a>
-            <div className={style.containerText}>
-              <p>take</p>
-              <p>action and</p>
-              <p>boost</p>
-              <p>your</p>
-              <p>business</p>
-            </div>
-          </div>
-        </div>
+      
         
         {/* Overlay de fondo */}
         <div 

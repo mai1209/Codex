@@ -154,48 +154,7 @@
     cursor: pointer;
 }
 
-.containerButtonWrapper {
-    display: flex;
-    width: 100vw;
 
-    justify-content: flex-end;
-
-}
-
-.containerButton {
-    background-color: #F0EAD6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    padding: 0.4rem;
-    margin: 1rem 0.5rem;
-
-    border-top-left-radius: 13px;
-    border-bottom-left-radius: 13px;
-    gap: 0.4rem;
-
-}
-
-.containerButton a {
-    text-decoration: none;
-}
-
-.button {
-    background-color: var(--color-fondo-dark);
-    color: var(--color-text);
-    border: 1px solid var(--color-crimson);
-    border-radius: 13px;
-    text-align: center;
-    height: fit-content;
-    padding: 0.7rem 1rem;
-    font-size: 0.6rem;
-    font-family: 'Menda';
-    font-weight: 500;
-    font-style: normal;
-    cursor: pointer;
-
-}
 
 .containerText {
     line-height: 0.5rem;
