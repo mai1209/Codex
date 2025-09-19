@@ -167,7 +167,7 @@ border-bottom-right-radius: 33px;
 
 .boxTwo{
   background-color: var(--color-crimson);
-  border-radius: 33px;
+  border-radius: 50px;
  
 }
 
@@ -354,10 +354,10 @@ padding: 1rem;
 .boxTwo{
   background-color: var(--color-crimson);
   border-radius: 0;
-  border-top-right-radius: 33px;
+  border-top-right-radius: 50px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  border-top-left-radius: 33px;
+  border-top-left-radius: 50px;
     width: 700px;       
 
    padding: 1rem;
@@ -379,4 +379,20 @@ button{
 }
 
 
+
 }
+
+
+
+
+@media (min-width: 1500px){
+  
+.pensando{
+
+  top: 40vw;
+
+ 
+}
+}
+
+

@@ -61,7 +61,7 @@
 @media (min-width: 850px) {
 
 .containerImg img{
-    width: 12vw;
+    width: 10vw;
 }
 .containerImg{
     gap: 3rem;
@@ -83,7 +83,7 @@
 }
 
 .containerMembers{
-    max-width: 1000px;
+ max-width: 1000px;
     margin: auto;
     padding: 4rem  0 1rem 0;
 }
