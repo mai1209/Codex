@@ -31,7 +31,7 @@ const services = [
 
 function Diagrama() {
   return (
-    <div className={style.container}>
+    <div   id='consulta-nuestros-servicios' className={style.container}>
         <p className={style.title}>
             Servicios
         </p>

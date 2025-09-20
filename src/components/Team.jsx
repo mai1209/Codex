@@ -30,12 +30,14 @@ function Team() {
   return (
     <div className={style.container} id="nuestro-equipo">
       <div className={style.containerImg}>
-        <img src="./logo1.webp" alt="logo1" />
-        <img src="./logo2.webp" alt="logo2" />
-        <img src="./logo3.webp" alt="logo3" />
-        <img src="./logo4.webp" alt="logo4" />
-        <img src="./logo5.webp" alt="logo5" />
-        <img src="./logo6.webp" alt="logo6" />
+        <img fetchpriority="high" src="./logo1.webp" alt="logo1" />
+        <img fetchpriority="high" src="./logo2.webp" alt="logo2" />
+        <img fetchpriority="high" src="./logo3.webp" alt="logo3" />
+        <img fetchpriority="high" src="./logo4.webp" alt="logo4" />
+        <img fetchpriority="high" src="./logo5.webp" alt="logo5" />
+        <img fetchpriority="high" src="./logo6.webp" alt="logo6" />
+        <img fetchpriority="high" src="./logo7.webp" alt="logo7" />
+        <img fetchpriority="high" src="./logo8.webp" alt="logo8" />
       </div>
       <div className={style.containerMembers}>
     {members.map((member, index) => {
@@ -52,7 +54,7 @@ function Team() {
             <div key={member.name} className={style.wrapperClass}>
               
               <div className={`${style.circle} ${specialClass}`}>
-                <img className={style.imgMembers} src={member.img} alt={member.name} />
+                <img fetchpriority="high" className={style.imgMembers} src={member.img} alt={member.name} />
               </div>
          
               <div className={style.containerText}>

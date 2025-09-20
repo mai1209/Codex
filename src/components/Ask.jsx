@@ -55,7 +55,7 @@ function Ask() {
         </div>
       </div>
       <div className={style.containerLogo}>
-        <img src="./logoblanco.webp" alt="logoblanco " className={style.logoBlanco} />
+        <img  fetchpriority="high" src="./logoblanco.webp" alt="logoblanco " className={style.logoBlanco} />
       </div>
 
 

@@ -29,11 +29,23 @@
     flex-wrap: wrap;
     gap: 1rem;
     padding: 3rem 0;
-    filter: grayscale(100%);
+   
+
 }
 
 .containerImg img{
-    width: 20vw;
+    width: 25vw;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+   cursor: pointer;
+    filter: grayscale(100%) brightness(170%); 
+
+      
+    
+   
+}
+.containerImg img:hover{
+    filter: grayscale(0%) brightness(100%); 
 }
 
 
@@ -97,6 +109,7 @@
 
 .containerImg img{
     width: 10vw;
+ 
 }
 .containerImg{
     gap: 3rem;

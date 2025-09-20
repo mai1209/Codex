@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import style from '../styles/App.module.css';
-import { useNavigate } from 'react-router-dom';
+
 
 // Componente aislado para el video. No afecta a nada más.
 const AutoPlayBackgroundVideo = ({ videoId }) => {
@@ -21,7 +21,7 @@ const AutoPlayBackgroundVideo = ({ videoId }) => {
 
 
 function App() {
-  const navigate = useNavigate();
+ 
 
   const [showArrow, setShowArrow] = useState(false);
 
@@ -65,12 +65,12 @@ function App() {
             </div>
           </div>
           <div className={style.containerResorte}>
-            <img className={style.resorte} src="./resorte.webp" alt="resorte" />
+            <img  fetchpriority="high"  className={style.resorte} src="./resorte.webp" alt="resorte" />
             <div className={style.containerButtonWrapper}>
               <div className={style.containerButton}>
                 <a href="https://wa.me/5493425543308"><button className={style.button}>Let’s build it!</button></a>
                 <div className={style.containerText}>
-                  <div > <img className={style.wp} src="./WhatsApp.webp" alt="wp" /> </div>
+                  <div > <img  fetchpriority="high" className={style.wp} src="./WhatsApp.webp" alt="wp" /> </div>
                 </div>
               </div>
             </div>
@@ -86,6 +86,7 @@ function App() {
             alt="flecha-subir"
             onClick={scrollToTop}
             loading="lazy"
+            fetchpriority="high"
         />
       </div>
 

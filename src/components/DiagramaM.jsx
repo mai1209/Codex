@@ -46,7 +46,7 @@ function DiagramaM() {
   }, [activeIndex]);
 
   return (
-    <div className={style.container}>
+    <div  id='consulta-nuestros-servicios'  className={style.container}>
       <p className={style.title}>
         Servicios
       </p>
@@ -60,7 +60,7 @@ function DiagramaM() {
               onClick={() => setActiveIndex(index)}
             >
               <p className={style.serviceTitle}>{service.title}</p>
-              <img className={style.arrowLeft} src="./left.webp" alt="arrow" />
+              <img fetchpriority="high" className={style.arrowLeft} src="./left.webp" alt="arrow" />
             </div>
           ))}
         </div>

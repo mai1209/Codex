@@ -151,17 +151,28 @@
 }
 
 .boxOne{
- background-color: #ffffff0d;
+
+   background: linear-gradient(
+        to bottom,            
+        #ffffff0d 80%,         
+        #ffffff00 100%         
+    );
  border-top-left-radius: 33px;
  border-top-right-radius: 33px;
  margin: 0 1rem;
+
 
 }
 
 .boxThree{
 border-bottom-left-radius: 33px;
 border-bottom-right-radius: 33px;
- background-color: #ffffff0d;
+
+   background: linear-gradient(
+        to top,            
+        #ffffff0d 80%,         
+        #ffffff00 100%         
+    );
   margin: 0 1rem;
 }
 
@@ -233,7 +244,7 @@ border-bottom-right-radius: 33px;
 .containerButton{
   display: flex;
   justify-content: flex-end;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .containerButton a{
@@ -251,7 +262,8 @@ button{
   justify-content: center;
   align-items: center;
   gap: 5px;
-  font-size: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
 }
 
 .arrow{
@@ -314,8 +326,13 @@ button{
  border-top-right-radius: 0;
  margin: 1rem 0 0 0;
  padding: 1rem;
-height: 250px;
-    width: 400px;      
+  height: 250px;
+  width: 400px;      
+     background: linear-gradient(
+        to bottom,            
+        #ffffff0d 100%,         
+        #ffffff00 0         
+    );
   
 }
 
@@ -327,6 +344,11 @@ margin: 1rem 0 0 0;
 
 height: 250px;
 padding: 1rem;
+   background: linear-gradient(
+        to bottom,            
+        #ffffff0d 100%,         
+        #ffffff00 0%         
+    );
 }
 
 .counter p,

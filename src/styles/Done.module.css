@@ -125,6 +125,7 @@
     height: 250px;
     min-height: fit-content;
     border-radius: 13px;
+   
 }
 
 .containerBoxOne,
@@ -136,6 +137,8 @@
     gap: 1rem;
     margin: 0 20px;
 }
+
+
 
 .containerProyect .img {
     width: 100%;

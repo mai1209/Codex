@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'; // <-- 1. IMPORTA LINK AQUÍ
 
 function Nav() {
     const [activeMenuIndex, setActiveMenuIndex] = useState(null);
-    const [hoveredMenuIndex, setHoveredMenuIndex] = useState(null);
+  //  const [hoveredMenuIndex, setHoveredMenuIndex] = useState(null);
     const [showLogo, setShowLogo] = useState(false);
     const [showArrow, setShowArrow] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,11 +48,12 @@ function Nav() {
                     alt="flecha-subir"
                     onClick={scrollToTop}
                     loading="lazy"
+                    fetchpriority="high"
                 />
             </div>
             <nav>
                 <div className={style.welcome}>
-                   <img loading="lazy" id='img' onClick={scrollToTop} src="./logo.webp" alt="Logo Codex" className={style.logo} />
+                   <img fetchpriority="high" loading="lazy" id='img' onClick={scrollToTop} src="./logo.webp" alt="Logo Codex" className={style.logo} />
                 </div>
 
                 {/* --- 2. MODIFICA EL MENÚ DE ESCRITORIO --- */}
