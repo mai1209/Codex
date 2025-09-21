@@ -25,7 +25,21 @@ const services = [
   {
     title: 'Aplicación Móvil',
     description: 'Apps funcionales e intuitivas que destacan por su diseño y rendimiento.'
-  }
+  },
+
+];
+
+const servicesdos = [
+  {
+    title: 'Desarrollo Web',
+    description: 'Creamos sitios web innovadores, optimizados y adaptados a tus necesidades.'
+  },
+  {
+    title: 'Comunicación',
+    description: 'Mensajes estratégicos que fortalecen la conexión con tu público. "No es lo que vendes, sino como lo vendes."'
+  },
+ 
+
 ];
 
 function DiagramaM() {
@@ -76,6 +90,18 @@ function DiagramaM() {
               <p>{service.description}</p>
             </div>
           ))}
+
+            {servicesdos.map((service, index) => (
+            <div
+              key={index}
+             className={`${style.containerDescriptionIndividual} ${index === activeIndex ? style.activeDescription : ''}`}
+              ref={el => descriptionRefs.current[index] = el}
+            >
+              <p className={style.serviceTitleDescription}>{service.title}</p>
+              <p>{service.description}</p>
+            </div>
+          ))}
+          
         </div>
       </div>
     </div>
