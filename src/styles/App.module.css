@@ -46,7 +46,7 @@ nav {
   display: flex;
   justify-content: center;
   justify-content: space-between;
-  padding-right: 0px;
+  padding:0.5rem  1rem;
   z-index: 99999999999;
 box-shadow: 0 0 10px 0 #ffffff29;
 }
@@ -266,6 +266,10 @@ text-decoration: none;
 justify-content: center;
 align-items: center;
 
+}
+
+.nav{
+  padding: 0;
 }
   .menuHamburguesa {
   display: none;
