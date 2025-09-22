@@ -96,10 +96,11 @@
   z-index: 1;
   text-align: end;
   width: 90%;
+  padding-right: 5px;
  
 }
 .medioCirculo{
-  width: 40vw;
+  width: 42vw;
   height: 100%;
   position: relative; 
   top: 0px;
@@ -298,8 +299,8 @@ button{
 }
 
 .text{
-  font-size: 2.8rem;
-  padding: 10rem 0 0 0 ;
+  font-size: 2rem;
+  padding: 10rem 0  0 10rem;
 }
 
 .pensando{

@@ -93,9 +93,9 @@ function DiagramaM() {
 
             {servicesdos.map((service, index) => (
             <div
-              key={index}
+            
              className={`${style.containerDescriptionIndividual} ${index === activeIndex ? style.activeDescription : ''}`}
-              ref={el => descriptionRefs.current[index] = el}
+              
             >
               <p className={style.serviceTitleDescription}>{service.title}</p>
               <p>{service.description}</p>

@@ -18,12 +18,12 @@
       <div className={style.container} id="portafolio">
         <div>
           <div className={style.containerTitle}>
-            <p  className={style.title}> What We've <br /> Done. </p>
+            <p  className={style.title}> Lo que hemos  <br /> Hecho. </p>
      
           </div>
           
           <p className={style.subtitle}>
-            <span className={style.span}>CODEX</span> featured projects
+            <span className={style.span}>CODEX</span> proyectos destacados
           </p>
           
           <div className={style.containerAllProyect}>
@@ -33,7 +33,7 @@
                 <img fetchpriority="high" className={style.img} src="/wifrut.webp" alt="wifrut" />
                 <p className={style.nameProyect}>wifrut.com</p>
                 <p className={style.descriptionProyect}>
-                  Brand design, front- and back-end development, systems design.
+                  Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.
                 </p>
                 <a href="https://wifrut.com">
                   <img fetchpriority="high" className={style.link} src="/Linking.webp" alt="link" />
@@ -44,7 +44,7 @@
                 <img fetchpriority="high" className={style.img} src="/crea.webp" alt="crea" />
                 <p className={style.nameProyect}>creamarketingparavos.com</p>
                 <p className={style.descriptionProyect}>
-                  Brand design, front- and back-end development, systems design.
+                  Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.
                 </p>
                 <a href="https://creamarketingparavos.com">
                   <img fetchpriority="high" className={style.link} src="/Linking.webp" alt="link" />
@@ -57,7 +57,7 @@
                 <img fetchpriority="high" className={style.img} src="/growth.webp" alt="growth" />
                 <p className={style.nameProyect}>Growth web app</p>
                 <p className={style.descriptionProyect}>
-                  Brand design, front- and back-end development, systems design.
+                 Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.
                 </p>
                 <img 
                   onClick={() => setActivo(true)} 
@@ -70,7 +70,7 @@
               <div className={style.containerProyect}>
                 <img fetchpriority="high" className={style.img} src="/orion.webp" alt="orion" />
                 <p className={style.nameProyect}>Orion hairstudio</p>
-                <p className={style.descriptionProyect}>Brand identity</p>
+                <p className={style.descriptionProyect}>Diseño de marca.</p>
                 <a onClick={() => navigate("/orion")}>
                   <img className={style.link} src="/Linking.webp" alt="link" />
                 </a>
@@ -82,7 +82,7 @@
                 <img fetchpriority="high" className={style.img} src="/app.webp" alt="app" />
                 <p className={style.nameProyect}>Growth mobile app</p>
                 <p className={style.descriptionProyect}>
-                  Development and systems design.
+                  Desarrollo y diseño de sistemas.
                 </p>
                 <img fetchpriority="high" onClick={()=>{setActivo(true)}} className={style.link} src="/Linking.webp" alt="link" />
               </div>
@@ -91,7 +91,8 @@
                 <img fetchpriority="high" className={style.img} src="portafolio.webp" alt="portafolio" />
                 <p className={style.nameProyect}>Dev portfolio</p>
                 <p className={style.descriptionProyect}>
-                  Front design and development
+                  
+                    Diseño y desarrollo frontal
                 </p>
                 <a href="https://maidev.wtf">
                   <img fetchpriority="high" className={style.link} src="/Linking.webp" alt="link" />
@@ -113,10 +114,9 @@
         {/* Popup - Versión corregida */}
         <div className={`${style.containerPopUp} ${activo ? style.activo : ''}`}>
           <div className={`${style.popUp} ${activo ? style.activo : ''}`}>
-            <h2>Ready to build your digital future?</h2>
+            <h2>  ¿Listo para construir tu futuro digital?</h2>
             <p className={style.description}>
-              We're crafting this project with passion and vision, and it's coming soon. 
-              Stay tuned and let's build it together with Codex! #LetsBuildIt
+            Estamos elaborando este proyecto con pasión y visión, y llegará pronto. ¡Estén atentos y construyámoslo junto con Codex! #LetsBuildIt
             </p>
             <div className={style.btnContainer}>
               <button 
