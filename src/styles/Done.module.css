@@ -64,16 +64,17 @@
 
 }
 .title {
-    font-size: 2rem;
-    color: var(--color-text);
-    text-transform: uppercase;
-    padding-left: 20px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-style: normal;
+
+  color: var(--color-text);
+  padding: 1rem;
+  font-family: 'Menda'; 
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-size: 1.7rem;
     text-align: end;
     width: fit-content;
     line-height: 30px;
+    text-transform: uppercase;
 }
 
 .subtitle {
@@ -284,14 +285,11 @@
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
 }
-
-    .title {
-        font-size: 4rem;
-        padding-left: 32px;
-        padding-bottom: 50px;
-        padding-top: 100px;
-        line-height: 65px;
-    }
+ .title {
+  padding: 4rem;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
+}
 
     .containerProyect {
 
