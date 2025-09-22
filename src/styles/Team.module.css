@@ -9,69 +9,73 @@
 }
 
 @font-face {
-  font-family: 'Menda';
-  src: url('/Menda\ Font/menda_medium-webfont.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Menda';
+    src: url('/Menda\ Font/menda_medium-webfont.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
 
-.container{
+.container {
     background-color: var(--color-fondo-dark);
     color: var(--color-text);
     min-height: fit-content;
 }
 
-.containerImg{
+.containerImg {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
     padding: 3rem 0;
-   
+
 
 }
 
-.containerImg img{
+.containerImg img {
     width: 25vw;
     aspect-ratio: 3/2;
     object-fit: contain;
-   cursor: pointer;
-    filter: grayscale(100%) brightness(170%); 
+    cursor: pointer;
+    filter: grayscale(100%) brightness(170%);
 
-      
-    
-   
-}
-.containerImg img:hover{
-    filter: grayscale(0%) brightness(100%); 
+
+
+
 }
 
+.containerImg img:hover {
+    filter: grayscale(0%) brightness(100%);
+}
 
-.containerMembers{
+
+.containerMembers {
     max-width: 900px;
     margin: auto;
     display: flex;
-    align-items: flex-start; 
-    justify-content: center ;
+    align-items: flex-start;
+    justify-content: center;
     padding: 2rem 0;
 
 }
-.wrapperClass{
+
+.wrapperClass {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem ;
+    gap: 1rem;
     flex: 1;
 }
-.imgMembers{
-   width: 80px;
-   height: 80px;
-   border-radius: 50%;
+
+.imgMembers {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
-.containerText{
+
+.containerText {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,66 +83,136 @@
     gap: 1rem;
 }
 
-.p{
+.p {
     font-size: 0.7rem;
     font-family: 'Menda';
     text-align: center;
 
 }
 
-.role2{
+.role2 {
     font-size: 0.7rem;
-    font-family: "Archivo", sans-serif;  
-    font-weight:100;
+    font-family: "Archivo", sans-serif;
+    font-weight: 100;
     font-style: normal;
 }
+
 .firstImage {
-  border-radius: 50%;
-  padding: 1px; 
-  background: conic-gradient(from 180deg, var(--color-crimson) 180deg, transparent 0);
-  border: none;
+    border-radius: 50%;
+    padding: 1px;
+    background: conic-gradient(from 180deg, var(--color-crimson) 180deg, transparent 0);
+    border: none;
 }
 
-.middleImage{
-  border-radius: 50%;
-  padding: 1px; 
-  background: conic-gradient(from 0deg, var(--color-crimson) 180deg, transparent 0);
-  border: none;
-}
-@media (min-width: 850px) {
-
-.containerImg img{
-    width: 10vw;
- 
-}
-.containerImg{
-    gap: 3rem;
-    padding: 2rem 0;
+.middleImage {
+    border-radius: 50%;
+    padding: 1px;
+    background: conic-gradient(from 0deg, var(--color-crimson) 180deg, transparent 0);
+    border: none;
 }
 
-.imgMembers{
-   width: 150px;
-   height: 150px;
+.containerContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    background-color: var(--color-crimson);
+    gap: 1.5rem;
 
 }
 
-.p{
-    font-size: 1.2rem;
-   
+.textContact {
+    color: var(--color-dark-text);
+    font-size: 0.9rem;
+    font-family: 'Menda';
+    font-weight: 500;
+    line-height: 0.8rem;
 
 }
 
-.role2{
+.btnContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: var(--color-fondo);
+
+}
+
+.btnContact button {
+    background: none;
     font-size: 1rem;
+    font-family: 'Menda';
+    font-weight: 500;
+    color: var(--color-text);
+
 
 }
 
-.containerMembers{
-   gap: 2rem    ;
-
-}
-
+.btnContact img {
+    width: 5vw;
 }
 
 
 
+@media (min-width: 850px) {
+    .containerContact {
+      padding: 3rem 3rem 3rem 3rem;
+        gap: 20rem;
+        margin-top: 5rem;
+
+    }
+
+    .textContact {
+
+        font-size: 1.8rem;
+        line-height: 1.5rem;
+    }
+
+    .btnContact button {
+
+    font-size: 1.2rem;
+  
+
+
+}
+
+    .btnContact img {
+        width: 1.5vw;
+    }
+
+    .containerImg img {
+        width: 10vw;
+
+    }
+
+    .containerImg {
+        gap: 3rem;
+        padding: 2rem 0;
+    }
+
+    .imgMembers {
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .p {
+        font-size: 1.2rem;
+
+
+    }
+
+    .role2 {
+        font-size: 1rem;
+
+    }
+
+    .containerMembers {
+        gap: 2rem;
+
+    }
+
+}

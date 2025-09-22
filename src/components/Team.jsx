@@ -25,7 +25,7 @@ function Team() {
       role2: "Chief Sales Officer",
       img: "./imgOficialJuan.webp",
     }
-    ];
+  ];
 
   return (
     <div className={style.container} id="nuestro-equipo">
@@ -40,8 +40,8 @@ function Team() {
         <img fetchpriority="high" src="./logo8.webp" alt="logo8" />
       </div>
       <div className={style.containerMembers}>
-    {members.map((member, index) => {
-          
+        {members.map((member, index) => {
+
           let specialClass = '';
           if (index === 0) {
             specialClass = style.firstImage;
@@ -50,13 +50,13 @@ function Team() {
           }
 
           return (
-           
+
             <div key={member.name} className={style.wrapperClass}>
-              
+
               <div className={`${style.circle} ${specialClass}`}>
                 <img fetchpriority="high" className={style.imgMembers} src={member.img} alt={member.name} />
               </div>
-         
+
               <div className={style.containerText}>
                 <p className={style.p}>{member.role1}</p>
                 <p className={style.role2}>{member.role2}</p>
@@ -65,7 +65,15 @@ function Team() {
             </div>
           );
         })}
-      </div> 
+      </div>
+      <div className={style.containerContact}>
+        <p className={style.textContact}>CONSTRUÍ TU SITIO WEB CON <br />
+          CODEX CORPORTION & BUSINESS</p>
+        <div className={style.btnContact}>
+          <button>¡Contactanos!</button>
+          <img src="./WhatsAppBlanco.webp" alt="wp" />
+        </div>
+      </div>
     </div>
   );
 }
