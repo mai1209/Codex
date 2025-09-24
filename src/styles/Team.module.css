@@ -22,30 +22,47 @@
     min-height: fit-content;
 }
 
-.containerImg {
+
+/* Carrusel de logos */
+.carouselContainer {
+    width: 100%;
+  
+    position: relative;
+    background: transparent;
+    margin-bottom: 2rem;
+}
+
+.carouselTrack {
     display: flex;
-    justify-content: center;
+    animation: scroll-logos 20s linear infinite;
+    padding: 2rem 0;
+}
+
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.logoItem {
+    flex: 0 0 auto;
+    margin: 0 2rem;
+    height: 60px;
+    display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 3rem 0;
-
-
 }
 
-.containerImg img {
-    width: 25vw;
-    aspect-ratio: 3/2;
+.logoItem img {
+    height: 60px;
+    width: auto;
     object-fit: contain;
-    cursor: pointer;
     filter: grayscale(100%) brightness(170%);
-
-
-
-
+    transition: filter 0.3s;
 }
-
-.containerImg img:hover {
+.logoItem img:hover {
     filter: grayscale(0%) brightness(100%);
 }
 
@@ -139,7 +156,12 @@
     padding: 0.5rem;
     border-radius: 10px;
     background-color: var(--color-fondo);
+    z-index: 99999999;
 
+}
+
+.btnContact a{
+    text-decoration: none;
 }
 
 .btnContact button {
@@ -184,10 +206,7 @@
         width: 1.5vw;
     }
 
-    .containerImg img {
-        width: 10vw;
-
-    }
+   
 
     .containerImg {
         gap: 3rem;
@@ -215,5 +234,10 @@
         gap: 2rem;
 
     }
+
+.logoItem img {
+    height: 80px;
+ 
+}
 
 }

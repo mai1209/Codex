@@ -27,17 +27,30 @@ function Team() {
     }
   ];
 
+  // Carrusel de logos
+  const logos = [
+    './logo1.webp',
+    './logo2.webp',
+    './logo3.webp',
+    './logo4.webp',
+    './logo5.webp',
+    './logo6.webp',
+    './logo7.webp',
+    './logo8.webp',
+  ];
+  // Duplicamos para efecto infinito
+  const allLogos = [...logos, ...logos];
+
   return (
     <div className={style.container} id="nuestro-equipo">
-      <div className={style.containerImg}>
-        <img fetchpriority="high" src="./logo1.webp" alt="logo1" />
-        <img fetchpriority="high" src="./logo2.webp" alt="logo2" />
-        <img fetchpriority="high" src="./logo3.webp" alt="logo3" />
-        <img fetchpriority="high" src="./logo4.webp" alt="logo4" />
-        <img fetchpriority="high" src="./logo5.webp" alt="logo5" />
-        <img fetchpriority="high" src="./logo6.webp" alt="logo6" />
-        <img fetchpriority="high" src="./logo7.webp" alt="logo7" />
-        <img fetchpriority="high" src="./logo8.webp" alt="logo8" />
+      <div className={style.carouselContainer}>
+        <div className={style.carouselTrack}>
+          {allLogos.map((src, idx) => (
+            <div className={style.logoItem} key={idx}>
+              <img src={src} alt={`logo${idx % logos.length + 1}`} />
+            </div>
+          ))}
+        </div>
       </div>
       <div className={style.containerMembers}>
         {members.map((member, index) => {
@@ -70,8 +83,8 @@ function Team() {
         <p className={style.textContact}>CONSTRUÍ TU SITIO WEB CON <br />
           CODEX CORPORTION & BUSINESS</p>
         <div className={style.btnContact}>
-          <button>¡Contactanos!</button>
-          <img src="./WhatsAppBlanco.webp" alt="wp" />
+        <a href="https://wa.me/5493425543308">  <button>¡Contactanos!</button></a>
+         <img src="./WhatsAppBlanco.webp" alt="wp" />
         </div>
       </div>
     </div>

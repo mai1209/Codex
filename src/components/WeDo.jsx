@@ -4,7 +4,8 @@ import Contador from './Contador'
 function WeDo() {
   return (
     <div className={style.container} id='qué-hacemos'>
-      <h2 className={style.title}>¿QUE <br></br> HACEMOS?</h2>
+      <div className={style.containerAll}>
+            <h2 className={style.title}>¿QUE <br></br> HACEMOS?</h2>
       <div className={style.containerInfo}>
         <div className={style.containerTextInfo}>
           <p>En Codex Corp. impulsamos marcas a través del diseño, desarrollo y comunicación estratégica. <br /> Somos expertos en branding, marketing digital y diseño web, creando soluciones <br /> visuales y digitales que aumentan la visibilidad de tu  <br />negocio, conectan con tu público objetivo y generan resultados medibles. <br /> <br />    </p>
@@ -44,6 +45,7 @@ function WeDo() {
           <p className={style.textInfo}>Haz tu sitio web móvil y potencia tu SEO para llegar a más clientes.</p>
 
         </div>
+      </div>
       </div>
     </div>
   )

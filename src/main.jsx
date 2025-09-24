@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Im
 import '../src/index.css';
 import App from './components/App';
 import WeDo from './components/WeDo';
-import Diagrama from './components/Diagrama';
+//import Diagrama from './components/Diagrama';
 import DiagramaM from './components/DiagramaM';
 import Done from './components/Done';
 import Nav from './components/Nav';
@@ -39,7 +39,7 @@ function RootApp() {
                  <Nav /> 
                   <App />
                   <WeDo />
-                  {isMobile ? <Diagrama /> : <DiagramaM />}
+                  {isMobile ? <DiagramaM /> : <DiagramaM />}
                   <Done />
                   <Team />
                   <Contacto />

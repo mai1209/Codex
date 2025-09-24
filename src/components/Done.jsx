@@ -16,7 +16,7 @@
   
     return (
       <div className={style.container} id="portafolio">
-        <div>
+        <div className={style.containerAll}>
           <div className={style.containerTitle}>
             <p  className={style.title}> Lo que hemos  <br /> Hecho. </p>
      

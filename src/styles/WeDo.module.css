@@ -29,6 +29,8 @@
   font-style: normal;
   font-display: swap;
 }
+
+
 .container {
 
   --grid-size: 100px;          /* Tamaño de cada celda */
@@ -69,9 +71,32 @@
  
   background-repeat: repeat;
 
+ 
+
 
 }
 
+.containerAll{
+  position: relative;
+}
+.containerAll::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: 40%;
+  width: 70%;
+  height: 80%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 0, 128, 0.2) 0%,
+    rgba(255, 0, 128, 0.15) 25%,
+    rgba(255, 0, 128, 0.1) 40%,
+    transparent 60%
+  );
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+}
 .title {
   color: var(--color-text);
   padding: 1rem;
@@ -309,7 +334,7 @@ button{
   display: flex;
   width: 25vw;
   position: absolute;
-  top: 57vw;
+  top: 15vw;
  
  
 }
