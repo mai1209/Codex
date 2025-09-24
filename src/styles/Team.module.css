@@ -6,6 +6,7 @@
     --color-text: #fff;
     --color-dark-text: #000;
     --color-fondo-dark: #1C1C1C;
+    --carousel-speed: 20s; /* default speed for desktop */
 }
 
 @font-face {
@@ -34,8 +35,11 @@
 
 .carouselTrack {
     display: flex;
-    animation: scroll-logos 20s linear infinite;
+    width: max-content; /* asegurar que el track mida el ancho real del contenido duplicado */
+    flex-wrap: nowrap; /* evitar que las imágenes hagan wrap en pantallas pequeñas */
+    animation: scroll-logos var(--carousel-speed) linear infinite;
     padding: 2rem 0;
+    will-change: transform;
 }
 
 @keyframes scroll-logos {
@@ -44,6 +48,30 @@
     }
     100% {
         transform: translateX(-50%);
+    }
+}
+
+/* Responsive: reducir margenes y tamaño en móviles para mostrar más logos */
+@media (max-width: 600px) {
+    .logoItem {
+        margin: 0 0.6rem;
+        height: 44px;
+    }
+    .logoItem img {
+        height: 44px;
+    }
+    .carouselTrack {
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .logoItem {
+        margin: 0 0.4rem;
+        height: 36px;
+    }
+    .logoItem img {
+        height: 36px;
     }
 }
 

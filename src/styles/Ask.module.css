@@ -164,9 +164,20 @@ margin: 1rem;
   font-family: 'Menda';
   font-weight: 500;
   font-style: normal;
+  
+}
+.description{
+  padding-left: 3rem;
+  
+ 
 }
 
 @media (min-width: 850px){
+  .description{
+  padding-left: 6rem;
+  font-size: 1.6rem;
+ 
+}
 
 .title {
  

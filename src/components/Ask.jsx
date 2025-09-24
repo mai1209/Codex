@@ -56,7 +56,7 @@ function Ask() {
         <p className={style.simbol}>{q.simbol}</p>
         <p>{q.title}</p>
       </div>
-      {isOpen && <p>{q.desc}</p>}
+      {isOpen && <p className={style.description}>{q.desc}</p>}
     </div>
   );
 })}

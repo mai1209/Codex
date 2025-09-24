@@ -334,7 +334,8 @@ button{
   display: flex;
   width: 25vw;
   position: absolute;
-  top: 15vw;
+  top: 10%;
+  
  
  
 }
@@ -435,14 +436,5 @@ button{
 
 
 
-@media (min-width: 1500px){
-  
-.pensando{
-
-  top: 40vw;
-
- 
-}
-}
 
 
