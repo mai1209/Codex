@@ -19,30 +19,145 @@
 
 .container{
   background-color: var(--color-crimson);
+  overflow: hidden; 
+  position: relative
+}
+
+.imgFooter{
+  display: none;
+}
+
+.containerTitle{
+  padding: 1rem;
   
 }
 
 .title{
+  color:  var(--color-dark-text);
   font-family: 'Menda';
-  font-style: none;
   font-weight: 500;
-  color: var(--color-dark-text);
-  font-size: 1.2rem;
-  text-align: center;
-  padding: 1rem;
+  font-style: normal;
+  font-size: 1.5rem;
+
 }
 
 .subtitle{
   color: var(--color-text);
+  font-size: 1rem;
   font-family: 'Archivo', sans-serif;
-  font-weight: 500;
-  font-style: none;
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 1rem;
+}
+
+.containerAllLinks{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+
 }
 
 
+.titleNavigation{
+  color: var(--color-dark-text);
+  font-family: 'Menda';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  text-transform: uppercase;
+  
+}
+
+.containerLinksBottom{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+ 
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.links a{
+text-decoration: none ;
+color: var(--color-dark-text);
+font-family: 'Menda';
+font-size: 1rem;
+font-style: none;
+font-weight: 400;
+cursor: pointer;
+}
+
+.containerDerechos{
+  color: var(--color-text);
+  padding: 1rem ;
+  z-index: 99999999;
+  position: relative;
+  font-family: 'Menda';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+}
+
 @media (min-width: 850px) {
 
+.containerTitle{
+  padding: 6rem 0 12rem 6rem;
+}
+.title{
+ font-size: 2.5rem;
+}
+
+.subtitle{
+  font-size: 2rem;
+}
+
+.containerAllLinks{
+  justify-content: flex-end;
+  flex-direction: row;
+  padding: 0rem 15rem 10rem 0rem;
+  gap: 10rem;
+  position: relative;
+
+}
+
+.titleNavigation{
+font-size: 1.3rem;
+}
+
+.links a{
+font-size: 1.3rem;
+}
+
+.containerLinksBottom{
+ justify-content: space-between;
+ }
+
+.imgFooter {
+  display: flex;
+  position: absolute;
+  bottom: -7rem;
+  left: -10rem;
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  z-index: 0;
+ 
+}
+
+.containerDerechos{
+  color: var(--color-text);
+  padding: 0.5rem 10rem ;
+  z-index: 99999999;
+  position: relative;
+  font-family: 'Menda';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5rem;
+}
 
 }

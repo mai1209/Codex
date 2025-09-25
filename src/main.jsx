@@ -9,7 +9,7 @@ import DiagramaM from './components/DiagramaM';
 import Done from './components/Done';
 import Nav from './components/Nav';
 import Team from './components/Team';
-//import Footer from './components/Footer';
+import Footer from './components/Footer';
 import Orion from './components/Orion'; 
 import Ask from './components/Ask';
 
@@ -42,7 +42,7 @@ function RootApp() {
                   {isMobile ? <DiagramaM /> : <DiagramaM />}
                   <Done />
                   <Team />
-                
+                  <Footer />
                 </>
               } 
             />
