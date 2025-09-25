@@ -1,8 +1,6 @@
 
 import style from '../styles/Footer.module.css';
-
-
-
+import { Link } from "react-router-dom";
 
 
 function Footer() {
@@ -25,7 +23,7 @@ function Footer() {
             <a href="#portafolio">Portafolio</a>
             <a href="#nuestro-equipo">Equipo</a>
             <a href="#contacto">Contacto</a>
-            <a href="ask">Preguntas frecuentes</a>
+            <Link to="/ask">Preguntas frecuentes</Link>
           </div>
 
         </div>
@@ -51,7 +49,9 @@ function Footer() {
       <div className={style.containerDerechos}>
         <p>© 2025. Todos los derechos reservados.</p>
         <div >
-          <img src="" alt="" /><img src="" alt="" /><img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
         </div>
       </div>
 
@@ -61,5 +61,4 @@ function Footer() {
     </div>
   );
 }
-
 export default Footer;
