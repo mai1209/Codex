@@ -141,11 +141,13 @@
   transform: translateX(-15px);
   /* ESTA LÍNEA ES LA CLAVE DE LA ANIMACIÓN DE LA FLECHA */
   transition: opacity 0.3s ease-out, transform 0.4s ease-out;
+ 
+
 }
 
 .containerTitle.active .arrowLeft {
   opacity: 1;
-  transform: translateX(0);
+   transform: translateX(0) rotate(0deg); /* ↓ abajo */
 }
 
 
@@ -164,5 +166,12 @@ border: 1px solid var(--color-crimson);
   padding: 0.5rem 1rem 1rem;
 
 }
+
+.containerTitle.active .arrowLeft {
+  opacity: 1;
+   transform: translateX(0) rotate(90deg); /* ↓ abajo */
+}
+
+
 
 }

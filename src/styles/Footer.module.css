@@ -17,7 +17,29 @@
   font-display: swap;
 }
 
+.container{
+  background-color: var(--color-crimson);
+  
+}
 
+.title{
+  font-family: 'Menda';
+  font-style: none;
+  font-weight: 500;
+  color: var(--color-dark-text);
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.subtitle{
+  color: var(--color-text);
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  font-style: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
 
 
 @media (min-width: 850px) {

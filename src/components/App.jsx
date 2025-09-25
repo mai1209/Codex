@@ -4,28 +4,20 @@ import style from '../styles/App.module.css';
 
 
 const YouTubeLazy = ({ videoId }) => {
-  const [showIframe, setShowIframe] = useState(false);
-  const thumbnail = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+  // Memoizamos la URL para evitar recálculos innecesarios
+  const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&iv_load_policy=3&modestbranding=1`;
 
   return (
-    <div className={style.videoBackgroundContainer} onClick={() => setShowIframe(true)} style={{cursor: 'pointer'}}>
-      {!showIframe ? (
-        <img
-          className={style.videoBackground}
-          src={thumbnail}
-          alt="Video preview"
-          loading="lazy"
-          style={{objectFit: 'cover', width: '100%', height: '100%'}}
-        />
-      ) : (
+    <div className={style.videoBackgroundContainer}>
         <iframe
           className={style.videoBackground}
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&iv_load_policy=3&modestbranding=1`}
+          src={videoUrl}
           title="YouTube video background player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
+          loading="lazy"
+          aria-hidden="true"
         ></iframe>
-      )}
     </div>
   );
 };
