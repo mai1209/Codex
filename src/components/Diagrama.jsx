@@ -1,51 +1,44 @@
 import style from '../styles/Diagrama.module.css';
 
-const services = [
-    {
-        title: 'Desarrollo Web',
-        description: 'Creamos sitios web innovadores, optimizados y adaptados a tus necesidades.'
-    },
-    {
-        title: 'Comunicación',
-        description: 'Mensajes estratégicos que fortalecen la conexión con tu público. "No es lo que vendes, sino como lo vendes."'
-    },
-    {
-        title: 'Marketing',
-        description: 'Impulsamos tu marca con campañas estratégicas para maximizar su alcance y relevancia.'
-    },
-    {
-        title: 'Identidad Visual',
-        description: 'Diseños que transmiten tu esencia y conectan con tu audiencia.'
-    },
-    {
-        title: 'Estrategia y Diseño',
-        description: 'Estrategias visuales y conceptuales que dan vida a tus ideas.'
-    },
-    {
-        title: 'Aplicaciones Móviles',
-        description: 'Apps funcionales e intuitivas que destacan por su diseño y rendimiento.'
-    }
-];
-
-
-
 function Diagrama() {
+  // Creamos un array con el texto para repetirlo fácilmente
+  const titleText = "*DICEN QUIENES HAN TRABAJADO CON CODEX*";
+  // El número 6 es arbitrario, solo para asegurar que sea lo suficientemente largo.
+  const repeatedText = Array(6).fill(titleText); 
+
   return (
-    <div   id='consulta-nuestros-servicios' className={style.container}>
-        <p className={style.title}>
-            Servicios
-        </p>
-        <div className={style.diagrama}>
-            {services.map((service, index) => (
-                <div key={index} className={style.containerServices}>
-                    <p className={style.serviceTitle}>{service.title}</p>
-                    <p className={style.serviceDescription}>{service.description}</p>
-                </div>
-            ))}
+    <div className={style.container}>
+      {/* El div 'header' ahora es un contenedor flex para las dos marquesinas */}
+      <div className={style.header}>
+        {/* ✨ Creamos dos bloques de marquesina idénticos para el bucle infinito y sin pausas */}
+        <div className={style.marquee}>
+          {repeatedText.map((text, i) => (
+            <span key={i} className={style.title}>
+              {text}
+            </span>
+          ))}
         </div>
-    </div> 
-  )
+        <div className={style.marquee}>
+          {repeatedText.map((text, i) => (
+            <span key={`second-${i}`} className={style.title}>
+              {text}
+            </span>
+          ))}
+        </div>
+      </div>
+
+
+      <div className={style.content}>
+        <p className={style.description}>Con CODEX entendí que tener un sitio web es clave para el crecimiento constante y automatizado de mi negocio</p>
+        <div className={style.line}></div>
+        <div>
+          <p>Natalia Lofeudo</p>
+          <p>Creá</p>
+        </div>
+      
+      </div>
+    </div>
+  );
 }
 
-export default Diagrama
-
+export default Diagrama;

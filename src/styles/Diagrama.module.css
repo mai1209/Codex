@@ -1,13 +1,13 @@
-
+/* Tus importaciones y variables root se mantienen igual */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --color-fondo-dark: #121212;
-    --color-crimson: #FF1493;
-    --color-text: #fff;
-    --color-fondo-instagram: #f0ead6;
+  --color-fondo-dark: #121212;
+  --color-crimson: #FF1493;
+  --color-text: #fff;
+  --color-fondo-instagram: #f0ead6;
 }
 
 @font-face {
@@ -18,95 +18,97 @@
   font-display: swap;
 }
 
-.container{
-    background-color: var(--color-fondo-dark);
-    height: fit-content ;
-    padding-bottom: 1rem ;
 
-      --grid-size: 100px;          /* Tamaño de cada celda */
-  --line-color: #3838384f;      /* Color de las líneas finas de la grilla */
-  --cross-color: #66666600;       /* Color de las cruces en las intersecciones */
-  --dot-color: #55555500;         /* Color de los puntos en el medio */
-
+.container {
   background-color: var(--color-fondo-dark);
-
-  /* Las capas se leen de arriba hacia abajo */
-  background-image:
-    /* 1. Puntos en el medio de la celda (la capa de más arriba) */
-    radial-gradient(circle, var(--dot-color) 1px, transparent 1.5px),
-    /* 2. Barra vertical de la cruz (+) */
-    linear-gradient(var(--cross-color), var(--cross-color)),
-    /* 3. Barra horizontal de la cruz (+) */
-    linear-gradient(to right, var(--cross-color), var(--cross-color)),
-    /* 4. Líneas verticales de la grilla */
-    repeating-linear-gradient(to right, var(--line-color) 0, var(--line-color) 2px, transparent 2px, transparent var(--grid-size)),
-    /* 5. Líneas horizontales de la grilla */
-    repeating-linear-gradient(to bottom, var(--line-color) 0, var(--line-color) 2px, transparent 2px, transparent var(--grid-size));
-
-  background-size:
-    var(--grid-size) var(--grid-size),      
-    2px 10px,                          
-    10px 2px,                           
-    var(--grid-size) var(--grid-size),      
-    var(--grid-size) var(--grid-size);     
-
-  background-position:
-    calc(var(--grid-size) / 2) calc(var(--grid-size) / 2), 
-    center center,                        
-    center center,                          
-    center center,                         
-    center center;                          
-
+  height: fit-content;
+  padding-bottom: 1rem;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
  
-  background-repeat: repeat;    
 }
+
+
+.header {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex; 
+}
+
+
+.marquee {
+  display: flex; 
+  flex-shrink: 0; 
+  white-space: nowrap; 
+  animation: scroll 70s linear infinite;
+}
+
 
 .title {
-  color: var(--color-text);
-  padding: 1rem;
-  font-family: 'Menda'; 
+  color: var(--color-crimson);
+  font-family: 'Menda', sans-serif;
   font-weight: 500;
-  line-height: 1.5rem;
-  font-size: 1.7rem;
-  text-transform: uppercase;
+  font-size: 1rem;
+  font-style: normal;
+
 }
 
-.diagrama{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 1rem;
+.content{
+ 
+  padding: 1rem 2rem;
+  color: var(--color-text);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem ;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-style: normal; ;
+}
+
+.line{
+  height: 1px;
+  background-color: var(--color-crimson);
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Archivo', sans-serif;
+
+}
+
+/* 4. La animación sigue siendo la misma, pero ahora mueve un bloque mucho más grande */
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 850px) {
+  .container {
   
-}
+  height: 65vh;
 
-.containerServices{
-    background-color: #ffffff29;
-      padding: 1.2rem;
-    border-radius: 13px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    height: 150px;
-    border: 1px solid var(--color-crimson);
+ 
+}
+  .content{
+ 
+  padding: 3rem 25rem;
+  font-size: 1.2rem;
+  font-weight: 100;
 
 }
+.title {
+
+  font-size: 2rem;
 
 
-.serviceTitle{
-    color: var(--color-crimson);
-    font-family: 'Menda';
-    font-weight: 500;
-    font-size: 1.2rem;
-}
-
-.serviceDescription{
-    color: var(--color-text);
-     font-family: "Archivo", sans-serif;
-     font-weight: 100;
-     font-size: 1rem;
 }
 
 
-
-
-
+}
