@@ -6,7 +6,6 @@ const ContadorAnimado = ({ final = 70 }) => {
   const ref = useRef(null);
   const animationFrameId = useRef(); 
 
-  // Este useEffect para el IntersectionObserver se queda igual
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -45,15 +44,15 @@ const ContadorAnimado = ({ final = 70 }) => {
       setCount(newCount);
 
       if (progress < duration) {
-        // Si no hemos terminado, pedimos el siguiente frame
+        
         animationFrameId.current = requestAnimationFrame(animate);
       }
     };
 
-    // Inicia la animación
+  
     animationFrameId.current = requestAnimationFrame(animate);
 
-    // Función de limpieza para cancelar la animación si el componente se desmonta
+  
     return () => cancelAnimationFrame(animationFrameId.current);
   }, [active, final]);
 

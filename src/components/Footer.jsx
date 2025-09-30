@@ -13,7 +13,7 @@ function Footer() {
         <h2 className={style.title} >CODEX Corporation & Business</h2>
         <p className={style.subtitle} >Diseñamos nuevas estrategias de negocios <br /> para web , redes sociales y marcas.</p>
       </div>
-      <div className={style.containerAllLinks}> 
+      <div className={style.containerAllLinks}>
 
         <div className={style.containerLinks}>
           <p className={style.titleNavigation}>navegacion</p>
@@ -29,33 +29,33 @@ function Footer() {
         </div>
 
         <div className={style.containerLinksBottom}>
-    
-         
-            <div className={style.links}>
-              <p className={style.titleNavigation}>soporte</p>
-              <a href="https://wa.me/5493425543308">+54 9 342 554 3308</a>
-              <a href="https://wa.me/5493425040804">+54 9 342 504 0804</a>
-            </div>
-      
-       
-            <div className={style.links}>
-              <p className={style.titleNavigation}>ventas</p>
-              <a href="https://wa.me/543435136669">+54 343 513 6669</a>
-            </div>
-        
+
+
+          <div className={style.links}>
+            <p className={style.titleNavigation}>soporte</p>
+            <a href="https://wa.me/5493425543308">+54 9 342 554 3308</a>
+            <a href="https://wa.me/5493425040804">+54 9 342 504 0804</a>
+          </div>
+
+
+          <div className={style.links}>
+            <p className={style.titleNavigation}>ventas</p>
+            <a href="https://wa.me/543435136669">+54 343 513 6669</a>
+          </div>
+
         </div>
 
       </div>
       <div className={style.containerDerechos}>
         <p>© 2025. Todos los derechos reservados.</p>
-        <div >
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+        <div className={style.redes}>
+          <a href="https://wa.me/5493425543308"><img src="./WhatsAppBlanco.webp" alt="instagram" /></a>
+          <a href="https://www.instagram.com/codexcorporation"><img src="./Instagram.png" alt="linkedin" /></a>
+          <a href="https://www.linkedin.com/company/109157270/admin/dashboard/"> <img src="./LinkedIn.png" alt="wp" /></a>
         </div>
       </div>
 
-       <img className={style.imgFooter} src="./Brutalism.png" alt="Brutalism" />
+      <img className={style.imgFooter} src="./Brutalism.png" alt="Brutalism" />
 
 
     </div>

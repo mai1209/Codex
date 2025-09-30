@@ -148,7 +148,8 @@ margin: 1rem;
     pointer-events: none; /* <-- Esto permite que los clics pasen a los elementos debajo */
 }
 .logoBlanco{
-   width: 330px;
+ 
+   display: none;
    
 }
 

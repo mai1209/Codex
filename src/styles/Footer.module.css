@@ -20,8 +20,10 @@
 .container{
   background-color: var(--color-crimson);
   overflow: hidden; 
-  position: relative
+  position: relative;
+
 }
+
 
 .imgFooter{
   display: none;
@@ -45,7 +47,7 @@
   color: var(--color-text);
   font-size: 1rem;
   font-family: 'Archivo', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-style: normal;
   margin-top: 1rem;
 }
@@ -64,7 +66,7 @@
   font-family: 'Menda';
   font-weight: 500;
   font-style: normal;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   
 }
@@ -101,19 +103,53 @@ cursor: pointer;
   font-weight: 500;
   font-style: normal;
   font-size: 1rem;
+  
 }
+
+.redes{
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0.2rem;
+}
+
+.redes img{
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.redes img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  animation: pulse 2s infinite ease-in-out;
+}
+
 
 @media (min-width: 850px) {
 
+ 
 .containerTitle{
   padding: 6rem 0 12rem 6rem;
 }
 .title{
- font-size: 2.8rem;
+ font-size: 3rem;
 }
 
 .subtitle{
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .containerAllLinks{
@@ -126,11 +162,15 @@ cursor: pointer;
 }
 
 .titleNavigation{
-font-size: 1.3rem;
+font-size: 1.5rem;
 }
 
 .links a{
 font-size: 1.3rem;
+}
+
+.link:hover a{
+  color: var(--color-text);
 }
 
 .containerLinksBottom{
@@ -140,8 +180,8 @@ font-size: 1.3rem;
 .imgFooter {
   display: flex;
   position: absolute;
-  bottom: -7rem;
-  left: -10rem;
+  bottom: 0rem;
+  left: 0rem;
   width: 600px;
   height: 600px;
   object-fit: cover;
@@ -158,6 +198,18 @@ font-size: 1.3rem;
   font-weight: 500;
   font-style: normal;
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  
+}
+
+.redes{
+  padding-left: 20rem;
+}
+
+.redes img{
+  width: 40px;
+  height: 40px;
 }
 
 }

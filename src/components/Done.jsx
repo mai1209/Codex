@@ -27,7 +27,7 @@
           </p>
           
           <div className={style.containerAllProyect}>
-            {/* Sección de proyectos */}
+         
             <div className={style.containerBoxOne}>
               <div className={style.containerProyect}>
                 <img fetchpriority="high" className={style.img} src="/wifrut.webp" alt="wifrut" />
@@ -103,15 +103,13 @@
         </div>
         
       
-        
-        {/* Overlay de fondo */}
+      
         <div 
           className={`${style.secondFondo} ${activo ? style.activo : ''}`}
           onClick={handleClosePopup}
         ></div>
         
-        
-        {/* Popup - Versión corregida */}
+       
         <div className={`${style.containerPopUp} ${activo ? style.activo : ''}`}>
           <div className={`${style.popUp} ${activo ? style.activo : ''}`}>
             <h2>  ¿Listo para construir tu futuro digital?</h2>

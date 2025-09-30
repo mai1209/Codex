@@ -27,7 +27,7 @@ function Team() {
     }
   ];
 
-  // Carrusel de logos
+
   const logos = [
     './logo1.webp',
     './logo2.webp',
@@ -38,7 +38,7 @@ function Team() {
     './logo7.webp',
     './logo8.webp',
   ];
-  // Duplicamos para efecto infinito
+ 
   const allLogos = [...logos, ...logos];
 
   return (

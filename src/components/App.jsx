@@ -2,33 +2,20 @@ import { useState, useEffect } from 'react';
 import style from '../styles/App.module.css';
 
 
-
 const YouTubeLazy = ({ videoId }) => {
-  const [showIframe, setShowIframe] = useState(false);
-  const thumbnail = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-
   return (
-    <div className={style.videoBackgroundContainer} onClick={() => setShowIframe(true)} style={{cursor: 'pointer'}}>
-      {!showIframe ? (
-        <img
-          className={style.videoBackground}
-          src={thumbnail}
-          alt="Video preview"
-          loading="lazy"
-          style={{objectFit: 'cover', width: '100%', height: '100%'}}
-        />
-      ) : (
-        <iframe
-          className={style.videoBackground}
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&iv_load_policy=3&modestbranding=1`}
-          title="YouTube video background player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      )}
+    <div className={style.videoBackgroundContainer}>
+      <iframe
+        className={style.videoBackground}
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&iv_load_policy=3&modestbranding=1`}
+        title="YouTube video background player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 };
+
 
 
 function App() {
@@ -46,7 +33,7 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  // <-- 1. AÑADE LA FUNCIÓN PARA HACER SCROLL -->
+
   const scrollToTop = () => {
     window.scrollTo({
         top: 0,
@@ -56,12 +43,11 @@ function App() {
 
   return (
     <div className={style.container}>
-      
-      {/* El div principal que ya tenías */}
+    
       <div className={style.contenedorGeneral}>
         <YouTubeLazy videoId="B8VV75AdHco" />
 
-        {/* Todo tu contenido permanece igual */}
+       
         <div className={style.containerGeneral}>
           <div className={style.containerInfo}>
             <div className={style.containerTextHome}>
@@ -89,7 +75,7 @@ function App() {
         </div>
       </div>
 
-      {/* <-- 2. AÑADE EL JSX DE LA FLECHA AQUÍ --> */}
+      {/* <-- FLECHA --> */}
       <div className={`${style.containerArrowSubir} ${showArrow ? style.showArrow : ''}`}>
         <img
             className={style.arrowSubirImg}

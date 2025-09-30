@@ -1,16 +1,16 @@
 import style from '../styles/Diagrama.module.css';
 
 function Diagrama() {
-  // Creamos un array con el texto para repetirlo fácilmente
-  const titleText = "*DICEN QUIENES HAN TRABAJADO CON CODEX*";
-  // El número 6 es arbitrario, solo para asegurar que sea lo suficientemente largo.
+
+  const titleText = "*DICEN QUIENES HAN TRABAJADO CON CODEX";
+
   const repeatedText = Array(6).fill(titleText); 
 
   return (
     <div className={style.container}>
-      {/* El div 'header' ahora es un contenedor flex para las dos marquesinas */}
+    
       <div className={style.header}>
-        {/* ✨ Creamos dos bloques de marquesina idénticos para el bucle infinito y sin pausas */}
+     
         <div className={style.marquee}>
           {repeatedText.map((text, i) => (
             <span key={i} className={style.title}>
