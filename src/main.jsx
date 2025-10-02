@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import Orion from './components/Orion'; 
 import Ask from './components/Ask';
 import Diagrama from './components/Diagrama';
+import Done from './components/Done';
 
 function RootApp() {
   const [isMobile, setIsMobile] = useState(false);
@@ -43,6 +44,7 @@ function RootApp() {
                   {isMobile ? <DiagramaM /> : <DiagramaM />}
                   <Team />
                 <Diagrama />
+                <Done />
                   <Footer />
                 </>
               } 
