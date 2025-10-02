@@ -49,9 +49,9 @@ function Footer() {
       <div className={style.containerDerechos}>
         <p>© 2025. Todos los derechos reservados.</p>
         <div className={style.redes}>
-          <a href="https://wa.me/5493425543308"><img src="./WhatsAppBlanco.webp" alt="instagram" /></a>
-          <a href="https://www.instagram.com/codexcorporation"><img src="./Instagram.png" alt="linkedin" /></a>
-          <a href="https://www.linkedin.com/company/109157270/admin/dashboard/"> <img src="./LinkedIn.png" alt="wp" /></a>
+          <a href="https://wa.me/5493425543308"><img src="./WhatsAppBlanco.webp" alt="wp" /></a>
+          <a href="https://www.instagram.com/codexcorporation"><img src="./Instagram.png" alt="instagram" /></a>
+          <a href="https://www.linkedin.com/company/109157270/admin/dashboard/"> <img src="./LinkedIn.png" alt="linkedin" /></a>
         </div>
       </div>
 

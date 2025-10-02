@@ -15,7 +15,8 @@ function Nav() {
         'Consulta nuestros servicios',
         'Portafolio',
         'Nuestro equipo',
-        'Preguntas frecuentes'
+        'Preguntas frecuentes',
+        'Precios'
     ];
 
     const scrollToTop = () => {
@@ -68,7 +69,15 @@ function Nav() {
                                 </div>
                             );
                         }
-                 
+                    if (item === 'Precios') {
+                            return (
+                                <div key={index} className={style.containerMenu}>
+                                    <Link to="/pricing" onClick={() => setActiveMenuIndex(index)}>
+                                        {item}
+                                    </Link>
+                                </div>
+                            );
+                        }
                         return (
                             <div key={index} className={style.containerMenu}>
                                 <a

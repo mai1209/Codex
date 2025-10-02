@@ -6,7 +6,7 @@ import App from './components/App';
 import WeDo from './components/WeDo';
 //import Diagrama from './components/Diagrama';
 import DiagramaM from './components/DiagramaM';
-import Done from './components/Done';
+import Pricing from './components/Pricing';
 import Nav from './components/Nav';
 import Team from './components/Team';
 import Footer from './components/Footer';
@@ -41,7 +41,6 @@ function RootApp() {
                   <App />
                   <WeDo />
                   {isMobile ? <DiagramaM /> : <DiagramaM />}
-                  <Done />
                   <Team />
                 <Diagrama />
                   <Footer />
@@ -51,6 +50,7 @@ function RootApp() {
             {/* Ruta para Orion */}
             <Route path="/orion" element={<Orion />} />
             <Route path='/ask' element={<Ask />} />
+            <Route path='/pricing' element={<Pricing />} />
           </Routes>
         </div>
       </Router>
