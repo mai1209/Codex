@@ -23,15 +23,21 @@ function App() {
 
   const [showArrow, setShowArrow] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-   
-      setShowArrow(window.scrollY > 200);
-    };
+useEffect(() => {
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    // Mostrar flecha si pasaste 200px, pero ocultar si estás cerca del final
+    const nearBottom = scrollTop + windowHeight > documentHeight - 150; // 150px antes del footer
+    setShowArrow(scrollTop > 200 && !nearBottom);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
   
 
   const scrollToTop = () => {

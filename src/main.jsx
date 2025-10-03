@@ -41,10 +41,11 @@ function RootApp() {
                  <Nav /> 
                   <App />
                   <WeDo />
+
                   {isMobile ? <DiagramaM /> : <DiagramaM />}
+                  <Done />
                   <Team />
-                <Diagrama />
-                <Done />
+                  <Diagrama />
                   <Footer />
                 </>
               } 

@@ -40,6 +40,7 @@
     animation: scroll-logos var(--carousel-speed) linear infinite;
     padding: 2rem 0;
     will-change: transform;
+     animation-direction: reverse; 
 }
 
 @keyframes scroll-logos {

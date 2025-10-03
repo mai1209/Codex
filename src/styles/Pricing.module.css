@@ -224,25 +224,45 @@
     margin-top: 0.2rem;
 }
 
-.button{
-    background: none;
+.button {
+    background: var(--color-fondo-dark);
     border: none;
-    background-color: var(--color-fondo-dark);
     color: var(--color-text);
     font-family: 'Menda', sans-serif;
     font-weight: 500;
     font-size: 1rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin: 2rem auto;
     border-radius: 13px;
-
-
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.button img{
+.button img {
     width: 20px;
     height: 20px;
     margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.a{
+    text-decoration: none;
+}
+
+.button:hover {
+ border: var(--color-crimson) 2px solid;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.buttonF:hover{
+    border: var(--color-text) 2px solid;
+}
+
+
+.button:hover img {
+    transform: translateX(5px) rotate(10deg);
 }
 
 .btnHome{
