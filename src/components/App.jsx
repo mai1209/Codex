@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import style from '../styles/App.module.css';
+import { useTranslation } from 'react-i18next';
 
 
 const YouTubeLazy = ({ videoId }) => {
@@ -20,7 +21,7 @@ const YouTubeLazy = ({ videoId }) => {
 
 function App() {
  
-
+ const { t } = useTranslation();
   const [showArrow, setShowArrow] = useState(false);
 
 useEffect(() => {
@@ -57,14 +58,14 @@ useEffect(() => {
         <div className={style.containerGeneral}>
           <div className={style.containerInfo}>
             <div className={style.containerTextHome}>
-              <p>Tu mejor</p>
-              <p>opcion a la</p>
-              <p>hora de</p>
-              <p>digitalizarte</p>
+              <p>{t('app.title1')}</p>
+              <p>{t('app.title2')}</p>
+              <p>{t('app.title3')}</p>
+              <p>{t('app.title4')}</p>
             </div>
             <div className={style.secondaryText}>
-              <p>¿Sabias qué? El 70% de las visitas llegan a traves del navegador mobile</p>
-              <p>Potencia tu marca en la era digital</p>
+              <p>{t('app.secondaryText1')}</p>
+              <p>{t('app.secondaryText2')}</p>
             </div>
           </div>
           <div className={style.containerResorte}>

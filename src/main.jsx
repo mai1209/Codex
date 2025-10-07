@@ -14,6 +14,7 @@ import Orion from './components/Orion';
 import Ask from './components/Ask';
 import Diagrama from './components/Diagrama';
 import Done from './components/Done';
+import './i18n';
 
 function RootApp() {
   const [isMobile, setIsMobile] = useState(false);

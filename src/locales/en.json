@@ -1,0 +1,132 @@
+{
+    "app": {
+        "title1": "Your best",
+        "title2": "option when",
+        "title3": "it's time to",
+        "title4": "go digital",
+        "secondaryText1": "Did you know? 70% of visits come through mobile browsers",
+        "secondaryText2": "Boost your brand in the digital era"
+    },
+      "wedo": {
+        "title1": "WHAT",
+        "title2": " WE DO?",
+        "containerTextInfo1": "At Codex Corp., we boost brands through design, development, and strategic communication.",
+        "containerTextInfo2": "We are experts in branding, digital marketing, and web design, creating solutions",
+        "containerTextInfo3": "visual and digital that increase your",
+        "containerTextInfo4": "business visibility, connect with your target audience, and generate measurable results.",
+        "containerTextInfo5": "Our multidisciplinary team combines creativity, innovation, and",
+        "containerTextInfo6": "experience to take every project to the next level.",
+        "text": "A website compatible",
+        "text1": "with mobile devices",
+        "text2": "Is crucial:",
+        "number1": "01.",
+        "textInfo": "Of visits come through mobile browsers",
+        "number2": "02.",
+        "seo": "SEO",
+        "textInfoTwo": "We improve your website's performance by optimizing its functionality and search engine ranking, ensuring it reaches more users effectively.",
+        "number3": "03.",
+        "textInfoThree": "Make your website mobile-friendly and boost your SEO to reach more customers."
+    },
+      "diagrama": {
+    "title": "Services",
+    "services": [
+      {
+        "title": "Web Development",
+        "description": "We create innovative, optimized websites tailored to your needs."
+      },
+      {
+        "title": "Communication",
+        "description": "Strategic messages that strengthen your connection with the audience. \"It's not what you sell, but how you sell it.\""
+      },
+      {
+        "title": "Marketing",
+        "description": "We boost your brand with strategic campaigns to maximize reach and relevance."
+      },
+      {
+        "title": "Visual Identity",
+        "description": "Designs that convey your essence and connect with your audience."
+      },
+      {
+        "title": "Strategy & Design",
+        "description": "Visual and conceptual strategies that bring your ideas to life."
+      },
+      {
+        "title": "Mobile App",
+        "description": "Functional and intuitive apps that stand out for their design and performance."
+      }
+    ]
+  },
+      "done": {
+        "title": "What we’ve",
+        "title2": " Done.",
+        "subtitle": "CODEX",
+        "subtitle2": "featured projects", 
+        "nameProyect1": "wifrut.com",
+        "descriptionProyect1": "Brand design, front-end and back-end development, system design.",
+        "nameProyect2": "creamarketingparavos.com",
+        "descriptionProyect2": "Brand design, front-end and back-end development, system design.",
+        "nameProyect3": "Growth web app",
+        "descriptionProyect3": "Brand design, front-end and back-end development, system design.",
+        "nameProyect4": "Growth mobile app",
+        "descriptionProyect4": "System development and design.",
+        "nameProyect5": "Dev portfolio",
+        "descriptionProyect5": "Front-end design and development.",
+        "popUp": "Ready to build your digital future?",
+        "description": "We’re crafting this project with passion and vision — it’s coming soon. Stay tuned and let’s build it together with Codex!"
+    },
+    "team": {
+        "textContact": "BUILD YOUR WEBSITE WITH",
+        "textContact2": "CODEX CORPORATION & BUSINESS",
+        "button": "Contact us!"
+    },
+     "diagramaM": {
+    "title": "*THEY SAY WHO HAVE WORKED WITH CODEX",
+    "description": "With CODEX I understood that having a website is key to the constant and automated growth of my business",
+    "author": "Natalia Lofeudo",
+    "role": "Create"
+  },
+    "footer": {
+    "title": "CODEX Corporation & Business",
+    "subtitle": "We design new business strategies for web, social media, and brands.",
+    "navigation": "navigation",
+    "support": "support",
+    "sales": "sales",
+    "home": "Home",
+    "whatWeDo": "What we do",
+    "portfolio": "Portfolio",
+    "team": "Team",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "rights": "© 2025. All rights reserved."
+  },
+    "ask": {
+    "title": "QUESTIONS & ANSWERS",
+    "back": "Back",
+
+    "q1": {
+      "title": "Why choose CODEX?",
+      "desc": "At Codex, we understand that standing out in the digital world can be overwhelming. That’s why we’re here to drive your success. More than an agency, we’re your strategic allies in web development, communication, marketing, visual identity, strategy, design, and mobile apps. Our solutions are designed to scale with any business, whether you’re a startup or an established brand, providing flexible and impactful strategies. We deliver measurable results, personalized 1:1 support, and a passionate commitment to bringing your vision to life. Let’s shape the future of your brand together with Codex."
+    },
+    "q2": {
+      "title": "What information do we need to boost your project?",
+      "desc": "We only request the essential details any agency would need: your target audience, your current reach, your goals, and how we can help you achieve them. At Codex, neither we nor any team member will ever ask for your username or password."
+    },
+    "q3": {
+      "title": "How to build a thriving digital community with Codex?",
+      "desc": "We know that building a digital presence goes beyond gaining followers: it’s about cultivating a passionate community that connects with your vision and essence. Whether you run a startup, a creative project, or a brand with a distinctive message, growth is key to forging authentic connections with new audiences. With our expertise in web development, communication, marketing, visual identity, strategy, design, and mobile apps, we empower you to stand out and explore new opportunities. Thriving in the digital world opens doors to valuable collaborations and limitless possibilities. Why settle for less when you can shine with Codex as your strategic ally?"
+    },
+    "q4": {
+      "title": "What guarantees do we offer?",
+      "desc": "We have full confidence in our work and the results we deliver. We don’t make empty promises (no one can guarantee instant fame), but we’ll be with you every step of the way, refining strategies to ensure genuine progress. Our success is defined by your satisfaction, and we won’t stop until you’re thrilled with the results achieved with Codex."
+    }
+  },
+   "nav": {
+    "whatWeDo": "What we do",
+    "services": "Explore our services",
+    "portfolio": "Portfolio",
+    "team": "Our team",
+    "faq": "FAQ",
+    "pricing": "Pricing"
+  }
+ 
+}

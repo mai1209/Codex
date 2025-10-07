@@ -1,8 +1,10 @@
 
 import style from "../styles/Team.module.css";
+  import { useTranslation } from 'react-i18next';
 
 
 function Team() {
+   const { t } = useTranslation();
   const members = [
     {
       wrapperClass: style.wrapperImgTeamMai,
@@ -80,10 +82,10 @@ function Team() {
         })}
       </div>
       <div className={style.containerContact}>
-        <p className={style.textContact}>CONSTRUÍ TU SITIO WEB CON <br />
-          CODEX CORPORTION & BUSINESS</p>
+        <p className={style.textContact}>{t('team.textContact')}<br />
+          {t('team.textContact2')}</p>
         <div className={style.btnContact}>
-        <a href="https://wa.me/5493425543308">  <button>¡Contactanos!</button></a>
+        <a href="https://wa.me/5493425543308">  <button>{t('team.button')}</button></a>
          <img src="./WhatsAppBlanco.webp" alt="wp" />
         </div>
       </div>

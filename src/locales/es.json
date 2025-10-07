@@ -1,0 +1,135 @@
+{
+    "app": {
+        "title1": "Tu mejor",
+        "title2": "opcion a la ",
+        "title3": "hora de ",
+        "title4": "digitalizarte",
+        "secondaryText1": "¿Sabias qué? El 70% de las visitas llegan a traves del navegador mobile",
+        "secondaryText2": "Potencia tu marca en la era digital"
+    },
+    "wedo": {
+        "title1": "¿QUE",
+        "title2": " HACEMOS?",
+        "containerTextInfo1": "En Codex Corp. impulsamos marcas a través del diseño, desarrollo y comunicación estratégica.",
+        "containerTextInfo2": " Somos expertos en branding, marketing digital y diseño web, creando soluciones",
+        "containerTextInfo3": "visuales y digitales que aumentan la visibilidad de tu",
+        "containerTextInfo4": "negocio, conectan con tu público objetivo y generan resultados medibles.",
+        "containerTextInfo5": "Nuestro equipo multidisciplinario combina creatividad, innovación y ",
+        "containerTextInfo6": "experiencia para llevar cada proyecto al siguiente nivel.",
+        "text": "Un sitio web compatible",
+        "text1": "con dispositivos móviles",
+        "text2": "Es crucial:",
+        "number1": "01.",
+        "textInfo": "De las visitas llegan a traves del  navegador mobil",
+        "number2": "02.",
+        "seo": "SEO",
+        "textInfoTwo": "Mejoramos el rendimiento de tu sitio web optimizando su funcionalidad y posicionamiento en buscadores, asegurando que alcance a más usuarios de manera efectiva.",
+        "number3": "03.",
+        "day": "HOY",
+        "textInfoThree": "Haz tu sitio web móvil y potencia tu SEO para llegar a más clientes."
+    },
+    "diagrama": {
+        "title": "Servicios",
+        "services": [
+            {
+                "title": "Desarrollo Web",
+                "description": "Creamos sitios web innovadores, optimizados y adaptados a tus necesidades."
+            },
+            {
+                "title": "Comunicación",
+                "description": "Mensajes estratégicos que fortalecen la conexión con tu público. \"No es lo que vendes, sino cómo lo vendes.\""
+            },
+            {
+                "title": "Marketing",
+                "description": "Impulsamos tu marca con campañas estratégicas para maximizar su alcance y relevancia."
+            },
+            {
+                "title": "Identidad Visual",
+                "description": "Diseños que transmiten tu esencia y conectan con tu audiencia."
+            },
+            {
+                "title": "Estrategia & Diseño",
+                "description": "Estrategias visuales y conceptuales que dan vida a tus ideas."
+            },
+            {
+                "title": "Aplicación Móvil",
+                "description": "Apps funcionales e intuitivas que destacan por su diseño y rendimiento."
+            }
+        ]
+    },
+    "done": {
+        "title": "Lo que hemos",
+        "title2": " Hecho.",
+        "subtitle": "CODEX",
+        "subtitle2": "proyectos destacados",
+        "nameProyect1": "wifrut.com",
+        "descriptionProyect1": "  Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.",
+        "nameProyect2": "creamarketingparavos.com",
+        "descriptionProyect2": "   Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.",
+        "nameProyect3": "Growth web app",
+        "descriptionProyect3": "    Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.",
+        "nameProyect4": "Growth mobile app",
+        "descriptionProyect4": "   Desarrollo y diseño de sistemas",
+        "nameProyect5": "Dev portfolio",
+        "descriptionProyect5": "     Diseño y desarrollo frontal",
+        "nameProyect6": "Orion hairstudio",
+        "descriptionProyect6": " Diseño de marca. ",
+        "popUp": "¿Listo para construir tu futuro digital?",
+        "description": "Estamos elaborando este proyecto con pasión y visión, y llegará pronto. ¡Estén atentos y construyámoslo junto con Codex!"
+    },
+    "team": {
+        "textContact": "CONSTRUÍ TU SITIO WEB CON",
+        "textContact2": "CODEX CORPORTION & BUSINESS",
+        "button": "¡Contactanos!"
+    },
+    "diagramaM": {
+        "title": "*DICEN QUIENES HAN TRABAJADO CON CODEX",
+        "description": "Con CODEX entendí que tener un sitio web es clave para el crecimiento constante y automatizado de mi negocio",
+        "author": "Natalia Lofeudo",
+        "role": "Creá"
+    },
+     "footer": {
+    "title": "CODEX Corporation & Business",
+    "subtitle": "Diseñamos nuevas estrategias de negocios para web, redes sociales y marcas.",
+    "navigation": "navegación",
+    "support": "soporte",
+    "sales": "ventas",
+    "home": "Inicio",
+    "whatWeDo": "Qué hacemos",
+    "portfolio": "Portafolio",
+    "team": "Equipo",
+    "contact": "Contacto",
+    "faq": "Preguntas frecuentes",
+    "rights": "© 2025. Todos los derechos reservados."
+  },
+    "ask": {
+    "title": "PREGUNTAS Y RESPUESTAS",
+    "back": "Volver",
+
+    "q1": {
+      "title": "¿Por qué elegir CODEX?",
+      "desc": "En Codex, entendemos que destacar en el mundo digital puede ser abrumador. Por eso estamos aquí para impulsar tu éxito. Más que una agencia, somos tus aliados estratégicos en desarrollo web, comunicación, marketing, identidad visual, estrategia, diseño y aplicaciones móviles. Nuestras soluciones están diseñadas para escalar con negocios en cualquier etapa, ya seas un startup o una marca establecida, ofreciendo estrategias flexibles e impactantes. Proporcionamos resultados medibles, soporte personalizado 1:1 y un compromiso apasionado por materializar tu visión. Moldeemos juntos el futuro de tu marca con Codex."
+    },
+    "q2": {
+      "title": "¿Qué información necesitamos para impulsar tu proyecto?",
+      "desc": "Solo solicitamos los detalles esenciales que cualquier agencia necesitaría: tu público objetivo, tu audiencia actual, tus metas y cómo podemos ayudarte a alcanzarlas. En Codex, ni nosotros ni ningún miembro del equipo jamás te pediremos tu nombre de usuario o contraseña."
+    },
+    "q3": {
+      "title": "¿Cómo construir una comunidad digital próspera con Codex?",
+      "desc": "Reconocemos que construir presencia digital va más allá de acumular seguidores: se trata de cultivar una comunidad apasionada que se conecte con tu visión y esencia. Ya sea que tengas un startup, un proyecto creativo o una marca con un mensaje distintivo, el crecimiento es vital para forjar conexiones auténticas con nuevas audiencias. Con nuestra experiencia en desarrollo web, comunicación, marketing, identidad visual, estrategia, diseño y aplicaciones móviles, te empoderamos para destacar y descubrir nuevas posibilidades. Prosperar en el ámbito digital abre puertas a colaboraciones valiosas y oportunidades ilimitadas. ¿Por qué conformarte con poco cuando puedes brillar con Codex como tu aliado estratégico?"
+    },
+    "q4": {
+      "title": "¿Qué garantías ofrecemos?",
+      "desc": "Tenemos plena confianza en nuestro trabajo y los resultados que entregamos. No haremos promesas vacías (nadie puede garantizar fama instantánea), pero estaremos a tu lado en cada paso, ajustando estrategias para asegurar un progreso genuino. Nuestro éxito se define por tu satisfacción, y no nos detendremos hasta que estés encantado con los resultados logrados con Codex."
+    }
+  },
+     "nav": {
+    "whatWeDo": "Qué hacemos",
+    "services": "Consulta nuestros servicios",
+    "portfolio": "Portafolio",
+    "team": "Nuestro equipo",
+    "faq": "Preguntas frecuentes",
+    "pricing": "Precios"
+  }
+   
+}

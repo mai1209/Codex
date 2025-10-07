@@ -2,8 +2,12 @@
   import style from "../styles/Done.module.css";
   import { useNavigate } from 'react-router-dom';
   import { useState } from "react";
+  import { useTranslation } from 'react-i18next';
+
 
   function Done() {
+
+ const { t } = useTranslation();
     const navigate = useNavigate();
     const [activo, setActivo] = useState(false);
 
@@ -18,12 +22,12 @@
       <div className={style.container} id="portafolio">
         <div className={style.containerAll}>
           <div className={style.containerTitle}>
-            <p  className={style.title}> Lo que hemos  <br /> Hecho. </p>
+            <p  className={style.title}> {t('done.title')} <br /> {t('done.title2')} </p>
      
           </div>
           
           <p className={style.subtitle}>
-            <span className={style.span}>CODEX</span> proyectos destacados
+            <span className={style.span}> {t('done.subtitle')} </span>  {t('done.subtitle2')} 
           </p>
           
           <div className={style.containerAllProyect}>
@@ -33,7 +37,7 @@
                 <img fetchpriority="high" className={style.img} src="/wifrut.webp" alt="wifrut" />
                 <p className={style.nameProyect}>wifrut.com</p>
                 <p className={style.descriptionProyect}>
-                  Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.
+                   {t('done.descriptionProyect1')} 
                 </p>
                 <a href="https://wifrut.com">
                   <img fetchpriority="high" className={style.link} src="/Linking.webp" alt="link" />
@@ -44,7 +48,7 @@
                 <img fetchpriority="high" className={style.img} src="/crea.webp" alt="crea" />
                 <p className={style.nameProyect}>creamarketingparavos.com</p>
                 <p className={style.descriptionProyect}>
-                  Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.
+                   {t('done.descriptionProyect2')} 
                 </p>
                 <a href="https://creamarketingparavos.com">
                   <img fetchpriority="high" className={style.link} src="/Linking.webp" alt="link" />
@@ -57,7 +61,7 @@
                 <img fetchpriority="high" className={style.img} src="/growth.webp" alt="growth" />
                 <p className={style.nameProyect}>Growth web app</p>
                 <p className={style.descriptionProyect}>
-                 Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.
+                {t('done.descriptionProyect3')} 
                 </p>
                 <img 
                   onClick={() => setActivo(true)} 
@@ -82,7 +86,7 @@
                 <img fetchpriority="high" className={style.img} src="/app.webp" alt="app" />
                 <p className={style.nameProyect}>Growth mobile app</p>
                 <p className={style.descriptionProyect}>
-                  Desarrollo y diseño de sistemas.
+                   {t('done.descriptionProyect4')} 
                 </p>
                 <img fetchpriority="high" onClick={()=>{setActivo(true)}} className={style.link} src="/Linking.webp" alt="link" />
               </div>
@@ -92,7 +96,7 @@
                 <p className={style.nameProyect}>Dev portfolio</p>
                 <p className={style.descriptionProyect}>
                   
-                    Diseño y desarrollo frontal
+                     {t('done.descriptionProyect5')} 
                 </p>
                 <a href="https://maidev.wtf">
                   <img fetchpriority="high" className={style.link} src="/Linking.webp" alt="link" />
@@ -112,9 +116,9 @@
        
         <div className={`${style.containerPopUp} ${activo ? style.activo : ''}`}>
           <div className={`${style.popUp} ${activo ? style.activo : ''}`}>
-            <h2>  ¿Listo para construir tu futuro digital?</h2>
+            <h2>   {t('done.popUp')} </h2>
             <p className={style.description}>
-            Estamos elaborando este proyecto con pasión y visión, y llegará pronto. ¡Estén atentos y construyámoslo junto con Codex! #LetsBuildIt
+            {t('done.description')} #LetsBuildIt
             </p>
             <div className={style.btnContainer}>
               <button 

@@ -1,8 +1,10 @@
 import style from '../styles/Diagrama.module.css';
+import { useTranslation } from 'react-i18next';
 
 function Diagrama() {
-
-  const titleText = "*DICEN QUIENES HAN TRABAJADO CON CODEX";
+ 
+ const { t } = useTranslation();
+  const titleText = t('diagramaM.title');
 
   const repeatedText = Array(6).fill(titleText); 
 
@@ -29,11 +31,11 @@ function Diagrama() {
 
 
       <div className={style.content}>
-        <p className={style.description}>Con CODEX entendí que tener un sitio web es clave para el crecimiento constante y automatizado de mi negocio</p>
+        <p className={style.description}>{t('diagramaM.description')}</p>
         <div className={style.line}></div>
         <div>
-          <p>Natalia Lofeudo</p>
-          <p>Creá</p>
+          <p>{t('diagramaM.author')}</p>
+          <p>{t('diagramaM.role')}</p>
         </div>
       
       </div>

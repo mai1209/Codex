@@ -44,12 +44,17 @@ nav {
   background-color: #1c1c1c6c;
   backdrop-filter: blur(4px);
   display: flex;
-  justify-content: center;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-between  ;
   padding:0.5rem  1rem;
   z-index: 99999999999;
 box-shadow: 0 0 10px 0 #ffffff29;
+
 }
+
+.containerMenuLang{
+display: flex;
+align-items: center;}
 
 
  
@@ -76,9 +81,11 @@ box-shadow: 0 0 10px 0 #ffffff29;
   display: none;
 }
 .logo {
-  width: 70px;
-  height: 70px;
-  padding: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  
 }
 .containerArrowSubir {
   width: 100%;
@@ -104,7 +111,7 @@ box-shadow: 0 0 10px 0 #ffffff29;
 }
 .menuHamburguesa {
   display: flex;
-  padding-top: 19px;
+ 
 }
 .menuIcon {
   font-size: 2rem;
@@ -259,6 +266,48 @@ text-decoration: none;
 
 }
 
+.langToggle {
+  position: relative;
+  display: flex;
+  width: 90px;
+  height: 36px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+}
+
+.langOption {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 2;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.langOption.active {
+  color: #fff;
+}
+
+.langIndicator {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 44px; /* la mitad del ancho menos bordes */
+  height: 32px;
+  background: var(--color-crimson); 
+  border-radius: 16px;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+
+
 @media (min-width: 850px) {
   .containerGeneral{
 
@@ -270,9 +319,11 @@ align-items: center;
 
 .nav{
   padding: 0;
+
 }
   .menuHamburguesa {
   display: none;
+
 }
   .videoBackground{
     border: none;
@@ -373,7 +424,7 @@ s
 
 .containerButton{
 padding: 10px;
-}
+} 
 .wp{
   width: 25px;
   height: 25px;

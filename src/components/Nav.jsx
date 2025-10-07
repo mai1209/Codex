@@ -3,45 +3,49 @@ import style from '../styles/App.module.css';
 import { CiMenuFries } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 function Nav() {
+    const { t, i18n } = useTranslation();
     const [activeMenuIndex, setActiveMenuIndex] = useState(null);
-    const [showLogo, setShowLogo] = useState(false);
-    const [showArrow, setShowArrow] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const changeLanguage = () => {
+        const newLang = i18n.language === 'es' ? 'en' : 'es';
+        i18n.changeLanguage(newLang);
+    };
+
     const menuItems = [
-        'Qué hacemos',
-        'Consulta nuestros servicios',
-        'Portafolio',
-        'Nuestro equipo',
-        'Preguntas frecuentes',
-        'Precios'
+        { key: 'whatWeDo', path: '#qué-hacemos' },
+        { key: 'services', path: '#consulta-nuestros-servicios' },
+        { key: 'portfolio', path: '#portafolio' },
+        { key: 'team', path: '#nuestro-equipo' },
+        { key: 'faq', route: '/ask' },
+        { key: 'pricing', route: '/pricing' },
     ];
 
     const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
-
-    const closeMenu = () => {
-        setIsMenuOpen(false);
-    };
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const closeMenu = () => setIsMenuOpen(false);
 
     const handleMenuItemClick = (index) => {
         setActiveMenuIndex(index);
         closeMenu();
     };
 
+
+    const toggleLanguage = () => {
+        const newLang = i18n.language === 'es' ? 'en' : 'es';
+        i18n.changeLanguage(newLang);
+    };
+
+
     return (
         <div>
-            <div className={`${style.containerArrowSubir} ${showArrow ? style.showArrow : ''}`}>
+            <div className={style.containerArrowSubir}>
                 <img
                     className={style.arrowSubirImg}
                     src="./arrowup.webp"
@@ -51,46 +55,65 @@ function Nav() {
                     fetchpriority="high"
                 />
             </div>
+
             <nav>
                 <div className={style.welcome}>
-                    <img fetchpriority="high" loading="lazy" id='img' onClick={scrollToTop} src="./logo.webp" alt="Logo Codex" className={style.logo} />
+                    <img
+                        fetchpriority="high"
+                        loading="lazy"
+                        onClick={scrollToTop}
+                        src="./logo.webp"
+                        alt="Logo Codex"
+                        className={style.logo}
+                    />
+                </div>
+
+                <div className={style.containerMenuLang}>
+                    <div className={style.containerTexts}>
+                        {menuItems.map((item, index) => {
+                            if (item.route) {
+                                return (
+                                    <div key={index} className={style.containerMenu}>
+                                        <Link to={item.route} onClick={() => handleMenuItemClick(index)}>
+                                            {t(`nav.${item.key}`)}
+                                        </Link>
+                                    </div>
+                                );
+                            }
+                            return (
+                                <div key={index} className={style.containerMenu}>
+                                    <a href={item.path} onClick={() => handleMenuItemClick(index)}>
+                                        {t(`nav.${item.key}`)}
+                                    </a>
+                                </div>
+                            );
+                        })}
+                    </div>
+                    {/* Botón toggle de idioma */}
+                    <div className={style.langToggle}>
+                        <div
+                            className={`${style.langIndicator}`}
+                            style={{
+                                transform: i18n.language === 'es' ? 'translateX(0%)' : 'translateX(100%)',
+                            }}
+                        />
+                        <div
+                            className={`${style.langOption} ${i18n.language === 'es' ? style.active : ''}`}
+                            onClick={() => i18n.changeLanguage('es')}
+                        >
+                            ES
+                        </div>
+                        <div
+                            className={`${style.langOption} ${i18n.language === 'en' ? style.active : ''}`}
+                            onClick={() => i18n.changeLanguage('en')}
+                        >
+                            EN
+                        </div>
+                    </div>
                 </div>
 
 
-                <div className={style.containerTexts}>
-                    {menuItems.map((item, index) => {
-
-                        if (item === 'Preguntas frecuentes') {
-                            return (
-                                <div key={index} className={style.containerMenu}>
-                                    <Link to="/ask" onClick={() => setActiveMenuIndex(index)}>
-                                        {item}
-                                    </Link>
-                                </div>
-                            );
-                        }
-                        if (item === 'Precios') {
-                            return (
-                                <div key={index} className={style.containerMenu}>
-                                    <Link to="/pricing" onClick={() => setActiveMenuIndex(index)}>
-                                        {item}
-                                    </Link>
-                                </div>
-                            );
-                        }
-                        return (
-                            <div key={index} className={style.containerMenu}>
-                                <a
-                                    href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                                    onClick={() => setActiveMenuIndex(index)}
-                                >
-                                    {item}
-                                </a>
-                            </div>
-                        );
-                    })}
-                </div>
-
+                {/* Menú hamburguesa */}
                 <div className={style.menuHamburguesa}>
                     {isMenuOpen ? (
                         <IoCloseOutline className={style.menuIconn} onClick={toggleMenu} />
@@ -101,42 +124,24 @@ function Nav() {
 
                 <div className={`${style.overlay} ${isMenuOpen ? style.open : ''}`} onClick={closeMenu}></div>
 
-
+                {/* Menú móvil */}
                 <div className={`${style.mobileMenu} ${isMenuOpen ? style.open : ''}`}>
                     <IoCloseOutline className={style.closeIcon} onClick={closeMenu} />
                     {menuItems.map((item, index) => {
-                        if (item === 'Preguntas frecuentes') {
+                        if (item.route) {
                             return (
-                                <Link
-                                    key={index}
-                                    to="/ask"
-                                    onClick={() => handleMenuItemClick(index)}
-                                >
-                                    {item}
-                                </Link>
-                            );
-                        }
-                        if (item === 'Precios') {
-                            return (
-                                <Link
-                                    key={index}
-                                    to="/pricing"
-                                    onClick={() => handleMenuItemClick(index)}
-                                >
-                                    {item}
+                                <Link key={index} to={item.route} onClick={() => handleMenuItemClick(index)}>
+                                    {t(`nav.${item.key}`)}
                                 </Link>
                             );
                         }
                         return (
-                            <a
-                                key={index}
-                                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                                onClick={() => handleMenuItemClick(index)}
-                            >
-                                {item}
+                            <a key={index} href={item.path} onClick={() => handleMenuItemClick(index)}>
+                                {t(`nav.${item.key}`)}
                             </a>
                         );
                     })}
+
                 </div>
             </nav>
         </div>
