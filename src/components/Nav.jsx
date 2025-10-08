@@ -89,27 +89,7 @@ function Nav() {
                             );
                         })}
                     </div>
-                    {/* Botón toggle de idioma */}
-                    <div className={style.langToggle}>
-                        <div
-                            className={`${style.langIndicator}`}
-                            style={{
-                                transform: i18n.language === 'es' ? 'translateX(0%)' : 'translateX(100%)',
-                            }}
-                        />
-                        <div
-                            className={`${style.langOption} ${i18n.language === 'es' ? style.active : ''}`}
-                            onClick={() => i18n.changeLanguage('es')}
-                        >
-                            ES
-                        </div>
-                        <div
-                            className={`${style.langOption} ${i18n.language === 'en' ? style.active : ''}`}
-                            onClick={() => i18n.changeLanguage('en')}
-                        >
-                            EN
-                        </div>
-                    </div>
+
                 </div>
 
 
@@ -120,13 +100,37 @@ function Nav() {
                     ) : (
                         <CiMenuFries className={style.menuIcon} onClick={toggleMenu} />
                     )}
+
                 </div>
 
                 <div className={`${style.overlay} ${isMenuOpen ? style.open : ''}`} onClick={closeMenu}></div>
 
                 {/* Menú móvil */}
                 <div className={`${style.mobileMenu} ${isMenuOpen ? style.open : ''}`}>
-                    <IoCloseOutline className={style.closeIcon} onClick={closeMenu} />
+                    <div>
+                        {/* Botón toggle de idioma */}
+                        <div className={style.langToggleM}>
+                            <div
+                                className={`${style.langIndicator}`}
+                                style={{
+                                    transform: i18n.language === 'es' ? 'translateX(0%)' : 'translateX(100%)',
+                                }}
+                            />
+                            <div
+                                className={`${style.langOption} ${i18n.language === 'es' ? style.active : ''}`}
+                                onClick={() => i18n.changeLanguage('es')}
+                            >
+                                ES
+                            </div>
+                            <div
+                                className={`${style.langOption} ${i18n.language === 'en' ? style.active : ''}`}
+                                onClick={() => i18n.changeLanguage('en')}
+                            >
+                                EN
+                            </div>
+                        </div>
+                        <IoCloseOutline className={style.closeIcon} onClick={closeMenu} />
+                    </div>
                     {menuItems.map((item, index) => {
                         if (item.route) {
                             return (

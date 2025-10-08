@@ -269,11 +269,24 @@ text-decoration: none;
 .langToggle {
   position: relative;
   display: flex;
-  width: 90px;
-  height: 36px;
-  border-radius: 20px;
-  background: #fff;
-  border: 1px solid #ccc;
+  width: 100px;
+  height: 48px;
+  font-family: 'Poppins', sans-serif;
+  font-family: 500;
+  box-shadow: inset 0 0 2px #ffffff29;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+}
+.langToggleM{
+  position: relative;
+  top: -70px;
+  display: flex;
+  width: 100px;
+  height: 48px;
+  font-family: 'Poppins', sans-serif;
+  font-family: 500;
+  box-shadow: inset 0 0 2px #ffffff29;
   cursor: pointer;
   user-select: none;
   overflow: hidden;
@@ -288,7 +301,8 @@ text-decoration: none;
   z-index: 2;
   color: #333;
   transition: color 0.3s;
-}
+  
+  }
 
 .langOption.active {
   color: #fff;
@@ -298,10 +312,11 @@ text-decoration: none;
   position: absolute;
   top: 2px;
   left: 2px;
-  width: 44px; /* la mitad del ancho menos bordes */
-  height: 32px;
+  width: 50px;
+  height: 100%;
+  padding: 20px;
   background: var(--color-crimson); 
-  border-radius: 16px;
+
   z-index: 1;
   transition: transform 0.3s ease;
 }
