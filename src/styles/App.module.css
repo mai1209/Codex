@@ -277,6 +277,7 @@ text-decoration: none;
   cursor: pointer;
   user-select: none;
   overflow: hidden;
+  display: none;
 }
 .langToggleM{
   position: relative;
@@ -455,6 +456,20 @@ padding: 10px;
     font-weight: 500;
     font-size: 0.9rem;
   
+}
+
+.langToggle {
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: 48px;
+  font-family: 'Poppins', sans-serif;
+  font-family: 500;
+  box-shadow: inset 0 0 2px #ffffff29;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  display: flex;
 }
 
 }
