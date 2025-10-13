@@ -89,6 +89,27 @@ function Nav() {
                             );
                         })}
                     </div>
+                     {/* Botón toggle de idioma */}
+                        <div className={style.langToggle}>
+                            <div
+                                className={`${style.langIndicator}`}
+                                style={{
+                                    transform: i18n.language === 'es' ? 'translateX(0%)' : 'translateX(100%)',
+                                }}
+                            />
+                            <div
+                                className={`${style.langOption} ${i18n.language === 'es' ? style.active : ''}`}
+                                onClick={() => i18n.changeLanguage('es')}
+                            >
+                                ES
+                            </div>
+                            <div
+                                className={`${style.langOption} ${i18n.language === 'en' ? style.active : ''}`}
+                                onClick={() => i18n.changeLanguage('en')}
+                            >
+                                EN
+                            </div>
+                        </div>
 
                 </div>
 
