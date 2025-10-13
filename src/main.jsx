@@ -1,6 +1,6 @@
 import { StrictMode, useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importa Router
+import { HashRouter  as Router, Routes, Route } from 'react-router-dom'; // Importa Router
 import '../src/index.css';
 import App from './components/App';
 import WeDo from './components/WeDo';
