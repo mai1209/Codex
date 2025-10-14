@@ -1,276 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
-    :root {
-        --color-fondo-dark: #121212;
-        --color-crimson: #FF1493;
-        --color-text: #fff;
-        --color-fondo-instagram: #f0ead6;
-    }
-
-    @font-face {
-    font-family: 'Menda';
-    src: url('/Menda\ Font/menda_black-webfont.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+:root {
+  --color-fondo-dark: #121212;
+  --color-crimson: #FF1493;
+  --color-text: #fff;
+  --color-fondo-instagram: #f0ead6;
 }
 
-    .container{
-            background-color: var(--color-fondo-dark);
-        height: 100vh;
-        min-height: fit-content;
-        padding-bottom: 4rem;
+@font-face {
+  font-family: 'Menda';
+  src: url('/Menda Font/menda_black-webfont.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
-        --grid-size: 100px;          /* Tamaño de cada celda */
-    --line-color: #3838384f;      /* Color de las líneas finas de la grilla */
-    --cross-color: #66666600;       /* Color de las cruces en las intersecciones */
-    --dot-color: #55555500;         /* Color de los puntos en el medio */
+/* ------------------ CONTAINER ------------------ */
+.container {
+  background-color: var(--color-fondo-dark);
+  height: 100vh;
+  min-height: fit-content;
+  padding-bottom: 4rem;
 
-    background-color: var(--color-fondo-dark);
+  --grid-size: 100px;
+  --line-color: #3838384f;
+  --cross-color: #66666600;
+  --dot-color: #55555500;
 
-    /* Las capas se leen de arriba hacia abajo */
-    background-image:
-        /* 1. Puntos en el medio de la celda (la capa de más arriba) */
-        radial-gradient(circle, var(--dot-color) 1px, transparent 1.5px),
-        /* 2. Barra vertical de la cruz (+) */
-        linear-gradient(var(--cross-color), var(--cross-color)),
-        /* 3. Barra horizontal de la cruz (+) */
-        linear-gradient(to right, var(--cross-color), var(--cross-color)),
-        /* 4. Líneas verticales de la grilla */
-        repeating-linear-gradient(to right, var(--line-color) 0, var(--line-color) 2px, transparent 2px, transparent var(--grid-size)),
-        /* 5. Líneas horizontales de la grilla */
-        repeating-linear-gradient(to bottom, var(--line-color) 0, var(--line-color) 2px, transparent 2px, transparent var(--grid-size));
+  background-image:
+    radial-gradient(circle, var(--dot-color) 1px, transparent 1.5px),
+    linear-gradient(var(--cross-color), var(--cross-color)),
+    linear-gradient(to right, var(--cross-color), var(--cross-color)),
+    repeating-linear-gradient(to right, var(--line-color) 0, var(--line-color) 2px, transparent 2px, transparent var(--grid-size)),
+    repeating-linear-gradient(to bottom, var(--line-color) 0, var(--line-color) 2px, transparent 2px, transparent var(--grid-size));
 
-    /* El tamaño de cada capa (corresponde a las 5 capas de arriba) */
-    background-size:
-        var(--grid-size) var(--grid-size),      /* 1. El espacio de repetición para los puntos */
-        2px 10px,                             /* 2. Grosor y alto de la barra vertical de la cruz */
-        10px 2px,                             /* 3. Ancho y grosor de la barra horizontal de la cruz */
-        var(--grid-size) var(--grid-size),      /* 4. El espacio de repetición para la grilla vertical */
-        var(--grid-size) var(--grid-size);      /* 5. El espacio de repetición para la grilla horizontal */
+  background-size:
+    var(--grid-size) var(--grid-size),
+    2px 10px,
+    10px 2px,
+    var(--grid-size) var(--grid-size),
+    var(--grid-size) var(--grid-size);
 
-    background-position:
-        calc(var(--grid-size) / 2) calc(var(--grid-size) / 2), /* 1. Centra los puntos en la celda */
-        center center,                          /* 2. Centra las barras verticales de la cruz */
-        center center,                          /* 3. Centra las barras horizontales de la cruz */
-        center center,                          /* 4. Centra la grilla vertical */
-        center center;                          /* 5. Centra la grilla horizontal */
+  background-position:
+    calc(var(--grid-size) / 2) calc(var(--grid-size) / 2),
+    center center,
+    center center,
+    center center,
+    center center;
 
-    
-    background-repeat: repeat;
-    }
+  background-repeat: repeat;
+}
 
-    .title{
-        color: var(--color-text);
-        text-align: center;
-        padding: 1rem 0;
-        font-family: 'Menda', sans-serif;
-        font-weight: 500;
-        font-size: 1.9rem;
-        font-style: normal;
-    }
+/* ------------------ TITLES ------------------ */
+.title {
+  color: var(--color-text);
+  text-align: center;
+  padding: 1rem 0;
+  font-family: 'Menda', sans-serif;
+  font-weight: 500;
+  font-size: 1.9rem;
+}
 
-    .subtitle{
-        text-align: center;
-        color: var(--color-text);
-        font-family: 'Menda', sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 1.2srem;
-        padding: 0.5rem 1rem;
-    }
+.subtitle {
+  text-align: center;
+  color: var(--color-text);
+  font-family: 'Menda', sans-serif;
+  font-weight: lighter;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
 
-    .containerBtn{
-        display: flex;
-        width: 100vw;
-        justify-content: center;
-        padding: 2rem 1rem;
-        
-    }
+/* ------------------ SWITCH BUTTONS ------------------ */
+.containerBtn {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  width: 100vw;
+}
 
-    .btnWeb{
-        background-color: var(--color-crimson);
-        color: var(--color-fondo-dark);
-        border-radius:55px ;
-        padding: 1rem 1.5rem;
-    }
+.btns {
+  position: relative;
+  display: flex;
+  background-color: var(--color-fondo-instagram);
+  border-radius: 55px;
+  overflow: hidden;
+  width: fit-content;
+}
 
-    .btnMobile{
-        background: none;
-        color: grey;
-        padding: 1rem;
-    }
-
-    .btns{
-    border-radius: 55px;
-        background-color: var(--color-fondo-instagram);
-        display: flex;
-
-        
-
-    }
-
-
-
-.active {
-  background-color: var(--color-crimson) !important;
-  color: var(--color-fondo-dark) !important;
+.switch-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: var(--color-crimson);
+  border-radius: 55px;
+  transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 0;
 }
 
 .btn {
-  background: none;
+  position: relative;
+  z-index: 1;
+  flex: 1;
   color: grey;
-  border-radius: 55px;
+  border: none;
+  background: none;
+  font-family: 'Menda', sans-serif;
   padding: 1rem 1.5rem;
-  transition: all 0.3s ease;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-/* Estado activo */
 .active {
-  background-color: var(--color-crimson);
   color: var(--color-fondo-dark);
 }
 
-.cards{
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-    gap: 2rem;
-    justify-content: center;
+/* ------------------ CARDS ------------------ */
+.cards {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  gap: 2rem;
+  justify-content: center;
 }
+
 .cards > div:hover {
   transform: translateY(-6px) scale(1.02);
   border-color: var(--color-crimson);
   box-shadow: 0 10px 25px rgba(255, 20, 147, 0.3);
 }
-.card{
-    border-radius: 20px;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05); /* leve transparencia sobre el fondo */
-    backdrop-filter: blur(6px); /* efecto glass */
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-      display: flex;
+
+.card {
+  border-radius: 20px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-    
-
 }
-
 
 .featured {
-    background-color: var(--color-crimson);
+  background-color: var(--color-crimson);
 }
 
-.titleCard{
-    background-color: var(--color-fondo-dark);
-    color: #343434;
-    padding: 0.2rem 3rem;
-    text-align: center;
-    border-radius: 13px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
-    font-style: normal;
-    width: fit-content;
-    margin: 0.5rem auto;
-
+/* ------------------ CARD CONTENT ------------------ */
+.titleCard {
+  background-color: var(--color-fondo-dark);
+  color: #343434;
+  padding: 0.2rem 3rem;
+  text-align: center;
+  border-radius: 13px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  width: fit-content;
+  margin: 0.5rem auto;
 }
 
-.price{
-    font-family: 'Archivo', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 800;
-    font-style: normal;
-    color: var(--color-text);
-    padding: 1rem;
+.price {
+  font-family: 'Archivo', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-text);
+  padding: 1rem;
 }
 
-.description{
-    font-family: 'Menda', sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 1rem;
-    color: var(--color-text);
-    padding:  0 1rem;
+.description {
+  font-family: 'Menda', sans-serif;
+  font-weight: lighter;
+  font-size: 1rem;
+  color: var(--color-text);
+  padding: 0 1rem;
 }
 
-.include{
-    font-family: 'Menda', sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 1.2rem;
-    color: var(--color-text);
-    padding: 1rem;
+.include {
+  font-family: 'Menda', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  padding: 1rem;
 }
 
-.containerInclude{
-    display: flex;
-    gap: 0.5rem;
-    padding-left: 1rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 200;
-    font-size: 1rem;
-    font-style: normal;
-    color: var(--color-text);
-  
+.containerInclude {
+  display: flex;
+  gap: 0.5rem;
+  padding-left: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  color: var(--color-text);
 }
 
-.containerInclude img{
-    width: 12px;
-    height: 12px;
-    margin-top: 0.2rem;
+.containerInclude img {
+  width: 12px;
+  height: 12px;
+  margin-top: 0.2rem;
 }
 
+/* ------------------ BUTTON ------------------ */
 .button {
-    background: var(--color-fondo-dark);
-    border: none;
-    color: var(--color-text);
-    font-family: 'Menda', sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    margin: 2rem auto;
-    border-radius: 13px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  background: var(--color-fondo-dark);
+  border: none;
+  color: var(--color-text);
+  font-family: 'Menda', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .button img {
-    width: 20px;
-    height: 20px;
-    margin-left: 0.5rem;
-    transition: transform 0.3s ease;
-}
-
-.a{
-    text-decoration: none;
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
 }
 
 .button:hover {
- border: var(--color-crimson) 2px solid;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border: var(--color-crimson) 2px solid;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
-.buttonF:hover{
-    border: var(--color-text) 2px solid;
-}
-
 
 .button:hover img {
-    transform: translateX(5px) rotate(10deg);
+  transform: translateX(5px) rotate(10deg);
 }
 
-.btnHome{
-    padding:   2rem  1rem;
- 
+.buttonF:hover {
+  border: var(--color-text) 2px solid;
 }
 
-/* styles.module.css */
+/* ------------------ HOME BUTTON ------------------ */
+.btnHome {
+  padding: 2rem 1rem;
+}
+
 .btnHome button {
   background: none;
   border: none;
@@ -278,20 +252,17 @@
   font-size: 1rem;
   font-family: 'Menda';
   font-weight: 500;
-  font-style: normal;
   cursor: pointer;
   position: relative;
   padding: 0.3rem 0.5rem;
-  transition: all 0.4s ease;
+  transition: all 0.8s ease;
 }
 
-/* Efecto hover: Borde inferior animado + desplazamiento */
 .btnHome button:hover {
   color: var(--color-crimson);
-  transform: translateX(-5px); /* Desplaza ligeramente a la izquierda */
+  transform: translateX(-5px);
 }
 
-/* Pseudoelemento para el borde animado */
 .btnHome button::after {
   content: '';
   position: absolute;
@@ -309,32 +280,27 @@
   width: 100%;
 }
 
-@media (min-width: 850px){
+/* ------------------ MEDIA QUERIES ------------------ */
+@media (min-width: 850px) {
   .cards {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
 
-  flex-direction: row;
+  .cards > div {
+    max-width: 350px;
+    width: 90%;
+    margin: 0 auto;
+  }
 
-  gap: 1.5rem;
+  .btnHome {
+    padding: 2rem 4rem;
+  }
 }
 
-/* Para mobile (menos de 850px) */
-.cards > div {
-  max-width: 350px;   /* 🔥 ancho máximo de la card */
-  width: 90%;         /* 🔥 ocupa 90% del ancho de la pantalla */
-  margin: 0 auto;     /* 🔥 la centra horizontalmente */
-}
-.btnHome{
-    padding:   2rem  4rem;
- 
-}
- 
-}
-
-
-@media (min-width: 1500px)
-{
-    .cards{
-        max-width: 1600px;
-        margin: 1rem auto;
-    }
+@media (min-width: 1500px) {
+  .cards {
+    max-width: 1600px;
+    margin: 1rem auto;
+  }
 }

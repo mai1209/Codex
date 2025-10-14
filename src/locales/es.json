@@ -130,6 +130,39 @@
     "team": "Nuestro equipo",
     "faq": "Preguntas frecuentes",
     "pricing": "Precios"
+  },
+  "pricing": {
+  "title": "Precios",
+  "subtitle": "Conoce nuestros precios y comienza a construir la mejora que impulsará tu negocio/proyecto a la era digital",
+  "websites": "Sitios Web",
+  "mobileApp": "Aplicaciones Móviles",
+  "includes": "Incluye",
+  "button": "Construyámoslo",
+  "back": "Volver",
+  "web": {
+    "title1": "Más popular",
+    "price1": "$680 - $1.2K USD",
+    "desc1": "Sitio web básico (estático)",
+    "features1": ["Plantillas", "Responsivo", "SEO básico", "Algunas animaciones"],
+
+    "price2": "$1000 - $2200",
+    "desc2": "Sitio web corporativo",
+    "features2": ["Diseño semi-personalizado", "Formularios", "Blog", "SEO avanzado"],
+
+    "price3": "$2800 - $5000",
+    "desc3": "Sitio web e-commerce",
+    "features3": ["Sistema de tienda", "Pagos", "SEO Pro", "Animaciones"],
+
+    "price4": "$2720 - $13600",
+    "desc4": "Sitio web personalizado",
+    "features4": ["Personalización total", "Seguridad", "Integraciones", "Animaciones", "Multilenguaje", "SEO Pro"]
+  },
+  "mobile": {
+    "price1": "$7000 - $20000+",
+    "desc1": "Aplicación móvil personalizada (Android & iOS)",
+    "features1": ["Diseño a medida", "Integraciones avanzadas", "Escalabilidad", "Animaciones", "Seguridad", "SEO Pro", "Y más..."]
   }
+}
+
    
 }

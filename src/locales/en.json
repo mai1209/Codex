@@ -127,6 +127,39 @@
     "team": "Our team",
     "faq": "FAQ",
     "pricing": "Pricing"
+  },
+  "pricing": {
+  "title": "Pricing",
+  "subtitle": "Discover our plans and start building the upgrade that will push your business into the digital era",
+  "websites": "Websites",
+  "mobileApp": "Mobile Apps",
+  "includes": "Includes",
+  "button": "Let's build IT",
+  "back": "Back",
+  "web": {
+    "title1": "Most popular",
+    "price1": "$680 - $1.2K USD",
+    "desc1": "Basic website (static)",
+    "features1": ["Templates", "Responsive", "Basic SEO", "Some animations"],
+
+    "price2": "$1000 - $2200",
+    "desc2": "Corporate website",
+    "features2": ["Semi-custom design", "Forms", "Blog", "Advanced SEO"],
+
+    "price3": "$2800 - $5000",
+    "desc3": "E-commerce website",
+    "features3": ["Shop system", "Payments", "SEO Pro", "Animations"],
+
+    "price4": "$2720 - $13600",
+    "desc4": "Custom website",
+    "features4": ["Full customization", "Security", "Integrations", "Animations", "Multilingual", "SEO Pro"]
+  },
+  "mobile": {
+    "price1": "$7000 - $20000+",
+    "desc1": "Custom mobile app (Android & iOS)",
+    "features1": ["Tailored design", "Advanced integrations", "Scalability", "Some animations", "Security", "SEO Pro", "And more..."]
   }
+}
+
  
 }
