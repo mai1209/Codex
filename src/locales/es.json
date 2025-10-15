@@ -144,18 +144,22 @@
     "price1": "$680 - $1.2K USD",
     "desc1": "Sitio web básico (estático)",
     "features1": ["Plantillas", "Responsivo", "SEO básico", "Algunas animaciones"],
+     "descT1":"*no incluye backend",
 
     "price2": "$1000 - $2200",
     "desc2": "Sitio web corporativo",
     "features2": ["Diseño semi-personalizado", "Formularios", "Blog", "SEO avanzado"],
+     "descT2":"*no incluye backend",
 
     "price3": "$2800 - $5000",
     "desc3": "Sitio web e-commerce",
     "features3": ["Sistema de tienda", "Pagos", "SEO Pro", "Animaciones"],
+     "descT3":"*incluye backend",
 
     "price4": "$2720 - $13600",
     "desc4": "Sitio web personalizado",
-    "features4": ["Personalización total", "Seguridad", "Integraciones", "Animaciones", "Multilenguaje", "SEO Pro"]
+    "features4": ["Personalización total", "Seguridad", "Integraciones", "Animaciones", "Multilenguaje", "SEO Pro"],
+     "descT4":"*incluye backend"
   },
   "mobile": {
     "price1": "$7000 - $20000+",

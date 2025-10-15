@@ -280,6 +280,10 @@
   width: 100%;
 }
 
+
+.descriptionTwo{
+  text-align: center;
+}
 /* ------------------ MEDIA QUERIES ------------------ */
 @media (min-width: 850px) {
   .cards {

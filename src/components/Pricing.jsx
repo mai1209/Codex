@@ -15,24 +15,28 @@ function Pricing() {
       price: t("pricing.web.price1"),
       description: t("pricing.web.desc1"),
       features: t("pricing.web.features1", { returnObjects: true }),
+      descriptionTwo: t("pricing.web.descT1"),
     },
     {
       id: 2,
       price: t("pricing.web.price2"),
       description: t("pricing.web.desc2"),
       features: t("pricing.web.features2", { returnObjects: true }),
+      descriptionTwo: t("pricing.web.descT2"),
     },
     {
       id: 3,
       price: t("pricing.web.price3"),
       description: t("pricing.web.desc3"),
       features: t("pricing.web.features3", { returnObjects: true }),
+      descriptionTwo: t("pricing.web.descT3"),
     },
     {
       id: 4,
       price: t("pricing.web.price4"),
       description: t("pricing.web.desc4"),
       features: t("pricing.web.features4", { returnObjects: true }),
+      descriptionTwo: t("pricing.web.descT4")
     },
   ];
 
@@ -42,6 +46,7 @@ function Pricing() {
       price: t("pricing.mobile.price1"),
       description: t("pricing.mobile.desc1"),
       features: t("pricing.mobile.features1", { returnObjects: true }),
+      descriptionTwo: t("pricing.web.descT4")
     },
   ];
 
@@ -58,30 +63,30 @@ function Pricing() {
         <p className={style.subtitle}>{t("pricing.subtitle")}</p>
       </div>
 
-<div className={style.containerBtn}>
-  <div className={style.btns}>
-    <div
-      className={style["switch-bg"]}
-      style={{
-        transform: activeTab === "web" ? "translateX(0%)" : "translateX(100%)",
-      }}
-    ></div>
+      <div className={style.containerBtn}>
+        <div className={style.btns}>
+          <div
+            className={style["switch-bg"]}
+            style={{
+              transform: activeTab === "web" ? "translateX(0%)" : "translateX(100%)",
+            }}
+          ></div>
 
-    <button
-      onClick={() => setActiveTab("web")}
-      className={`${style.btn} ${activeTab === "web" ? style.active : ""}`}
-    >
-      {t("pricing.websites")}
-    </button>
+          <button
+            onClick={() => setActiveTab("web")}
+            className={`${style.btn} ${activeTab === "web" ? style.active : ""}`}
+          >
+            {t("pricing.websites")}
+          </button>
 
-    <button
-      onClick={() => setActiveTab("mobile")}
-      className={`${style.btn} ${activeTab === "mobile" ? style.active : ""}`}
-    >
-      {t("pricing.mobileApp")}
-    </button>
-  </div>
-</div>
+          <button
+            onClick={() => setActiveTab("mobile")}
+            className={`${style.btn} ${activeTab === "mobile" ? style.active : ""}`}
+          >
+            {t("pricing.mobileApp")}
+          </button>
+        </div>
+      </div>
 
       {/* Cards */}
       <div className={style.cards}>
@@ -105,6 +110,7 @@ function Pricing() {
                 <img src="/WhatsAppBlanco.webp" alt="wp" />
               </button>
             </a>
+            <p className={style.descriptionTwo}>{plan.descriptionTwo}</p>
           </div>
         ))}
       </div>
