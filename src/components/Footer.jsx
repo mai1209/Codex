@@ -3,7 +3,7 @@ import style from '../styles/Footer.module.css';
 import { Link } from "react-router-dom";
 
 function Footer() {
-  const { t, i18n } = useTranslation();
+  const { t,  } = useTranslation();
 
   return (
     <div className={style.container} id="contacto">
@@ -18,7 +18,7 @@ function Footer() {
         <div className={style.containerLinks}>
           <p className={style.titleNavigation}>{t('footer.navigation')}</p>
           <div className={style.links}>
-            <a href="">{t('footer.home')}</a>
+            <a href="#">{t('footer.home')}</a>
             <a href="#qué-hacemos">{t('footer.whatWeDo')}</a>
             <a href="#portafolio">{t('footer.portfolio')}</a>
             <a href="#nuestro-equipo">{t('footer.team')}</a>

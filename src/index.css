@@ -22,7 +22,6 @@ html, body {
 
 body {
   cursor: url(/cursor.svg), auto;
-  overscroll-behavior-y: contain; /* Más seguro que 'none' */
 }
 
 .app-wrapper {
