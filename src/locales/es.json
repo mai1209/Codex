@@ -8,7 +8,7 @@
     "secondaryText2": "Potencia tu marca en la era digital",
     "textBtn": "Construyamos IT",
     "secondaryText3": "Impulsamos marcas a través del diseño, desarrollo y comunicación estratégica.Somos expertos en branding, marketing digital y diseño web",
-      "secondaryText4": "Potencia tu negocio en la era digital"
+    "secondaryText4": "Potencia tu negocio en la era digital"
   },
   "wedo": {
     "title1": "¿QUE",
@@ -71,6 +71,7 @@
   },
   "done": {
     "title": "Lo que hemos",
+    "portfolio": "Nuestro Portafolio",
     "title2": " Hecho.",
     "subtitle": "CODEX",
     "subtitle2": "proyectos destacados",

@@ -17,8 +17,7 @@ function Done() {
       <div className={style.containerAll}>
         <div className={style.containerTitle}>
           <p className={style.title}>
-            {" "}
-            {t("done.title")} <br /> {t("done.title2")}{" "}
+              {t("done.portfolio")}
           </p>
         </div>
 

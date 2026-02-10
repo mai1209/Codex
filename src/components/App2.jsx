@@ -53,8 +53,8 @@ function App2() {
             <p>{t("app.title4")}</p>
           </div>
           <div className={style.row}></div>
-          <a href="https://wa.me/5493425543308" className={style.containerBtn}>
 
+          <a href="https://wa.me/5493425543308" className={style.containerBtn}>
             <img
               className={style.btnWp}
               src="/WhatsAppBlanco.webp"
