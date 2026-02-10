@@ -30,8 +30,8 @@ useEffect(() => {
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
 
-    // Mostrar flecha si pasaste 200px, pero ocultar si estás cerca del final
-    const nearBottom = scrollTop + windowHeight > documentHeight - 150; // 150px antes del footer
+  
+    const nearBottom = scrollTop + windowHeight > documentHeight - 150;
     setShowArrow(scrollTop > 200 && !nearBottom);
   };
 

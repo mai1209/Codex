@@ -16,23 +16,7 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Menda';
-  src: url('/Menda\ Font/menda_medium-webfont.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Menda';
-  src: url('/Menda\ Font/menda_semibold-webfont.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
 .container {
-
 
   background-color: var(--color-fondo-dark);
  

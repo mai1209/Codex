@@ -1,57 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&display=swap");
 
 :root {
   --color-fondo-dark: #121212;
-  --color-crimson: #FF1493;
+  --color-crimson: #ff1493;
   --color-text: #fff;
   --color-fondo-instagram: #f0ead6;
-  --color-fondo-dark: #1C1C1C;
+  --color-fondo-dark: #1c1c1c;
 }
 
 @font-face {
-  font-family: 'Menda';
-  src: url('/Menda\ Font/menda_medium-webfont.woff2') format('woff2');
+  font-family: "Menda";
+  src: url("/Menda\ Font/menda_medium-webfont.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 .container {
-  background-color: var(--color-fondo-dark);
-  height: fit-content;
-  padding-bottom: 1rem;
-  --grid-size: 100px;
-  --line-color: #3838384f;
-  --cross-color: #66666600;
-  --dot-color: #55555500;
-  background-image:
-    radial-gradient(circle, var(--dot-color) 1px, transparent 1.5px),
-    linear-gradient(var(--cross-color), var(--cross-color)),
-    linear-gradient(to right, var(--cross-color), var(--cross-color)),
-    repeating-linear-gradient(to right, var(--line-color) 0, var(--line-color) 2px, transparent 2px, transparent var(--grid-size)),
-    repeating-linear-gradient(to bottom, var(--line-color) 0, var(--line-color) 2px, transparent 2px, transparent var(--grid-size));
-  background-size:
-    var(--grid-size) var(--grid-size),
-    2px 10px,
-    10px 2px,
-    var(--grid-size) var(--grid-size),
-    var(--grid-size) var(--grid-size);
-  background-position:
-    calc(var(--grid-size) / 2) calc(var(--grid-size) / 2),
-    center center,
-    center center,
-    center center,
-    center center;
-  background-repeat: repeat;
+  background-color: #1c1c1c;
 }
 
 .title {
   color: var(--color-text);
-  font-family: 'Menda';
+  font-family: "Menda";
   font-weight: 500;
   font-size: 2.7rem;
-  padding: 3rem;
+  padding:0 0 8rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .containerAll {
@@ -91,7 +66,7 @@
   flex-direction: column;
   gap: 1rem;
   position: relative;
-  overflow-y: auto; 
+  overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -115,7 +90,7 @@
 
 .containerDescriptionIndividual p:nth-child(2) {
   color: var(--color-text);
-  font-family: "Poppins", sans-serif; /* Cambiado de Archivo a Poppins para consistencia */
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 1rem;
   padding-left: 3rem;
@@ -123,12 +98,10 @@
 
 .serviceTitleDescription {
   color: var(--color-crimson);
-  font-family: 'Menda';
+  font-family: "Menda";
   font-weight: 500;
   font-size: 1.2rem;
 }
-
-
 
 .containerTitle.active .serviceTitle {
   color: var(--color-crimson);
@@ -139,39 +112,97 @@
   height: 14px;
   opacity: 0;
   transform: translateX(-15px);
-  /* ESTA LÍNEA ES LA CLAVE DE LA ANIMACIÓN DE LA FLECHA */
-  transition: opacity 0.3s ease-out, transform 0.4s ease-out;
- 
-
+  transition:
+    opacity 0.3s ease-out,
+    transform 0.4s ease-out;
 }
 
 .containerTitle.active .arrowLeft {
   opacity: 1;
-   transform: translateX(0) rotate(0deg); /* ↓ abajo */
+  transform: translateX(0) rotate(0deg);
 }
 
-
-/* NUEVA REGLA PARA EL ELEMENTO ACTIVO */
 .containerDescriptionIndividual.activeDescription {
-border: 1px solid var(--color-crimson);
+  border: 1px solid var(--color-crimson);
 }
 
+.marqueeMove {
+  display: flex;
+  flex-shrink: 0;
+  white-space: nowrap;
+  animation: scroll 100s linear infinite;
+  background-color: var(--color-crimson);
+  padding: 0.5rem 0;
+  font-family: "Menda", sans-serif;
+  text-decoration: underline;
+  margin: 6rem 0;
+  font-size: 2.3rem;
+}
 
-@media (max-width: 850px){
+.asterisk{
+  color: var(--color-crimson);
+}
+
+/* 4. animacion texto  */
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.videoBackground {
+  border: none;
+  width: 100vw;
+  height: 95vh;
+  object-fit: cover;
+  
+}
+ .videoBackgroundContainer{
+
+    display: flex;
+    justify-content: center;
+    
+  }
+
+
+@media (max-width: 850px) {
   .containerDescription {
     height: 320px;
   }
   .containerDescriptionIndividual {
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  .containerTitle.active .arrowLeft {
+    opacity: 1;
+    transform: translateX(0) rotate(90deg);
+  }
+.marqueeMove {
+  padding: 0.5rem 0;
+  margin: 2rem 0;
+
+  font-size: 1.5rem;
+}
+
+.title {
+  color: var(--color-text);
+  font-family: "Menda";
+  font-weight: 500;
+  font-size: 2.7rem;
+  padding: 2rem 0 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.videoBackground {
+  width: 100vw;
+  height: 50vh;
+  padding: 3rem 0;
   
-  padding: 0.5rem 1rem 1rem;
-
+  
 }
-
-.containerTitle.active .arrowLeft {
-  opacity: 1;
-   transform: translateX(0) rotate(90deg); /* ↓ abajo */
-}
-
-
 
 }

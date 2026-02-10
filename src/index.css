@@ -4,6 +4,8 @@ html, body {
   padding: 0;
   overflow-x: hidden; /* Solo aquí, no en * */
   scroll-behavior: smooth;
+    background: var(--color-fondo-dark);
+
 }
 
 /* Scrollbars para Brave/Chrome */

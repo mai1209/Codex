@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Glitch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Menda";
+  src: url("/Menda\ Font/menda_medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Menda";
+  src: url("/Menda\ Font/menda_semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ------------------ CONTAINER ------------------ */
+.container {
+  background-color: var(--color-fondo-dark);
+  height: calc(100vh + 8rem);
+  min-height: fit-content;
+  padding-bottom: 4rem;
+  --grid-size: 100px;
+  --line-color: #3838384f;
+  --cross-color: #66666600;
+  --dot-color: #55555500;
+
+  background-image:
+    radial-gradient(circle, var(--dot-color) 1px, transparent 1.5px),
+    linear-gradient(var(--cross-color), var(--cross-color)),
+    linear-gradient(to right, var(--cross-color), var(--cross-color)),
+    repeating-linear-gradient(
+      to right,
+      var(--line-color) 0,
+      var(--line-color) 2px,
+      transparent 2px,
+      transparent var(--grid-size)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--line-color) 0,
+      var(--line-color) 2px,
+      transparent 2px,
+      transparent var(--grid-size)
+    );
+
+  background-size:
+    var(--grid-size) var(--grid-size),
+    2px 10px,
+    10px 2px,
+    var(--grid-size) var(--grid-size),
+    var(--grid-size) var(--grid-size);
+
+  background-position:
+    calc(var(--grid-size) / 2) calc(var(--grid-size) / 2),
+    center center,
+    center center,
+    center center,
+    center center;
+
+  background-repeat: repeat;
+}
+
+.containerTextHome {
+  font-family: "Menda";
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.8rem;
+  padding: 7rem 1rem 0rem 1rem;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.row {
+  height: 0.3rem;
+  background-color: var(--color-crimson);
+  border-radius: 2rem;
+  width: 43%;
+  margin: 1rem;
+}
+
+.containerBtn {
+  background-color: var(--color-crimson);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 83px;
+  width: fit-content;
+  margin: 3rem auto;
+  padding: 0.1rem 3rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.535);
+}
+
+.containerBtn:hover {
+  background-color: var(--color-crimson-hover);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.btnWp {
+  width: 18px;
+  height: 18px;
+}
+
+.btnText {
+  color: var(--color-text);
+  background: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.containerSecondaryText {
+  background-color: var(--color-crimson);
+  padding: 2rem 1rem;
+  line-height: 1.3rem;
+  border-radius: 14px;
+  margin: 0 auto;
+  width: 90%;
+  background: linear-gradient(
+  -20deg,
+    #FF1493  0%,
+    #1C1C1C 100%
+  );
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.535);
+}
+
+.secondaryText {
+  color: var(--color-text);
+  text-align: start;
+  font-family: "Menda";
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-shadow: #5d5b5b 1px 1px 2px;
+}
+
+.containerRobot {
+  padding-right: 2rem;
+  margin: 1rem 0;
+  position: absolute;
+  right: 0;
+}
+
+.robot {
+  width: 161px;
+  height: 286px;
+  filter: drop-shadow(0 0 25px rgba(255, 20, 147, 0.45));
+
+}
+
+.containerTextRobot {
+  position: relative;
+  top: 230px;
+  max-width: fit-content;
+  margin-left: 2.5rem;
+}
+
+.textFirst {
+  color: var(--color-text);
+  font-family: "Menda";
+  font-size: 0.8rem;
+}
+
+.textSecond {
+  color: var(--color-text);
+  text-transform: uppercase;
+  font-size: 2.7rem;
+  font-family: "Menda";
+}
+
+
+
+.marqueeMove {
+  display: flex;
+  flex-shrink: 0;
+  white-space: nowrap;
+  animation: scroll 100s linear infinite;
+  font-family: "Menda", sans-serif;
+  margin: 0rem 0;
+  font-size:3.8rem;
+  color: #FF1493  ;
+  position: fixed;
+  top: 0;
+}
+
+.asterisk{
+  color: var(--color-crimson);
+}
+
+/* 4. animacion texto  */
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 1400px) {
+  /* ------------------ CONTAINER ------------------ */
+  .containerInfo {
+    display: flex;
+    height: 100vh;
+  }
+  .containerInfoText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .containerSecondaryText {
+    padding: 6rem 4rem;
+    width: 100%;
+    margin-left: 0;
+    border-radius: 0;
+  }
+
+  .secondaryText {
+    font-size: 1.4em;
+    max-width: 550px;
+  }
+
+  .containerTextHome {
+    font-size: 4rem;
+    line-height: 4rem;
+    padding: 8rem 1rem 0rem 5rem;
+  }
+
+  .row {
+    width: 50%;
+    margin: 1rem 5rem;
+  }
+  .containerRobot {
+    padding-right: 0rem;
+    position: absolute;
+    right: 0;
+    top: 2rem;
+  }
+
+  .robot {
+    width: 500px;
+    height: 100vh;
+  }
+
+  .containerRobotInfo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    padding-bottom: 5rem;
+  }
+
+  .containerTextRobot {
+    top: 0px;
+  }
+
+  .textSecond {
+    color: var(--color-text);
+    text-transform: uppercase;
+    font-size: 7.3rem;
+    font-family: "Menda";
+  }
+
+  .containerBtn {
+  background-color: #00000000;
+  border: 1px solid var(--color-text);
+  margin: 3rem auto;
+  padding: 0.3rem 3rem;
+ 
+}
+.btnText {
+ 
+  font-size: 1rem;
+
+}
+
+
+
+}

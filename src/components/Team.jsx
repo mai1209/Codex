@@ -30,30 +30,12 @@ function Team() {
   ];
 
 
-  const logos = [
-    './logo1.webp',
-    './logo2.webp',
-    './logo3.webp',
-    './logo4.webp',
-    './logo5.webp',
-    './logo6.webp',
-    './logo7.webp',
-    './logo8.webp',
-  ];
+
  
-  const allLogos = [...logos, ...logos];
 
   return (
     <div className={style.container} id="nuestro-equipo">
-      <div className={style.carouselContainer}>
-        <div className={style.carouselTrack}>
-          {allLogos.map((src, idx) => (
-            <div className={style.logoItem} key={idx}>
-              <img src={src} alt={`logo${idx % logos.length + 1}`} />
-            </div>
-          ))}
-        </div>
-      </div>
+     
       <div className={style.containerMembers}>
         {members.map((member, index) => {
 

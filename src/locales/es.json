@@ -1,94 +1,106 @@
 {
-    "app": {
-        "title1": "Tu mejor",
-        "title2": "opcion a la ",
-        "title3": "hora de ",
-        "title4": "digitalizarte",
-        "secondaryText1": "¿Sabias qué? El 70% de las visitas llegan a traves del navegador mobile",
-        "secondaryText2": "Potencia tu marca en la era digital"
-    },
-    "wedo": {
-        "title1": "¿QUE",
-        "title2": " HACEMOS?",
-        "containerTextInfo1": "En Codex Corp. impulsamos marcas a través del diseño, desarrollo y comunicación estratégica.",
-        "containerTextInfo2": " Somos expertos en branding, marketing digital y diseño web, creando soluciones",
-        "containerTextInfo3": "visuales y digitales que aumentan la visibilidad de tu",
-        "containerTextInfo4": "negocio, conectan con tu público objetivo y generan resultados medibles.",
-        "containerTextInfo5": "Nuestro equipo multidisciplinario combina creatividad, innovación y ",
-        "containerTextInfo6": "experiencia para llevar cada proyecto al siguiente nivel.",
-        "text": "Un sitio web compatible",
-        "text1": "con dispositivos móviles",
-        "text2": "Es crucial:",
-        "number1": "01.",
-        "textInfo": "De las visitas llegan a traves del  navegador mobil",
-        "number2": "02.",
-        "seo": "SEO",
-        "textInfoTwo": "Mejoramos el rendimiento de tu sitio web optimizando su funcionalidad y posicionamiento en buscadores, asegurando que alcance a más usuarios de manera efectiva.",
-        "number3": "03.",
-        "day": "HOY",
-        "textInfoThree": "Haz tu sitio web móvil y potencia tu SEO para llegar a más clientes."
-    },
-    "diagrama": {
-        "title": "Servicios",
-        "services": [
-            {
-                "title": "Desarrollo Web",
-                "description": "Creamos sitios web innovadores, optimizados y adaptados a tus necesidades."
-            },
-            {
-                "title": "Comunicación",
-                "description": "Mensajes estratégicos que fortalecen la conexión con tu público. \"No es lo que vendes, sino cómo lo vendes.\""
-            },
-            {
-                "title": "Marketing",
-                "description": "Impulsamos tu marca con campañas estratégicas para maximizar su alcance y relevancia."
-            },
-            {
-                "title": "Identidad Visual",
-                "description": "Diseños que transmiten tu esencia y conectan con tu audiencia."
-            },
-            {
-                "title": "Estrategia & Diseño",
-                "description": "Estrategias visuales y conceptuales que dan vida a tus ideas."
-            },
-            {
-                "title": "Aplicación Móvil",
-                "description": "Apps funcionales e intuitivas que destacan por su diseño y rendimiento."
-            }
-        ]
-    },
-    "done": {
-        "title": "Lo que hemos",
-        "title2": " Hecho.",
-        "subtitle": "CODEX",
-        "subtitle2": "proyectos destacados",
-        "nameProyect1": "wifrut.com",
-        "descriptionProyect1": "  Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.",
-        "nameProyect2": "creamarketingparavos.com",
-        "descriptionProyect2": "   Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.",
-        "nameProyect3": "Growth web app",
-        "descriptionProyect3": "    Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.",
-        "nameProyect4": "Growth mobile app",
-        "descriptionProyect4": "   Desarrollo y diseño de sistemas",
-        "nameProyect5": "Dev portfolio",
-        "descriptionProyect5": "     Diseño y desarrollo frontal",
-        "nameProyect6": "Orion hairstudio",
-        "descriptionProyect6": " Diseño de marca. ",
-        "popUp": "¿Listo para construir tu futuro digital?",
-        "description": "Estamos elaborando este proyecto con pasión y visión, y llegará pronto. ¡Estén atentos y construyámoslo junto con Codex!"
-    },
-    "team": {
-        "textContact": "CONSTRUÍ TU SITIO WEB CON",
-        "textContact2": "CODEX CORPORTION & BUSINESS",
-        "button": "¡Contactanos!"
-    },
-    "diagramaM": {
-        "title": "*DICEN QUIENES HAN TRABAJADO CON CODEX",
-        "description": "Con CODEX entendí que tener un sitio web es clave para el crecimiento constante y automatizado de mi negocio",
-        "author": "Natalia Lofeudo",
-        "role": "Creá"
-    },
-     "footer": {
+  "app": {
+    "title1": "Tu mejor",
+    "title2": "opción a la ",
+    "title3": "hora de ",
+    "title4": "digitalizarte",
+    "secondaryText1": "¿Sabias qué? El 70% de las visitas llegan a traves del navegador mobile",
+    "secondaryText2": "Potencia tu marca en la era digital",
+    "textBtn": "Construyamos IT",
+    "secondaryText3": "Impulsamos marcas a través del diseño, desarrollo y comunicación estratégica.Somos expertos en branding, marketing digital y diseño web",
+      "secondaryText4": "Potencia tu negocio en la era digital"
+  },
+  "wedo": {
+    "title1": "¿QUE",
+    "title2": " HACEMOS?",
+    "containerTextInfo1": "En Codex Corp. impulsamos marcas a través del diseño, desarrollo y comunicación estratégica.",
+    "containerTextInfo2": " Somos expertos en branding, marketing digital y diseño web, creando soluciones",
+    "containerTextInfo3": "visuales y digitales que aumentan la visibilidad de tu",
+    "containerTextInfo4": "negocio, conectan con tu público objetivo y generan resultados medibles.",
+    "containerTextInfo5": "Nuestro equipo multidisciplinario combina creatividad, innovación y ",
+    "containerTextInfo6": "experiencia para llevar cada proyecto al siguiente nivel.",
+    "text": "Un sitio web optimizado",
+    "text1": "para dispositivos móviles",
+    "text2": "Es crucial:",
+    "number1": "01.",
+    "textInfo": "De las visitas llegan a traves del  navegador mobil",
+    "number2": "02.",
+    "seo": "SEO",
+    "textInfoTwo": "Mejoramos el rendimiento de tu sitio web optimizando su funcionalidad y posicionamiento en buscadores, asegurando que alcance a más usuarios de manera efectiva.",
+    "number3": "03.",
+    "day": "HOY",
+    "textInfoThree": "Haz tu sitio web móvil y potencia tu SEO para llegar a más clientes.",
+    "textBottom1": "Hay ideas que solo necesitan el equipo correcto para despegar. ",
+    "textBottom2": "¿Y si justo nos cruzamos en el momento ideal?",
+    "textBottom3": "¡Construyámoslo juntos con Codex!",
+    "textFirst": "Nuestro equipo multidisciplinario combina creatividad, innovación y",
+    "textSecond": "experiencia para llevar cada proyecto al siguiente nivel."
+  },
+  "diagrama": {
+    "title": "Servicios",
+    "titleSome": "Algunos Clientes",
+    "titleMove": "TIENES ALGUNA IDEA? CONTACTANOS!",
+    "titleNavTop": "The future is coded — let’s build it —",
+
+    "services": [
+      {
+        "title": "Desarrollo Web",
+        "description": "Creamos sitios web innovadores, optimizados y adaptados a tus necesidades."
+      },
+      {
+        "title": "Comunicación",
+        "description": "Mensajes estratégicos que fortalecen la conexión con tu público. \"No es lo que vendes, sino cómo lo vendes.\""
+      },
+      {
+        "title": "Marketing",
+        "description": "Impulsamos tu marca con campañas estratégicas para maximizar su alcance y relevancia."
+      },
+      {
+        "title": "Identidad Visual",
+        "description": "Diseños que transmiten tu esencia y conectan con tu audiencia."
+      },
+      {
+        "title": "Estrategia & Diseño",
+        "description": "Estrategias visuales y conceptuales que dan vida a tus ideas."
+      },
+      {
+        "title": "Aplicación Móvil",
+        "description": "Apps funcionales e intuitivas que destacan por su diseño y rendimiento."
+      }
+    ]
+  },
+  "done": {
+    "title": "Lo que hemos",
+    "title2": " Hecho.",
+    "subtitle": "CODEX",
+    "subtitle2": "proyectos destacados",
+    "nameProyect1": "wifrut.com",
+    "descriptionProyect1": "  Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.",
+    "nameProyect2": "creamarketingparavos.com",
+    "descriptionProyect2": "   Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.",
+    "nameProyect3": "Growth web app",
+    "descriptionProyect3": "    Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.",
+    "nameProyect4": "Growth mobile app",
+    "descriptionProyect4": "   Desarrollo y diseño de sistemas",
+    "nameProyect5": "Dev portfolio",
+    "descriptionProyect5": "     Diseño y desarrollo frontal",
+    "nameProyect6": "Orion hairstudio",
+    "descriptionProyect6": " Diseño de marca. ",
+    "popUp": "¿Listo para construir tu futuro digital?",
+    "description": "Estamos elaborando este proyecto con pasión y visión, y llegará pronto. ¡Estén atentos y construyámoslo junto con Codex!"
+  },
+  "team": {
+    "textContact": "CONSTRUÍ TU SITIO WEB CON",
+    "textContact2": "CODEX CORPORTION & BUSINESS",
+    "button": "¡Contactanos!"
+  },
+  "diagramaM": {
+    "title": "*DICEN QUIENES HAN TRABAJADO CON CODEX",
+    "description": "Con CODEX entendí que tener un sitio web es clave para el crecimiento constante y automatizado de mi negocio",
+    "author": "Natalia Lofeudo",
+    "role": "Creá"
+  },
+  "footer": {
     "title": "CODEX Corporation & Business",
     "subtitle": "Diseñamos nuevas estrategias de negocios para web, redes sociales y marcas.",
     "navigation": "navegación",
@@ -102,7 +114,7 @@
     "faq": "Preguntas frecuentes",
     "rights": "© 2025. Todos los derechos reservados."
   },
-    "ask": {
+  "ask": {
     "title": "PREGUNTAS Y RESPUESTAS",
     "back": "Volver",
 
@@ -123,7 +135,7 @@
       "desc": "Tenemos plena confianza en nuestro trabajo y los resultados que entregamos. No haremos promesas vacías (nadie puede garantizar fama instantánea), pero estaremos a tu lado en cada paso, ajustando estrategias para asegurar un progreso genuino. Nuestro éxito se define por tu satisfacción, y no nos detendremos hasta que estés encantado con los resultados logrados con Codex."
     }
   },
-     "nav": {
+  "nav": {
     "whatWeDo": "Qué hacemos",
     "services": "Consulta nuestros servicios",
     "portfolio": "Portafolio",
@@ -132,41 +144,64 @@
     "pricing": "Precios"
   },
   "pricing": {
-  "title": "Precios",
-  "subtitle": "Conoce nuestros precios y comienza a construir la mejora que impulsará tu negocio/proyecto a la era digital",
-  "websites": "Sitios Web",
-  "mobileApp": "Aplicaciones Móviles",
-  "includes": "Incluye",
-  "button": "Construyámoslo",
-  "back": "Volver",
-  "web": {
-    "title1": "Más popular",
-    "price1": "$680 - $1.2K USD",
-    "desc1": "Sitio web básico (estático)",
-    "features1": ["Plantillas", "Responsivo", "SEO básico", "Algunas animaciones"],
-     "descT1":"*no incluye backend",
+    "title": "Precios",
+    "subtitle": "Conoce nuestros precios y comienza a construir la mejora que impulsará tu negocio/proyecto a la era digital",
+    "websites": "Sitios Web",
+    "mobileApp": "Aplicaciones Móviles",
+    "includes": "Incluye",
+    "button": "Construyámoslo",
+    "back": "Volver",
+    "web": {
+      "title1": "Más popular",
+      "price1": "$680 - $1.2K USD",
+      "desc1": "Sitio web básico (estático)",
+      "features1": [
+        "Plantillas",
+        "Responsivo",
+        "SEO básico",
+        "Algunas animaciones"
+      ],
+      "descT1": "*no incluye backend",
 
-    "price2": "$1000 - $2200",
-    "desc2": "Sitio web corporativo",
-    "features2": ["Diseño semi-personalizado", "Formularios", "Blog", "SEO avanzado"],
-     "descT2":"*no incluye backend",
+      "price2": "$1000 - $2200",
+      "desc2": "Sitio web corporativo",
+      "features2": [
+        "Diseño semi-personalizado",
+        "Formularios",
+        "Blog",
+        "SEO avanzado"
+      ],
+      "descT2": "*no incluye backend",
 
-    "price3": "$2800 - $5000",
-    "desc3": "Sitio web e-commerce",
-    "features3": ["Sistema de tienda", "Pagos", "SEO Pro", "Animaciones"],
-     "descT3":"*incluye backend",
+      "price3": "$2800 - $5000",
+      "desc3": "Sitio web e-commerce",
+      "features3": ["Sistema de tienda", "Pagos", "SEO Pro", "Animaciones"],
+      "descT3": "*incluye backend",
 
-    "price4": "$2720 - $13600",
-    "desc4": "Sitio web personalizado",
-    "features4": ["Personalización total", "Seguridad", "Integraciones", "Animaciones", "Multilenguaje", "SEO Pro"],
-     "descT4":"*incluye backend"
-  },
-  "mobile": {
-    "price1": "$7000 - $20000+",
-    "desc1": "Aplicación móvil personalizada (Android & iOS)",
-    "features1": ["Diseño a medida", "Integraciones avanzadas", "Escalabilidad", "Animaciones", "Seguridad", "SEO Pro", "Y más..."]
+      "price4": "$2720 - $13600",
+      "desc4": "Sitio web personalizado",
+      "features4": [
+        "Personalización total",
+        "Seguridad",
+        "Integraciones",
+        "Animaciones",
+        "Multilenguaje",
+        "SEO Pro"
+      ],
+      "descT4": "*incluye backend"
+    },
+    "mobile": {
+      "price1": "$7000 - $20000+",
+      "desc1": "Aplicación móvil personalizada (Android & iOS)",
+      "features1": [
+        "Diseño a medida",
+        "Integraciones avanzadas",
+        "Escalabilidad",
+        "Animaciones",
+        "Seguridad",
+        "SEO Pro",
+        "Y más..."
+      ]
+    }
   }
-}
-
-   
 }

@@ -2,7 +2,7 @@ import { StrictMode, useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importa Router
 import '../src/index.css';
-import App from './components/App';
+//import App from './components/App';
 import WeDo from './components/WeDo';
 //import Diagrama from './components/Diagrama';
 import DiagramaM from './components/DiagramaM';
@@ -15,6 +15,7 @@ import Ask from './components/Ask';
 import Diagrama from './components/Diagrama';
 import Done from './components/Done';
 import './i18n';
+import App2 from './components/App2';
 
 function RootApp() {
   const [isMobile, setIsMobile] = useState(false);
@@ -40,7 +41,8 @@ function RootApp() {
               element={
                 <>
                  <Nav /> 
-                  <App />
+                  <App2 />
+               
                   <WeDo />
 
                   {isMobile ? <DiagramaM /> : <DiagramaM />}

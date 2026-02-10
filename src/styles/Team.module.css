@@ -1,272 +1,277 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-    --color-fondo: #070a0c;
-    --color-crimson: #FF1493;
-    --color-text: #fff;
-    --color-dark-text: #000;
-    --color-fondo-dark: #1C1C1C;
-    --carousel-speed: 20s; /* default speed for desktop */
+  --color-fondo: #070a0c;
+  --color-crimson: #ff1493;
+  --color-text: #fff;
+  --color-dark-text: #000;
+  --color-fondo-dark: #1c1c1c;
+  --carousel-speed: 20s; /* default speed for desktop */
 }
 
 @font-face {
-    font-family: 'Menda';
-    src: url('/Menda\ Font/menda_medium-webfont.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Menda";
+  src: url("/Menda\ Font/menda_medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 .container {
-    background-color: var(--color-fondo-dark);
-    color: var(--color-text);
-    min-height: fit-content;
+  background-color: var(--color-fondo-dark);
+  color: var(--color-text);
+  min-height: fit-content;
 }
-
 
 /* Carrusel de logos */
 .carouselContainer {
-    width: 100%;
-  
-    position: relative;
-    background: transparent;
-    margin-bottom: 2rem;
+  width: 100%;
+
+  position: relative;
+  background: transparent;
+  margin-bottom: 2rem;
 }
 
 .carouselTrack {
-    display: flex;
-    width: max-content; /* asegurar que el track mida el ancho real del contenido duplicado */
-    flex-wrap: nowrap; /* evitar que las imágenes hagan wrap en pantallas pequeñas */
-    animation: scroll-logos var(--carousel-speed) linear infinite;
-    padding: 2rem 0;
-    will-change: transform;
-     animation-direction: reverse; 
+  display: flex;
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll-logos var(--carousel-speed) linear infinite;
+  padding: 6rem 0;
+  will-change: transform;
+  animation-direction: reverse;
 }
 
 @keyframes scroll-logos {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-/* Responsive: reducir margenes y tamaño en móviles para mostrar más logos */
+.title {
+  color: var(--color-text);
+  font-family: "Menda";
+  font-weight: 500;
+  font-size: 2.9rem;
+  padding: 8rem 0 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
 @media (max-width: 600px) {
-    .logoItem {
-        margin: 0 0.6rem;
-        height: 44px;
-    }
-    .logoItem img {
-        height: 44px;
-    }
-    .carouselTrack {
-        padding: 1rem 0;
-    }
+  .logoItem {
+    margin: 0 0.6rem;
+    height: 44px;
+  }
+  .logoItem img {
+    height: 44px;
+  }
+  .carouselTrack {
+    padding: 2rem 0 3rem 0;
+  }
+
+  .title {
+  color: var(--color-text);
+
+  font-size: 2rem;
+  padding: 3rem 0 1rem;
+  text-transform: uppercase;
+  text-align: center;
+
+}
 }
 
 @media (max-width: 400px) {
-    .logoItem {
-        margin: 0 0.4rem;
-        height: 36px;
-    }
-    .logoItem img {
-        height: 36px;
-    }
+  .logoItem {
+    margin: 0 0.4rem;
+    height: 36px;
+  }
+  .logoItem img {
+    height: 36px;
+  }
+
+
 }
 
+
+
 .logoItem {
-    flex: 0 0 auto;
-    margin: 0 2rem;
-    height: 60px;
-    display: flex;
-    align-items: center;
+  flex: 0 0 auto;
+  margin: 0 2rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .logoItem img {
-    height: 60px;
-    width: auto;
-    object-fit: contain;
-    filter: grayscale(100%) brightness(170%);
-    transition: filter 0.3s;
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(170%);
+  transition: filter 0.3s;
 }
 .logoItem img:hover {
-    filter: grayscale(0%) brightness(100%);
+  filter: grayscale(0%) brightness(100%);
 }
 
-
 .containerMembers {
-    max-width: 900px;
-    margin: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 2rem 0;
-
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 12rem 0 9rem;
 }
 
 .wrapperClass {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
 }
 
 .imgMembers {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 
 .containerText {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .p {
-    font-size: 0.7rem;
-    font-family: 'Menda';
-    text-align: center;
-
+  font-size: 0.7rem;
+  font-family: "Menda";
+  text-align: center;
 }
 
 .role2 {
-    font-size: 0.7rem;
-    font-family: "Archivo", sans-serif;
-    font-weight: 100;
-    font-style: normal;
+  font-size: 0.7rem;
+  font-family: "Archivo", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
 .firstImage {
-    border-radius: 50%;
-    padding: 1px;
-    background: conic-gradient(from 180deg, var(--color-crimson) 180deg, transparent 0);
-    border: none;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(
+    from 180deg,
+    var(--color-crimson) 180deg,
+    transparent 0
+  );
+  border: none;
 }
 
 .middleImage {
-    border-radius: 50%;
-    padding: 1px;
-    background: conic-gradient(from 0deg, var(--color-crimson) 180deg, transparent 0);
-    border: none;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(
+    from 0deg,
+    var(--color-crimson) 180deg,
+    transparent 0
+  );
+  border: none;
 }
 
 .containerContact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 1rem;
-    margin-top: 3rem;
-    background-color: var(--color-crimson);
-    gap: 1.5rem;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  background-color: var(--color-crimson);
+  gap: 1.5rem;
 }
 
 .textContact {
-    color: var(--color-dark-text);
-    font-size: 0.9rem;
-    font-family: 'Menda';
-    font-weight: 500;
-    line-height: 0.8rem;
-    max-width: 167px;
-
+  color: var(--color-dark-text);
+  font-size: 0.9rem;
+  font-family: "Menda";
+  font-weight: 500;
+  line-height: 0.8rem;
+  max-width: 167px;
 }
 
 .btnContact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-    border-radius: 10px;
-    background-color: var(--color-fondo);
-    z-index: 99999999;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: var(--color-fondo);
+  z-index: 99999999;
 }
 
-.btnContact a{
-    text-decoration: none;
+.btnContact a {
+  text-decoration: none;
 }
 
 .btnContact button {
-    background: none;
-    font-size: 1rem;
-    font-family: 'Menda';
-    font-weight: 500;
-    color: var(--color-text);
-
-
+  background: none;
+  font-size: 1rem;
+  font-family: "Menda";
+  font-weight: 500;
+  color: var(--color-text);
 }
 
 .btnContact img {
-    width: 5vw;
+  width: 5vw;
 }
-
-
 
 @media (min-width: 850px) {
-    .containerContact {
-      padding: 3rem 3rem 3rem 3rem;
-        gap: 20rem;
-        margin-top: 5rem;
+  .containerContact {
+    padding: 3rem 3rem 3rem 3rem;
+    gap: 20rem;
+    margin-top: 5rem;
+  }
 
-    }
+  .textContact {
+    max-width: fit-content;
+    font-size: 1.8rem;
+    line-height: 1.5rem;
+  }
 
-    .textContact {
-   max-width: fit-content;
-        font-size: 1.8rem;
-        line-height: 1.5rem;
-    }
-
-    .btnContact button {
-
+  .btnContact button {
     font-size: 1.2rem;
-  
+  }
 
+  .btnContact img {
+    width: 1.5vw;
+  }
 
-}
+  .containerImg {
+    gap: 3rem;
+    padding: 2rem 0;
+  }
 
-    .btnContact img {
-        width: 1.5vw;
-    }
+  .imgMembers {
+    width: 150px;
+    height: 150px;
+  }
 
-   
+  .p {
+    font-size: 1.2rem;
+  }
 
-    .containerImg {
-        gap: 3rem;
-        padding: 2rem 0;
-    }
+  .role2 {
+    font-size: 1rem;
+  }
 
-    .imgMembers {
-        width: 150px;
-        height: 150px;
+  .containerMembers {
+    gap: 2rem;
+  }
 
-    }
-
-    .p {
-        font-size: 1.2rem;
-
-
-    }
-
-    .role2 {
-        font-size: 1rem;
-
-    }
-
-    .containerMembers {
-        gap: 2rem;
-
-    }
-
-.logoItem img {
+  .logoItem img {
     height: 80px;
- 
-}
-
+  }
 }

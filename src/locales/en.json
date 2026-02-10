@@ -1,34 +1,46 @@
 {
-    "app": {
-        "title1": "Your best",
-        "title2": "option when",
-        "title3": "it's time to",
-        "title4": "go digital",
-        "secondaryText1": "Did you know? 70% of visits come through mobile browsers",
-        "secondaryText2": "Boost your brand in the digital era"
-    },
-      "wedo": {
-        "title1": "WHAT",
-        "title2": " WE DO?",
-        "containerTextInfo1": "At Codex Corp., we boost brands through design, development, and strategic communication.",
-        "containerTextInfo2": "We are experts in branding, digital marketing, and web design, creating solutions",
-        "containerTextInfo3": "visual and digital that increase your",
-        "containerTextInfo4": "business visibility, connect with your target audience, and generate measurable results.",
-        "containerTextInfo5": "Our multidisciplinary team combines creativity, innovation, and",
-        "containerTextInfo6": "experience to take every project to the next level.",
-        "text": "A website compatible",
-        "text1": "with mobile devices",
-        "text2": "Is crucial:",
-        "number1": "01.",
-        "textInfo": "Of visits come through mobile browsers",
-        "number2": "02.",
-        "seo": "SEO",
-        "textInfoTwo": "We improve your website's performance by optimizing its functionality and search engine ranking, ensuring it reaches more users effectively.",
-        "number3": "03.",
-        "textInfoThree": "Make your website mobile-friendly and boost your SEO to reach more customers."
-    },
-      "diagrama": {
+  "app": {
+    "title1": "Your best",
+    "title2": "option when",
+    "title3": "it's time to",
+    "title4": "go digital",
+    "secondaryText1": "Did you know? 70% of visits come through mobile browsers",
+    "secondaryText2": "Boost your brand in the digital era",
+    "textBtn": "Let’s build it!",
+    "secondaryText3": "We drive brands through design, development, and strategic communication. We are experts in branding, digital marketing, and web design.",
+    "secondaryText4": "Boost your business in the digital age"
+
+  },
+  "wedo": {
+    "title1": "WHAT",
+    "title2": " WE DO?",
+    "containerTextInfo1": "At Codex Corp., we boost brands through design, development, and strategic communication.",
+    "containerTextInfo2": "We are experts in branding, digital marketing, and web design, creating solutions",
+    "containerTextInfo3": "visual and digital that increase your",
+    "containerTextInfo4": "business visibility, connect with your target audience, and generate measurable results.",
+    "containerTextInfo5": "Our multidisciplinary team combines creativity, innovation, and",
+    "containerTextInfo6": "experience to take every project to the next level.",
+    "text": "A mobile-friendly",
+    "text1": "website",
+    "text2": "Is crucial:",
+    "number1": "01.",
+    "textInfo": "Of visits come through mobile browsers",
+    "number2": "02.",
+    "seo": "SEO",
+    "textInfoTwo": "We improve your website's performance by optimizing its functionality and search engine ranking, ensuring it reaches more users effectively.",
+    "number3": "03.",
+    "textInfoThree": "Make your website mobile-friendly and boost your SEO to reach more customers.",
+      "textBottom1": "There are ideas that just need the right team to take off.",
+      "textBottom2": "What if we just cross paths at the ideal moment?",
+      "textBottom3": "Let's build it together with Codex!",
+      "textFirst":"Our multidisciplinary team combines creativity, innovation, and",
+      "textSecond":"experience to take every project to the next level."
+  },
+  "diagrama": {
     "title": "Services",
+    "titleMove": "HAVE ANY IDEA? CONTACT US!",
+    "titleSome": "Some Clients",
+    "titleNavTop": "The future is coded — let’s build it —",
     "services": [
       {
         "title": "Web Development",
@@ -56,36 +68,36 @@
       }
     ]
   },
-      "done": {
-        "title": "What we’ve",
-        "title2": " Done.",
-        "subtitle": "CODEX",
-        "subtitle2": "featured projects", 
-        "nameProyect1": "wifrut.com",
-        "descriptionProyect1": "Brand design, front-end and back-end development, system design.",
-        "nameProyect2": "creamarketingparavos.com",
-        "descriptionProyect2": "Brand design, front-end and back-end development, system design.",
-        "nameProyect3": "Growth web app",
-        "descriptionProyect3": "Brand design, front-end and back-end development, system design.",
-        "nameProyect4": "Growth mobile app",
-        "descriptionProyect4": "System development and design.",
-        "nameProyect5": "Dev portfolio",
-        "descriptionProyect5": "Front-end design and development.",
-        "popUp": "Ready to build your digital future?",
-        "description": "We’re crafting this project with passion and vision — it’s coming soon. Stay tuned and let’s build it together with Codex!"
-    },
-    "team": {
-        "textContact": "BUILD YOUR WEBSITE WITH",
-        "textContact2": "CODEX CORPORATION & BUSINESS",
-        "button": "Contact us!"
-    },
-     "diagramaM": {
+  "done": {
+    "title": "What we’ve",
+    "title2": " Done.",
+    "subtitle": "CODEX",
+    "subtitle2": "featured projects",
+    "nameProyect1": "wifrut.com",
+    "descriptionProyect1": "Brand design, front-end and back-end development, system design.",
+    "nameProyect2": "creamarketingparavos.com",
+    "descriptionProyect2": "Brand design, front-end and back-end development, system design.",
+    "nameProyect3": "Growth web app",
+    "descriptionProyect3": "Brand design, front-end and back-end development, system design.",
+    "nameProyect4": "Growth mobile app",
+    "descriptionProyect4": "System development and design.",
+    "nameProyect5": "Dev portfolio",
+    "descriptionProyect5": "Front-end design and development.",
+    "popUp": "Ready to build your digital future?",
+    "description": "We’re crafting this project with passion and vision — it’s coming soon. Stay tuned and let’s build it together with Codex!"
+  },
+  "team": {
+    "textContact": "BUILD YOUR WEBSITE WITH",
+    "textContact2": "CODEX CORPORATION & BUSINESS",
+    "button": "Contact us!"
+  },
+  "diagramaM": {
     "title": "*THEY SAY WHO HAVE WORKED WITH CODEX",
     "description": "With CODEX I understood that having a website is key to the constant and automated growth of my business",
     "author": "Natalia Lofeudo",
     "role": "Create"
   },
-    "footer": {
+  "footer": {
     "title": "CODEX Corporation & Business",
     "subtitle": "We design new business strategies for web, social media, and brands.",
     "navigation": "navigation",
@@ -99,7 +111,7 @@
     "faq": "FAQ",
     "rights": "© 2025. All rights reserved."
   },
-    "ask": {
+  "ask": {
     "title": "QUESTIONS & ANSWERS",
     "back": "Back",
 
@@ -120,7 +132,7 @@
       "desc": "We have full confidence in our work and the results we deliver. We don’t make empty promises (no one can guarantee instant fame), but we’ll be with you every step of the way, refining strategies to ensure genuine progress. Our success is defined by your satisfaction, and we won’t stop until you’re thrilled with the results achieved with Codex."
     }
   },
-   "nav": {
+  "nav": {
     "whatWeDo": "What we do",
     "services": "Explore our services",
     "portfolio": "Portfolio",
@@ -129,42 +141,54 @@
     "pricing": "Pricing"
   },
   "pricing": {
-  "title": "Pricing",
-  "subtitle": "Discover our plans and start building the upgrade that will push your business into the digital era",
-  "websites": "Websites",
-  "mobileApp": "Mobile Apps",
-  "includes": "Includes",
-  "button": "Let's build IT",
-  "back": "Back",
-  "web": {
-    "title1": "Most popular",
-    "price1": "$680 - $1.2K USD",
-    "desc1": "Basic website (static)",
-    "features1": ["Templates", "Responsive", "Basic SEO", "Some animations"],
-    "descT1":"*does not include backend",
+    "title": "Pricing",
+    "subtitle": "Discover our plans and start building the upgrade that will push your business into the digital era",
+    "websites": "Websites",
+    "mobileApp": "Mobile Apps",
+    "includes": "Includes",
+    "button": "Let's build IT",
+    "back": "Back",
+    "web": {
+      "title1": "Most popular",
+      "price1": "$680 - $1.2K USD",
+      "desc1": "Basic website (static)",
+      "features1": ["Templates", "Responsive", "Basic SEO", "Some animations"],
+      "descT1": "*does not include backend",
 
+      "price2": "$1000 - $2200",
+      "desc2": "Corporate website",
+      "features2": ["Semi-custom design", "Forms", "Blog", "Advanced SEO"],
+      "descT2": "*does not include backend",
 
-    "price2": "$1000 - $2200",
-    "desc2": "Corporate website",
-    "features2": ["Semi-custom design", "Forms", "Blog", "Advanced SEO"],
-      "descT2":"*does not include backend",
+      "price3": "$2800 - $5000",
+      "desc3": "E-commerce website",
+      "features3": ["Shop system", "Payments", "SEO Pro", "Animations"],
+      "descT3": "*includes backend",
 
-    "price3": "$2800 - $5000",
-    "desc3": "E-commerce website",
-    "features3": ["Shop system", "Payments", "SEO Pro", "Animations"],
-      "descT3":"*includes backend",
-
-    "price4": "$2720 - $13600",
-    "desc4": "Custom website",
-    "features4": ["Full customization", "Security", "Integrations", "Animations", "Multilingual", "SEO Pro"],
-      "descT4":"*includes backend"
-  },
-  "mobile": {
-    "price1": "$7000 - $20000+",
-    "desc1": "Custom mobile app (Android & iOS)",
-    "features1": ["Tailored design", "Advanced integrations", "Scalability", "Some animations", "Security", "SEO Pro", "And more..."]
+      "price4": "$2720 - $13600",
+      "desc4": "Custom website",
+      "features4": [
+        "Full customization",
+        "Security",
+        "Integrations",
+        "Animations",
+        "Multilingual",
+        "SEO Pro"
+      ],
+      "descT4": "*includes backend"
+    },
+    "mobile": {
+      "price1": "$7000 - $20000+",
+      "desc1": "Custom mobile app (Android & iOS)",
+      "features1": [
+        "Tailored design",
+        "Advanced integrations",
+        "Scalability",
+        "Some animations",
+        "Security",
+        "SEO Pro",
+        "And more..."
+      ]
+    }
   }
-}
-
- 
 }
