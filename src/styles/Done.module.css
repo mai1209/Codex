@@ -88,6 +88,7 @@
   height: 250px;
   min-height: fit-content;
   border-radius: 13px;
+  text-decoration: none;
 }
 
 .containerBoxOne,
@@ -115,6 +116,20 @@
   height: 20px;
   cursor: pointer;
 }
+
+.link:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.containerProyect:hover {
+  box-shadow: 0 0 20px rgba(255, 20, 147, 0.45);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
 
 .containerText {
   line-height: 0.5rem;

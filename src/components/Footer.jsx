@@ -31,7 +31,7 @@ function Footer() {
           <div className={style.links}>
             <p className={style.titleNavigation}>{t('footer.support')}</p>
             <a href="https://wa.me/5493425543308">+54 9 342 554 3308</a>
-            <a href="https://wa.me/5493425040804">+54 9 342 504 0804</a>
+            <a href="https://wa.me/5493425400804">+54 9 342 540 0804</a>
           </div>
 
           <div className={style.links}>

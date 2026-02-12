@@ -212,6 +212,12 @@
   z-index: 99999999;
 }
 
+.btnContact:hover {
+
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
 .btnContact a {
   text-decoration: none;
 }

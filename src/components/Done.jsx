@@ -16,9 +16,7 @@ function Done() {
     <div className={style.container} id="portafolio">
       <div className={style.containerAll}>
         <div className={style.containerTitle}>
-          <p className={style.title}>
-              {t("done.portfolio")}
-          </p>
+          <p className={style.title}>{t("done.portfolio")}</p>
         </div>
 
         <p className={style.subtitle}>
@@ -28,7 +26,10 @@ function Done() {
 
         <div className={style.containerAllProyect}>
           <div className={style.containerBoxOne}>
-            <div className={style.containerProyect}>
+            <a
+              className={style.containerProyect}
+              href="https://cheap-shop-three.vercel.app"
+            >
               <img
                 fetchpriority="high"
                 className={style.img}
@@ -47,9 +48,12 @@ function Done() {
                   alt="link"
                 />
               </a>
-            </div>
+            </a>
 
-            <div className={style.containerProyect}>
+            <a
+              href="https://creamarketingparavos.com"
+              className={style.containerProyect}
+            >
               <img
                 fetchpriority="high"
                 className={style.img}
@@ -68,11 +72,14 @@ function Done() {
                   alt="link"
                 />
               </a>
-            </div>
+            </a>
           </div>
 
           <div className={style.containerBoxTwo}>
-            <div className={style.containerProyect}>
+            <a
+              href="https://growthmanager.app "
+              className={style.containerProyect}
+            >
               <img
                 fetchpriority="high"
                 className={style.img}
@@ -86,9 +93,12 @@ function Done() {
               <a href="https://growthmanager.app ">
                 <img className={style.link} src="/Linking.webp" alt="link" />
               </a>
-            </div>
+            </a>
 
-            <div className={style.containerProyect}>
+            <div
+              onClick={() => navigate("/orion")}
+              className={style.containerProyect}
+            >
               <img
                 fetchpriority="high"
                 className={style.img}
@@ -126,7 +136,7 @@ function Done() {
               />
             </div>
 
-            <div className={style.containerProyect}>
+            <a href="https://maidev.wtf" className={style.containerProyect}>
               <img
                 fetchpriority="high"
                 className={style.img}
@@ -145,7 +155,7 @@ function Done() {
                   alt="link"
                 />
               </a>
-            </div>
+            </a>
           </div>
         </div>
       </div>

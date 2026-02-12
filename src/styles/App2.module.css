@@ -75,8 +75,6 @@
   color: var(--color-text);
 }
 
-
-
 .row {
   height: 0.3rem;
   background-color: var(--color-crimson);
@@ -84,8 +82,6 @@
   width: 43%;
   margin: 1rem;
 }
-
-
 
 .containerBtn {
   background-color: var(--color-crimson);
@@ -98,6 +94,7 @@
   padding: 0.1rem 3rem;
   cursor: pointer;
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.535);
+  text-decoration: none;
 }
 
 .containerBtn:hover {
@@ -126,11 +123,7 @@
   border-radius: 14px;
   margin: 0 auto;
   width: 90%;
-  background: linear-gradient(
-  -20deg,
-    #FF1493  0%,
-    #1C1C1C 100%
-  );
+  background: linear-gradient(-20deg, #ff1493 0%, #1c1c1c 100%);
   box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.535);
 }
 
@@ -154,7 +147,6 @@
   width: 161px;
   height: 286px;
   filter: drop-shadow(0 0 25px rgba(255, 20, 147, 0.45));
-
 }
 
 .containerTextRobot {
@@ -180,10 +172,7 @@
 .textSecond:hover {
   color: var(--color-crimson);
   transition: all 0.3s ease;
-
 }
-
-
 
 .marqueeMove {
   display: flex;
@@ -192,13 +181,13 @@
   animation: scroll 100s linear infinite;
   font-family: "Menda", sans-serif;
   margin: 0rem 0;
-  font-size:3.8rem;
-  color: #FF1493  ;
+  font-size: 3.8rem;
+  color: #ff1493;
   position: fixed;
   top: 0;
 }
 
-.asterisk{
+.asterisk {
   color: var(--color-crimson);
 }
 
@@ -217,16 +206,12 @@
   .containerInfo {
     display: flex;
     height: 100vh;
-
-
   }
   .containerInfoText {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-
-
 
   .containerSecondaryText {
     padding: 6rem 4rem;
@@ -260,6 +245,29 @@
   .robot {
     width: 500px;
     height: 100vh;
+    filter: drop-shadow(0 0 25px rgba(255, 20, 147, 0.45));
+    transform-origin: 60% 80%;
+    animation: robotFloat 4.8s ease-in-out infinite;
+    will-change: transform, filter;
+  }
+
+  @keyframes robotFloat {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-0.8deg);
+      filter: drop-shadow(0 0 22px rgba(255, 20, 147, 0.35));
+    }
+    50% {
+      transform: translateY(-10px) rotate(0.8deg);
+      filter: drop-shadow(0 0 34px rgba(255, 20, 147, 0.6));
+    }
+  }
+
+  /* accesibilidad */
+  @media (prefers-reduced-motion: reduce) {
+    .robot {
+      animation: none;
+    }
   }
 
   .containerRobotInfo {
@@ -281,18 +289,14 @@
   }
 
   .containerBtn {
-  background-color: #00000000;
-  border: 1px solid var(--color-text);
-  margin: 3rem auto;
-  padding: 0.3rem 3rem;
- 
-}
-.btnText {
- 
-  font-size: 1rem;
-
-}
-
+    background-color: #00000000;
+    border: 1px solid var(--color-text);
+    margin: 3rem auto;
+    padding: 0.3rem 3rem;
+  }
+  .btnText {
+    font-size: 1rem;
+  }
 
 
 }
