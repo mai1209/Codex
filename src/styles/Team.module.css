@@ -138,6 +138,9 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  object-fit:cover;
+
+
 }
 
 .containerText {
@@ -261,8 +264,8 @@
   }
 
   .imgMembers {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
 
   .p {

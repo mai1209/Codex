@@ -9,7 +9,6 @@
     "textBtn": "Let’s build it!",
     "secondaryText3": "We drive brands through design, development, and strategic communication. We are experts in branding, digital marketing, and web design.",
     "secondaryText4": "Boost your business in the digital age"
-
   },
   "wedo": {
     "title1": "WHAT",
@@ -30,11 +29,11 @@
     "textInfoTwo": "We improve your website's performance by optimizing its functionality and search engine ranking, ensuring it reaches more users effectively.",
     "number3": "03.",
     "textInfoThree": "Make your website mobile-friendly and boost your SEO to reach more customers.",
-      "textBottom1": "There are ideas that just need the right team to take off.",
-      "textBottom2": "What if we just cross paths at the ideal moment?",
-      "textBottom3": "Let's build it together with Codex!",
-      "textFirst":"Our multidisciplinary team combines creativity, innovation, and",
-      "textSecond":"experience to take every project to the next level."
+    "textBottom1": "There are ideas that just need the right team to take off.",
+    "textBottom2": "What if we just cross paths at the ideal moment?",
+    "textBottom3": "Let's build it together with Codex!",
+    "textFirst": "Our multidisciplinary team combines creativity, innovation, and",
+    "textSecond": "experience to take every project to the next level."
   },
   "diagrama": {
     "title": "Services",
@@ -83,7 +82,7 @@
     "nameProyect4": "Growth mobile app",
     "descriptionProyect4": "System development and design.",
     "nameProyect5": "Dev portfolio",
-    "descriptionProyect5": "Front-end design and development.",
+    "descriptionProyect5": " Front-end y Back-end, design and development.",
     "popUp": "Ready to build your digital future?",
     "description": "We’re crafting this project with passion and vision — it’s coming soon. Stay tuned and let’s build it together with Codex!"
   },
@@ -110,7 +109,7 @@
     "team": "Team",
     "contact": "Contact",
     "faq": "FAQ",
-    "rights": "© 2025. All rights reserved."
+    "rights": "© 2026. All rights reserved."
   },
   "ask": {
     "title": "QUESTIONS & ANSWERS",

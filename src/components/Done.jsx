@@ -140,14 +140,14 @@ function Done() {
               <img
                 fetchpriority="high"
                 className={style.img}
-                src="portafolio.webp"
+                src="wifrut.webp"
                 alt="portafolio"
               />
-              <p className={style.nameProyect}>Dev portfolio</p>
+              <p className={style.nameProyect}>Ecommerce model</p>
               <p className={style.descriptionProyect}>
                 {t("done.descriptionProyect5")}
               </p>
-              <a href="https://maidev.wtf">
+              <a href="https://wifrut-livid.vercel.app">
                 <img
                   fetchpriority="high"
                   className={style.link}
