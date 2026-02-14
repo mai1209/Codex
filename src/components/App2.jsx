@@ -70,13 +70,16 @@ function App2() {
         <div className={style.containerRobotInfo}>
           <div className={style.containerRobot}>
             <img className={style.robot} src="/bigrobot.png" alt="robot" />
+            
           </div>
+
           <div className={style.containerTextRobot}>
             <p className={style.textFirst}>
               Potencia tu negocio en la era digital
             </p>
             <p className={style.textSecond}>CODEX™</p>
           </div>
+          
         </div>
       </div>
       {/* <-- FLECHA --> */}
@@ -95,7 +98,7 @@ function App2() {
       {/* <-- FLECHA --> */}
       <a
         href="https://wa.me/543435136669"
-          target="_blank"
+        target="_blank"
         rel="noopener noreferrer"
         className={`${style.containerWpSubir} ${showArrow ? style.showArrow : ""}`}
       >

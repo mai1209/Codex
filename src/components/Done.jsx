@@ -155,7 +155,7 @@ function Done() {
             </div>
 
             <a
-              href="https://maidev.wtf"
+                href="https://wifrut-livid.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className={style.containerProyect}
