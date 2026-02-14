@@ -82,11 +82,12 @@ useEffect(() => {
         </div>
       </div>
 
-      {/* <-- FLECHA --> */}
+  
+            {/* <-- FLECHA --> */}
       <div className={`${style.containerArrowSubir} ${showArrow ? style.showArrow : ''}`}>
         <img
             className={style.arrowSubirImg}
-            src="./arrowup.webp"
+            src="/whatsappArrow.png"
             alt="flecha-subir"
             onClick={scrollToTop}
             loading="lazy"

@@ -191,6 +191,43 @@
   color: var(--color-crimson);
 }
 
+.containerArrowSubir {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 9999999;
+}
+
+
+.containerWpSubir {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 95px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  z-index: 9999999;
+}
+.containerArrowSubir.showArrow,
+.containerWpSubir.showArrow
+{
+  opacity: 1;
+}
+.arrowSubirImg {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  overflow: hidden;
+  z-index: 1000000;
+  position: relative;
+}
 /* 4. animacion texto  */
 @keyframes scroll {
   from {
@@ -298,5 +335,28 @@
     font-size: 1rem;
   }
 
+
+
+.containerArrowSubir {
+  width: 100%;
+
+  bottom: 40px;
+
+}
+
+
+.containerWpSubir {
+  width: 100%;
+
+  bottom: 95px;
+
+}
+
+.arrowSubirImg {
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+
+}
 
 }

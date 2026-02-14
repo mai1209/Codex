@@ -29,6 +29,8 @@ function Done() {
             <a
               className={style.containerProyect}
               href="https://cheap-shop-three.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 fetchpriority="high"
@@ -40,7 +42,11 @@ function Done() {
               <p className={style.descriptionProyect}>
                 {t("done.descriptionProyect1")}
               </p>
-              <a href="https://cheap-shop-three.vercel.app">
+              <a
+                href="https://cheap-shop-three.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   fetchpriority="high"
                   className={style.link}
@@ -53,6 +59,8 @@ function Done() {
             <a
               href="https://creamarketingparavos.com"
               className={style.containerProyect}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 fetchpriority="high"
@@ -64,7 +72,11 @@ function Done() {
               <p className={style.descriptionProyect}>
                 {t("done.descriptionProyect2")}
               </p>
-              <a href="https://creamarketingparavos.com">
+              <a
+                href="https://creamarketingparavos.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   fetchpriority="high"
                   className={style.link}
@@ -78,6 +90,8 @@ function Done() {
           <div className={style.containerBoxTwo}>
             <a
               href="https://growthmanager.app "
+              target="_blank"
+              rel="noopener noreferrer"
               className={style.containerProyect}
             >
               <img
@@ -90,7 +104,11 @@ function Done() {
               <p className={style.descriptionProyect}>
                 {t("done.descriptionProyect3")}
               </p>
-              <a href="https://growthmanager.app ">
+              <a
+                href="https://growthmanager.app "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img className={style.link} src="/Linking.webp" alt="link" />
               </a>
             </a>
@@ -136,7 +154,12 @@ function Done() {
               />
             </div>
 
-            <a href="https://maidev.wtf" className={style.containerProyect}>
+            <a
+              href="https://maidev.wtf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={style.containerProyect}
+            >
               <img
                 fetchpriority="high"
                 className={style.img}
@@ -147,7 +170,11 @@ function Done() {
               <p className={style.descriptionProyect}>
                 {t("done.descriptionProyect5")}
               </p>
-              <a href="https://wifrut-livid.vercel.app">
+              <a
+                href="https://wifrut-livid.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   fetchpriority="high"
                   className={style.link}

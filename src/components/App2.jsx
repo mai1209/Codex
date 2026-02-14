@@ -79,6 +79,35 @@ function App2() {
           </div>
         </div>
       </div>
+      {/* <-- FLECHA --> */}
+      <div
+        className={`${style.containerArrowSubir} ${showArrow ? style.showArrow : ""}`}
+      >
+        <img
+          className={style.arrowSubirImg}
+          src="./arrowup.webp"
+          alt="flecha-subir"
+          onClick={scrollToTop}
+          loading="lazy"
+          fetchpriority="high"
+        />
+      </div>
+      {/* <-- FLECHA --> */}
+      <a
+        href="https://wa.me/543435136669"
+          target="_blank"
+        rel="noopener noreferrer"
+        className={`${style.containerWpSubir} ${showArrow ? style.showArrow : ""}`}
+      >
+        <img
+          className={style.arrowSubirImg}
+          src="/whatsappArrow.png"
+          alt="flecha-subir"
+          onClick={scrollToTop}
+          loading="lazy"
+          fetchpriority="high"
+        />
+      </a>
     </div>
   );
 }

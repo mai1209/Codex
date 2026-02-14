@@ -1,6 +1,6 @@
 import { useState } from "react";
 import style from "../styles/Pricing.module.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 function Pricing() {
@@ -36,7 +36,7 @@ function Pricing() {
       price: t("pricing.web.price4"),
       description: t("pricing.web.desc4"),
       features: t("pricing.web.features4", { returnObjects: true }),
-      descriptionTwo: t("pricing.web.descT4")
+      descriptionTwo: t("pricing.web.descT4"),
     },
   ];
 
@@ -46,7 +46,7 @@ function Pricing() {
       price: t("pricing.mobile.price1"),
       description: t("pricing.mobile.desc1"),
       features: t("pricing.mobile.features1", { returnObjects: true }),
-      descriptionTwo: t("pricing.web.descT4")
+      descriptionTwo: t("pricing.web.descT4"),
     },
   ];
 
@@ -55,7 +55,7 @@ function Pricing() {
   return (
     <div className={style.container}>
       <div className={style.btnHome}>
-        <button onClick={() => navigate('/')}>{t("pricing.back")}</button>
+        <button onClick={() => navigate("/")}>{t("pricing.back")}</button>
       </div>
 
       <div>
@@ -68,7 +68,8 @@ function Pricing() {
           <div
             className={style["switch-bg"]}
             style={{
-              transform: activeTab === "web" ? "translateX(0%)" : "translateX(100%)",
+              transform:
+                activeTab === "web" ? "translateX(0%)" : "translateX(100%)",
             }}
           ></div>
 
@@ -91,7 +92,10 @@ function Pricing() {
       {/* Cards */}
       <div className={style.cards}>
         {plans.map((plan) => (
-          <div key={plan.id} className={`${style.card} ${plan.title ? style.featured : ""}`}>
+          <div
+            key={plan.id}
+            className={`${style.card} ${plan.title ? style.featured : ""}`}
+          >
             {plan.title && <h2 className={style.titleCard}>{plan.title}</h2>}
             <p className={style.price}>{plan.price}</p>
             <p className={style.description}>{plan.description}</p>
@@ -99,13 +103,23 @@ function Pricing() {
             <div>
               {plan.features.map((f, i) => (
                 <div key={i} className={style.containerInclude}>
-                  <img src={plan.title ? "/logoblancocompleto.png" : "/logo.webp"} alt="feature" />
+                  <img
+                    src={plan.title ? "/logoblancocompleto.png" : "/logo.webp"}
+                    alt="feature"
+                  />
                   <p>{f}</p>
                 </div>
               ))}
             </div>
-            <a className={style.a} href="https://wa.me/5493425543308">
-              <button className={`${style.button} ${plan.title ? style.buttonF : ""}`}>
+            <a
+              className={style.a}
+              href="https://wa.me/5493425543308"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button
+                className={`${style.button} ${plan.title ? style.buttonF : ""}`}
+              >
                 <p>{t("pricing.button")}</p>
                 <img src="/WhatsAppBlanco.webp" alt="wp" />
               </button>
