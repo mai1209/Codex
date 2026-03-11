@@ -65,14 +65,78 @@
         "title": "Mobile App",
         "description": "Functional and intuitive apps that stand out for their design and performance."
       }
-    ]
+    ],
+  "testimonials": [
+  {
+    "label": "Creá",
+    "name": "Natalia Lofeudo",
+    "role": "CEO Creá",
+    "quote": "With Codex I realized that having a website is key for the constant and automated growth of my business. Thanks to it, my reach has increased dramatically.",
+    "image": "/natiTestimonios.png",
+    "imageAlt": "Natalia Lofeudo"
+  },
+  {
+    "label": "Darko Clothes",
+    "name": "David Menendez",
+    "role": "Founder Darko",
+    "quote": "The redesign increased the trust of our distributors and gave us a visual identity aligned with our operation.",
+    "image": "/imgDavidOficial.webp",
+    "imageAlt": "David"
+  },
+  {
+    "label": "Regatas Divers",
+    "name": "Santiago",
+    "role": "Instructor at Regatas Divers",
+    "quote": "We automated reservations, added online payments, and the studio now runs at full capacity without endless phone calls.",
+    "image": "/logowebBDR.png",
+    "imageAlt": "Santiago"
+  },
+  {
+    "label": "Orion HairStudio",
+    "name": "Lisandro Lobos",
+    "role": "Hair Studio Owner",
+    "quote": "Their team got involved in metrics and content, not just design. We launched in half the expected time.",
+    "image": "/orion.png",
+    "imageAlt": "Leandro"
+  },
+  {
+    "label": "SG Market",
+    "name": "Santiago Gomez",
+    "role": "Owner SG Market",
+    "quote": "My leads increased 3x after publishing the portfolio we planned together with Codex.",
+    "image": "/imgMaiOficial.webp",
+    "imageAlt": "Santiago"
+  },
+  {
+    "label": "JAM",
+    "name": "...",
+    "role": "Owner JAM",
+    "quote": "They helped us organize our messaging, document processes, and transform our website into a clear funnel.",
+    "image": "/jam.png",
+    "imageAlt": "..."
+  },
+  {
+    "label": "Vidatrade",
+    "name": "Dario Benitez",
+    "role": "Owner Vidatrade",
+    "quote": "They helped us organize our messaging, document processes, and transform our website into a clear funnel.",
+    "image": "/vidatrade.png",
+    "imageAlt": "Dario"
+  },
+  {
+    "label": "...",
+    "name": "...",
+    "role": "...",
+    "quote": "...",
+    "image": "/imgMaiOficial.webp",
+    "imageAlt": "..."
+  }
+]
   },
   "done": {
     "title": "What we’ve",
-    "portfolio": " OUR PORTFOLIO",
+    "portfolio": "Discover our work",
     "title2": " Done.",
-    "subtitle": "CODEX",
-    "subtitle2": "featured projects",
     "nameProyect1": "wifrut.com",
     "descriptionProyect1": "Brand design, front-end and back-end development, system design.",
     "nameProyect2": "creamarketingparavos.com",

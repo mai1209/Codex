@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-function Done() {
+function Porfolio() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [activo, setActivo] = useState(false);
@@ -14,14 +14,14 @@ function Done() {
 
   return (
     <div className={style.container} id="portafolio">
+        <div className={style.btnHome}>
+              <button onClick={() => navigate('/')}>Volver</button>
+            </div>
       <div className={style.containerAll}>
-        <div
-          onClick={() => navigate("/porfolio")}
-          className={style.containerTitle}
-        >
-
+        <div className={style.containerTitle}>
           <p className={style.title}>{t("done.portfolio")}</p>
         </div>
+
 
         <div className={style.containerAllProyect}>
           <div className={style.containerBoxOne}>
@@ -85,6 +85,104 @@ function Done() {
               </a>
             </a>
           </div>
+
+          <div className={style.containerBoxTwo}>
+            <a
+              href="https://growthmanager.app "
+              target="_blank"
+              rel="noopener noreferrer"
+              className={style.containerProyect}
+            >
+              <img
+                fetchpriority="high"
+                className={style.img}
+                src="/growth.png"
+                alt="growth"
+              />
+              <p className={style.nameProyect}>Growth web app</p>
+              <p className={style.descriptionProyect}>
+                {t("done.descriptionProyect3")}
+              </p>
+              <a
+                href="https://growthmanager.app "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img className={style.link} src="/Linking.webp" alt="link" />
+              </a>
+            </a>
+
+            <div
+              onClick={() => navigate("/orion")}
+              className={style.containerProyect}
+            >
+              <img
+                fetchpriority="high"
+                className={style.img}
+                src="/orion.webp"
+                alt="orion"
+              />
+              <p className={style.nameProyect}>Orion hairstudio</p>
+              <p className={style.descriptionProyect}>Diseño de marca.</p>
+              <a onClick={() => navigate("/orion")}>
+                <img className={style.link} src="/Linking.webp" alt="link" />
+              </a>
+            </div>
+          </div>
+
+          <div className={style.containerBoxTres}>
+            <div className={style.containerProyect}>
+              <img
+                fetchpriority="high"
+                className={style.img}
+                src="/app.webp"
+                alt="app"
+              />
+              <p className={style.nameProyect}>Growth mobile app</p>
+              <p className={style.descriptionProyect}>
+                {t("done.descriptionProyect4")}
+              </p>
+              <img
+                fetchpriority="high"
+                onClick={() => {
+                  setActivo(true);
+                }}
+                className={style.link}
+                src="/Linking.webp"
+                alt="link"
+              />
+            </div>
+
+            <a
+                href="https://wifrut-livid.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={style.containerProyect}
+            >
+              <img
+                fetchpriority="high"
+                className={style.img}
+                src="wifrut.webp"
+                alt="portafolio"
+              />
+              <p className={style.nameProyect}>Ecommerce model</p>
+              <p className={style.descriptionProyect}>
+                {t("done.descriptionProyect5")}
+              </p>
+              <a
+                href="https://wifrut-livid.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  fetchpriority="high"
+                  className={style.link}
+                  src="/Linking.webp"
+                  alt="link"
+                />
+              </a>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -118,11 +216,9 @@ function Done() {
             />
           </div>
         </div>
-
-        <p  onClick={() => navigate("/porfolio")}  className={style.portfolio}>conoce nuestro portafolio completo</p>
       </div>
     </div>
   );
 }
 
-export default Done;
+export default Porfolio;

@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;900&display=swap");
+
+:root {
+  --color-fondo-dark: #121212;
+  --color-crimson: #ff1493;
+  --color-text: #fff;
+  --color-fondo-instagram: #f0ead6;
+  --color-fondo-dark: #1c1c1c;
+}
+
+@font-face {
+  font-family: "Menda";
+  src: url("/Menda\ Font/menda_medium-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+.container {
+  background-color: #1c1c1c;
+}
+
+.title {
+  color: var(--color-text);
+  font-family: "Menda";
+  font-weight: 500;
+  font-size: 2.7rem;
+  padding:0 0 8rem;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+.containerAll {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.containerTitleGeneral {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-left: 10px solid var(--color-crimson);
+  width: fit-content;
+  height: fit-content;
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+  min-width: 250px;
+}
+
+.containerTitle {
+  color: var(--color-text);
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.containerDescription {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.containerDescription::-webkit-scrollbar {
+  display: none;
+}
+
+.containerDescriptionIndividual {
+  background-color: #ffffff29;
+  backdrop-filter: blur(3px);
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5rem 1rem 2rem;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: fit-content;
+}
+
+.containerDescriptionIndividual p:nth-child(2) {
+  color: var(--color-text);
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  padding-left: 3rem;
+}
+
+.serviceTitleDescription {
+  color: var(--color-crimson);
+  font-family: "Menda";
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.containerTitle.active .serviceTitle {
+  color: var(--color-crimson);
+}
+
+.arrowLeft {
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  transform: translateX(-15px);
+  transition:
+    opacity 0.3s ease-out,
+    transform 0.4s ease-out;
+}
+
+.containerTitle.active .arrowLeft {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg);
+}
+
+.containerDescriptionIndividual.activeDescription {
+  border: 1px solid var(--color-crimson);
+}
+
+.marqueeMove {
+  display: flex;
+  flex-shrink: 0;
+  white-space: nowrap;
+  animation: scroll 100s linear infinite;
+  background-color: var(--color-crimson);
+  padding: 0.5rem 0;
+  font-family: "Menda", sans-serif;
+  text-decoration: underline;
+  margin: 6rem 0;
+  font-size: 2.3rem;
+}
+
+.asterisk{
+  color: var(--color-crimson);
+}
+
+/* 4. animacion texto  */
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.videoBackground {
+  border: none;
+  width: 100vw;
+  height: 95vh;
+  object-fit: cover;
+  
+}
+ .videoBackgroundContainer{
+
+    display: flex;
+    justify-content: center;
+    
+  }
+
+
+@media (max-width: 850px) {
+  .containerDescription {
+    height: 320px;
+  }
+  .containerDescriptionIndividual {
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  .containerTitle.active .arrowLeft {
+    opacity: 1;
+    transform: translateX(0) rotate(90deg);
+  }
+.marqueeMove {
+  padding: 0.5rem 0;
+  margin: 2rem 0;
+
+  font-size: 1.5rem;
+}
+
+.title {
+  color: var(--color-text);
+  font-family: "Menda";
+  font-weight: 500;
+  font-size: 2.7rem;
+  padding: 2rem 0 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.videoBackground {
+  width: 100vw;
+  height: 50vh;
+  padding: 3rem 0;
+  
+  
+}
+
+.container {
+  background-color: #cb1414;
+  padding-top: 20rem;
+}
+
+}

@@ -67,14 +67,78 @@
         "title": "Aplicación Móvil",
         "description": "Apps funcionales e intuitivas que destacan por su diseño y rendimiento."
       }
+    ],
+    "testimonials": [
+      {
+        "label": "Creá",
+        "name": "Natalia Lofeudo",
+        "role": "CEO Creá",
+        "quote": "Con Codex entendí que tener un sitio web es clave para el crecimiento constante y automatizado de mi negocio, gracias a ello mi alcance ha aumentado drasticamente. ",
+        "image": "/natiTestimonios.png",
+        "imageAlt": "Natalia Lofeudo"
+      },
+      {
+        "label": "Darko Clothes",
+        "name": "David Menendez",
+        "role": "Darko Clothes",
+        "quote": "El rediseño elevó la confianza de nuestros compradores y nos dio una identidad visual acorde a nuestra operación.",
+        "image": "/imgDavidOficial.webp",
+        "imageAlt": "David"
+      },
+      {
+        "label": "Buzos de Regatas",
+        "name": "Santiago ",
+        "role": "Intructor en Buzos de Regatas",
+        "quote": "Codex nos ayudo a automatizar reservas, a darle una nueva identidad a nuestro sitio web y genero una estructura capaz de vender por si sola.",
+        "image": "/logowebBDR.png",
+        "imageAlt": "Santiago"
+      },
+      {
+        "label": "Orion HairStudio",
+        "name": "Lisandro Lobos",
+        "role": "Orion Hair Studio",
+        "quote": "Su equipo se involucró en métricas y contenido, no solo en diseño. Lanzamos en la mitad del tiempo previsto.",
+        "image": "/orion.png",
+        "imageAlt": "Leandro"
+      },
+      {
+        "label": "SG Market",
+        "name": "Santiago Gomez",
+        "role": "SG Market",
+        "quote": "Mis leads aumentaron 3x luego de publicar el portfolio que planificamos junto a Codex, el servicio de producción y edición de videos nos ayudó a traer mas visitantes a nuestro perfil de instagram.",
+        "image": "/imgMaiOficial.webp",
+        "imageAlt": "Santiago"
+      },
+      {
+        "label": "JAM",
+        "name": "Jorge Antonio",
+        "role": "Owner JAM",
+        "quote": "Nuestra nueva identidad de marca nos posicionó en el mercado como una empresa profesional.",
+        "image": "/jam.png",
+        "imageAlt": "jorge"
+      },
+      {
+        "label": "VidaTrade",
+        "name": "Dario Benitez",
+        "role": "CEO VidaTrade",
+        "quote": "La velocidad y agilidad que tuvieron para construir un Ecommerce me sorprendió. ",
+        "image": "/vidatrade.png",
+        "imageAlt": "Dario"
+      },
+      {
+        "label": "...",
+        "name": "...",
+        "role": "...",  
+        "quote": "...",
+        "image": "/imgMaiOficial.webp",
+        "imageAlt": "..."
+      }
     ]
   },
   "done": {
     "title": "Lo que hemos",
-    "portfolio": "Nuestro Portafolio",
+    "portfolio": "conoce nuestro trabajo",
     "title2": " Hecho.",
-    "subtitle": "CODEX",
-    "subtitle2": "proyectos destacados",
     "nameProyect1": "wifrut.com",
     "descriptionProyect1": "  Diseño de marca, desarrollo front-end y back-end, diseño de sistemas.",
     "nameProyect2": "creamarketingparavos.com",

@@ -1,21 +1,22 @@
-import { StrictMode, useEffect, useState } from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importa Router
-import '../src/index.css';
+import { StrictMode, useEffect, useState } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Importa Router
+import "../src/index.css";
 //import App from './components/App';
-import WeDo from './components/WeDo';
+import WeDo from "./components/WeDo";
 //import Diagrama from './components/Diagrama';
-import DiagramaM from './components/DiagramaM';
-import Pricing from './components/Pricing';
-import Nav from './components/Nav';
-import Team from './components/Team';
-import Footer from './components/Footer';
-import Orion from './components/Orion'; 
-import Ask from './components/Ask';
-import Diagrama from './components/Diagrama';
-import Done from './components/Done';
-import './i18n';
-import App2 from './components/App2';
+import DiagramaM from "./components/DiagramaM";
+import Pricing from "./components/Pricing";
+import Nav from "./components/Nav";
+import Team from "./components/Team";
+import Footer from "./components/Footer";
+import Orion from "./components/Orion";
+import Ask from "./components/Ask";
+import Diagrama from "./components/Diagrama";
+import Done from "./components/Done";
+import "./i18n";
+import App2 from "./components/App2";
+import Porfolio from "./components/Porfolio";
 
 function RootApp() {
   const [isMobile, setIsMobile] = useState(false);
@@ -25,38 +26,41 @@ function RootApp() {
       setIsMobile(window.innerWidth <= 1000);
     };
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <StrictMode>
-      <Router> {/* Envuelve todo en Router */}
+      <Router>
+        {" "}
+        {/* Envuelve todo en Router */}
         <div className="app-wrapper">
-         
           <Routes>
             {/* Ruta principal (página de inicio) */}
-            <Route 
-              path="/" 
+            <Route
+              path="/"
               element={
                 <>
-                 <Nav /> 
+                  <Nav />
                   <App2 />
-               
+
                   <WeDo />
 
                   {isMobile ? <DiagramaM /> : <DiagramaM />}
                   <Done />
+
                   <Team />
                   <Diagrama />
                   <Footer />
                 </>
-              } 
+              }
             />
             {/* Ruta para Orion */}
             <Route path="/orion" element={<Orion />} />
-            <Route path='/ask' element={<Ask />} />
-            <Route path='/pricing' element={<Pricing />} />
+            <Route path="/ask" element={<Ask />} />
+            <Route path="/pricing" element={<Pricing />} />
+                  <Route path="/porfolio" element={<Porfolio />} />
           </Routes>
         </div>
       </Router>
@@ -64,4 +68,4 @@ function RootApp() {
   );
 }
 
-createRoot(document.getElementById('root')).render(<RootApp />);
+createRoot(document.getElementById("root")).render(<RootApp />);
