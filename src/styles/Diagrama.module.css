@@ -188,7 +188,8 @@
   .testimonialQuote {
     font-size: 1.2rem;
     height: 5rem;
-  }
+    min-height: fit-content;
+    }
   .testimonialAuthor {
     font-size: 1.5rem;
   }

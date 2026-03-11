@@ -66,67 +66,67 @@
         "description": "Functional and intuitive apps that stand out for their design and performance."
       }
     ],
-  "testimonials": [
+"testimonials": [
   {
     "label": "Creá",
     "name": "Natalia Lofeudo",
     "role": "CEO Creá",
-    "quote": "With Codex I realized that having a website is key for the constant and automated growth of my business. Thanks to it, my reach has increased dramatically.",
+    "quote": "With Codex, I realized that having a website is key to the constant and automated growth of my business; thanks to them, my reach has increased drastically.",
     "image": "/natiTestimonios.png",
     "imageAlt": "Natalia Lofeudo"
   },
   {
     "label": "Darko Clothes",
     "name": "David Menendez",
-    "role": "Founder Darko",
-    "quote": "The redesign increased the trust of our distributors and gave us a visual identity aligned with our operation.",
-    "image": "/imgDavidOficial.webp",
+    "role": "Darko Clothes",
+    "quote": "The redesign boosted our customers' trust and gave us a visual identity that matches our current scale of operations.",
+    "image": "/logodarko.png",
     "imageAlt": "David"
   },
   {
-    "label": "Regatas Divers",
+    "label": "Buzos de Regatas",
     "name": "Santiago",
-    "role": "Instructor at Regatas Divers",
-    "quote": "We automated reservations, added online payments, and the studio now runs at full capacity without endless phone calls.",
+    "role": "Instructor at Buzos de Regatas",
+    "quote": "Codex helped us automate bookings, gave our website a new identity, and created a structure capable of selling on its own.",
     "image": "/logowebBDR.png",
     "imageAlt": "Santiago"
   },
   {
     "label": "Orion HairStudio",
     "name": "Lisandro Lobos",
-    "role": "Hair Studio Owner",
+    "role": "Orion Hair Studio",
     "quote": "Their team got involved in metrics and content, not just design. We launched in half the expected time.",
     "image": "/orion.png",
-    "imageAlt": "Leandro"
+    "imageAlt": "Lisandro"
   },
   {
     "label": "SG Market",
     "name": "Santiago Gomez",
-    "role": "Owner SG Market",
-    "quote": "My leads increased 3x after publishing the portfolio we planned together with Codex.",
-    "image": "/imgMaiOficial.webp",
+    "role": "SG Market",
+    "quote": "My leads tripled after publishing the portfolio we planned with Codex; their video production and editing service helped us drive more visitors to our Instagram profile.",
+    "image": "/sgmarket.png",
     "imageAlt": "Santiago"
   },
   {
     "label": "JAM",
-    "name": "...",
+    "name": "Jorge Antonio",
     "role": "Owner JAM",
-    "quote": "They helped us organize our messaging, document processes, and transform our website into a clear funnel.",
+    "quote": "Our new brand identity positioned us in the market as a professional company.",
     "image": "/jam.png",
-    "imageAlt": "..."
+    "imageAlt": "Jorge"
   },
   {
-    "label": "Vidatrade",
+    "label": "VidaTrade",
     "name": "Dario Benitez",
-    "role": "Owner Vidatrade",
-    "quote": "They helped us organize our messaging, document processes, and transform our website into a clear funnel.",
+    "role": "CEO VidaTrade",
+    "quote": "The speed and agility they showed in building an E-commerce platform truly surprised me.",
     "image": "/vidatrade.png",
     "imageAlt": "Dario"
   },
   {
     "label": "...",
     "name": "...",
-    "role": "...",
+    "role": "...",  
     "quote": "...",
     "image": "/imgMaiOficial.webp",
     "imageAlt": "..."

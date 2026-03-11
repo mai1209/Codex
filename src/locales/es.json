@@ -82,7 +82,7 @@
         "name": "David Menendez",
         "role": "Darko Clothes",
         "quote": "El rediseño elevó la confianza de nuestros compradores y nos dio una identidad visual acorde a nuestra operación.",
-        "image": "/imgDavidOficial.webp",
+        "image": "/logodarko.png",
         "imageAlt": "David"
       },
       {
@@ -106,7 +106,7 @@
         "name": "Santiago Gomez",
         "role": "SG Market",
         "quote": "Mis leads aumentaron 3x luego de publicar el portfolio que planificamos junto a Codex, el servicio de producción y edición de videos nos ayudó a traer mas visitantes a nuestro perfil de instagram.",
-        "image": "/imgMaiOficial.webp",
+        "image": "/sgmarket.png",
         "imageAlt": "Santiago"
       },
       {
@@ -130,7 +130,7 @@
         "name": "...",
         "role": "...",  
         "quote": "...",
-        "image": "/imgMaiOficial.webp",
+        "image": "...",
         "imageAlt": "..."
       }
     ]
