@@ -14,11 +14,6 @@ function WeDo() {
           {t("wedo.text2")}
         </p>
 
-        <p className={style.subtitle}>
-        {(t("wedo.textFirst"))} <br /> {(t("wedo.textSecond"))}
-        
-        </p>
-
         <div className={style.containerImportantInfo}>
           <div className={style.boxOne}>
             <p className={style.number}>{t("wedo.number1")}</p>
@@ -36,7 +31,7 @@ function WeDo() {
             <div className={style.containerButton}>
               <a href="https://wa.me/5493425543308">
                 <button>
-                  Let’s build it!{" "}
+                  {t("app.textBtn")}{" "}
                   <img
                     loading="lazy"
                     className={style.arrow}
@@ -55,7 +50,12 @@ function WeDo() {
           </div>
         </div>
 
-        <p className={style.textBottom}><span className={style.color}>{t("wedo.textBottom1")} <br /> {t("wedo.textBottom2")} </span>{t("wedo.textBottom3")}</p>
+        <p className={style.textBottom}>
+          <span className={style.color}>
+            {t("wedo.textBottom1")} <br /> {t("wedo.textBottom2")}{" "}
+          </span>
+          {t("wedo.textBottom3")}
+        </p>
       </div>
     </div>
   );

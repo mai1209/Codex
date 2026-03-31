@@ -1,14 +1,21 @@
 {
   "app": {
-    "title1": "Tu mejor",
-    "title2": "opción a la ",
-    "title3": "hora de ",
-    "title4": "digitalizarte",
+    "title1": "Transformamos",
+    "title2": "ideas en ",
+    "title3": "negocios",
+    "title4": "digitales",
     "secondaryText1": "¿Sabias qué? El 70% de las visitas llegan a traves del navegador mobile",
     "secondaryText2": "Potencia tu marca en la era digital",
     "textBtn": "Construyamos IT",
     "secondaryText3": "Impulsamos marcas a través del diseño, desarrollo y comunicación estratégica.Somos expertos en branding, marketing digital y diseño web",
-    "secondaryText4": "Potencia tu negocio en la era digital"
+    "secondaryText4": "Potencia tu negocio en la era digital",
+    "heroBadge1": "Software",
+    "heroBadge2": "Diseño",
+    "heroBadge3": "Estrategia digital",
+    "viewServices": "Ver servicios",
+    "feature1": "Diseño estratégico",
+    "feature2": "Desarrollo profesional",
+    "feature3": "Crecimiento digital"
   },
   "wedo": {
     "title1": "¿QUE",
@@ -17,8 +24,6 @@
     "containerTextInfo2": " Somos expertos en branding, marketing digital y diseño web, creando soluciones",
     "containerTextInfo3": "visuales y digitales que aumentan la visibilidad de tu",
     "containerTextInfo4": "negocio, conectan con tu público objetivo y generan resultados medibles.",
-    "containerTextInfo5": "Nuestro equipo multidisciplinario combina creatividad, innovación y ",
-    "containerTextInfo6": "experiencia para llevar cada proyecto al siguiente nivel.",
     "text": "Un sitio web optimizado",
     "text1": "para dispositivos móviles",
     "text2": "Es crucial:",
@@ -41,6 +46,10 @@
     "titleSome": "Algunos Clientes",
     "titleMove": "TIENES ALGUNA IDEA? CONTACTANOS!",
     "titleNavTop": "The future is coded — let’s build it —",
+    "containerTextInfo5": "Nuestro equipo multidisciplinario combina creatividad, innovación y ",
+    "containerTextInfo6": "experiencia para llevar cada proyecto al siguiente nivel.",
+    "problemHeader":"El costo de ser invisible.",
+    "problemDescription":"El 85% de los consumidores investiga un negocio online antes de realizar una compra. Si no tienes una web optimizada, no solo eres invisible: estás regalando tus clientes a la competencia que sí está a un clic de distancia. Nosotros eliminamos esa brecha digital con plataformas que convierten visitas en facturación",
 
     "services": [
       {
@@ -128,7 +137,7 @@
       {
         "label": "...",
         "name": "...",
-        "role": "...",  
+        "role": "...",
         "quote": "...",
         "image": "...",
         "imageAlt": "..."
@@ -153,17 +162,21 @@
     "descriptionProyect6": " Diseño de marca. ",
     "popUp": "¿Listo para construir tu futuro digital?",
     "description": "Estamos elaborando este proyecto con pasión y visión, y llegará pronto. ¡Estén atentos y construyámoslo junto con Codex!"
+    ,"buildButton": "Construyámoslo",
+    "fullPortfolio": "conoce nuestro portafolio completo"
   },
   "team": {
     "textContact": "CONSTRUÍ TU SITIO WEB CON",
     "textContact2": "CODEX CORPORTION & BUSINESS",
-    "button": "¡Contactanos!"
+    "button": "¡Contactanos!",
+    "title": "Nuestro Equipo"
   },
   "diagramaM": {
     "title": "*DICEN QUIENES HAN TRABAJADO CON CODEX",
     "description": "Con CODEX entendí que tener un sitio web es clave para el crecimiento constante y automatizado de mi negocio",
     "author": "Natalia Lofeudo",
     "role": "Creá"
+    
   },
   "footer": {
     "title": "CODEX Corporation & Business",

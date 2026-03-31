@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --color-fondo-dark: #121212;
+  --color-fondo-dark: #1c1c1c;
   --color-crimson: #ff1493;
   --color-text: #fff;
   --color-fondo-instagram: #f0ead6;
@@ -19,7 +19,7 @@
 }
 
 .container {
-  background-color: var(--color-fondo-dark);
+  background-color: #1c1c1c;
   height: fit-content;
   padding-bottom: 1rem;
   display: flex;

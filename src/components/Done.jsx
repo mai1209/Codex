@@ -11,6 +11,15 @@ function Done() {
   const handleClosePopup = () => {
     setActivo(false);
   };
+    // 1. Lista de logos (Pon aquí los nombres de tus archivos de logos)
+  const logos = [
+    "./logo1.webp", 
+    "./logo2.webp", 
+    "./logo3.webp", 
+    "./logo4.webp", 
+    "./logo5.webp", 
+    "./logo6.webp"
+  ];
 
   return (
     <div className={style.container} id="portafolio">
@@ -106,7 +115,7 @@ function Done() {
                 setActivo(false);
               }}
             >
-              Let's build it!
+              {t("done.buildButton")}
             </button>
           </div>
           <div className={style.containerImg}>
@@ -119,8 +128,21 @@ function Done() {
           </div>
         </div>
 
-        <p  onClick={() => navigate("/porfolio")}  className={style.portfolio}>conoce nuestro portafolio completo</p>
+        <p onClick={() => navigate("/porfolio")} className={style.portfolio}>
+          {t("done.fullPortfolio")}
+        </p>
       </div>
+         {/* Carrusel de Logos con Flujo Infinito */}
+            <div className={style.carouselContainer}>
+              <div className={style.carouselTrack}>
+                {/* Duplicamos la lista para que el scroll sea infinito y sin cortes */}
+                {[...logos, ...logos].map((logo, index) => (
+                  <div key={index} className={style.logoItem}>
+                    <img src={logo} alt={`brand-logo-${index}`} />
+                  </div>
+                ))}
+              </div>
+            </div>
     </div>
   );
 }

@@ -2,73 +2,75 @@ import style from '../styles/Ask.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Plus } from 'lucide-react'; // Versión correcta para Web
 
-function Ask() {
+function Ask({ embedded = false }) {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
   const questions = [
-    {
-      title: t('ask.q1.title'),
-      desc: t('ask.q1.desc')
-    },
-    {
-      title: t('ask.q2.title'),
-      desc: t('ask.q2.desc')
-    },
-    {
-      title: t('ask.q3.title'),
-      desc: t('ask.q3.desc')
-    },
-    {
-      title: t('ask.q4.title'),
-      desc: t('ask.q4.desc')
-    }
+    { title: t('ask.q1.title'), desc: t('ask.q1.desc') },
+    { title: t('ask.q2.title'), desc: t('ask.q2.desc') },
+    { title: t('ask.q3.title'), desc: t('ask.q3.desc') },
+    { title: t('ask.q4.title'), desc: t('ask.q4.desc') }
   ];
 
-  const [openIndexes, setOpenIndexes] = useState([0]);
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggle = (idx) => {
+    setOpenIndex(openIndex === idx ? null : idx);
+  };
 
   return (
-    <div className={style.container}>
-      <div className={style.btnHome}>
-        <button onClick={() => navigate('/')}>{t('ask.back')}</button>
-      </div>
-      <h2 className={style.title}>{t('ask.title')}</h2>
+    <section
+      className={`${style.pageWrapper} ${embedded ? style.pageWrapperEmbedded : ''}`}
+    >
+      <div className={style.backgroundGlow}  id='ask'/>
+      
+      {!embedded && (
+        <div className={style.btnHome}>
+          <button onClick={() => navigate('/')}>{t('ask.back')}</button>
+        </div>
+      )}
 
-      <div className={style.containerAll}>
-        {questions.map((q, idx) => {
-          const isOpen = openIndexes.includes(idx);
-          return (
-            <div className={style.containerAsk} key={q.title}>
-              <div
-                className={style.containerQuestion}
-                onClick={() => {
-                  setOpenIndexes(prev =>
-                    prev.includes(idx)
-                      ? prev.filter(i => i !== idx)
-                      : [...prev, idx]
-                  );
-                }}
-                style={{ cursor: 'pointer' }}
+      <main className={`${style.content} ${embedded ? style.contentEmbedded : ''}`}>
+        <header className={style.headerSection}>
+          <h2 className={style.mainTitle}>{t('ask.title')}</h2>
+        </header>
+
+        <div className={style.cardsGrid}>
+          {questions.map((q, idx) => {
+            const isOpen = openIndex === idx;
+            return (
+              <article 
+                key={idx} 
+                className={`${style.card} ${isOpen ? style.cardOpen : ''}`}
+                onClick={() => toggle(idx)}
               >
-                <p className={style.simbol}>{isOpen ? 'x' : '+'}</p>
-                <p>{q.title}</p>
-              </div>
-              {isOpen && <p className={style.description}>{q.desc}</p>}
-            </div>
-          );
-        })}
-      </div>
+                <div className={style.cardHeader}>
+                  <div className={`${style.iconWrapper} ${isOpen ? style.rotate : ''}`}>
+                    <Plus size={20} color={isOpen ? "#fff" : "#FF1493"} />
+                  </div>
+                  <h3 className={style.questionText}>{q.title}</h3>
+                </div>
 
-      <div className={style.containerLogo}>
-        <img
-          fetchpriority="high"
-          src="./logoblanco.webp"
-          alt="logoblanco"
-          className={style.logoBlanco}
-        />
-      </div>
-    </div>
+                <div className={`${style.cardBody} ${isOpen ? style.bodyVisible : ''}`}>
+                  <div className={style.innerContent}>
+                    <p className={style.descriptionText}>{q.desc}</p>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </main>
+
+      {!embedded && (
+        <footer className={style.footer}>
+          <img src="/logoblanco.webp" alt="Logo" className={style.floatingLogo} />
+        </footer>
+      )}
+    </section>
   );
 }
 

@@ -1,45 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
 
 :root {
-  --color-fondo: #070a0c;
+  --color-fondo: #1c1c1c;
   --color-crimson: #ff1493;
   --color-text: #fff;
   --color-dark-text: #000;
   --color-fondo-dark: #1c1c1c;
-  --carousel-speed: 20s; /* default speed for desktop */
+  --color-card-bg: #252525;
+  --carousel-speed: 30s; /* Ajusta esto para cambiar la velocidad del carrusel */
 }
 
 @font-face {
   font-family: "Menda";
   src: url("/Menda\ Font/menda_medium-webfont.woff2") format("woff2");
   font-weight: 500;
-  font-style: normal;
   font-display: swap;
 }
 
 .container {
-  background-color: var(--color-fondo-dark);
+  background-color: #1c1c1c;
   color: var(--color-text);
   min-height: fit-content;
+  overflow: hidden;
+  padding-bottom: 4rem;
 }
 
-/* Carrusel de logos */
+/* --- CARRUSEL INFINITO SIN CORTES --- */
 .carouselContainer {
   width: 100%;
-
-  position: relative;
+  overflow: hidden;
   background: transparent;
-  margin-bottom: 2rem;
+  padding: 0rem 0rem 4rem 0;
+  position: relative;
 }
 
 .carouselTrack {
   display: flex;
   width: max-content;
-  flex-wrap: nowrap;
   animation: scroll-logos var(--carousel-speed) linear infinite;
-  padding: 6rem 0;
-  will-change: transform;
-  animation-direction: reverse;
 }
 
 @keyframes scroll-logos {
@@ -48,239 +46,236 @@
   }
   100% {
     transform: translateX(-50%);
-  }
+  } /* Se mueve la mitad exacta del contenido duplicado */
 }
-
-.title {
-  color: var(--color-text);
-  font-family: "Menda";
-  font-weight: 500;
-  font-size: 2.9rem;
-  padding: 8rem 0 1rem;
-  text-transform: uppercase;
-  text-align: center;
-}
-@media (max-width: 600px) {
-  .logoItem {
-    margin: 0 0.6rem;
-    height: 44px;
-  }
-  .logoItem img {
-    height: 44px;
-  }
-  .carouselTrack {
-    padding: 2rem 0 3rem 0;
-  }
-
-  .title {
-  color: var(--color-text);
-
-  font-size: 1.5rem;
-  padding: 3rem 0 1rem;
-  text-transform: uppercase;
-  text-align: center;
-
-}
-}
-
-@media (max-width: 400px) {
-  .logoItem {
-    margin: 0 0.4rem;
-    height: 36px;
-  }
-  .logoItem img {
-    height: 36px;
-  }
-
-
-}
-
-
 
 .logoItem {
   flex: 0 0 auto;
-  margin: 0 2rem;
-  height: 60px;
+  padding: 0 50px; /* Espacio lateral entre cada logo */
   display: flex;
   align-items: center;
 }
 
 .logoItem img {
-  height: 60px;
+  height: 50px;
   width: auto;
-  object-fit: contain;
-  filter: grayscale(100%) brightness(170%);
-  transition: filter 0.3s;
-}
-.logoItem img:hover {
-  filter: grayscale(0%) brightness(100%);
+  filter: grayscale(100%) brightness(150%);
+  opacity: 0.5;
+  transition: all 0.3s ease;
 }
 
+.logoItem img:hover {
+  opacity: 1;
+  filter: grayscale(0%) brightness(100%);
+  transform: scale(1.1);
+}
+
+/* Pausar el flujo cuando el usuario pone el mouse encima */
+.carouselContainer:hover .carouselTrack {
+  animation-play-state: paused;
+}
+
+/* --- TÍTULO --- */
+.title {
+  color: var(--color-text);
+  font-family: "Menda";
+  font-weight: 500;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* --- CONTENEDOR DE CARDS --- */
 .containerMembers {
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 12rem 0 9rem;
+  gap: 3rem;
+  padding: 2rem 1.5rem 6rem;
 }
 
-.wrapperClass {
+.memberCard {
+  background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+  border-radius: 20px;
+  padding: 3.5rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  flex: 1;
+  flex: 1 1 300px;
+  max-width: 340px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.imgMembers {
-  width: 80px;
-  height: 80px;
+.memberCard:hover {
+  transform: translateY(-15px);
+  border-color: var(--color-crimson);
+  box-shadow: 0 15px 40px rgba(255, 20, 147, 0.2);
+}
+
+.imageCircle {
+  margin-bottom: 1.5rem;
+  padding: 5px;
   border-radius: 50%;
-  object-fit:cover;
-
-
-}
-
-.containerText {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.p {
-  font-size: 0.7rem;
-  font-family: "Menda";
-  text-align: center;
-}
-
-.role2 {
-  font-size: 0.7rem;
-  font-family: "Archivo", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.firstImage {
-  border-radius: 50%;
-  padding: 1px;
   background: conic-gradient(
     from 180deg,
     var(--color-crimson) 180deg,
     transparent 0
   );
-  border: none;
-}
-
-.middleImage {
-  border-radius: 50%;
-  padding: 1px;
-  background: conic-gradient(
-    from 0deg,
-    var(--color-crimson) 180deg,
-    transparent 0
-  );
-  border: none;
-}
-
-.containerContact {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
+}
+
+.imgMembers {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color-card-bg);
+}
+
+.containerText {
+  text-align: center;
+  width: 100%;
+}
+
+.role1 {
+  font-family: "Menda";
+  font-size: 1.5rem;
+  color: var(--color-crimson);
+  margin-bottom: 0.2rem;
+}
+
+.role2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: #bbb;
+  margin-bottom: 0;
+}
+
+.divider {
+  width: 50px;
+  height: 2px;
   background-color: var(--color-crimson);
-  gap: 1.5rem;
+  margin: 1.2rem auto;
+}
+
+.memberName {
+  font-family: "Menda";
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+/* --- SECCIÓN CONTACTO --- */
+.containerContact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 5%;
+  margin: 2rem auto 4rem;
+  background-color: var(--color-crimson);
+  max-width: 1100px;
+  border-radius: 20px;
+  gap: 2rem;
 }
 
 .textContact {
   color: var(--color-dark-text);
-  font-size: 0.9rem;
+  font-size: 1.7rem;
   font-family: "Menda";
-  font-weight: 500;
-  line-height: 0.8rem;
-  max-width: 167px;
-}
-
-.btnContact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-  border-radius: 10px;
-  background-color: var(--color-fondo);
-  z-index: 99999999;
-}
-
-.btnContact:hover {
-
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
+  line-height: 1.2;
+  margin: 0;
 }
 
 .btnContact a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-fondo);
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
   text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btnContact a:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 .btnContact button {
   background: none;
-  font-size: 1rem;
+  border: none;
+  color: white;
   font-family: "Menda";
-  font-weight: 500;
-  color: var(--color-text);
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .btnContact img {
-  width: 5vw;
+  width: 25px;
+  height: 25px;
 }
 
-@media (min-width: 850px) {
+/* --- RESPONSIVE --- */
+@media (max-width: 850px) {
   .containerContact {
-    padding: 3rem 3rem 3rem 3rem;
-    gap: 20rem;
-    margin-top: 5rem;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 1rem 1rem;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
   }
 
   .textContact {
-    max-width: fit-content;
-    font-size: 1.8rem;
-    line-height: 1.5rem;
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .logoItem {
+    padding: 0 25px;
+  }
+  .logoItem img {
+    height: 35px;
+  }
+
+  .memberCard {
+   
+    padding: 2rem 1rem;
+  }
+  .btnContact a {
+    padding: 0.2rem 1rem;
   }
 
   .btnContact button {
-    font-size: 1.2rem;
-  }
-
-  .btnContact img {
-    width: 1.5vw;
-  }
-
-  .containerImg {
-    gap: 3rem;
-    padding: 2rem 0;
-  }
-
-  .imgMembers {
-    width: 140px;
-    height: 140px;
-  }
-
-  .p {
-    font-size: 1.2rem;
-  }
-
-  .role2 {
     font-size: 1rem;
   }
 
+  .container {
+    padding-bottom: 0rem;
+  }
   .containerMembers {
-    gap: 2rem;
+    padding: 2rem 1.5rem 3rem;
   }
+  .imgMembers {
+  width: 100px;
+  height: 100px;
 
-  .logoItem img {
-    height: 80px;
-  }
+}
+
 }

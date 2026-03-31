@@ -38,7 +38,6 @@
   position: relative;
 }
 
-
 .containerButton:hover {
   background-color: var(--color-crimson-hover);
   transform: translateY(-2px);
@@ -102,26 +101,31 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  gap: 1rem;
 }
 
 .boxOne {
-  background: linear-gradient(to bottom, #ffffff0d 80%, #ffffff00 100%);
-  border-top-left-radius: 33px;
-  border-top-right-radius: 33px;
+  background: var(--color-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
   margin: 0 1rem;
+  border-radius: 50px;
 }
 
 .boxThree {
-  border-bottom-left-radius: 33px;
-  border-bottom-right-radius: 33px;
+  border-radius: 50px;
 
-  background: linear-gradient(to top, #ffffff0d 80%, #ffffff00 100%);
+  background: var(--color-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
   margin: 0 1rem;
 }
 
 .boxTwo {
-  background-color: var(--color-crimson);
   border-radius: 50px;
+  background-color: #ff1493;
 }
 
 .number {
@@ -209,15 +213,6 @@ button {
   width: 5vw;
 }
 
-.subtitle {
-  color: var(--color-text);
-  font-family: "Menda";
-  text-align: center;
-  padding: 2.8rem 0 4rem 0;
-
-  font-size: 0.8rem;
-}
-
 .textBottom {
   color: var(--color-text);
   font-family: "Menda";
@@ -248,21 +243,14 @@ button {
   }
 
   .text {
-    font-size: 2.4rem;
-    padding: 6rem 2rem 0 2rem;
+    font-size: 2.2rem;
+    padding: 6rem 0rem 0 0rem;
     line-height: 2.8rem;
+    max-width: 1240px;
+    margin: auto;
   }
   .containerButton {
-
-  padding: 1rem;
-}
-
-  .subtitle {
-    color: var(--color-text);
-    padding: 5rem 0 0;
-    text-align: center;
-    font-size: 1.9rem;
-    font-family: "Menda";
+    padding: 1rem;
   }
 
   .containerImportantInfo {
@@ -274,9 +262,7 @@ button {
   }
 
   .boxOne {
-    border-top-left-radius: 33px;
-    border-bottom-left-radius: 33px;
-    border-top-right-radius: 0;
+    border-radius: 50px;
     margin: 1rem 0 0 0;
     padding: 1rem;
     height: 250px;
@@ -285,11 +271,10 @@ button {
   }
 
   .boxThree {
-    border-bottom-left-radius: 0;
     border-top-right-radius: 33px;
     margin: 1rem 0 0 0;
     width: 400px;
-
+    border-radius: 50px;
     height: 250px;
     padding: 1rem;
     background: linear-gradient(to bottom, #ffffff0d 100%, #ffffff00 0%);
@@ -303,7 +288,7 @@ button {
     padding: 0 0 0 1.5rem;
   }
 
-  .seo{
+  .seo {
     font-size: 5rem;
   }
 
@@ -317,12 +302,9 @@ button {
   }
 
   .boxTwo {
-    background-color: var(--color-crimson);
     border-radius: 0;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 50px;
+    border-radius: 50px;
+
     width: 500px;
 
     padding: 1rem;

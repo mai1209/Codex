@@ -44,10 +44,10 @@ function RootApp() {
                 <>
                   <Nav />
                   <App2 />
-
+                  {isMobile ? <DiagramaM /> : <DiagramaM />}
+                  <Ask embedded />
                   <WeDo />
 
-                  {isMobile ? <DiagramaM /> : <DiagramaM />}
                   <Done />
 
                   <Team />
@@ -60,7 +60,7 @@ function RootApp() {
             <Route path="/orion" element={<Orion />} />
             <Route path="/ask" element={<Ask />} />
             <Route path="/pricing" element={<Pricing />} />
-                  <Route path="/porfolio" element={<Porfolio />} />
+            <Route path="/porfolio" element={<Porfolio />} />
           </Routes>
         </div>
       </Router>

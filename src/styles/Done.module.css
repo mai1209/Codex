@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 :root {
-  --color-fondo: #070a0c;
+  --color-fondo: #1c1c1c;
   --color-crimson: #ff1493;
   --color-text: #fff;
-  --color-dark-text: #000;
-  --color-fondo-dark: #1c1c1c;
+  --color-glass: rgba(255, 255, 255, 0.07);
+  --color-border: rgba(255, 255, 255, 0.1);
 }
 
 @font-face {
@@ -15,261 +15,18 @@
   font-family: "Menda";
   font-display: swap;
 }
-.containerAll {
-  position: relative;
-}
 
 .container {
-  background-color: #1c1c1c;
-}
-.title {
-  color: var(--color-text);
-  padding: 0.5rem 1rem;
-  font-family: "Menda";
-  font-weight: 500;
-  line-height: 1.5rem;
-  font-size: 1srem;
-  text-align: center;
-  width: fit-content;
-  line-height: 30px;
-  text-transform: uppercase;
-  background-color: var(--color-crimson);
-  margin: 1rem auto 3rem auto;
-  position: relative;
-  border-bottom-left-radius: 25px;
-  cursor: pointer;
+  background-color: var(--color-fondo);
+  padding: 2.5rem 2rem;
+  min-height: 100vh;
 }
 
-.containerTitle:hover {
-  size-adjust: 200%;
+/* --- BOTÓN VOLVER (Manteniendo tu estilo original) --- */
+.btnHome {
+  padding: 1rem;
 }
 
-.arrow {
-display: none;
-}
-
-.subtitle {
-  color: var(--color-text);
-  font-family: "menda";
-  font-weight: 500;
-  text-align: center;
-  padding: 1.5rem 0;
-}
-
-.portfolio{
-  padding: 2rem;
-  color: var(--color-text);
-  font-family: 'Menda';
-  cursor: pointer;
-  text-decoration: underline ;
-  font-size: 0.8rem;
-
-}
-
-.portfolio:hover{
-  color: #ff1493;
-  }
-
-.span {
-  background-color: transparent;
-  color: var(--color-crimson);
-  padding: 0;
-}
-
-.containerAllProyect {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.nameProyect {
-  color: var(--color-text);
-  font-size: 0.8rem;
-  font-family: "menda";
-  font-weight: 500;
-  margin-left: 10px;
-}
-
-.descriptionProyect {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-  color: var(--color-text);
-  font-size: 0.6rem;
-  max-width: 200px;
-  margin-left: 10px;
-  line-height: 1rem;
-}
-
-.containerProyect {
-  position: relative;
-  background-color: #ffffff12;
-  backdrop-filter: blur(2px);
-  box-shadow: 4px 4px 4px 6px rgba(0, 0, 0, 0.535);
-  margin: 0 0.5rem;
-  width: 100%;
-  height: 250px;
-  min-height: fit-content;
-  border-radius: 13px;
-  text-decoration: none;
-}
-
-.containerBoxOne,
-.containerBoxTwo,
-.containerBoxTres {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 0 20px;
-}
-
-.containerProyect .img {
-  width: 100%;
-
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-}
-
-.link {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.link:hover {
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.containerProyect:hover {
-  box-shadow: 0 0 20px rgba(255, 20, 147, 0.45);
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.containerText {
-  line-height: 0.5rem;
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  font-family: "Menda";
-  font-weight: 500;
-  font-style: normal;
-}
-
-.containerPopUp {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.popUp {
-  background-color: var(--color-dark-text);
-  color: var(--color-text);
-  font-size: 0.6rem;
-  border-radius: 13px;
-  overflow: hidden;
-  box-shadow: 1px 1px 1px 2px rgba(255, 255, 255, 0.148);
-  position: relative;
-  z-index: 9999;
-  position: fixed;
-  top: 40%;
-  opacity: 0;
-  transform: scale(0.9);
-  transition: all 0.3s ease;
-  pointer-events: none;
-  padding: 0.2rem 0.1rem;
-}
-.popUp.activo {
-  opacity: 1;
-  transform: scale(1);
-  pointer-events: all;
-}
-.popUp h2 {
-  font-weight: bold;
-  font-weight: 500;
-  font-style: normal;
-  font-family: "Menda";
-  padding: 0.9rem 0.6rem;
-  text-align: center;
-}
-
-.description {
-  max-width: 250px;
-  margin: 0.5rem auto;
-  font-weight: 500;
-  font-style: normal;
-  font-family: "Menda";
-}
-
-.btnContainer {
-  display: flex;
-  justify-content: center;
-  margin: 1rem;
-}
-
-.btnButton {
-  text-align: center;
-  width: 100%;
-  background-color: #ff1493;
-  border: none;
-  color: var(--color-text);
-  padding: 0.5rem;
-  z-index: 9999;
-  border-radius: 13px;
-  font-weight: 500;
-  font-style: normal;
-  font-family: "Menda";
-  cursor: pointer;
-}
-
-.containerImg {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
-  width: 100%;
-}
-
-.popUpImg {
-  width: 100px;
-}
-
-.logoBlanco {
-  width: 100px;
-}
-
-.secondFondo {
-  background-color: #0000006e;
-  backdrop-filter: blur(7px);
-  height: 100vh;
-  width: 100vw;
-  z-index: 8888;
-  position: fixed;
-  top: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.secondFondo.activo {
-  opacity: 1;
-  pointer-events: all;
-}
-
-
-.btnHome{
-    padding: 1rem;
- 
-}
-
-/* styles.module.css */
 .btnHome button {
   background: none;
   border: none;
@@ -277,20 +34,17 @@ display: none;
   font-size: 1rem;
   font-family: 'Menda';
   font-weight: 500;
-  font-style: normal;
   cursor: pointer;
   position: relative;
   padding: 0.3rem 0.5rem;
   transition: all 0.4s ease;
 }
 
-/* Efecto hover: Borde inferior animado + desplazamiento */
 .btnHome button:hover {
   color: var(--color-crimson);
-  transform: translateX(-5px); /* Desplaza ligeramente a la izquierda */
+  transform: translateX(-5px);
 }
 
-/* Pseudoelemento para el borde animado */
 .btnHome button::after {
   content: '';
   position: absolute;
@@ -299,7 +53,6 @@ display: none;
   width: 0;
   height: 2px;
   background: var(--color-crimson);
-  border-radius: 2px;
   transition: all 0.4s ease;
 }
 
@@ -308,155 +61,223 @@ display: none;
   width: 100%;
 }
 
+/* --- TÍTULO SECCIÓN --- */
+.title {
+  color: var(--color-text);
+  padding: 0.5rem 1.5rem;
+  font-family: "Menda";
+  font-size: 1.2rem;
+  text-align: center;
+  width: fit-content;
+  text-transform: uppercase;
+  background-color: var(--color-crimson);
+  margin: 1rem auto 3rem auto;
+  border-bottom-left-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
-@media (min-width: 850px) {
-portfolio{
+.title:hover {
+  transform: scale(1.05);
+}
+
+
+/* --- GRID DE PROYECTOS --- */
+.containerAllProyect {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.containerBoxOne{
+  gap: 2rem;
+  display: flex;
+}
+.containerProyect {
+  position: relative;
+  background-color: var(--color-glass);
+  backdrop-filter: blur(5px);
+  width: 100%; /* Mobile full width */
+  max-width: 600px; /* Tu ancho original */
+  height: 430px;
+  border-radius: 13px;
+  text-decoration: none;
+  overflow: hidden; /* Importante para el zoom de la imagen */
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.containerProyect:hover {
+  transform: translateY(-10px);
+  border-color: var(--color-crimson);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* --- EFECTO ZOOM IMAGEN --- */
+.img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.containerProyect:hover .img {
+  transform: scale(1.1);
+}
+
+.nameProyect {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-family: "Menda";
+  margin: 1.2rem 0 0.5rem 20px;
+}
+
+.descriptionProyect {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+  margin-left: 20px;
+  max-width: 80%;
+}
+
+.link {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  transition: 0.3s ease;
+}
+
+.containerProyect:hover .link {
+  transform: rotate(45deg) scale(1.2);
+}
+
+/* --- POPUP Y OVERLAY --- */
+.secondFondo {
+  background-color: rgba(0,0,0,0.8);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  inset: 0;
+  z-index: 8888;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.secondFondo.activo { opacity: 1; pointer-events: all; }
+
+.popUp {
+  background-color: #111;
+  color: #fff;
+  border-radius: 20px;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  z-index: 9999;
+  width: 90%;
+  max-width: 500px;
   padding: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
 
+.popUp.activo { opacity: 1; transform: translate(-50%, -50%) scale(1); pointer-events: all; }
+
+.popUp h2 { font-family: "Menda"; margin-bottom: 1rem; }
+
+.btnButton {
+  background-color: var(--color-crimson);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-family: "Menda";
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.portfolio {
+  color: var(--color-text);
+  font-family: 'Menda';
+  text-align: center;
+  margin-top: 3rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* --- CARRUSEL INFINITO SIN CORTES --- */
+.carouselContainer {
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+  padding: 6rem 0;
+  position: relative;
+}
+
+.carouselTrack {
+  display: flex;
+  width: max-content;
+  animation: scroll-logos var(--carousel-speed) linear infinite;
+}
+
+@keyframes scroll-logos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Se mueve la mitad exacta del contenido duplicado */
+}
+
+.logoItem {
+  flex: 0 0 auto;
+  padding: 0 50px; /* Espacio lateral entre cada logo */
+  display: flex;
+  align-items: center;
+}
+
+.logoItem img {
+  height: 50px;
+  width: auto;
+  filter: grayscale(100%) brightness(150%);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.logoItem img:hover {
+  opacity: 1;
+  filter: grayscale(0%) brightness(100%);
+  transform: scale(1.1);
+}
+
+/* Pausar el flujo cuando el usuario pone el mouse encima */
+.carouselContainer:hover .carouselTrack {
+  animation-play-state: paused;
+}
+
+@media (max-width: 850px) {
+  .containerProyect { height: auto; padding-bottom: 2rem; }
+  .img { height: 200px; }
+  .nameProyect { font-size: 1.1rem; }
+  .descriptionProyect { font-size: 0.8rem; }
+  .title { font-size: 1rem; }
+  .containerBoxOne{
+    flex-direction: column;
+  }
+
+.container {
+  padding: 2rem 0.7rem;
+}
+.carouselContainer {
+
+  padding: 3rem 0;
 
 }
-  .containerProyect .img {
-    width: 100%;
-    height: 300px;
-    border-top-left-radius: 13px;
-    border-top-right-radius: 13px;
-  }
-  .title {
-    padding: 1rem;
-    line-height: 2.5rem;
-    font-size: 2.5rem;
-    margin: 1rem auto 6rem auto;
 
-  }
 
-  .containerProyect {
-    width: 600px;
-    height: 430px;
-  }
-
-  .containerBoxOne {
-    justify-content: end;
-  }
-
-  .containerBoxTres {
-    justify-content: end;
-  }
-
-  .subtitle {
-    padding: 3rem 0;
-    font-size: 2rem;
-  }
-
-  .containerBoxOne,
-  .containerBoxTwo,
-  .containerBoxTres {
-    gap: 2rem;
-  }
-
-  .containerAllProyect {
-    gap: 2rem;
-  }
-
-  .nameProyect {
-    font-size: 1.5rem;
-  }
-
-  .descriptionProyect {
-    max-width: 300px;
-    font-size: 1rem;
-  }
-
-  .link {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 30px;
-    height: 30px;
-  }
-
-  .button {
-    padding: 1rem 1rem;
-    font-size: 1rem;
-  }
-
-  .containerText {
-    line-height: 0.8rem;
-    font-size: 1rem;
-  }
-
-  .containerButtonWrapper {
-    margin: 1.5rem 0;
-  }
-
-  .containerPopUp {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .popUp {
-    font-size: 1.2rem;
-
-    top: 40%;
-    opacity: 0;
-    padding: 0.5rem 0.3rem;
-  }
-
-  .popUp.activo {
-    opacity: 1;
-  }
-
-  .popUp h2 {
-    padding: 1rem 0.9rem;
-    text-align: center;
-  }
-
-  .description {
-    max-width: 500px;
-    margin: 0.5rem auto;
-  }
-
-  .btnContainer {
-    display: flex;
-    justify-content: center;
-    margin: 1rem;
-  }
-
-  .btnButton {
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-
-  .containerImg {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
-    width: 100%;
-  }
-
-  .popUpImg {
-    width: 100px;
-  }
-
-  .logoBlanco {
-    width: 100px;
-  }
-
-  .secondFondo {
-    opacity: 0;
-  }
-
-  .secondFondo.activo {
-    opacity: 1;
-  }
-  .containerTitle:hover {
-    size-adjust: 200%;
-  }
-
-  .container{
-    padding: 4rem;
-  }
 }

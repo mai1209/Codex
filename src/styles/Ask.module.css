@@ -1,98 +1,79 @@
 :root {
-    --color-fondo-dark: #121212;
-    --color-crimson: #FF1493;
-    --color-text: #fff;
-    --color-fondo-instagram: #f0ead6;
+  --bg-dark: #1c1c1c;
+  --card-bg: #1a1a1a;
+  --accent: #ff1493;
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --font-menda: "Menda", sans-serif;
 }
 
-@font-face {
-    font-family: 'Menda';
-    src: url('/Menda\ Font/menda_medium-webfont.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-.container {
-    background-color: var(--color-fondo-dark);
-    height: 100vh;
-    min-height: fit-content;
-    padding-bottom: 4rem;
-
-      --grid-size: 100px;          /* Tamaño de cada celda */
-  --line-color: #3838384f;      /* Color de las líneas finas de la grilla */
-  --cross-color: #66666600;       /* Color de las cruces en las intersecciones */
-  --dot-color: #55555500;         /* Color de los puntos en el medio */
-
-  background-color: var(--color-fondo-dark);
-
-  /* Las capas se leen de arriba hacia abajo */
+.pageWrapper {
+  background-color: var(--bg-dark);
+  min-height: 100vh;
+  padding-bottom: 5rem;
+  font-family: var(--font-menda);
+  position: relative;
+  overflow-x: hidden;
+  /* Grilla de fondo sutil */
   background-image:
-    /* 1. Puntos en el medio de la celda (la capa de más arriba) */
-    radial-gradient(circle, var(--dot-color) 1px, transparent 1.5px),
-    /* 2. Barra vertical de la cruz (+) */
-    linear-gradient(var(--cross-color), var(--cross-color)),
-    /* 3. Barra horizontal de la cruz (+) */
-    linear-gradient(to right, var(--cross-color), var(--cross-color)),
-    /* 4. Líneas verticales de la grilla */
-    repeating-linear-gradient(to right, var(--line-color) 0, var(--line-color) 2px, transparent 2px, transparent var(--grid-size)),
-    /* 5. Líneas horizontales de la grilla */
-    repeating-linear-gradient(to bottom, var(--line-color) 0, var(--line-color) 2px, transparent 2px, transparent var(--grid-size));
-
-  /* El tamaño de cada capa (corresponde a las 5 capas de arriba) */
-  background-size:
-    var(--grid-size) var(--grid-size),      /* 1. El espacio de repetición para los puntos */
-    2px 10px,                             /* 2. Grosor y alto de la barra vertical de la cruz */
-    10px 2px,                             /* 3. Ancho y grosor de la barra horizontal de la cruz */
-    var(--grid-size) var(--grid-size),      /* 4. El espacio de repetición para la grilla vertical */
-    var(--grid-size) var(--grid-size);      /* 5. El espacio de repetición para la grilla horizontal */
-
-  background-position:
-    calc(var(--grid-size) / 2) calc(var(--grid-size) / 2), /* 1. Centra los puntos en la celda */
-    center center,                          /* 2. Centra las barras verticales de la cruz */
-    center center,                          /* 3. Centra las barras horizontales de la cruz */
-    center center,                          /* 4. Centra la grilla vertical */
-    center center;                          /* 5. Centra la grilla horizontal */
-
- 
-  background-repeat: repeat;
+    linear-gradient(to right, #3838382a 1px, transparent 1px),
+    linear-gradient(to bottom, #3838382a 1px, transparent 1px);
+  background-size: 100px 100px;
 }
 
-.btnHome{
-    padding: 1rem;
- 
+.pageWrapperEmbedded {
+  min-height: auto;
+  padding: 4rem 0 3rem;
+  background-image: none;
 }
 
-/* styles.module.css */
+.backgroundGlow {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 20, 147, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.btnHome {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
 .btnHome button {
   background: none;
   border: none;
-  color: var(--color-text);
+  color: var(--text-main);
   font-size: 1rem;
-  font-family: 'Menda';
+  font-family: var(--font-menda);
   font-weight: 500;
-  font-style: normal;
   cursor: pointer;
   position: relative;
   padding: 0.3rem 0.5rem;
   transition: all 0.4s ease;
 }
 
-/* Efecto hover: Borde inferior animado + desplazamiento */
 .btnHome button:hover {
-  color: var(--color-crimson);
-  transform: translateX(-5px); /* Desplaza ligeramente a la izquierda */
+  color: var(--accent);
+  transform: translateX(-5px);
 }
 
-/* Pseudoelemento para el borde animado */
 .btnHome button::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
   width: 0;
   height: 2px;
-  background: var(--color-crimson);
+  background: var(--accent);
   border-radius: 2px;
   transition: all 0.4s ease;
 }
@@ -102,137 +83,185 @@
   width: 100%;
 }
 
-.title {
-    color: var(--color-crimson);
-    font-size: 0.9rem;
-    margin: 0.4rem 2rem;
-    font-family: 'Menda';
-    font-weight: 500;
-    font-style: normal;
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 0 1.5rem;
 }
 
-.containerQuestion{
-    color: var(--color-text);
-    display: flex;
-gap: 1rem;
-margin: 1rem;
-   font-family: 'Menda';
-    font-weight: 500;
-    font-style: normal;
-    font-size: 0.8rem;
-    align-items: start;
+.contentEmbedded {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.containerAsk{
-    color: var(--color-text);
-    font-size: 0.7rem;
-    margin: 1rem;
-   font-family: 'Menda';
-    font-weight: 500;
-    font-style: normal;
-    text-align: start;
+.headerSection {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.mainTitle {
+  font-size: clamp(1.5rem, 6vw, 2.8rem);
+  color: #ff1493;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+  font-family: 'Menda';
+  font-weight: 500;
+}
+
+
+
+.cardsGrid {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
 }
 
-.simbol{
-    color: var(--color-crimson);
-    font-size: 1rem;
-}
-.containerLogo {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    z-index: 0;
-    position: fixed;
-    bottom: 0;
-    pointer-events: none; /* <-- Esto permite que los clics pasen a los elementos debajo */
-}
-.logoBlanco{
- 
-   display: none;
-   
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 20, 147, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-.containerText{
+.cardOpen {
+  border-color: var(--accent);
+  background: #1f1f1f;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconWrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 20, 147, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.2rem 0.5rem;
-  background-color: var(--color-fondo-dark);
-  color: var(--color-text);
-  border: 1px solid var(--color-crimson);
-  border-radius: 50%;
-  font-family: 'Menda';
+  transition: all 0.4s ease;
+  flex-shrink: 0;
+}
+
+.rotate {
+  transform: rotate(135deg);
+  background: var(--accent);
+}
+
+.questionText {
+  font-size: clamp(0.9rem, 3vw, 1.3rem);
   font-weight: 500;
-  font-style: normal;
-  
-}
-.description{
-  padding-left: 3rem;
-  
- 
+  color: var(--text-main);
 }
 
-@media (min-width: 850px){
-  .description{
-  padding-left: 6rem;
-  font-size: 1rem;
- 
+.cardBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
 }
 
-.title {
- 
-    font-size: 1.9rem;
-    margin: 1rem 2rem;
-
-}
-.containerQuestion{
-  
-
-
-    font-size: 1.5rem;
-  
-}
-.containerAsk{
-   
-    font-size: 1rem;
-    margin: 2rem;
- 
-    text-align: start;
-
-}
-.containerAll{
-    margin: 0 10rem;
+.bodyVisible {
+  max-height: 500px;
 }
 
-.simbol{
-
-    font-size: 2rem;
+.innerContent {
+  padding: 1.5rem 0 0.5rem 3rem;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
+.descriptionText {
+  font-size: 0.95rem;
+}
 
-.btnHome{
+.footer {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  opacity: 0.1;
+}
+
+.floatingLogo {
+  width: clamp(150px, 30vw, 400px);
+}
+
+@media (min-width: 850px) {
+  .btnHome {
     padding: 2rem;
- 
-}
-.logoBlanco{
-    width: 650px;
-    height: 600px;
-   
-}
-.containerText{
-  padding: 0.4rem 0.9rem;
-  font-size: 1.5rem;
-}
-.button{
-  padding: 0.7rem 1rem;
-  font-size: 1rem;
-}
-.containerButton{
-  padding: 0.2rem 0.4rem;
-  margin: 1rem 0.5rem;
+  }
 
+  .pageWrapperEmbedded {
+    padding: 5rem 0 4rem;
+  }
+
+  .contentEmbedded {
+    padding: 0 2rem;
+  }
+
+  .cardsGrid {
+    gap: 1.5rem;
+  }
+  .card {
+    padding: 1.8rem;
+    height: fit-content;
+  }
+  .descriptionText {
+    font-size: 1.1rem;
+  }
 }
 
- 
+@media (max-width: 849px) {
+  .pageWrapperEmbedded {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .contentEmbedded {
+    padding: 0 0.875rem;
+  }
+
+  .pageWrapperEmbedded .headerSection {
+    margin-bottom: 2.5rem;
+  }
+
+  .pageWrapperEmbedded .card {
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .pageWrapperEmbedded .questionText {
+    font-size: 0.98rem;
+  }
+
+  .pageWrapperEmbedded .innerContent {
+    padding: 1rem 0 0.25rem 2.4rem;
+  }
+
+  .pageWrapperEmbedded .descriptionText {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .pageWrapperEmbedded .backgroundGlow {
+    width: 70%;
+    height: 35%;
+    top: -2%;
+    right: -18%;
+  }
 }

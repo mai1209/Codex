@@ -20,7 +20,7 @@ function Nav() {
         { key: 'services', path: '#consulta-nuestros-servicios' },
         { key: 'portfolio', path: '#portafolio' },
         { key: 'team', path: '#nuestro-equipo' },
-        { key: 'faq', route: '/ask' },
+        { key: 'faq', path: '#ask' },
         { key: 'pricing', route: '/pricing' },
     ];
 
