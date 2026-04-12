@@ -19,6 +19,15 @@ function Porfolio() {
       </div>
 
       <div className={style.containerAllProyect}>
+
+   {/* Barber App */}
+        <a className={style.containerProyect} href="https://www.barberappbycodex.com" target="_blank" rel="noopener noreferrer">
+          <img className={style.img} src="/barberPorfolioImg.png" alt="Darko" />
+          <p className={style.nameProyect}>Booking App for Barbershops</p>
+          <p className={style.descriptionProyect}>{t("done.descriptionProyect7")}</p>
+          <img className={style.link} src="/Linking.webp" alt="link" />
+        </a>
+
         {/* Darko */}
         <a className={style.containerProyect} href="https://cheap-shop-three.vercel.app" target="_blank" rel="noopener noreferrer">
           <img className={style.img} src="/darko.png" alt="Darko" />
@@ -29,7 +38,7 @@ function Porfolio() {
 
         {/* Crea Marketing */}
         <a className={style.containerProyect} href="https://creamarketingparavos.com" target="_blank" rel="noopener noreferrer">
-          <img className={style.img} src="/crea.webp" alt="Crea" />
+          <img className={style.img} src="/crea.png" alt="Crea" />
           <p className={style.nameProyect}>creamarketingparavos.com</p>
           <p className={style.descriptionProyect}>{t("done.descriptionProyect2")}</p>
           <img className={style.link} src="/Linking.webp" alt="link" />

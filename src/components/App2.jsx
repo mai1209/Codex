@@ -88,7 +88,7 @@
                   </a>
 
                   <a
-                    href="#servicios"
+                    href="#consulta-nuestros-servicios"
                     className={style.secondaryBtn}
                   >
                     {t("app.viewServices")}

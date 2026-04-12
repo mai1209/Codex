@@ -151,7 +151,7 @@
 /* ------------------ CARD CONTENT ------------------ */
 .titleCard {
   background-color: var(--color-fondo-dark);
-  color: #343434;
+  color: #ffff;
   padding: 0.2rem 3rem;
   text-align: center;
   border-radius: 13px;
@@ -283,6 +283,7 @@
 
 .descriptionTwo{
   text-align: center;
+  color: var(--color-text);
 }
 /* ------------------ MEDIA QUERIES ------------------ */
 @media (min-width: 850px) {

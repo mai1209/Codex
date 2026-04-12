@@ -1,9 +1,9 @@
 {
   "app": {
-   "title1": "We transform",
-"title2": "ideas into",
-"title3": "digital",
-"title4": "businesses",
+    "title1": "We transform",
+    "title2": "ideas into",
+    "title3": "digital",
+    "title4": "businesses",
     "secondaryText1": "Did you know? 70% of visits come through mobile browsers",
     "secondaryText2": "Boost your brand in the digital era",
     "textBtn": "Let’s build it!",
@@ -41,7 +41,7 @@
     "textBottom3": "Let's build it together with Codex!",
     "textFirst": "Our multidisciplinary team combines creativity, innovation, and",
     "textSecond": "experience to take every project to the next level.",
-    "day":"TODAY"
+    "day": "TODAY"
   },
   "diagrama": {
     "title": "Services",
@@ -49,7 +49,7 @@
     "titleSome": "Some Clients",
     "titleNavTop": "The future is coded — let’s build it —",
     "problemHeader": "The cost of being invisible.",
-  "problemDescription": "85% of consumers research a business online before making a purchase. If you don't have an optimized website, you're not just invisible: you're giving your customers away to competitors who are just a click away. We bridge that digital gap with platforms that turn visitors into revenue",
+    "problemDescription": "85% of consumers research a business online before making a purchase. If you don't have an optimized website, you're not just invisible: you're giving your customers away to competitors who are just a click away. We bridge that digital gap with platforms that turn visitors into revenue",
     "services": [
       {
         "title": "Web Development",
@@ -76,72 +76,72 @@
         "description": "Functional and intuitive apps that stand out for their design and performance."
       }
     ],
-"testimonials": [
-  {
-    "label": "Creá",
-    "name": "Natalia Lofeudo",
-    "role": "CEO Creá",
-    "quote": "With Codex, I realized that having a website is key to the constant and automated growth of my business; thanks to them, my reach has increased drastically.",
-    "image": "/natiTestimonios.png",
-    "imageAlt": "Natalia Lofeudo"
-  },
-  {
-    "label": "Darko Clothes",
-    "name": "David Menendez",
-    "role": "Darko Clothes",
-    "quote": "The redesign boosted our customers' trust and gave us a visual identity that matches our current scale of operations.",
-    "image": "/logodarko.png",
-    "imageAlt": "David"
-  },
-  {
-    "label": "Buzos de Regatas",
-    "name": "Santiago",
-    "role": "Instructor at Buzos de Regatas",
-    "quote": "Codex helped us automate bookings, gave our website a new identity, and created a structure capable of selling on its own.",
-    "image": "/logowebBDR.png",
-    "imageAlt": "Santiago"
-  },
-  {
-    "label": "Orion HairStudio",
-    "name": "Lisandro Lobos",
-    "role": "Orion Hair Studio",
-    "quote": "Their team got involved in metrics and content, not just design. We launched in half the expected time.",
-    "image": "/orion.png",
-    "imageAlt": "Lisandro"
-  },
-  {
-    "label": "SG Market",
-    "name": "Santiago Gomez",
-    "role": "SG Market",
-    "quote": "My leads tripled after publishing the portfolio we planned with Codex; their video production and editing service helped us drive more visitors to our Instagram profile.",
-    "image": "/sgmarket.png",
-    "imageAlt": "Santiago"
-  },
-  {
-    "label": "JAM",
-    "name": "Jorge Antonio",
-    "role": "Owner JAM",
-    "quote": "Our new brand identity positioned us in the market as a professional company.",
-    "image": "/jam.png",
-    "imageAlt": "Jorge"
-  },
-  {
-    "label": "VidaTrade",
-    "name": "Dario Benitez",
-    "role": "CEO VidaTrade",
-    "quote": "The speed and agility they showed in building an E-commerce platform truly surprised me.",
-    "image": "/vidatrade.png",
-    "imageAlt": "Dario"
-  },
-  {
-    "label": "...",
-    "name": "...",
-    "role": "...",  
-    "quote": "...",
-    "image": "/imgMaiOficial.webp",
-    "imageAlt": "..."
-  }
-]
+    "testimonials": [
+      {
+        "label": "Creá",
+        "name": "Natalia Lofeudo",
+        "role": "CEO Creá",
+        "quote": "With Codex, I realized that having a website is key to the constant and automated growth of my business; thanks to them, my reach has increased drastically.",
+        "image": "/natiTestimonios.png",
+        "imageAlt": "Natalia Lofeudo"
+      },
+      {
+        "label": "Darko Clothes",
+        "name": "David Menendez",
+        "role": "Darko Clothes",
+        "quote": "The redesign boosted our customers' trust and gave us a visual identity that matches our current scale of operations.",
+        "image": "/logodarko.png",
+        "imageAlt": "David"
+      },
+      {
+        "label": "Buzos de Regatas",
+        "name": "Santiago",
+        "role": "Instructor at Buzos de Regatas",
+        "quote": "Codex helped us automate bookings, gave our website a new identity, and created a structure capable of selling on its own.",
+        "image": "/logowebBDR.png",
+        "imageAlt": "Santiago"
+      },
+      {
+        "label": "Orion HairStudio",
+        "name": "Lisandro Lobos",
+        "role": "Orion Hair Studio",
+        "quote": "Their team got involved in metrics and content, not just design. We launched in half the expected time.",
+        "image": "/orion.png",
+        "imageAlt": "Lisandro"
+      },
+      {
+        "label": "SG Market",
+        "name": "Santiago Gomez",
+        "role": "SG Market",
+        "quote": "My leads tripled after publishing the portfolio we planned with Codex; their video production and editing service helped us drive more visitors to our Instagram profile.",
+        "image": "/sgmarket.png",
+        "imageAlt": "Santiago"
+      },
+      {
+        "label": "JAM",
+        "name": "Jorge Antonio",
+        "role": "Owner JAM",
+        "quote": "Our new brand identity positioned us in the market as a professional company.",
+        "image": "/jam.png",
+        "imageAlt": "Jorge"
+      },
+      {
+        "label": "VidaTrade",
+        "name": "Dario Benitez",
+        "role": "CEO VidaTrade",
+        "quote": "The speed and agility they showed in building an E-commerce platform truly surprised me.",
+        "image": "/vidatrade.png",
+        "imageAlt": "Dario"
+      },
+      {
+        "label": "...",
+        "name": "...",
+        "role": "...",
+        "quote": "...",
+        "image": "/imgMaiOficial.webp",
+        "imageAlt": "..."
+      }
+    ]
   },
   "done": {
     "title": "What we’ve",
@@ -156,6 +156,8 @@
     "nameProyect4": "Growth mobile app",
     "descriptionProyect4": "System development and design.",
     "nameProyect5": "Dev portfolio",
+    "nameProyect7": "Booking App for Barbershops",
+    "descriptionProyect7": "Proprietary app available today on the Play Store for managing appointments, clients, and barbershop operations.",
     "descriptionProyect5": " Front-end y Back-end, design and development.",
     "popUp": "Ready to build your digital future?",
     "description": "We’re crafting this project with passion and vision — it’s coming soon. Stay tuned and let’s build it together with Codex!",
@@ -166,7 +168,7 @@
     "textContact": "BUILD YOUR WEBSITE WITH",
     "textContact2": "CODEX CORPORATION & BUSINESS",
     "button": "Contact us!",
-    "title": "Our Team" 
+    "title": "Our Team"
   },
   "diagramaM": {
     "title": "*THEY SAY WHO HAVE WORKED WITH CODEX",

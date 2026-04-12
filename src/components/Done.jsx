@@ -36,19 +36,19 @@ function Done() {
           <div className={style.containerBoxOne}>
             <a
               className={style.containerProyect}
-              href="https://cheap-shop-three.vercel.app"
+              href="https://www.barberappbycodex.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                fetchpriority="high"
+                fetchpriority="high"  
                 className={style.img}
-                src="/darko.png"
-                alt="wifrut"
+                src="/barberPorfolioImg.png"
+                alt="barberiaWeb"
               />
-              <p className={style.nameProyect}>Darko-shop.com</p>
+              <p className={style.nameProyect}>Booking App for Barbershops</p>
               <p className={style.descriptionProyect}>
-                {t("done.descriptionProyect1")}
+                {t("done.descriptionProyect7")}
               </p>
               <a
                 href="https://cheap-shop-three.vercel.app"
@@ -73,7 +73,7 @@ function Done() {
               <img
                 fetchpriority="high"
                 className={style.img}
-                src="/crea.webp"
+                src="/crea.png"
                 alt="crea"
               />
               <p className={style.nameProyect}>creamarketingparavos.com</p>
