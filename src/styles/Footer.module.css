@@ -106,6 +106,11 @@
   color: var(--color-text);
 }
 
+.containerLinks,
+.containerLinksBottom {
+  min-width: 0;
+}
+
 /* ✅ DERECHOS (z-index normal, no 99999999) */
 .containerDerechos {
   color: var(--color-text);
@@ -145,7 +150,83 @@
   100% { transform: scale(1); }
 }
 
-@media (min-width: 850px) {
+@media (min-width: 53.125rem) and (max-width: 74.9375rem) {
+  .containerTitle {
+    padding: 3.5rem 3rem 6rem;
+    max-width: 38rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .containerAllLinks {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 3rem 5rem;
+    gap: 2.5rem;
+  }
+
+  .containerLinks,
+  .containerLinksBottom {
+    flex: 1 1 0;
+  }
+
+  .containerLinksBottom {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .titleNavigation {
+    font-size: 1.25rem;
+  }
+
+  .links a {
+    font-size: 1.05rem;
+    line-height: 1.45;
+  }
+
+  .containerDerechos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 3rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .redes {
+    padding: 0;
+    gap: 0.85rem;
+  }
+
+  .redes img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .imgFooter {
+    display: block;
+    position: absolute;
+    left: -2.5rem;
+    bottom: -1rem;
+    width: 20rem;
+    height: 20rem;
+    object-fit: contain;
+    opacity: 0.28;
+    z-index: 0;
+  }
+}
+
+@media (min-width: 75rem) {
   .containerTitle {
     padding: 6rem 0 12rem 6rem;
   }
@@ -178,15 +259,16 @@
   }
 
   .imgFooter {
-    display: flex;
+    display: block;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 600px;
-    height: 600px;
-    object-fit: cover;
+    width: 37.5rem;
+    height: 37.5rem;
+    object-fit: contain;
     z-index: 0;
     pointer-events: none; /* ✅ clave */
+    opacity: 0.34;
   }
 
   .containerDerechos {
