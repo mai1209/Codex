@@ -19,12 +19,6 @@ function Team() {
       role1: "CEO",
       role2: "Co-Founder",
       img: "./imgDavidOficial.webp",
-    },
-    {
-      name: "Juan Manuel Fehleisen",
-      role1: "CMO",
-      role2: "Chief Sales Officer",
-      img: "./imgOficialJuan.webp",
     }
   ];
 

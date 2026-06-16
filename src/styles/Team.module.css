@@ -279,3 +279,42 @@
 }
 
 }
+
+/* ------------------ STAGGER REVEAL (cards del equipo) ------------------ */
+/* Antes de revelar la sección, las cards quedan ocultas */
+[data-revealed="false"] .memberCard {
+  opacity: 0;
+}
+
+/* Al revelar, cada card entra escalonada. animation-fill-mode: backwards
+   mantiene el estado inicial durante el delay y luego revierte al estado
+   natural, sin pisar el transform del :hover. */
+[data-revealed="true"] .memberCard {
+  animation: teamCardIn 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) backwards;
+}
+
+[data-revealed="true"] .memberCard:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+[data-revealed="true"] .memberCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes teamCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-revealed] .memberCard {
+    animation: none;
+    opacity: 1;
+  }
+}

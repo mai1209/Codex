@@ -17,6 +17,7 @@ import Done from "./components/Done";
 import "./i18n";
 import App2 from "./components/App2";
 import Porfolio from "./components/Porfolio";
+import Reveal from "./components/Reveal";
 
 function RootApp() {
   const [isMobile, setIsMobile] = useState(false);
@@ -44,14 +45,22 @@ function RootApp() {
                 <>
                   <Nav />
                   <App2 />
-                  {isMobile ? <DiagramaM /> : <DiagramaM />}
-                  <Ask embedded />
-                  <WeDo />
-
-                  <Done />
-
-                  <Team />
-                  <Diagrama />
+                  <Reveal variant="up">{isMobile ? <DiagramaM /> : <DiagramaM />}</Reveal>
+                  <Reveal variant="left">
+                    <Ask embedded />
+                  </Reveal>
+                  <Reveal variant="right">
+                    <WeDo />
+                  </Reveal>
+                  <Reveal variant="up">
+                    <Done />
+                  </Reveal>
+                  <Reveal triggerOnly>
+                    <Team />
+                  </Reveal>
+                  <Reveal variant="zoom">
+                    <Diagrama />
+                  </Reveal>
                   <Footer />
                 </>
               }

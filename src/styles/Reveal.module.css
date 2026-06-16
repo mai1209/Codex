@@ -1,0 +1,44 @@
+.reveal {
+  width: 100%;
+  opacity: 0;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Direcciones de entrada (solo transform → GPU) */
+.up {
+  transform: translateY(45px);
+}
+
+.left {
+  transform: translateX(-55px);
+}
+
+.right {
+  transform: translateX(55px);
+}
+
+.zoom {
+  transform: scale(0.92);
+}
+
+/* Estado revelado: anula cualquier variante */
+.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Modo "solo disparador": no anima el wrapper, solo expone data-revealed */
+.trigger {
+  width: 100%;
+}
+
+/* Accesibilidad: sin animación para quien la desactiva */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
