@@ -162,6 +162,8 @@
     "descriptionProyect6": " Diseño de marca. ",
     "nameProyect7": "App Turnera para barberías",
     "descriptionProyect7": "Desarrollo propio disponible hoy en Play Store para la gestión de turnos, clientes y operaciones de barberías.",
+    "nameProyect8": "ShiftHub",
+    "descriptionProyect8": "App y panel web para la gestión inteligente de turnos: reservas online 24/7, notificaciones automáticas y agenda para estética, peluquería, salud, wellness y más.",
     "popUp": "¿Listo para construir tu futuro digital?",
     "description": "Estamos elaborando este proyecto con pasión y visión, y llegará pronto. ¡Estén atentos y construyámoslo junto con Codex!",
     "buildButton": "Construyámoslo",
@@ -281,6 +283,121 @@
         "SEO Pro",
         "Y más..."
       ]
+    },
+    "moreInfo": "Más información",
+    "infoIdealTitle": "Ideal para empresas que:",
+    "infoFinancingTitle": "Financiación",
+    "infoContactTitle": "¿Tomaste una decisión y querés tu proyecto?",
+    "infoContactButton": "Ponte en contacto",
+    "infoTag": "The future is code — Let's build IT!",
+    "info": {
+      "landing": {
+        "title": "INFORMACIÓN — Landing Page",
+        "question": "¿Qué es una landing page y por qué es una inversión?",
+        "paragraphs": [
+          "Una landing page no es solo una web. Es una herramienta diseñada para transformar visitas en oportunidades reales.",
+          "Presenta tu propuesta de forma clara, transmite confianza y guía al usuario hacia una acción concreta: contactar, registrarse o comprar.",
+          "Es el primer paso para que tu negocio empiece a competir de verdad en el entorno digital."
+        ],
+        "ideal": [
+          "Quieren validar una idea o servicio",
+          "Necesitan empezar a generar consultas online",
+          "Buscan una presencia simple pero efectiva",
+          "Quieren resultados rápidos sin gran estructura inicial"
+        ],
+        "financingIntro": "Accedé hoy a tu landing page y empezá a generar resultados desde el primer momento.",
+        "installments": [
+          "3 cuotas de $260.000 ARS",
+          "6 cuotas de $145.000 ARS",
+          "12 cuotas de $75.000 ARS"
+        ],
+        "closing": "No es solo una página. Es una inversión en infraestructura digital, visibilidad online y generación de oportunidades reales, desarrollada por profesionales que entienden cómo hacer crecer tu negocio."
+      },
+      "corporate": {
+        "title": "INFORMACIÓN — Sitio Corporativo",
+        "question": "¿Qué es un sitio corporativo y por qué es una inversión?",
+        "paragraphs": [
+          "Un sitio corporativo es la base digital de tu empresa. No solo muestra quién sos, sino cómo trabajás, qué ofrecés y por qué deberían elegirte.",
+          "Es la herramienta que posiciona tu marca, genera credibilidad y convierte visitas en oportunidades reales."
+        ],
+        "ideal": [
+          "Necesitan consolidar su imagen profesional",
+          "Quieren mostrar servicios de forma clara y estructurada",
+          "Buscan generar confianza antes del primer contacto",
+          "Están listas para escalar su presencia digital"
+        ],
+        "financingIntro": "Construí una presencia digital sólida y preparada para crecer.",
+        "installments": [
+          "3 cuotas de $670.000 ARS",
+          "6 cuotas de $370.000 ARS",
+          "12 cuotas de $210.000 ARS"
+        ],
+        "closing": "No es solo una web. Es una inversión en infraestructura digital, seguridad de datos y posicionamiento real, desarrollada por profesionales que entienden el crecimiento empresarial."
+      },
+      "ecommerce": {
+        "title": "INFORMACIÓN — Ecommerce",
+        "question": "¿Qué es un ecommerce y por qué es una inversión?",
+        "paragraphs": [
+          "Un ecommerce es un sistema de ventas completo que funciona las 24 horas.",
+          "Desarrollamos tiendas profesionales, originales y a medida, con experiencias pensadas para convertir y seguridad de vanguardia que protege cada operación.",
+          "Cada decisión está orientada a maximizar resultados y escalar tu negocio."
+        ],
+        "ideal": [
+          "Quieren vender productos online de forma profesional",
+          "Buscan automatizar su proceso de ventas",
+          "Necesitan una tienda segura, rápida y confiable",
+          "Están listas para escalar sin límites físicos"
+        ],
+        "financingIntro": "Llevá tu negocio a un entorno diseñado para vender.",
+        "installments": [
+          "3 cuotas de $1.420.000 ARS",
+          "6 cuotas de $780.000 ARS",
+          "12 cuotas de $420.000 ARS"
+        ],
+        "closing": "No es solo una tienda online. Es una inversión en ventas automatizadas, seguridad y escalabilidad, construida por expertos que saben cómo convertir tráfico en resultados."
+      },
+      "custom": {
+        "title": "INFORMACIÓN — Desarrollo Personalizado",
+        "question": "¿Qué es un desarrollo personalizado y por qué es una inversión?",
+        "paragraphs": [
+          "Un desarrollo personalizado es la solución para empresas que necesitan tecnología adaptada a sus procesos.",
+          "Creamos sistemas, plataformas y herramientas desde cero, pensadas para optimizar, escalar y acompañar el crecimiento de tu negocio."
+        ],
+        "ideal": [
+          "Tienen necesidades específicas que no cubren soluciones estándar",
+          "Buscan optimizar procesos internos",
+          "Necesitan sistemas escalables y adaptados",
+          "Quieren tecnología alineada a su operación"
+        ],
+        "financingIntro": "Tecnología diseñada a la medida de tu empresa.",
+        "installments": [
+          "3 cuotas de $1.320.000 ARS",
+          "6 cuotas de $720.000 ARS",
+          "12 cuotas de $390.000 ARS"
+        ],
+        "closing": "No es solo desarrollo. Es una inversión en eficiencia operativa, control y crecimiento sostenido, respaldada por profesionales que entienden tu negocio."
+      },
+      "app": {
+        "title": "INFORMACIÓN — Aplicaciones Móviles",
+        "question": "¿Qué es una app y por qué es una inversión?",
+        "paragraphs": [
+          "Una app conecta tu negocio con tus clientes de forma directa, rápida y constante.",
+          "Desarrollamos aplicaciones para iOS y Android con foco en rendimiento, experiencia de usuario y escalabilidad, pensadas para generar valor real y acompañar el crecimiento de tu empresa."
+        ],
+        "ideal": [
+          "Quieren ofrecer una experiencia directa a sus clientes",
+          "Buscan innovar y diferenciarse en el mercado",
+          "Necesitan automatizar servicios o procesos",
+          "Están listas para crear un producto digital escalable"
+        ],
+        "financingIntro": "Llevá tu negocio al bolsillo de tus clientes con una solución pensada para escalar.",
+        "installments": [
+          "3 cuotas de $3.310.000 ARS",
+          "6 cuotas de $1.820.000 ARS",
+          "12 cuotas de $980.000 ARS"
+        ],
+        "closing": "No es solo una app. Es una inversión en infraestructura tecnológica, seguridad, experiencia de usuario y crecimiento digital sostenido, desarrollada por profesionales que construyen productos reales."
+      }
     }
   }
 }

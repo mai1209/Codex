@@ -203,6 +203,11 @@
 }
 
 /* ------------------ BUTTON ------------------ */
+.a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .button {
   background: var(--color-fondo-dark);
   border: none;
@@ -307,5 +312,242 @@
   .cards {
     max-width: 1600px;
     margin: 1rem auto;
+  }
+}
+
+/* ------------------ MORE INFO BUTTON ------------------ */
+.moreInfo {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--color-text);
+  font-family: 'Menda', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.5rem;
+  margin: 0 auto 1rem auto;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.moreInfo:hover {
+  border-color: var(--color-crimson);
+  color: var(--color-crimson);
+  transform: translateY(-3px);
+}
+
+.moreInfoF {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.moreInfoF:hover {
+  border-color: var(--color-text);
+  color: var(--color-fondo-dark);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* ------------------ INFO MODAL ------------------ */
+.infoOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 1000;
+  animation: infoFade 0.25s ease;
+}
+
+@keyframes infoFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.infoModal {
+  position: relative;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 760px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  animation: infoRise 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@keyframes infoRise {
+  from { opacity: 0; transform: translateY(30px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.infoClose {
+  position: sticky;
+  top: 1rem;
+  float: right;
+  margin: 1rem 1rem 0 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.infoClose:hover {
+  background: var(--color-crimson);
+  transform: rotate(90deg);
+}
+
+.infoContent {
+  padding: 3rem 2.5rem;
+}
+
+.infoTitle {
+  font-family: 'Menda', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: var(--color-crimson);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.infoQuestion {
+  font-family: 'Menda', sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--color-text);
+  margin-bottom: 1.2rem;
+}
+
+.infoText {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.9rem;
+}
+
+.infoSubtitle {
+  font-family: 'Menda', sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--color-text);
+  margin: 1.5rem 0 0.8rem 0;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+}
+
+.infoList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.infoList li::before {
+  content: '•';
+  position: absolute;
+  left: 0.3rem;
+  color: var(--color-crimson);
+  font-size: 1.1rem;
+}
+
+.infoInstallments {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.infoInstallments li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.6rem;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+
+.infoInstallments li::before {
+  content: '➜';
+  position: absolute;
+  left: 0;
+  color: var(--color-crimson);
+}
+
+.infoClosing {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.infoContactTitle {
+  font-family: 'Menda', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  margin: 1.8rem 0 1rem 0;
+  text-align: center;
+}
+
+.infoContactButton {
+  display: block;
+  margin: 0 auto;
+  background: var(--color-crimson);
+  border: none;
+  color: var(--color-text);
+  font-family: 'Menda', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.9rem 2.5rem;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.infoContactButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 20, 147, 0.4);
+}
+
+.infoTag {
+  text-align: center;
+  font-family: 'Menda', sans-serif;
+  font-weight: lighter;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .infoContent {
+    padding: 2.5rem 1.3rem;
+  }
+
+  .infoQuestion {
+    font-size: 1.2rem;
   }
 }

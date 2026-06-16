@@ -158,6 +158,8 @@
     "nameProyect5": "Dev portfolio",
     "nameProyect7": "Booking App for Barbershops",
     "descriptionProyect7": "Proprietary app available today on the Play Store for managing appointments, clients, and barbershop operations.",
+    "nameProyect8": "ShiftHub",
+    "descriptionProyect8": "Web app and dashboard for smart appointment management: 24/7 online booking, automatic notifications, and scheduling for beauty, hair, health, wellness, and more.",
     "descriptionProyect5": " Front-end y Back-end, design and development.",
     "popUp": "Ready to build your digital future?",
     "description": "We’re crafting this project with passion and vision — it’s coming soon. Stay tuned and let’s build it together with Codex!",
@@ -268,6 +270,121 @@
         "SEO Pro",
         "And more..."
       ]
+    },
+    "moreInfo": "More information",
+    "infoIdealTitle": "Ideal for companies that:",
+    "infoFinancingTitle": "Financing",
+    "infoContactTitle": "Made a decision and want your project?",
+    "infoContactButton": "Get in touch",
+    "infoTag": "The future is code — Let's build IT!",
+    "info": {
+      "landing": {
+        "title": "INFORMATION — Landing Page",
+        "question": "What is a landing page and why is it an investment?",
+        "paragraphs": [
+          "A landing page is not just a website. It's a tool designed to turn visits into real opportunities.",
+          "It presents your offer clearly, builds trust, and guides the user toward a concrete action: contacting you, signing up, or buying.",
+          "It's the first step for your business to truly start competing in the digital space."
+        ],
+        "ideal": [
+          "Want to validate an idea or service",
+          "Need to start generating online inquiries",
+          "Are looking for a simple but effective presence",
+          "Want fast results without a large initial structure"
+        ],
+        "financingIntro": "Get your landing page today and start generating results from the very first moment.",
+        "installments": [
+          "3 installments of $260,000 ARS",
+          "6 installments of $145,000 ARS",
+          "12 installments of $75,000 ARS"
+        ],
+        "closing": "It's not just a page. It's an investment in digital infrastructure, online visibility, and the generation of real opportunities, built by professionals who understand how to grow your business."
+      },
+      "corporate": {
+        "title": "INFORMATION — Corporate Website",
+        "question": "What is a corporate website and why is it an investment?",
+        "paragraphs": [
+          "A corporate website is your company's digital foundation. It shows not only who you are, but how you work, what you offer, and why they should choose you.",
+          "It's the tool that positions your brand, builds credibility, and turns visits into real opportunities."
+        ],
+        "ideal": [
+          "Need to consolidate their professional image",
+          "Want to showcase services clearly and in a structured way",
+          "Seek to build trust before the first contact",
+          "Are ready to scale their digital presence"
+        ],
+        "financingIntro": "Build a solid digital presence ready to grow.",
+        "installments": [
+          "3 installments of $670,000 ARS",
+          "6 installments of $370,000 ARS",
+          "12 installments of $210,000 ARS"
+        ],
+        "closing": "It's not just a website. It's an investment in digital infrastructure, data security, and real positioning, built by professionals who understand business growth."
+      },
+      "ecommerce": {
+        "title": "INFORMATION — Ecommerce",
+        "question": "What is an ecommerce and why is it an investment?",
+        "paragraphs": [
+          "An ecommerce is a complete sales system that runs 24 hours a day.",
+          "We build professional, original, and tailor-made stores, with experiences designed to convert and cutting-edge security that protects every operation.",
+          "Every decision is geared toward maximizing results and scaling your business."
+        ],
+        "ideal": [
+          "Want to sell products online professionally",
+          "Are looking to automate their sales process",
+          "Need a secure, fast, and reliable store",
+          "Are ready to scale without physical limits"
+        ],
+        "financingIntro": "Take your business to an environment designed to sell.",
+        "installments": [
+          "3 installments of $1,420,000 ARS",
+          "6 installments of $780,000 ARS",
+          "12 installments of $420,000 ARS"
+        ],
+        "closing": "It's not just an online store. It's an investment in automated sales, security, and scalability, built by experts who know how to turn traffic into results."
+      },
+      "custom": {
+        "title": "INFORMATION — Custom Development",
+        "question": "What is custom development and why is it an investment?",
+        "paragraphs": [
+          "Custom development is the solution for companies that need technology adapted to their processes.",
+          "We create systems, platforms, and tools from scratch, designed to optimize, scale, and support the growth of your business."
+        ],
+        "ideal": [
+          "Have specific needs that off-the-shelf solutions don't cover",
+          "Are looking to optimize internal processes",
+          "Need scalable and tailored systems",
+          "Want technology aligned with their operation"
+        ],
+        "financingIntro": "Technology designed to fit your company.",
+        "installments": [
+          "3 installments of $1,320,000 ARS",
+          "6 installments of $720,000 ARS",
+          "12 installments of $390,000 ARS"
+        ],
+        "closing": "It's not just development. It's an investment in operational efficiency, control, and sustained growth, backed by professionals who understand your business."
+      },
+      "app": {
+        "title": "INFORMATION — Mobile Apps",
+        "question": "What is an app and why is it an investment?",
+        "paragraphs": [
+          "An app connects your business with your customers directly, quickly, and consistently.",
+          "We develop apps for iOS and Android with a focus on performance, user experience, and scalability, designed to generate real value and support your company's growth."
+        ],
+        "ideal": [
+          "Want to offer a direct experience to their customers",
+          "Seek to innovate and stand out in the market",
+          "Need to automate services or processes",
+          "Are ready to create a scalable digital product"
+        ],
+        "financingIntro": "Put your business in your customers' pocket with a solution built to scale.",
+        "installments": [
+          "3 installments of $3,310,000 ARS",
+          "6 installments of $1,820,000 ARS",
+          "12 installments of $980,000 ARS"
+        ],
+        "closing": "It's not just an app. It's an investment in technological infrastructure, security, user experience, and sustained digital growth, built by professionals who create real products."
+      }
     }
   }
 }

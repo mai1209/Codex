@@ -20,6 +20,14 @@ function Porfolio() {
 
       <div className={style.containerAllProyect}>
 
+   {/* ShiftHub */}
+        <a className={style.containerProyect} href="https://www.shifthubycodex.com/" target="_blank" rel="noopener noreferrer">
+          <img className={style.img} src="/shifthub.webp" alt="ShiftHub" />
+          <p className={style.nameProyect}>{t("done.nameProyect8")}</p>
+          <p className={style.descriptionProyect}>{t("done.descriptionProyect8")}</p>
+          <img className={style.link} src="/Linking.webp" alt="link" />
+        </a>
+
    {/* Barber App */}
         <a className={style.containerProyect} href="https://www.barberappbycodex.com" target="_blank" rel="noopener noreferrer">
           <img className={style.img} src="/barberPorfolioImg.png" alt="Darko" />
