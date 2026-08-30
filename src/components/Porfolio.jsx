@@ -30,7 +30,7 @@ function Porfolio() {
 
    {/* Barber App */}
         <a className={style.containerProyect} href="https://www.barberappbycodex.com" target="_blank" rel="noopener noreferrer">
-          <img className={style.img} src="/barberPorfolioImg.png" alt="Darko" />
+          <img className={style.img} src="/barberLanding.webp" alt="Barber App" />
           <p className={style.nameProyect}>Booking App for Barbershops</p>
           <p className={style.descriptionProyect}>{t("done.descriptionProyect7")}</p>
           <img className={style.link} src="/Linking.webp" alt="link" />

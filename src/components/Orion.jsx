@@ -20,7 +20,7 @@ function Orion() {
           className={style.imgOrion} 
           src="./orionDescription.webp" 
           alt="Identidad visual de Orion Hairstudio" 
-          fetchpriority="high"
+          fetchPriority="high"
         />
         
         <div className={style.containerDescription}>

@@ -18,6 +18,7 @@ import "./i18n";
 import App2 from "./components/App2";
 import Porfolio from "./components/Porfolio";
 import Reveal from "./components/Reveal";
+import ScrollToTop from "./components/ScrollToTop";
 
 function RootApp() {
   const [isMobile, setIsMobile] = useState(false);
@@ -34,7 +35,7 @@ function RootApp() {
   return (
     <StrictMode>
       <Router>
-        {" "}
+        <ScrollToTop />
         {/* Envuelve todo en Router */}
         <div className="app-wrapper">
           <Routes>

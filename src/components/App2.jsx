@@ -145,7 +145,7 @@
             src="/arrowup.webp"
             alt="flecha-subir"
             loading="lazy"
-            fetchpriority="high"
+            fetchPriority="high"
           />
         </button>
 
@@ -164,7 +164,7 @@
             src="/whatsappArrow.png"
             alt="whatsapp"
             loading="lazy"
-            fetchpriority="high"
+            fetchPriority="high"
           />
         </a>
       </section>

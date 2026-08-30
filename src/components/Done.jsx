@@ -41,27 +41,21 @@ function Done() {
               rel="noopener noreferrer"
             >
               <img
-                fetchpriority="high"  
+                fetchPriority="high"  
                 className={style.img}
-                src="/barberPorfolioImg.png"
+                src="/barberLanding.webp"
                 alt="barberiaWeb"
               />
               <p className={style.nameProyect}>Booking App for Barbershops</p>
               <p className={style.descriptionProyect}>
                 {t("done.descriptionProyect7")}
               </p>
-              <a
-                href="https://cheap-shop-three.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  fetchpriority="high"
-                  className={style.link}
-                  src="/Linking.webp"
-                  alt="link"
-                />
-              </a>
+              <img
+                fetchPriority="high"
+                className={style.link}
+                src="/Linking.webp"
+                alt="link"
+              />
             </a>
 
             <a
@@ -71,7 +65,7 @@ function Done() {
               rel="noopener noreferrer"
             >
               <img
-                fetchpriority="high"
+                fetchPriority="high"
                 className={style.img}
                 src="/crea.png"
                 alt="crea"
@@ -80,18 +74,12 @@ function Done() {
               <p className={style.descriptionProyect}>
                 {t("done.descriptionProyect2")}
               </p>
-              <a
-                href="https://creamarketingparavos.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  fetchpriority="high"
-                  className={style.link}
-                  src="/Linking.webp"
-                  alt="link"
-                />
-              </a>
+              <img
+                fetchPriority="high"
+                className={style.link}
+                src="/Linking.webp"
+                alt="link"
+              />
             </a>
           </div>
         </div>

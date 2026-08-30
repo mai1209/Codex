@@ -36,7 +36,7 @@ function Team() {
             
             <div className={style.imageCircle}>
               <img 
-                fetchpriority="high" 
+                fetchPriority="high" 
                 className={style.imgMembers} 
                 src={member.img} 
                 alt={member.name} 

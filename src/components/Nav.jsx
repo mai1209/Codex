@@ -52,14 +52,14 @@ function Nav() {
                     alt="flecha-subir"
                     onClick={scrollToTop}
                     loading="lazy"
-                    fetchpriority="high"
+                    fetchPriority="high"
                 />
             </div>
 
             <nav>
                 <div className={style.welcome}>
                     <img
-                        fetchpriority="high"
+                        fetchPriority="high"
                         loading="lazy"
                         onClick={scrollToTop}
                         src="./logo.webp"
