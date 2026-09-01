@@ -7,6 +7,8 @@ function Porfolio() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [activo, setActivo] = useState(false);
+  const [entregado, setEntregado] = useState(false);
+  const [disponible, setDisponible] = useState(false);
 
   return (
     <div className={style.container}>
@@ -19,6 +21,14 @@ function Porfolio() {
       </div>
 
       <div className={style.containerAllProyect}>
+
+   {/* TecniTower */}
+        <div onClick={() => setEntregado(true)} className={style.containerProyect} style={{cursor: 'pointer'}}>
+          <img className={style.img} src="/tecnitower.webp" alt="TecniTower" />
+          <p className={style.nameProyect}>{t("done.nameProyect9")}</p>
+          <p className={style.descriptionProyect}>{t("done.descriptionProyect9")}</p>
+          <img className={style.link} src="/Linking.webp" alt="link" />
+        </div>
 
    {/* ShiftHub */}
         <a className={style.containerProyect} href="https://www.shifthubycodex.com/" target="_blank" rel="noopener noreferrer">
@@ -69,8 +79,8 @@ function Porfolio() {
         </div>
 
         {/* Growth Mobile */}
-        <div onClick={() => setActivo(true)} className={style.containerProyect} style={{cursor: 'pointer'}}>
-          <img className={style.img} src="/app.webp" alt="App Mobile" />
+        <div onClick={() => setDisponible(true)} className={style.containerProyect} style={{cursor: 'pointer'}}>
+          <img className={style.img} src="/growthapp.webp" alt="Growth App Mobile" />
           <p className={style.nameProyect}>Growth mobile app</p>
           <p className={style.descriptionProyect}>{t("done.descriptionProyect4")}</p>
           <img className={style.link} src="/Linking.webp" alt="link" />
@@ -86,11 +96,36 @@ function Porfolio() {
       </div>
 
       {/* PopUp */}
-      <div className={`${style.secondFondo} ${activo ? style.activo : ""}`} onClick={() => setActivo(false)} />
+      <div
+        className={`${style.secondFondo} ${activo || entregado || disponible ? style.activo : ""}`}
+        onClick={() => { setActivo(false); setEntregado(false); setDisponible(false); }}
+      />
       <div className={`${style.popUp} ${activo ? style.activo : ""}`}>
         <h2> {t("done.popUp")} </h2>
         <p className={style.description}>{t("done.description")} #LetsBuildIt</p>
         <button className={style.btnButton} onClick={() => setActivo(false)}>Let's build it!</button>
+      </div>
+
+      {/* PopUp app disponible (Growth) */}
+      <div className={`${style.popUp} ${disponible ? style.activo : ""}`}>
+        <h2> {t("done.popUpAvailable")} </h2>
+        <p className={style.description}>{t("done.descriptionAvailable")}</p>
+        <a
+          className={style.btnButton}
+          href="https://apps.apple.com/ar/app/growthmanager/id6781464707"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", display: "inline-block" }}
+        >
+          {t("done.appStoreButton")}
+        </a>
+      </div>
+
+      {/* PopUp proyecto entregado (TecniTower) */}
+      <div className={`${style.popUp} ${entregado ? style.activo : ""}`}>
+        <h2> {t("done.popUpDelivered")} </h2>
+        <p className={style.description}>{t("done.descriptionDelivered")}</p>
+        <button className={style.btnButton} onClick={() => setEntregado(false)}>Let's build it!</button>
       </div>
     </div>
   );
