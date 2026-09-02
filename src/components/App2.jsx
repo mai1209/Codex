@@ -118,7 +118,7 @@
                   <div className={style.glowOne}></div>
                   <div className={style.glowTwo}></div>
 
-                  <img className={style.robot} src="/bigrobot.png" alt="robot" />
+                  <img className={style.robot} src="/bigrobot.webp" alt="robot" />
 
                   <div className={style.robotInfoCard}>
                     <p className={style.textFirst}>{t("app.secondaryText4")}</p>

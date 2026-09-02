@@ -48,7 +48,7 @@ function Porfolio() {
 
         {/* Darko */}
         <a className={style.containerProyect} href="https://cheap-shop-three.vercel.app" target="_blank" rel="noopener noreferrer">
-          <img className={style.img} src="/darko.png" alt="Darko" />
+          <img className={style.img} src="/darko.webp" alt="Darko" />
           <p className={style.nameProyect}>Darko-shop.com</p>
           <p className={style.descriptionProyect}>{t("done.descriptionProyect1")}</p>
           <img className={style.link} src="/Linking.webp" alt="link" />
@@ -56,7 +56,7 @@ function Porfolio() {
 
         {/* Crea Marketing */}
         <a className={style.containerProyect} href="https://creamarketingparavos.com" target="_blank" rel="noopener noreferrer">
-          <img className={style.img} src="/crea.png" alt="Crea" />
+          <img className={style.img} src="/crea-landing.webp" alt="Crea" />
           <p className={style.nameProyect}>creamarketingparavos.com</p>
           <p className={style.descriptionProyect}>{t("done.descriptionProyect2")}</p>
           <img className={style.link} src="/Linking.webp" alt="link" />
@@ -64,7 +64,7 @@ function Porfolio() {
 
         {/* Growth Web */}
         <a className={style.containerProyect} href="https://growthmanager.app" target="_blank" rel="noopener noreferrer">
-          <img className={style.img} src="/growth.png" alt="Growth" />
+          <img className={style.img} src="/growth-landing.webp" alt="Growth" />
           <p className={style.nameProyect}>Growth web app</p>
           <p className={style.descriptionProyect}>{t("done.descriptionProyect3")}</p>
           <img className={style.link} src="/Linking.webp" alt="link" />
@@ -88,7 +88,7 @@ function Porfolio() {
 
         {/* Ecommerce Model */}
         <a className={style.containerProyect} href="https://wifrut-livid.vercel.app" target="_blank" rel="noopener noreferrer">
-          <img className={style.img} src="wifrut.webp" alt="Wifrut" />
+          <img className={style.img} src="/wifrut.webp" alt="Wifrut" />
           <p className={style.nameProyect}>Ecommerce model</p>
           <p className={style.descriptionProyect}>{t("done.descriptionProyect5")}</p>
           <img className={style.link} src="/Linking.webp" alt="link" />
