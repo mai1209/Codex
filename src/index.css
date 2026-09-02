@@ -2,7 +2,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Solo aquí, no en * */
+  /* clip recorta igual que hidden pero no rompe position: sticky */
+  overflow-x: clip;
   scroll-behavior: smooth;
     background: var(--color-fondo-dark);
 

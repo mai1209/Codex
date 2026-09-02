@@ -17,6 +17,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Menda';
+  src: url('/Menda Font/menda_black-webfont.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ✅ FOOTER WRAPPER */
 .container {
   background-color: var(--color-crimson);
@@ -36,8 +44,75 @@
   overflow-x: hidden;
 }
 
-.imgFooter {
-  display: none;
+/* ✅ WORDMARK GIGANTE (recortado en el borde inferior) */
+.wordmarkWrap {
+  position: relative;
+  height: 10.2vw;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.wordmark {
+  position: absolute;
+  top: -0.145em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Menda';
+  font-weight: 900;
+  font-size: 19vw;
+  line-height: 1;
+  white-space: nowrap;
+  color: rgba(7, 10, 12, 0.27);
+}
+
+/* ✅ COHETE ANIMADO */
+.rocketScene {
+  display: block;
+  width: 13rem;
+  max-width: 80%;
+  height: auto;
+  margin: 1.75rem 0 0.25rem;
+  color: var(--color-fondo);
+}
+
+.rocketBob {
+  animation: bob 3.6s ease-in-out infinite;
+}
+
+.flame {
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+  animation: flick 0.4s ease-in-out infinite alternate;
+}
+
+.trail {
+  opacity: 0.55;
+  animation: trailDash 1s linear infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes flick {
+  from { transform: scaleY(1); }
+  to { transform: scaleY(0.72) scaleX(0.9); }
+}
+
+@keyframes trailDash {
+  to { stroke-dashoffset: 15; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rocketBob,
+  .flame,
+  .trail,
+  .redes img {
+    animation: none;
+  }
 }
 
 /* ✅ TÍTULOS */
@@ -139,11 +214,6 @@
   animation: pulse 2s infinite ease-in-out;
 }
 
-/* ✅ la imagen absoluta nunca debe capturar eventos */
-.imgFooter {
-  pointer-events: none;
-}
-
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.15); }
@@ -152,7 +222,7 @@
 
 @media (min-width: 53.125rem) and (max-width: 74.9375rem) {
   .containerTitle {
-    padding: 3.5rem 3rem 6rem;
+    padding: 3rem 3rem 2rem;
     max-width: 38rem;
   }
 
@@ -169,7 +239,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 3rem 5rem;
+    padding: 0 3rem 3rem;
     gap: 2.5rem;
   }
 
@@ -199,8 +269,9 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: 0 3rem 2rem;
+    padding: 1.5rem 3rem 2rem;
     font-size: 1.1rem;
+    border-top: 1px solid rgba(7, 10, 12, 0.35);
   }
 
   .redes {
@@ -213,22 +284,19 @@
     height: 2rem;
   }
 
-  .imgFooter {
-    display: block;
+  .rocketScene {
     position: absolute;
-    left: -2.5rem;
-    bottom: -1rem;
-    width: 20rem;
-    height: 20rem;
-    object-fit: contain;
-    opacity: 0.28;
-    z-index: 0;
+    right: 2rem;
+    top: 2rem;
+    width: 13rem;
+    margin: 0;
+    pointer-events: none;
   }
 }
 
 @media (min-width: 75rem) {
   .containerTitle {
-    padding: 6rem 0 12rem 6rem;
+    padding: 3rem 0 0 6rem;
   }
 
   .title {
@@ -242,8 +310,8 @@
   .containerAllLinks {
     justify-content: flex-end;
     flex-direction: row;
-    padding: 0rem 15rem 10rem 0rem;
-    gap: 10rem;
+    padding: 2.5rem 12rem 3rem 0rem;
+    gap: 8rem;
   }
 
   .titleNavigation {
@@ -258,28 +326,24 @@
     justify-content: space-between;
   }
 
-  .imgFooter {
-    display: block;
+  .rocketScene {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 37.5rem;
-    height: 37.5rem;
-    object-fit: contain;
-    z-index: 0;
-    pointer-events: none; /* ✅ clave */
-    opacity: 0.34;
+    left: 6rem;
+    top: 10rem;
+    width: 20rem;
+    max-width: none;
+    margin: 0;
+    z-index: 1;
+    pointer-events: none;
   }
 
   .containerDerechos {
-    padding: 0.5rem 10rem;
+    padding: 1.5rem 6rem;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
-  }
-
-  .redes {
-    padding-left: 20rem;
+    justify-content: space-between;
+    border-top: 1px solid rgba(7, 10, 12, 0.35);
   }
 
   .redes img {
