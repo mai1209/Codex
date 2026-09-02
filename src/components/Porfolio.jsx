@@ -110,15 +110,26 @@ function Porfolio() {
       <div className={`${style.popUp} ${disponible ? style.activo : ""}`}>
         <h2> {t("done.popUpAvailable")} </h2>
         <p className={style.description}>{t("done.descriptionAvailable")}</p>
-        <a
-          className={style.btnButton}
-          href="https://apps.apple.com/ar/app/growthmanager/id6781464707"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ textDecoration: "none", display: "inline-block" }}
-        >
-          {t("done.appStoreButton")}
-        </a>
+        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", justifyContent: "center" }}>
+          <a
+            className={style.btnButton}
+            href="https://apps.apple.com/ar/app/growthmanager/id6781464707"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", display: "inline-block" }}
+          >
+            {t("done.appStoreButton")}
+          </a>
+          <a
+            className={style.btnButton}
+            href="https://www.growthmanager.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", display: "inline-block" }}
+          >
+            {t("done.webButton")}
+          </a>
+        </div>
       </div>
 
       {/* PopUp proyecto entregado (TecniTower) */}
