@@ -1,4 +1,4 @@
-import { StrictMode, useEffect, useState } from "react";
+import { StrictMode, Suspense, lazy, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Importa Router
 import "../src/index.css";
@@ -6,19 +6,21 @@ import "../src/index.css";
 import WeDo from "./components/WeDo";
 //import Diagrama from './components/Diagrama';
 import DiagramaM from "./components/DiagramaM";
-import Pricing from "./components/Pricing";
 import Nav from "./components/Nav";
 import Team from "./components/Team";
 import Footer from "./components/Footer";
-import Orion from "./components/Orion";
 import Ask from "./components/Ask";
 import Diagrama from "./components/Diagrama";
 import Done from "./components/Done";
 import "./i18n";
 import App2 from "./components/App2";
-import Porfolio from "./components/Porfolio";
 import Reveal from "./components/Reveal";
 import ScrollToTop from "./components/ScrollToTop";
+
+// Rutas secundarias con code-splitting: no cargan hasta que se visitan
+const Pricing = lazy(() => import("./components/Pricing"));
+const Orion = lazy(() => import("./components/Orion"));
+const Porfolio = lazy(() => import("./components/Porfolio"));
 
 function RootApp() {
   const [isMobile, setIsMobile] = useState(false);
@@ -67,10 +69,31 @@ function RootApp() {
               }
             />
             {/* Ruta para Orion */}
-            <Route path="/orion" element={<Orion />} />
+            <Route
+              path="/orion"
+              element={
+                <Suspense fallback={null}>
+                  <Orion />
+                </Suspense>
+              }
+            />
             <Route path="/ask" element={<Ask />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/porfolio" element={<Porfolio />} />
+            <Route
+              path="/pricing"
+              element={
+                <Suspense fallback={null}>
+                  <Pricing />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/porfolio"
+              element={
+                <Suspense fallback={null}>
+                  <Porfolio />
+                </Suspense>
+              }
+            />
           </Routes>
         </div>
       </Router>

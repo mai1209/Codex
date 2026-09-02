@@ -67,7 +67,7 @@ function Done() {
               <img
                 fetchPriority="high"
                 className={style.img}
-                src="/crea.png"
+                src="/crea-landing.webp"
                 alt="crea"
               />
               <p className={style.nameProyect}>creamarketingparavos.com</p>
