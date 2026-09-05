@@ -22,6 +22,14 @@ function Porfolio() {
 
       <div className={style.containerAllProyect}>
 
+   {/* Buzos de Regatas */}
+        <a className={style.containerProyect} href="https://buzos-de-regatas.vercel.app/" target="_blank" rel="noopener noreferrer">
+          <img className={style.img} src="/buzosregatas.webp" alt="Buzos de Regatas" />
+          <p className={style.nameProyect}>{t("done.nameProyect10")}</p>
+          <p className={style.descriptionProyect}>{t("done.descriptionProyect10")}</p>
+          <img className={style.link} src="/Linking.webp" alt="link" />
+        </a>
+
    {/* TecniTower */}
         <div onClick={() => setEntregado(true)} className={style.containerProyect} style={{cursor: 'pointer'}}>
           <img className={style.img} src="/tecnitower.webp" alt="TecniTower" />
