@@ -22,6 +22,22 @@ function Porfolio() {
 
       <div className={style.containerAllProyect}>
 
+        {/* Growth Mobile */}
+        <div onClick={() => setDisponible(true)} className={style.containerProyect} style={{cursor: 'pointer'}}>
+          <img className={style.img} src="/growthapp.webp" alt="Growth App Mobile" />
+          <p className={style.nameProyect}>Growth mobile app</p>
+          <p className={style.descriptionProyect}>{t("done.descriptionProyect4")}</p>
+          <img className={style.link} src="/Linking.webp" alt="link" />
+        </div>
+
+   {/* Barber App */}
+        <a className={style.containerProyect} href="https://www.barberappbycodex.com" target="_blank" rel="noopener noreferrer">
+          <img className={style.img} src="/barberLanding.webp" alt="Barber App" />
+          <p className={style.nameProyect}>Booking App for Barbershops</p>
+          <p className={style.descriptionProyect}>{t("done.descriptionProyect7")}</p>
+          <img className={style.link} src="/Linking.webp" alt="link" />
+        </a>
+
    {/* Buzos de Regatas */}
         <a className={style.containerProyect} href="https://buzos-de-regatas.vercel.app/" target="_blank" rel="noopener noreferrer">
           <img className={style.img} src="/buzosregatas.webp" alt="Buzos de Regatas" />
@@ -43,14 +59,6 @@ function Porfolio() {
           <img className={style.img} src="/shifthub.webp" alt="ShiftHub" />
           <p className={style.nameProyect}>{t("done.nameProyect8")}</p>
           <p className={style.descriptionProyect}>{t("done.descriptionProyect8")}</p>
-          <img className={style.link} src="/Linking.webp" alt="link" />
-        </a>
-
-   {/* Barber App */}
-        <a className={style.containerProyect} href="https://www.barberappbycodex.com" target="_blank" rel="noopener noreferrer">
-          <img className={style.img} src="/barberLanding.webp" alt="Barber App" />
-          <p className={style.nameProyect}>Booking App for Barbershops</p>
-          <p className={style.descriptionProyect}>{t("done.descriptionProyect7")}</p>
           <img className={style.link} src="/Linking.webp" alt="link" />
         </a>
 
@@ -83,14 +91,6 @@ function Porfolio() {
           <img className={style.img} src="/orion.webp" alt="Orion" />
           <p className={style.nameProyect}>Orion hairstudio</p>
           <p className={style.descriptionProyect}>Diseño de marca.</p>
-          <img className={style.link} src="/Linking.webp" alt="link" />
-        </div>
-
-        {/* Growth Mobile */}
-        <div onClick={() => setDisponible(true)} className={style.containerProyect} style={{cursor: 'pointer'}}>
-          <img className={style.img} src="/growthapp.webp" alt="Growth App Mobile" />
-          <p className={style.nameProyect}>Growth mobile app</p>
-          <p className={style.descriptionProyect}>{t("done.descriptionProyect4")}</p>
           <img className={style.link} src="/Linking.webp" alt="link" />
         </div>
 
