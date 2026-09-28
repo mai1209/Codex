@@ -16,6 +16,11 @@ import "./i18n";
 import App2 from "./components/App2";
 import Reveal from "./components/Reveal";
 import ScrollToTop from "./components/ScrollToTop";
+import Mantenimiento from "./components/Mantenimiento";
+
+// ⚠️ MODO MANTENIMIENTO: true = muestra solo la pantalla de mantenimiento.
+// Poné false y volvé a deployar para mostrar el sitio normal.
+const MANTENIMIENTO = true;
 
 // Rutas secundarias con code-splitting: no cargan hasta que se visitan
 const Pricing = lazy(() => import("./components/Pricing"));
@@ -33,6 +38,14 @@ function RootApp() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  if (MANTENIMIENTO) {
+    return (
+      <StrictMode>
+        <Mantenimiento />
+      </StrictMode>
+    );
+  }
 
   return (
     <StrictMode>

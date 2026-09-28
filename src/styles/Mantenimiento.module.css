@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Menda';
+  src: url('/Menda Font/menda_medium-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Menda';
+  src: url('/Menda Font/menda_black-webfont.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.container {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #ff1493;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo {
+  width: 4.5rem;
+  height: auto;
+  filter: brightness(0);
+}
+
+.rocketScene {
+  width: min(15rem, 60vw);
+  height: auto;
+  margin: 1rem 0 0.5rem;
+  color: #070a0c;
+}
+
+.rocketBob {
+  animation: bob 3.6s ease-in-out infinite;
+}
+
+.flame {
+  transform-box: fill-box;
+  transform-origin: 50% 0%;
+  animation: flick 0.4s ease-in-out infinite alternate;
+}
+
+.trail {
+  opacity: 0.55;
+  animation: trailDash 1s linear infinite;
+}
+
+.title {
+  font-family: 'Menda';
+  font-weight: 500;
+  color: #070a0c;
+  font-size: clamp(1.6rem, 4.5vw, 3rem);
+  text-transform: uppercase;
+  margin: 0.5rem 0 0;
+}
+
+.subtitle {
+  font-family: 'Archivo', 'Poppins', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  font-size: clamp(0.95rem, 2vw, 1.25rem);
+  max-width: 34rem;
+  line-height: 1.5;
+  margin: 1rem 0 0;
+}
+
+.btn {
+  font-family: 'Menda';
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 1.75rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  background: #070a0c;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: #1c1c1c;
+}
+
+/* Wordmark gigante recortado abajo, como el footer */
+.wordmarkWrap {
+  position: relative;
+  width: 100%;
+  height: 10.2vw;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  margin-top: auto;
+}
+
+.wordmark {
+  position: absolute;
+  top: -0.145em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Menda';
+  font-weight: 900;
+  font-size: 19vw;
+  line-height: 1;
+  white-space: nowrap;
+  color: rgba(7, 10, 12, 0.27);
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes flick {
+  from { transform: scaleY(1); }
+  to { transform: scaleY(0.72) scaleX(0.9); }
+}
+
+@keyframes trailDash {
+  to { stroke-dashoffset: 15; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rocketBob,
+  .flame,
+  .trail {
+    animation: none;
+  }
+}
